@@ -1396,6 +1396,57 @@
 #undef POPULATION_SCALED_ACCESS
 #undef ALWAYS_GETS_ACCESS
 
+/datum/id_trim/job/exp_officer
+	assignment = JOB_EXP_OFFICER
+	intern_alt_name = "Junior Expeditionary Officer"
+	trim_state = "trim_forwarder"
+	department_color = COLOR_COMMAND_BLUE
+	subdepartment_color = COLOR_EXP_CORP
+	department_state = "departmenthead"
+	sechud_icon_state = SECHUD_EXP_OFFICER
+	minimal_access = list(
+		ACCESS_EXP,
+		ACCESS_EXP_STORAGE,
+		ACCESS_AUX_BASE,
+		ACCESS_BRIG_ENTRANCE,
+		ACCESS_BUDGET,
+		ACCESS_COMMAND,
+		ACCESS_CONSTRUCTION,
+		ACCESS_EVA,
+		ACCESS_GATEWAY,
+		ACCESS_GENETICS,
+		ACCESS_KEYCARD_AUTH,
+		ACCESS_NETWORK,
+		ACCESS_MAINT_TUNNELS,
+		ACCESS_MECH_ENGINE,
+		ACCESS_MECH_MINING,
+		ACCESS_MECH_SECURITY,
+		ACCESS_MECH_SCIENCE,
+		ACCESS_MINERAL_STOREROOM,
+		ACCESS_MORGUE,
+		ACCESS_ORDNANCE,
+		ACCESS_ORDNANCE_STORAGE,
+		ACCESS_RESEARCH,
+		ACCESS_ROBOTICS,
+		ACCESS_SCIENCE,
+		ACCESS_TECH_STORAGE,
+		ACCESS_TELEPORTER,
+		)
+	minimal_wildcard_access = list(
+		ACCESS_EXP_OFFICER,
+		)
+	extra_access = list()
+	extra_wildcard_access = list()
+	template_access = list(
+		ACCESS_CAPTAIN,
+		ACCESS_CHANGE_IDS,
+		)
+	job = /datum/job/exp_officer
+	big_pointer = TRUE
+	pointer_color = COLOR_SCIENCE_PINK
+	honorifics = list("Officer")
+	honorific_positions = HONORIFIC_POSITION_FIRST | HONORIFIC_POSITION_LAST | HONORIFIC_POSITION_FIRST_FULL | HONORIFIC_POSITION_NONE
+
 /datum/id_trim/job/human_ai
 	assignment = JOB_HUMAN_AI
 	trim_state = "trim_recluse"
@@ -1414,3 +1465,4 @@
 	job = /datum/job/human_ai
 	big_pointer = TRUE
 	pointer_color = COLOR_MODERATE_BLUE
+
