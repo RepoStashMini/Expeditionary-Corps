@@ -96,8 +96,8 @@
 					background-color: #3e3e3e;
 					background-image: repeating-linear-gradient(
 						-45deg,
-						green,
-						green 7px,
+						#9924cf,
+						#9924cf 7px,
 						black 7px,
 						black 8px
 					);
