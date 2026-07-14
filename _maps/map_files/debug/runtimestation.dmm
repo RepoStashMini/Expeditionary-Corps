@@ -325,6 +325,7 @@
 /obj/effect/turf_decal/stripes/line,
 /obj/machinery/status_display/evac/directional/north,
 /obj/machinery/camera/autoname/directional/north,
+/obj/item/card/id/advanced/robotic,
 /turf/open/floor/iron,
 /area/station/construction)
 "bY" = (
@@ -1090,6 +1091,10 @@
 /obj/item/paper/guides/jobs/security/labor_camp,
 /turf/open/floor/iron,
 /area/station/security/brig)
+"gZ" = (
+/obj/item/clothing/under/rank/expeditionary/com_forwarder,
+/turf/open/floor/plating,
+/area/station/construction)
 "hm" = (
 /obj/machinery/airalarm/directional/west,
 /obj/effect/mapping_helpers/airalarm/unlocked,
@@ -1277,6 +1282,10 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron,
 /area/station/engineering/main)
+"oT" = (
+/obj/item/clothing/under/rank/expeditionary/eng_forwarder,
+/turf/open/floor/plating,
+/area/station/construction)
 "pe" = (
 /obj/machinery/door/airlock,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -1330,10 +1339,15 @@
 /obj/machinery/door/airlock,
 /turf/open/floor/plating,
 /area/station/engineering/atmos)
+"qd" = (
+/obj/item/modular_computer/pda/janitor,
+/turf/open/floor/plating,
+/area/station/construction)
 "qf" = (
 /obj/machinery/greenscreen_camera{
 	dir = 1
 	},
+/obj/item/modular_computer/pda/janitor,
 /turf/open/floor/plating,
 /area/station/construction)
 "qg" = (
@@ -1756,6 +1770,11 @@
 	},
 /turf/open/floor/iron,
 /area/station/cargo/storage)
+"Ay" = (
+/obj/effect/turf_decal/stripes/line,
+/obj/item/card/id/advanced/robotic,
+/turf/open/floor/iron,
+/area/station/construction)
 "AD" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 4
@@ -1917,10 +1936,15 @@
 	},
 /turf/open/floor/iron,
 /area/station/hallway/primary/central)
+"En" = (
+/obj/item/clothing/under/rank/expeditionary/med_com_forwarder,
+/turf/open/floor/plating,
+/area/station/construction)
 "Es" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/item/card/id/advanced/robotic,
 /turf/open/floor/iron,
 /area/station/construction)
 "EG" = (
@@ -1960,6 +1984,10 @@
 	dir = 1
 	},
 /area/station/medical/medbay)
+"EU" = (
+/obj/item/radio/headset/headset_frontier_colonist,
+/turf/open/floor/plating,
+/area/station/construction)
 "EX" = (
 /obj/structure/table,
 /obj/item/screwdriver{
@@ -2000,6 +2028,14 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
 /turf/open/floor/plating,
 /area/station/engineering/atmos)
+"FI" = (
+/obj/item/storage/belt/military/cin_surplus,
+/turf/open/floor/plating,
+/area/station/construction)
+"FU" = (
+/obj/item/clothing/shoes/workboots,
+/turf/open/floor/plating,
+/area/station/construction)
 "GC" = (
 /obj/machinery/atmospherics/pipe/layer_manifold{
 	dir = 4
@@ -2329,6 +2365,10 @@
 /obj/machinery/light/directional/north,
 /turf/open/floor/iron,
 /area/station/hallway/secondary/entry)
+"OK" = (
+/obj/item/clothing/under/rank/expeditionary/forwarder,
+/turf/open/floor/plating,
+/area/station/construction)
 "OO" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
@@ -2355,6 +2395,7 @@
 /area/station/commons/storage/primary)
 "Pe" = (
 /obj/effect/landmark/event_spawn,
+/obj/item/radio/headset/headset_frontier_colonist,
 /turf/open/floor/plating,
 /area/station/construction)
 "Pk" = (
@@ -2384,6 +2425,7 @@
 "PB" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/structure/sign/poster/greenscreen/directional/north,
+/obj/item/card/id/advanced/robotic,
 /turf/open/floor/greenscreen,
 /area/station/construction)
 "PJ" = (
@@ -2631,6 +2673,10 @@
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/station/engineering/atmos)
+"Wo" = (
+/obj/item/storage/backpack/duffelbag/expeditionary_corps,
+/turf/open/floor/plating,
+/area/station/construction)
 "WK" = (
 /obj/structure/money_bot,
 /turf/open/floor/iron/dark,
@@ -2771,6 +2817,10 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /turf/open/floor/iron,
 /area/station/engineering/main)
+"Zm" = (
+/obj/item/clothing/under/rank/expeditionary/med_forwarder,
+/turf/open/floor/plating,
+/area/station/construction)
 "Zo" = (
 /obj/structure/table,
 /obj/item/gun/magic/wand/resurrection/debug,
@@ -2820,6 +2870,7 @@
 	},
 /obj/effect/turf_decal/stripes/line,
 /obj/structure/sign/poster/greenscreen/directional/north,
+/obj/item/card/id/advanced/robotic,
 /turf/open/floor/greenscreen,
 /area/station/construction)
 
@@ -6350,12 +6401,12 @@ QV
 FA
 Hb
 Es
+qd
 dn
-dn
-dn
-dn
-dn
-dn
+OK
+FU
+EU
+Wo
 dn
 dn
 dn
@@ -6441,13 +6492,13 @@ bE
 QV
 bE
 ef
-cY
+Ay
+qd
 dn
-dn
-dn
-dn
-dn
-dn
+Zm
+FU
+EU
+Wo
 dn
 dn
 dn
@@ -6534,12 +6585,12 @@ QV
 bE
 cN
 bV
+qd
 dn
-dn
-dn
-dn
-dn
-dn
+oT
+FU
+EU
+Wo
 dn
 dn
 dn
@@ -6626,12 +6677,12 @@ QV
 bE
 cN
 ZW
+qd
 dn
-dn
-dn
-dn
+En
+FU
 Pe
-dn
+Wo
 dn
 dn
 dn
@@ -6719,11 +6770,11 @@ hp
 cN
 PB
 qf
-dn
-dn
-dn
-dn
-dn
+FI
+gZ
+FU
+EU
+Wo
 dn
 dn
 dn

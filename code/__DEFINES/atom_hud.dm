@@ -126,6 +126,7 @@
 #define SECHUD_PSYCHOLOGIST "hudpsychologist"
 #define SECHUD_QUARTERMASTER "hudquartermaster"
 #define SECHUD_RESEARCH_DIRECTOR "hudresearchdirector"
+#define SECHUD_EXP_OFFICER "hudexpeditionofficer"
 #define SECHUD_ROBOTICIST "hudroboticist"
 #define SECHUD_SECURITY_OFFICER "hudsecurityofficer"
 #define SECHUD_SCIENTIST "hudscientist"
