@@ -34,6 +34,8 @@
 #define ACCESS_CAPTAIN "captain"
 /// Access used for the Head of Personnel's personal quarters in mapping, as well as the security console and other HoP-related things.
 #define ACCESS_HOP "hop"
+/// Access used for the Head of Personnel's personal quarters in mapping.
+#define ACCESS_EXP_OFFICER "Expedition officer"
 
 /// Security's General Access. In mapping, grants access to spaces such as to the "meeting room" or firing range, as well as being the general access that Tablet/Computer Programs check for "heads". Also unlocks other types of security equipment.
 #define ACCESS_SECURITY "security"
@@ -127,6 +129,11 @@
 #define ACCESS_XENOBIOLOGY "xenobiology"
 /// Access for the Research Director's personal quarters in mapping, as well as some other RD-related things.
 #define ACCESS_RD "rd"
+
+/// General access for the expedition crew.
+#define ACCESS_EXP "expeditionary"
+/// expeditionary storage.
+#define ACCESS_EXP_STORAGE "expeditionary_storage"
 
 /// General access for Service, allows for entry to the Service Hallway.
 #define ACCESS_SERVICE "service"
@@ -350,7 +357,7 @@
 	ACCESS_WEAPONS, \
 	ACCESS_XENOBIOLOGY, \
 	ACCESS_BARBER, \
-) // NOVA EDIT ADDITION
+)
 
 /// Command staff/secure accesses, think bridge/armoury, ai_upload, notably access to modify ID cards themselves. Do not use direct, access via SSid_access.get_flag_access_list(ACCESS_FLAG_COMMAND)
 #define COMMAND_ACCESS list( \
@@ -498,6 +505,13 @@
 	ACCESS_ROBOTICS, \
 	ACCESS_SCIENCE, \
 	ACCESS_XENOBIOLOGY, \
+)
+/// Name for the Expeditionary region.
+#define REGION_EXP "expeditionary"
+/// Used to seed the accesses_by_region list in SSid_access. A list of all research regional accesses that are overseen by the RD.
+#define REGION_ACCESS_EXP list( \
+	ACCESS_EXP, \
+	ACCESS_EXP_STORAGE, \
 )
 /// Name for the Engineering region.
 #define REGION_ENGINEERING "Engineering"

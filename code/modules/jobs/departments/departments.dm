@@ -200,6 +200,22 @@
 /datum/job_department/silicon/generate_nation_name()
 	return "United Nations" //For nations ruleset specifically, because all other sources of nation creation cannot choose silicons
 
+//All personnel involved in expeditions
+/datum/job_department/exp_personnel
+    department_name = DEPARTMENT_EXPEDITIONARY
+    department_bitflags = DEPARTMENT_BITFLAG_EXPEDITIONARY
+    department_head = /datum/job/exp_officer
+    department_experience_type = EXP_TYPE_EXPEDITIONARY
+    display_order = 9
+    label_class = "expeditionary"
+    ui_color = "#9924cf"
+    nation_prefixes = list("exp", "exp1", "exp2")
+    primary_work_area = /area/station/expeditionary
+    department_delivery_areas = list(/area/station/expeditionary)
+    associated_cargo_groups = list("Service", "Food & Hydroponics", "Livestock", "Costumes & Toys")
+    head_of_staff_access = ACCESS_EXP_OFFICER
+    department_access = list(ACCESS_EXP)
+
 /// Catch-all department for undefined jobs.
 /datum/job_department/undefined
 	display_order = 10
