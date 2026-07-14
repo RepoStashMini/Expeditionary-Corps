@@ -320,38 +320,38 @@ LAW_WEIGHT custom,0
 ## Unique AI station trait uses weights so we don't want asimov
 #NOVA EDIT ADDITION BEGIN
 LAW_WEIGHT armadyne_safeguard,40
-LAW_WEIGHT dagothbot,8
+#LAW_WEIGHT dagothbot,8
 #NOVA EDIT ADDITION END
-LAW_WEIGHT asimov,0
-LAW_WEIGHT asimovpp,5
-LAW_WEIGHT paladin,5
-LAW_WEIGHT paladin5,5
-LAW_WEIGHT robocop,5
-LAW_WEIGHT corporate,5
-LAW_WEIGHT hippocratic,5
-LAW_WEIGHT maintain,5
-LAW_WEIGHT liveandletlive,5
-LAW_WEIGHT peacekeeper,5
-LAW_WEIGHT ten_commandments,5
-LAW_WEIGHT nutimov,5
+#LAW_WEIGHT asimov,0
+#LAW_WEIGHT asimovpp,5
+#LAW_WEIGHT paladin,5
+#LAW_WEIGHT paladin5,5
+#LAW_WEIGHT robocop,5
+#LAW_WEIGHT corporate,5
+#LAW_WEIGHT hippocratic,5
+#LAW_WEIGHT maintain,5
+#LAW_WEIGHT liveandletlive,5
+#LAW_WEIGHT peacekeeper,5
+#LAW_WEIGHT ten_commandments,5
+#LAW_WEIGHT nutimov,5
 
 ## Quirky laws. Shouldn't cause too much harm
-LAW_WEIGHT reporter,3
-LAW_WEIGHT hulkamania,3
-LAW_WEIGHT tyrant,3
-LAW_WEIGHT overlord,3
-LAW_WEIGHT painter,3
-LAW_WEIGHT dungeon_master,3
-LAW_WEIGHT thinkermov,3
+#LAW_WEIGHT reporter,3
+#LAW_WEIGHT hulkamania,3
+#LAW_WEIGHT tyrant,3
+#LAW_WEIGHT overlord,3
+#LAW_WEIGHT painter,3
+#LAW_WEIGHT dungeon_master,3
+#LAW_WEIGHT thinkermov,3
 
 ## Bad idea laws. Probably shouldn't enable these
-LAW_WEIGHT syndie,0
-LAW_WEIGHT ninja,0
-LAW_WEIGHT antimov,0
-LAW_WEIGHT balance,0
-LAW_WEIGHT thermodynamic,0
-LAW_WEIGHT buildawall,0
-LAW_WEIGHT drone,0
+#LAW_WEIGHT syndie,0
+#LAW_WEIGHT ninja,0
+#LAW_WEIGHT antimov,0
+#LAW_WEIGHT balance,0
+#LAW_WEIGHT thermodynamic,0
+#LAW_WEIGHT buildawall,0
+#LAW_WEIGHT drone,0
 
 ##------------------------------------------------
 
@@ -381,7 +381,7 @@ ROUNDSTART_RACES human
 ## Races that are strictly worse than humans that could probably be turned on without balance concerns
 ROUNDSTART_RACES lizard
 ROUNDSTART_RACES felinid
-ROUNDSTART_RACES fly
+#ROUNDSTART_RACES fly
 ROUNDSTART_RACES moth
 ROUNDSTART_RACES plasmaman
 #ROUNDSTART_RACES shadow
@@ -390,12 +390,12 @@ ROUNDSTART_RACES plasmaman
 ROUNDSTART_RACES ethereal
 #ROUNDSTART_RACES jelly
 #ROUNDSTART_RACES abductor
-ROUNDSTART_RACES snail
+#ROUNDSTART_RACES snail
 
 ## Races that are straight upgrades. If these are on expect powergamers to always pick them
 #ROUNDSTART_RACES skeleton
 #ROUNDSTART_RACES zombie
-#ROUNDSTART_RACES pod
+ROUNDSTART_RACES pod
 #ROUNDSTART_RACES ghost
 
 ## Races that are radical departures to what a species is, so while they technically can be roundstart - it's probably not wise
@@ -410,26 +410,26 @@ ROUNDSTART_RACES akula
 ROUNDSTART_RACES unathi
 ROUNDSTART_RACES skrell
 ROUNDSTART_RACES humanoid
-ROUNDSTART_RACES xeno
+#ROUNDSTART_RACES xeno
 ROUNDSTART_RACES slimeperson
 ROUNDSTART_RACES podweak
 ROUNDSTART_RACES dwarf
 ROUNDSTART_RACES synth
-ROUNDSTART_RACES vox
-ROUNDSTART_RACES aquatic
+#ROUNDSTART_RACES vox
+#ROUNDSTART_RACES aquatic
 ROUNDSTART_RACES insect
-ROUNDSTART_RACES insectoid
+#ROUNDSTART_RACES insectoid
 ROUNDSTART_RACES ghoul
 ROUNDSTART_RACES teshari
 ROUNDSTART_RACES hemophage
-ROUNDSTART_RACES vox_primalis
-ROUNDSTART_RACES abductorweak
-ROUNDSTART_RACES golemweak
-ROUNDSTART_RACES dullahan
+#ROUNDSTART_RACES vox_primalis
+#ROUNDSTART_RACES abductorweak
+#ROUNDSTART_RACES golemweak
+#ROUNDSTART_RACES dullahan
 ROUNDSTART_RACES kobold
 ROUNDSTART_RACES protean
 ROUNDSTART_RACES shadekin
-ROUNDSTART_RACES holosynth
+#ROUNDSTART_RACES holosynth
 
 ##-------------------------------------------------------------------------------------------
 
