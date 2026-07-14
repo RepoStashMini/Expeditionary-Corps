@@ -20,16 +20,6 @@
 		interdinify()
 		return
 
-	// Tarkon
-	if (!SSmachines.special_tune_whitelist_areas["tarkon"])
-		SSmachines.special_tune_whitelist_areas["tarkon"] = typecacheof(list(
-			/area/ruin/space/has_grav/port_tarkon,
-			/area/shuttle/tarkon_driver))
-
-	if(is_type_in_typecache(target_area.type, SSmachines.special_tune_whitelist_areas["tarkon"]))
-		tarkonize()
-		return
-
 // To avoid every machine checking their area, we call tuning only for those, who may benefit from it
 // AAS
 /obj/machinery/announcement_system/post_machine_initialize()

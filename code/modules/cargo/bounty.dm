@@ -141,10 +141,6 @@ GLOBAL_LIST_EMPTY(shared_crew_bounties)
 				chosen_type = pick(subtypesof(/datum/bounty/item/interdyne_med) + subtypesof(/datum/bounty/item/interdyne_slime) + subtypesof(/datum/bounty/interdyne_pill/simple_pill) + subtypesof(/datum/bounty/interdyne_reagent/chemical_simple) + subtypesof(/datum/bounty/interdyne_reagent/chemical_complex) + subtypesof(/datum/bounty/item/shared_chef) + subtypesof(/datum/bounty/reagent/shared_chef))
 			if(DYNE_JOB_COMMAND)
 				chosen_type = pick(subtypesof(/datum/bounty/item/interdyne_med) + subtypesof(/datum/bounty/item/interdyne_slime) + subtypesof(/datum/bounty/interdyne_pill/simple_pill) + subtypesof(/datum/bounty/interdyne_reagent/chemical_simple) + subtypesof(/datum/bounty/interdyne_reagent/chemical_complex) + subtypesof(/datum/bounty/item/shared_chef) + subtypesof(/datum/bounty/reagent/shared_chef) + subtypesof(/datum/bounty/item/mining))
-			if(TARKON_JOB_CREW)
-				chosen_type = pick(subtypesof(/datum/bounty/item/tarkon) + subtypesof(/datum/bounty/item/shared_chef) + subtypesof(/datum/bounty/reagent/shared_chef))
-			if(TARKON_JOB_COMMAND)
-				chosen_type = pick(subtypesof(/datum/bounty/item/tarkon) + subtypesof(/datum/bounty/item/shared_chef) + subtypesof(/datum/bounty/reagent/shared_chef))
 			// NOVA EDIT ADDITION END #5738
 		bounty_ref = new chosen_type
 		if(bounty_ref.can_get())

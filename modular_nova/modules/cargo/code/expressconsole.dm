@@ -67,18 +67,3 @@
 	req_access = list(ACCESS_SYNDICATE)
 	cargo_account = ACCOUNT_DS2
 	console_flag = CARGO_CONSOLE_DS2
-
-// Tarkon Industries console
-/obj/item/circuitboard/computer/cargo/express/ghost/tarkon
-	name = "Tarkon Express Supply Console"
-	build_path = /obj/machinery/computer/cargo/express/ghost/tarkon
-	greyscale_colors = CIRCUIT_COLOR_ENGINEERING
-
-/obj/machinery/computer/cargo/express/ghost/tarkon
-	name = "\improper Tarkon Express Supply Console"
-	desc = "A specialized Tarkon Industries Express Supply Console, synced a deepspace storage satellite, armed with a drop pod railgun for precise and accurate \
-		deliveries over long distances, no matter how remote they are located."
-	circuit = /obj/item/circuitboard/computer/cargo/express/ghost/tarkon
-	req_access = list(ACCESS_TARKON)
-	cargo_account = ACCOUNT_TI
-	console_flag = CARGO_CONSOLE_TARKON

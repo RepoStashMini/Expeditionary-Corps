@@ -242,10 +242,6 @@
 	name = "\improper Interdyne Powerator"
 	build_path = /obj/machinery/powerator/interdyne
 
-/obj/item/circuitboard/machine/powerator/tarkon
-	name = "\improper Tarkon Powerator"
-	build_path = /obj/machinery/powerator/tarkon
-
 // This produces 25 per 2 seconds, no tax, so around 12 per second.
 /obj/machinery/powerator/syndicate
 	name = "\improper Syndicate Powerator"
@@ -265,15 +261,5 @@
 	tax = 10
 	icon_state = "powerator_dyne"
 	circuit = /obj/item/circuitboard/machine/powerator/interdyne
-
-// This produces 40 per 2 seconds, taxed to 28, which gives us 14 per second.
-/obj/machinery/powerator/tarkon
-	name = "\improper Tarkon Powerator"
-	credits_account = ACCOUNT_TI
-	power_cap = 6000 KILO WATTS
-	divide_ratio = 150 KILO WATTS
-	tax = 30
-	icon_state = "powerator_tarkon"
-	circuit = /obj/item/circuitboard/machine/powerator/tarkon
 
 #undef TECHWEB_NODE_POWERATOR

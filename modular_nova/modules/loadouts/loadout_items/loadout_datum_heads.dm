@@ -159,12 +159,6 @@
 	name = "Cap - Frontier Medical"
 	item_path = /obj/item/clothing/head/soft/frontier_colonist/medic
 
-/datum/loadout_item/head/tarkon
-	name = "Tarkon Welder"
-	item_path = /obj/item/clothing/head/utility/welding/hat
-	blacklisted_roles = list(JOB_PRISONER)
-	group = "Jobs"
-
 /datum/loadout_item/head/welder
 	name = "Regular Welder"
 	item_path = /obj/item/clothing/head/utility/welding

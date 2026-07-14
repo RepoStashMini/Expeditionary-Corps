@@ -25,10 +25,6 @@
 	name = "Interdyne Budget Monitor"
 	credits_account = "IP"
 
-/obj/machinery/status_display/department_balance/tarkon
-	name = "Tarkon Budget Monitor"
-	credits_account = "TI"
-
 /obj/machinery/status_display/department_balance/command
 	name = "Command Budget Monitor"
 	credits_account = "CMD"
@@ -59,7 +55,6 @@
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/status_display/department_balance/destwo, 32)
 MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/status_display/department_balance/interdyne, 32)
-MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/status_display/department_balance/tarkon, 32)
 MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/status_display/department_balance/command, 32)
 MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/status_display/department_balance/medical, 32)
 MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/status_display/department_balance/security, 32)

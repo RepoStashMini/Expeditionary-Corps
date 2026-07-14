@@ -266,7 +266,6 @@
 		"Prototype",
 		"Security",
 		"Colonist",
-		"Tarkon",
 		"Asteroid",
 		"Research",
 		"Rescue",

@@ -15,9 +15,3 @@
 #define RADIO_TOKEN_GUILD ":d"
 
 #define FREQ_GUILD 1214
-
-#define RADIO_CHANNEL_TARKON "Tarkon"
-#define RADIO_KEY_TARKON "k"
-#define RADIO_TOKEN_TARKON ":k"
-
-#define FREQ_TARKON 1243

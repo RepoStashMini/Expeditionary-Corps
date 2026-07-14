@@ -2427,23 +2427,6 @@ TREK
 	name = "Military Ribbon (Worn)"
 	icon_file = 'modular_nova/master_files/icons/mob/clothing/accessories.dmi'
 
-// Tarkon Uniform
-
-/datum/greyscale_config/tarkonuniform
-	name = "Tarkon Uniform"
-	icon_file = 'modular_nova/modules/tarkon/icons/obj/clothing/uniform.dmi'
-	json_config = 'modular_nova/modules/GAGS/json_configs/tarkon/tarkonuniform.json'
-
-/datum/greyscale_config/tarkonuniform/worn
-	name = "Tarkon Uniform (Worn)"
-	icon_file = 'modular_nova/modules/tarkon/icons/mob/clothing/uniform.dmi'
-	json_config = 'modular_nova/modules/GAGS/json_configs/tarkon/tarkonuniform_worn.json'
-
-/datum/greyscale_config/tarkonuniform/worn/digi
-	name = "Tarkon Uniform (Worn, Digi)"
-	icon_file = 'modular_nova/modules/tarkon/icons/mob/clothing/uniform_digi.dmi'
-	json_config = 'modular_nova/modules/GAGS/json_configs/tarkon/tarkonuniform_worn.json'
-
 // Solfed Uniform
 
 /datum/greyscale_config/solfedcamo
