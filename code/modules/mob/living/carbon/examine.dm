@@ -300,12 +300,6 @@
 	if(length(gunpointed))
 		for(var/datum/gunpoint/GP in gunpointed)
 			. += "<span class='warning'><b>[GP.source.name] [GP.source.p_are()] holding [t_him] at gunpoint with [GP.aimed_gun.name]!</b></span>\n"
-	if(has_dna(src))
-		for(var/genital_slot in GLOB.possible_genitals)
-			var/obj/item/organ/genital/possible_genital = get_organ_slot(genital_slot)
-			if(possible_genital)
-				if(possible_genital.is_exposed())
-					. += "<span class='notice'>[t_He] [t_has] exposed genitals... <a href='byond://?src=[REF(src)];lookup_info=genitals'>\[Look closer...\]</a></span>"
 					break
 
 	var/flavor_text_link
