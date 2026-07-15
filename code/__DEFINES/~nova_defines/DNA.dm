@@ -123,15 +123,6 @@
 #define FEATURE_SYNTH_HEAD "synth_head"
 #define FEATURE_SYNTH_HAIR "synth_hair"
 
-// Genitals
-#define FEATURE_PENIS "penis"
-#define FEATURE_WOMB "womb"
-#define FEATURE_VAGINA "vagina"
-#define FEATURE_TESTICLES "testicles"
-#define FEATURE_BREASTS "breasts"
-#define FEATURE_ANUS "anus"
-#define FEATURE_BUTT "butt"
-
 
 #define MANDATORY_FEATURE_LIST list(\
 	FEATURE_MUTANT_COLOR = "#FFFFBB",\

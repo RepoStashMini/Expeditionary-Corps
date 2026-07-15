@@ -52,7 +52,6 @@ GLOBAL_LIST_INIT(bioscrambler_organs_blacklist, typecacheof(list (
 	/obj/item/organ/empowered_borer_egg,
 	/obj/item/organ/eyes/robotic,
 	/obj/item/organ/eyes/night_vision/cyber,
-	/obj/item/organ/genital,
 	/obj/item/organ/head_accessory,
 	/obj/item/organ/neck_accessory,
 	// NOVA EDIT ADDITION END
