@@ -84,7 +84,6 @@
 				damage_dealt = actual_hit.get_damage() - delta // See above
 			else
 				damage_dealt = -1 * adjust_fire_loss(damage_amount, forced = forced)
-			INVOKE_ASYNC(src, TYPE_PROC_REF(/mob/living, adjust_pain), damage_amount) // NOVA EDIT ADDITION - ERP Pain
 		if(TOX)
 			damage_dealt = -1 * adjust_tox_loss(damage_amount, forced = forced)
 		if(OXY)

@@ -74,18 +74,7 @@
 
 	// OOC notes go first
 	if(preferences)
-		if(user.client?.prefs?.read_preference(/datum/preference/toggle/master_erp_preferences))
-			var/e_prefs = preferences.read_preference(/datum/preference/choiced/erp_status)
-			var/e_prefs_hypno = preferences.read_preference(/datum/preference/choiced/erp_status_hypno)
-			var/e_prefs_v = preferences.read_preference(/datum/preference/choiced/erp_status_v)
-			var/e_prefs_nc = preferences.read_preference(/datum/preference/choiced/erp_status_nc)
-			var/e_prefs_mechanical = preferences.read_preference(/datum/preference/choiced/erp_status_mechanics)
-			ooc_notes_nsfw += "ERP: [e_prefs]\n"
-			ooc_notes_nsfw += "Hypnosis: [e_prefs_hypno]\n"
-			ooc_notes_nsfw += "Vore: [e_prefs_v]\n"
-			ooc_notes_nsfw += "Non-Con: [e_prefs_nc]\n"
-			ooc_notes_nsfw += "ERP Mechanics: [e_prefs_mechanical]\n"
-			ooc_notes_nsfw += "\n"
+
 
 /*		if(!CONFIG_GET(flag/disable_antag_opt_in_preferences))
 			var/antag_prefs = holder.mind?.ideal_antag_opt_in_level
