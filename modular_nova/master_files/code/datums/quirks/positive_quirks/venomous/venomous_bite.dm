@@ -138,15 +138,15 @@
 	return TRUE
 
 /datum/action/cooldown/mob_cooldown/venomous_bite/proc/add_reagents(datum/reagents/target, harvesting = FALSE)
-	if (ishuman(owner))
-		var/mob/living/carbon/human/human_holder = owner
-		temp = human_holder.coretemperature
-	var/datum/reagent/local_typepath = reagent_typepath
-	if (harvesting)
-		var/list/spec = /datum/preference/choiced/venomous_bite_venom::venomous_bite_choice_specs[local_typepath]
-		if (!spec[3])
-
-	return TRUE
+//	if (ishuman(owner))
+//		var/mob/living/carbon/human/human_holder = owner
+//		temp = human_holder.coretemperature
+//	var/datum/reagent/local_typepath = reagent_typepath
+//	if (harvesting)
+//		var/list/spec = /datum/preference/choiced/venomous_bite_venom::venomous_bite_choice_specs[local_typepath]
+//		if (!spec[3])
+//
+//	return TRUE
 
 #undef VENOMOUS_BITE_DAMAGE
 #undef VENOMOUS_BITE_WOUND_BONUS

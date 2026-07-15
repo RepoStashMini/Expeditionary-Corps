@@ -190,12 +190,11 @@
 			ghostless += dullahan.owner
 
 		for(var/mob/receiver in ghostless)
-			if((running_emote_type & EMOTE_LEWD) && !pref_check_emote(receiver, preference = /datum/emote/living/lewd::pref_to_check))
-				continue
 			receiver.show_message(subtler_message, alt_msg = subtler_message)
 			var/datum/preferences/prefs = receiver.client?.prefs
 			if(prefs && prefs.read_preference(/datum/preference/toggle/subtler_sound))
 				receiver.playsound_local(get_turf(receiver), 'sound/effects/achievement/glockenspiel_ping.ogg', 50)
+
 
 	return TRUE
 
