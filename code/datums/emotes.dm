@@ -221,8 +221,6 @@
 	if(hologram)
 		if(is_important)
 			for(var/mob/living/viewer in viewers(world.view, hologram))
-				if((emote_type & EMOTE_LEWD) && !pref_check_emote(viewer))
-					continue
 				to_chat(viewer, msg)
 		else if(is_visual && is_audible)
 			hologram.audible_message(
