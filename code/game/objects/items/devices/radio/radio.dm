@@ -381,7 +381,7 @@
 		// NOVA EDIT ADDITION START - We play our radio sound for all mobs nearby to hear instead of just sending it to the person talking
 		if(radio_noise && COOLDOWN_FINISHED(src, audio_cooldown))
 			COOLDOWN_START(src, audio_cooldown, 0.5 SECONDS)
-			playsound_if_pref(src, radio_talk_sound, radio_sound_volume, radio_sound_has_vary, radio_sound_range, SOUND_FALLOFF_EXPONENT, frequency = get_rand_frequency_low_range(), pref_to_check = /datum/preference/numeric/volume/sound_radio_noise)
+			playsound(src, radio_talk_sound, radio_sound_volume, radio_sound_has_vary, radio_sound_range, SOUND_FALLOFF_EXPONENT, frequency = get_rand_frequency_low_range())
 		// NOVA EDIT ADDITION END
 
 	// All radios make an attempt to use the subspace system first

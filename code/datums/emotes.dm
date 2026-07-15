@@ -135,8 +135,6 @@
 			frequency = rand(MIN_EMOTE_PITCH, MAX_EMOTE_PITCH) * (1 + sqrt(abs(user.pitch)) * sign(user.pitch) * EMOTE_TTS_PITCH_MULTIPLIER)
 		else if(vary)
 			frequency = rand(MIN_EMOTE_PITCH, MAX_EMOTE_PITCH)
-		if(running_emote_type & EMOTE_LEWD)
-			playsound_if_pref(source = user, soundin = tmp_sound, vol = sound_volume, vary = FALSE, frequency = frequency, pref_to_check = /datum/preference/toggle/erp/sounds)
 		else if(use_sound_tokens && sound_wall_ignore)
 			playsoundtoken(source = user, soundin = tmp_sound, range = SOUND_RANGE, volume = 50)
 		else
@@ -160,10 +158,6 @@
 					continue
 				if(is_visual && viewer.is_blind())
 					continue
-				// NOVA EDIT ADDITION START - Pref checked emotes
-				if((running_emote_type & EMOTE_LEWD) && !pref_check_emote(viewer))
-					continue
-				// NOVA EDIT ADDITION END
 			if(user.runechat_prefs_check(viewer, EMOTE_MESSAGE))
 				viewer.create_chat_message(
 					speaker = user,
@@ -202,7 +196,6 @@
 			self_message = msg,
 			audible_message_flags = EMOTE_MESSAGE|ALWAYS_SHOW_SELF_MESSAGE|additional_message_flags,
 			separation = space, // NOVA EDIT ADDITION
-			pref_to_check = pref_to_check, // NOVA EDIT ADDITION
 		)
 	// Emote is entirely audible, no visible component
 	else if(is_audible)
@@ -211,7 +204,6 @@
 			self_message = msg,
 			audible_message_flags = EMOTE_MESSAGE|additional_message_flags,
 			separation = space, // NOVA EDIT ADDITION
-			pref_to_check = pref_to_check, // NOVA EDIT ADDITION
 		)
 	// Emote is entirely visible, no audible component
 	else if(is_visual)
@@ -220,7 +212,6 @@
 			self_message = msg,
 			visible_message_flags = EMOTE_MESSAGE|ALWAYS_SHOW_SELF_MESSAGE|additional_message_flags,
 			separation = space, // NOVA EDIT ADDITION
-			pref_to_check = pref_to_check, // NOVA EDIT ADDITION
 		)
 	else
 		CRASH("Emote [type] has no valid emote type set!")
@@ -240,7 +231,6 @@
 				self_message = msg,
 				audible_message_flags = EMOTE_MESSAGE|ALWAYS_SHOW_SELF_MESSAGE,
 				separation = space,
-				pref_to_check = pref_to_check,
 			)
 		else if(is_audible)
 			hologram.audible_message(
@@ -248,7 +238,6 @@
 				self_message = msg,
 				audible_message_flags = EMOTE_MESSAGE,
 				separation = space,
-				pref_to_check = pref_to_check,
 			)
 		else if(is_visual)
 			hologram.visible_message(
@@ -256,7 +245,6 @@
 				self_message = msg,
 				visible_message_flags = EMOTE_MESSAGE|ALWAYS_SHOW_SELF_MESSAGE,
 				separation = space,
-				pref_to_check = pref_to_check,
 			)
 	// NOVA EDIT ADDITION END
 	if(!isnull(user.client))
