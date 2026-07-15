@@ -1,6 +1,7 @@
 // Defines for the vehicle component
 
 /// For use in ride_check_flags. Prevents the piggyback slowdown, causes the riding offsets to be applied.
+#define RIDING_TAUR (1<<10) // high, to avoid flag conflict with tg)
 
 // Vehicle offset defines
 

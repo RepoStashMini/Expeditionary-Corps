@@ -26,11 +26,6 @@
 #define RADIO_TOKEN_SCIENCE ":n"
 #define RADIO_COLOR_SCIENCE "#c68cfa"
 
-#define RADIO_CHANNEL_EXP "Expeditionary"
-#define RADIO_KEY_EXP "x"
-#define RADIO_TOKEN_EXP ":x"
-#define RADIO_COLOR_EXP "#9924cf"
-
 #define RADIO_CHANNEL_MEDICAL "Medical"
 #define RADIO_KEY_MEDICAL "m"
 #define RADIO_TOKEN_MEDICAL ":m"

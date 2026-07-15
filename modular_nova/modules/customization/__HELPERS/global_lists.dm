@@ -110,6 +110,10 @@
 	for(var/datum/augment_item/aug_path as anything in valid_subtypesof(/datum/augment_item))
 		GLOB.augment_items[aug_path] = new aug_path()
 
+/// If the "Remove ERP Interaction" config is disabled, remove ERP things from various lists
+/proc/remove_erp_things()
+	if(!CONFIG_GET(flag/disable_erp_preferences))
+		return
 	// Chemical reactions aren't handled here because they're loaded in the reagents SS
 	// See Initialize() on SSReagents
 

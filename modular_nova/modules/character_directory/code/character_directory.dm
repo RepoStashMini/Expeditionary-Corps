@@ -194,6 +194,10 @@ GLOBAL_LIST_EMPTY(name_to_appearance)
 		data["personalVisibility"] = READ_PREFS(user, toggle/show_in_directory)
 		data["personalAttraction"] = READ_PREFS(user, choiced/attraction)
 		data["personalGender"] = READ_PREFS(user, choiced/display_gender)
+		data["personalErpTag"] = READ_PREFS(user, choiced/erp_status)
+		data["personalVoreTag"] = READ_PREFS(user, choiced/erp_status_v)
+		data["personalNonconTag"] = READ_PREFS(user, choiced/erp_status_nc)
+		data["personalHypnoTag"] = READ_PREFS(user, choiced/erp_status_hypno)
 		data["prefsOnly"] = TRUE
 
 	data["assignedView"] = CHAR_DIRECTORY_ASSIGNED_VIEW(user.ckey)
@@ -214,9 +218,15 @@ GLOBAL_LIST_EMPTY(name_to_appearance)
 	var/name
 	var/species
 	var/ooc_notes
+	var/ooc_notes_nsfw
 	var/flavor_text
+	var/flavor_text_nsfw
 	var/attraction
 	var/gender
+	var/erp
+	var/vore
+	var/noncon
+	var/hypno
 	var/nova_star_status
 	var/character_ad
 	var/headshot
@@ -244,6 +254,7 @@ GLOBAL_LIST_EMPTY(name_to_appearance)
 			if(species == "Unset")
 				species = "[human.dna.species.name]"
 			flavor_text = human.dna.features[EXAMINE_DNA_FLAVOR_TEXT] || ""
+			flavor_text_nsfw = human.dna.features[EXAMINE_DNA_FLAVOR_TEXT_NSFW] || ""
 			headshot = human.dna.features[EXAMINE_DNA_HEADSHOT] || ""
 		else if(issilicon(mob))
 			var/mob/living/silicon/silicon = mob
@@ -251,6 +262,7 @@ GLOBAL_LIST_EMPTY(name_to_appearance)
 			species = READ_PREFS(silicon, choiced/brain_type)
 			//Load silicon flavor text in place of normal flavor text
 			flavor_text = READ_PREFS(silicon, text/silicon_flavor_text) || ""
+			flavor_text_nsfw = READ_PREFS(silicon, text/silicon_flavor_text_nsfw) || ""
 			headshot = READ_PREFS(silicon, text/headshot/silicon) || ""
 		// Don't show if they are not a human or a silicon
 		else
@@ -261,8 +273,13 @@ GLOBAL_LIST_EMPTY(name_to_appearance)
 		gender = READ_PREFS(mob, choiced/display_gender) || "Unset"
 		if(gender == "Unset")
 			gender = capitalize(mob.gender)
+		erp = READ_PREFS(mob, choiced/erp_status) || "Ask"
+		vore = READ_PREFS(mob, choiced/erp_status_v) || "Ask"
+		noncon = READ_PREFS(mob, choiced/erp_status_nc) || "Ask"
+		hypno = READ_PREFS(mob, choiced/erp_status_hypno) || "Ask"
 		character_ad = READ_PREFS(mob, text/character_ad) || ""
 		ooc_notes = READ_PREFS(mob, text/ooc_notes) || ""
+		ooc_notes_nsfw = READ_PREFS(mob, text/ooc_notes_nsfw) || ""
 		nova_star_status = mob.client && SSplayer_ranks.is_nova_star(mob.client, admin_bypass = FALSE)
 		// And finally, we want to get the mob's name, taking into account disguised names.
 		name = mob.real_name ? mob.name : mob.real_name
@@ -272,11 +289,17 @@ GLOBAL_LIST_EMPTY(name_to_appearance)
 			"appearance_name" = mob.real_name,
 			"species" = species,
 			"ooc_notes" = ooc_notes,
+			"ooc_notes_nsfw" = ooc_notes_nsfw,
 			"attraction" = attraction,
 			"gender" = gender,
+			"erp" = erp,
+			"vore" = vore,
+			"noncon" = noncon,
+			"hypno" = hypno,
 			"nova_star_status" = nova_star_status,
 			"character_ad" = character_ad,
 			"flavor_text" = flavor_text,
+			"flavor_text_nsfw" = flavor_text_nsfw,
 			"headshot" = headshot,
 			"ref" = ref
 		)))

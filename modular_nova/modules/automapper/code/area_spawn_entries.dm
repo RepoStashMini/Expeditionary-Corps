@@ -31,6 +31,16 @@
 	desired_atom = /obj/machinery/ammo_workbench
 	mode = AREA_SPAWN_MODE_HUG_WALL
 
+/datum/area_spawn/lustwish_public
+	target_areas = list(/area/station/commons/locker, /area/station/commons/dorms/laundry, /area/station/commons/dorms)
+	desired_atom = /obj/machinery/vending/dorms
+	mode = AREA_SPAWN_MODE_HUG_WALL
+
+/datum/area_spawn/lustwish_prison
+	target_areas = list(/area/station/security/prison, /area/station/security/prison/shower)
+	desired_atom = /obj/machinery/vending/dorms
+	mode = AREA_SPAWN_MODE_HUG_WALL
+
 /datum/area_spawn/gbp_machine
 	target_areas = list(/area/station/cargo/lobby, /area/station/cargo/boutique, /area/station/construction/storage_wing) // lmao imagine map standardization
 	desired_atom = /obj/machinery/gbp_redemption
@@ -57,3 +67,57 @@
 	target_areas = list(/area/station/security/prison)
 	desired_atom = /obj/machinery/cryopod/prison
 	mode = AREA_SPAWN_MODE_MOUNT_WALL
+
+// Job spawners
+/datum/area_spawn/barber_landmark
+	target_areas = list(/area/station/service/salon, /area/station/hallway/secondary/service)
+	desired_atom = /obj/effect/landmark/start/barber
+
+/datum/area_spawn/blueshield_landmark
+	target_areas = list(/area/station/command/heads_quarters/captain, /area/station/command/bridge)
+	desired_atom = /obj/effect/landmark/start/blueshield
+
+/datum/area_spawn/bouncer_landmark
+	desired_atom = /obj/effect/landmark/start/bouncer
+	target_areas = list(/area/station/service/bar, /area/station/service/cafeteria, /area/station/service/kitchen/diner)
+
+/datum/area_spawn/engineering_guard_landmark
+	desired_atom = /obj/effect/landmark/start/engineering_guard
+	target_areas = list(/area/station/security/checkpoint/engineering, /area/station/engineering/break_room, /area/station/engineering/lobby)
+
+/datum/area_spawn/science_guard_landmark
+	desired_atom = /obj/effect/landmark/start/science_guard
+	target_areas = list(/area/station/security/checkpoint/science, /area/station/science/lobby, /area/station/science/lab)
+
+/datum/area_spawn/orderly_landmark
+	desired_atom = /obj/effect/landmark/start/orderly
+	target_areas = list(/area/station/security/checkpoint/medical, /area/station/medical/medbay/lobby)
+
+/datum/area_spawn/customs_agent_landmark
+	desired_atom = /obj/effect/landmark/start/customs_agent
+	target_areas = list(/area/station/security/checkpoint/supply, /area/station/cargo/storage)
+
+/datum/area_spawn/corrections_officer_landmark
+	desired_atom = /obj/effect/landmark/start/corrections_officer
+	target_areas = list(/area/station/security/brig, /area/station/security/prison/)
+
+/datum/area_spawn/virologist_landmark
+	target_areas = list(/area/station/medical/virology, /area/station/medical/virology/isolation)
+	desired_atom = /obj/effect/landmark/start/virologist
+
+/datum/area_spawn/telecomms_specialist_landmark
+	target_areas = list(
+		/area/station/tcommsat/computer,
+		/area/station/engineering/lobby,
+		/area/station/engineering/break_room,
+	)
+	desired_atom = /obj/effect/landmark/start/telecomms_specialist
+
+/datum/area_spawn/bridge_officer_landmark
+	target_areas = list(/area/station/command/bridge)
+	desired_atom = /obj/effect/landmark/start/bridge_officer
+
+/datum/area_spawn/cargo_shelves_warehouse
+	target_areas = list(/area/station/cargo/warehouse)
+	desired_atom = /obj/item/rack_parts/cargo_shelf
+	amount_to_spawn = 3

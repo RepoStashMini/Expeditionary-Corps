@@ -699,7 +699,7 @@
 	if(dna?.species)
 		add_atom_colour(COLOR_BLACK, TEMPORARY_COLOUR_PRIORITY)
 		var/mutable_appearance/shock_animation_dna = mutable_appearance(icon, "electrocuted_base", appearance_flags = RESET_COLOR|KEEP_APART)
-		apply_height_filters(shock_animation_dna)
+		apply_height(shock_animation_dna, ENTIRE_BODY)
 		zap_appearance = shock_animation_dna
 
 	// Otherwise do a generic animation
@@ -852,6 +852,10 @@
 		var/list/options = list("Clear" = "Clear")
 		for(var/type in sort_list(valid_subtypesof(/datum/quirk), GLOBAL_PROC_REF(cmp_typepaths_asc)))
 			var/datum/quirk/quirk_type = type
+			// NOVA EDIT ADDITION START
+			if(initial(quirk_type.erp_quirk) && CONFIG_GET(flag/disable_erp_preferences))
+				continue
+			// NOVA EDIT ADDITION END
 			var/qname = initial(quirk_type.name)
 			options[has_quirk(quirk_type) ? "[qname] (Remove)" : "[qname] (Add)"] = quirk_type
 

@@ -36,8 +36,6 @@
 #define ACCOUNT_ENG_NAME "Engineering Budget"
 #define ACCOUNT_SCI "SCI"
 #define ACCOUNT_SCI_NAME "Scientific Budget"
-#define ACCOUNT_EXP "EXP"
-#define ACCOUNT_EXP_NAME "Eexpeditionary Budget"
 #define ACCOUNT_MED "MED"
 #define ACCOUNT_MED_NAME "Medical Budget"
 #define ACCOUNT_SRV "SRV"

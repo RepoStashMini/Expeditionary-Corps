@@ -94,6 +94,7 @@
 	max_amount = 25
 	resistance_flags = FLAMMABLE
 	merge_type = /obj/item/stack/package_wrap
+	mats_per_unit = list(/datum/material/iron = SMALL_MATERIAL_AMOUNT * 0.1, /datum/material/glass = SMALL_MATERIAL_AMOUNT * 0.1)
 
 /obj/item/stack/package_wrap/grind_results()
 	return list(/datum/reagent/cellulose = 5)
@@ -105,6 +106,7 @@
 		parcel.base_icon_state = "deliverypackage5"
 		parcel.update_icon()
 		user.forceMove(parcel)
+		parcel.contains_mobs = TRUE // NOVA EDIT - CARGO BORGS
 		parcel.add_fingerprint(user)
 		return OXYLOSS
 	else
@@ -183,6 +185,12 @@
 			closet.forceMove(parcel)
 			parcel.add_fingerprint(user)
 			closet.add_fingerprint(user)
+			// NOVA EDIT START - CARGO BORGS
+			for(var/item in closet.get_all_contents())
+				if(istype(item, /mob))
+					parcel.contains_mobs = TRUE
+					break
+			// NOVA EDIT END
 		else
 			balloon_alert(user, "not enough paper!")
 			return ITEM_INTERACT_BLOCKING

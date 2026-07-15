@@ -64,6 +64,9 @@
 /datum/supply_pack/companies/armor/sol_fed/sf_soft_vest
 	contains = list(/obj/item/clothing/suit/armor/sf_peacekeeper)
 
+/datum/supply_pack/companies/armor/sol_fed/flak_jacket
+	contains = list(/obj/item/clothing/suit/armor/vest/sol)
+
 /datum/supply_pack/companies/armor/sol_fed/slim_vest
 	contains = list(/obj/item/clothing/suit/armor/vest)
 
@@ -96,6 +99,12 @@
 /datum/supply_pack/companies/armor/sol_fed/clothing
 	cost = CARGO_CRATE_VALUE * 0.25
 
+/datum/supply_pack/companies/armor/sol_fed/clothing/peacekeeper
+	contains = list(/obj/item/clothing/under/sol_peacekeeper)
+
+/datum/supply_pack/companies/armor/sol_fed/clothing/emt
+	contains = list(/obj/item/clothing/under/sol_emt)
+
 // HC surplus
 
 /datum/supply_pack/companies/armor/hc_surplus
@@ -113,6 +122,36 @@
 
 /datum/supply_pack/companies/armor/hc_surplus/clothing/vest
 	contains = list(/obj/item/clothing/suit/armor/vest/cin_surplus_vest)
+
+/datum/supply_pack/companies/armor/hc_surplus/clothing/police_jacket
+	contains = list(/obj/item/clothing/suit/armor/vest/hc_police_jacket)
+
+/datum/supply_pack/companies/armor/hc_surplus/clothing/police_cap
+	contains = list(/obj/item/clothing/head/hats/colonial/hc_police)
+
+/datum/supply_pack/companies/armor/hc_surplus/clothing/police_baseball_cap
+	contains = list(/obj/item/clothing/head/soft/hc_police)
+
+/datum/supply_pack/companies/armor/hc_surplus/clothing/police_mask
+	contains = list(/obj/item/clothing/mask/gas/hc_police)
+
+/datum/supply_pack/companies/armor/hc_surplus/clothing/police_vest
+	contains = list(/obj/item/clothing/head/helmet/hc_police)
+
+/datum/supply_pack/companies/armor/hc_surplus/clothing/police_helmet
+	contains = list(/obj/item/clothing/suit/armor/vest/hc_police)
+
+/datum/supply_pack/companies/armor/hc_surplus/clothing/police_uniform
+	contains = list(/obj/item/clothing/under/colonial/hc_police)
+
+/datum/supply_pack/companies/armor/hc_surplus/clothing/police_skirt
+	contains = list(/obj/item/clothing/under/colonial/hc_police/skirt)
+
+/datum/supply_pack/companies/armor/hc_surplus/clothing/police_cloak
+	contains = list(/obj/item/clothing/neck/cloak/colonial/hc_police)
+
+/datum/supply_pack/companies/armor/hc_surplus/clothing/police_suit_jacket
+	contains = list(/obj/item/clothing/suit/armor/vest/hc_police_jacket/suit)
 
 // Donk
 /datum/supply_pack/companies/armor/donk

@@ -38,7 +38,7 @@
 
 /obj/item/storage/lunchbox/bunny/carrot/PopulateContents()
 	for(var/i in 1 to 7)
-		new /obj/item/food/grown/carrot(src)
+		new /obj/item/food/grown/carrotlike/carrot(src)
 
 /datum/voucher_set/mining_suit
 	blackbox_key = "suit_voucher_redeemed"
@@ -52,6 +52,7 @@
 		/obj/item/clothing/head/playbunnyears/miner,
 		/obj/item/clothing/neck/tie/bunnytie/miner,
 		/obj/item/clothing/suit/jacket/tailcoat/miner,
+		/obj/item/clothing/under/rank/cargo/miner/bunnysuit,
 		/obj/item/clothing/shoes/workboots/mining/heeled,
 		/obj/item/clothing/mask/gas/explorer, //No bunny mask, this'll have to do.
 	)

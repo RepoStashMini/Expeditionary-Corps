@@ -458,32 +458,6 @@ GLOBAL_LIST_INIT(skin_tone_names, list(
 	var/mob/living/spawned_mob = new chosen(spawn_location)
 	return spawned_mob
 
-/proc/passtable_on(target, source)
-	var/mob/living/L = target
-	if (!HAS_TRAIT(L, TRAIT_PASSTABLE) && L.pass_flags & PASSTABLE)
-		ADD_TRAIT(L, TRAIT_PASSTABLE, INNATE_TRAIT)
-	ADD_TRAIT(L, TRAIT_PASSTABLE, source)
-	L.pass_flags |= PASSTABLE
-
-/proc/passtable_off(target, source)
-	var/mob/living/L = target
-	REMOVE_TRAIT(L, TRAIT_PASSTABLE, source)
-	if(!HAS_TRAIT(L, TRAIT_PASSTABLE))
-		L.pass_flags &= ~PASSTABLE
-
-/proc/passwindow_on(target, source)
-	var/mob/living/target_mob = target
-	if (!HAS_TRAIT(target_mob, TRAIT_PASSWINDOW) && target_mob.pass_flags & PASSWINDOW)
-		ADD_TRAIT(target_mob, TRAIT_PASSWINDOW, INNATE_TRAIT)
-	ADD_TRAIT(target_mob, TRAIT_PASSWINDOW, source)
-	target_mob.pass_flags |= PASSWINDOW
-
-/proc/passwindow_off(target, source)
-	var/mob/living/target_mob = target
-	REMOVE_TRAIT(target_mob, TRAIT_PASSWINDOW, source)
-	if(!HAS_TRAIT(target_mob, TRAIT_PASSWINDOW))
-		target_mob.pass_flags &= ~PASSWINDOW
-
 /proc/dance_rotate(atom/movable/AM, datum/callback/callperrotate, set_original_dir=FALSE)
 	set waitfor = FALSE
 	var/originaldir = AM.dir
@@ -610,6 +584,10 @@ GLOBAL_LIST_INIT(skin_tone_names, list(
 		// We've already added slimes.
 		if(isslime(mob_to_sort))
 			continue
+	// NOVA EDIT START - SOULCATCHERS
+	for(var/mob/living/soulcatcher_soul/mob_to_sort in sortmob)
+		moblist += mob_to_sort
+	// NOVA EDIT END - SOULCATCHERS
 	return moblist
 ///returns a mob type controlled by a specified ckey
 /proc/get_mob_by_ckey(key)

@@ -95,6 +95,37 @@
 
 /// Brings a savefile up to date with modular preferences. Called if savefile_needs_update_nova() returned a value higher than 0
 /datum/preferences/proc/update_character_nova(current_version, list/save_data)
+	if(current_version < VERSION_GENITAL_TOGGLES)
+		// removed genital toggles, with the new choiced prefs paths as assoc
+		var/static/list/old_toggles
+		if(!old_toggles)
+			old_toggles = list(
+				"penis_toggle" = /datum/preference/choiced/genital/penis,
+				"testicles_toggle" = /datum/preference/choiced/genital/testicles,
+				"vagina_toggle" = /datum/preference/choiced/genital/vagina,
+				"womb_toggle" = /datum/preference/choiced/genital/womb,
+				"breasts_toggle" = /datum/preference/choiced/genital/breasts,
+				"anus_toggle" = /datum/preference/choiced/genital/anus,
+				"butt_toggle" = /datum/preference/choiced/genital/butt,
+			)
+
+		for(var/toggle in old_toggles)
+			var/has_genital = save_data[toggle]
+			if(!has_genital) // The toggle was off, so we make sure they have it set to the default "None" in the dropdown pref.
+				var/datum/preference/genital = GLOB.preference_entries[old_toggles[toggle]]
+				write_preference(genital, genital.create_default_value())
+
+		if(save_data["skin_tone_toggle"])
+			for(var/pref_type in subtypesof(/datum/preference/toggle/genital_skin_tone))
+				write_preference(GLOB.preference_entries[pref_type], TRUE)
+
+	if(current_version < VERSION_BREAST_SIZE_CHANGE)
+		var/list/old_breast_prefs
+		old_breast_prefs = save_data["breasts_size"]
+		if(isnum(old_breast_prefs)) // Can't be too careful
+			// You weren't meant to be able to pick sizes over this anyways.
+			write_preference(GLOB.preference_entries[/datum/preference/choiced/breasts_size], GLOB.breast_size_translation["[min(old_breast_prefs, 10)]"])
+
 	if(current_version < VERSION_SYNTH_REFACTOR)
 		var/old_species = save_data["species"]
 		if(istext(old_species) && (old_species in list("synthhuman", "synthliz", "synthmammal", "ipc")))
@@ -279,6 +310,14 @@
 		var/current_wings = save_data["feature_wings"]
 		if(current_wings == "Moth (Featherful)")
 			write_preference(GLOB.preference_entries[/datum/preference/choiced/mutant_choice/wings], "Moth (Feathery)")
+
+	if(current_version < VERSION_DONK_MIGRATION)
+		var/current_donk = save_data["feature_penis"]
+		if(current_donk != "None")
+			write_preference(GLOB.preference_entries[/datum/preference/choiced/genital/penis], current_donk + " (Alt)")
+		var/current_pocket = save_data["feature_testicles"]
+		if(current_pocket == "Pair")
+			write_preference(GLOB.preference_entries[/datum/preference/choiced/genital/testicles], "Pair (Alt)")
 
 /datum/preferences/proc/check_migration()
 	if(!tgui_prefs_migration)
@@ -533,6 +572,10 @@
 			/obj/item/bodypart/arm/right/mutant/shadekin = /datum/augment_item/limb/r_arm/species/shadekin,
 			/obj/item/bodypart/leg/left/mutant/shadekin = /datum/augment_item/limb/l_leg/species/shadekin,
 			/obj/item/bodypart/leg/right/mutant/shadekin = /datum/augment_item/limb/r_leg/species/shadekin,
+			/obj/item/bodypart/leg/left/mutant/harpy = /datum/augment_item/limb/l_leg/species/mutant/harpy,
+			/obj/item/bodypart/leg/right/mutant/harpy = /datum/augment_item/limb/r_leg/species/mutant/harpy,
+			/obj/item/bodypart/leg/left/mutant/harpy_skin = /datum/augment_item/limb/l_leg/species/harpy,
+			/obj/item/bodypart/leg/right/mutant/harpy_skin = /datum/augment_item/limb/r_leg/species/harpy,
 			/obj/item/bodypart/leg/left/robot/surplus/digi = /datum/augment_item/limb/l_leg/digi_prosthetic,
 			/obj/item/bodypart/leg/left/robot/digi = /datum/augment_item/limb/l_leg/digi_cybernetic,
 			/obj/item/bodypart/leg/right/robot/surplus/digi = /datum/augment_item/limb/r_leg/digi_prosthetic,

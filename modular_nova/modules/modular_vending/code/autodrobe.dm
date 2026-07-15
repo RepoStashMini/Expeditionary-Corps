@@ -24,7 +24,13 @@
 				/obj/item/clothing/suit/jacket/tailcoat/magician = 6,
 				/obj/item/clothing/suit/jacket/tailcoat/plasmaman = 6,
 				/obj/item/clothing/suit/jacket/tailcoat/usa = 6,
+				/obj/item/clothing/under/costume/playbunny/british = 6,
+				/obj/item/clothing/under/costume/playbunny/communist = 6,
+				/obj/item/clothing/under/costume/playbunny/greyscale = 6,
+				/obj/item/clothing/under/costume/playbunny/magician = 6,
+				/obj/item/clothing/under/costume/playbunny/usa = 6,
 				/obj/item/clothing/head/helmet/glassdome = 6,
+				/obj/item/clothing/under/camo/gags = 6,
 			),
 		),
 		list(
@@ -46,6 +52,8 @@
 				/obj/item/clothing/shoes/clown_shoes/heeled = 3,
 				/obj/item/clothing/suit/jacket/tailcoat/clown = 3,
 				/obj/item/clothing/suit/jacket/tailcoat/mime = 3,
+				/obj/item/clothing/under/rank/civilian/clown/clown_bunnysuit = 3,
+				/obj/item/clothing/under/rank/civilian/mime_bunnysuit = 3,
 			),
 		),
 		list(
@@ -123,6 +131,7 @@
 		/obj/item/clothing/head/playbunnyears/syndicate/fake = 3,
 		/obj/item/clothing/neck/tie/bunnytie/syndicate = 3, //Armored but it's only Fire and Acid, not a balance concern
 		/obj/item/clothing/suit/jacket/tailcoat/syndicate/fake = 3,
+		/obj/item/clothing/under/syndicate/syndibunny/fake = 3,
 	)
 
 	premium_nova = list(

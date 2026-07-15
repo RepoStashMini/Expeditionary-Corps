@@ -1,6 +1,19 @@
 // MODULAR SECURITY WEAR (NOT OVERRIDES, LOOK IN 'modular_nova\modules\sec_haul\code\security_clothing\sec_clothing_overrides.dm')
 
 // DETECTIVE
+/obj/item/clothing/under/rank/security/detective/cowboy
+	name = "blonde cowboy uniform"
+	desc = "A blue shirt and dark jeans, with a pair of spurred cowboy boots to boot."
+	icon = 'modular_nova/master_files/icons/donator/obj/clothing/uniform.dmi'	//Donator item-ish? See the /armorless one below it
+	worn_icon = 'modular_nova/master_files/icons/donator/mob/clothing/uniform.dmi'
+	icon_state = "cowboy_uniform"
+	supports_variations_flags = NONE
+	can_adjust = FALSE
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION
+	bodyshapes_with_variations = NONE
+
+/obj/item/clothing/under/rank/security/detective/cowboy/armorless //Donator variant, just uses the sprite.
+	armor_type = /datum/armor/clothing_under
 
 /obj/item/clothing/suit/cowboyvest
 	name = "blonde cowboy vest"

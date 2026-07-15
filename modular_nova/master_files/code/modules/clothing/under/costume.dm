@@ -37,6 +37,7 @@
 	worn_icon = 'modular_nova/modules/GAGS/icons/suit/suit.dmi'
 	worn_icon_teshari = 'modular_nova/modules/GAGS/icons/suit/suit_teshari.dmi'
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
+	bodyshapes_with_variations = NONE
 	greyscale_colors = "#ffffff"
 	greyscale_config = /datum/greyscale_config/bathrobe
 	greyscale_config_worn = /datum/greyscale_config/bathrobe/worn
@@ -152,7 +153,6 @@
 	greyscale_config_worn = /datum/greyscale_config/cheongsam/worn
 	greyscale_config_worn_digi = /datum/greyscale_config/cheongsam/worn/digi
 	flags_1 = IS_PLAYER_COLORABLE_1
-	gets_cropped_on_taurs = FALSE
 
 /obj/item/clothing/under/costume/nova/cheongsam/customtrim
 	greyscale_colors = "#2b2b2b#ffce5b#353535"
@@ -189,6 +189,7 @@
 	body_parts_covered = CHEST|GROIN|ARMS
 	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
+	bodyshapes_with_variations = NONE
 
 /obj/item/clothing/under/costume/nova/shihakusho
 	name = "shihakusho"
@@ -208,6 +209,7 @@
 	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
 	alternate_worn_layer = UNDER_SUIT_LAYER
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
+	bodyshapes_with_variations = NONE
 	flags_1 = IS_PLAYER_COLORABLE_1
 
 /*
@@ -253,4 +255,19 @@
 
 /obj/item/clothing/under/trek/medsci
 	greyscale_config_worn_digi = /datum/greyscale_config/trek/worn/digi
+	flags_1 = IS_PLAYER_COLORABLE_1
+
+/obj/item/clothing/under/camo/gags
+	name = "camouflage jumpsuit"
+	desc = "The space mall ninja fears the space mall soldier."
+	icon = 'icons/map_icons/clothing/under/_under.dmi'
+	icon_state = "/obj/item/clothing/under/solfed/marines"
+	post_init_icon_state = "solfed_camo"
+	worn_icon_state = "solfed_camo"
+	worn_icon_digi = "solfed_camo"
+	greyscale_config = /datum/greyscale_config/solfedcamo
+	greyscale_config_worn = /datum/greyscale_config/solfedcamo/worn
+	greyscale_config_worn_digi = /datum/greyscale_config/solfedcamo/worn/digi
+	greyscale_colors = "#4d4d4d#333333#292929"
+	can_adjust = FALSE
 	flags_1 = IS_PLAYER_COLORABLE_1

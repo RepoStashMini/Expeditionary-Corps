@@ -20,8 +20,13 @@
 
 /// Blacklist of parts which should not appear when bioscrambled, largely because they will make you look totally fucked up
 GLOBAL_LIST_INIT(bioscrambler_parts_blacklist, typecacheof(list(
-	/obj/item/bodypart/chest/larva,
-	/obj/item/bodypart/head/larva,
+	/obj/item/bodypart/head/psyker,
+	/obj/item/bodypart/arm/left/skeleton/nonfunctional,
+	/obj/item/bodypart/arm/right/skeleton/nonfunctional,
+	/obj/item/bodypart/chest/skeleton/nonfunctional,
+	/obj/item/bodypart/head/skeleton/nonfunctional,
+	/obj/item/bodypart/leg/left/skeleton/nonfunctional,
+	/obj/item/bodypart/leg/right/skeleton/nonfunctional,
 )))
 
 /// Blacklist of organs which should not appear when bioscrambled.
@@ -47,6 +52,7 @@ GLOBAL_LIST_INIT(bioscrambler_organs_blacklist, typecacheof(list (
 	/obj/item/organ/empowered_borer_egg,
 	/obj/item/organ/eyes/robotic,
 	/obj/item/organ/eyes/night_vision/cyber,
+	/obj/item/organ/genital,
 	/obj/item/organ/head_accessory,
 	/obj/item/organ/neck_accessory,
 	// NOVA EDIT ADDITION END

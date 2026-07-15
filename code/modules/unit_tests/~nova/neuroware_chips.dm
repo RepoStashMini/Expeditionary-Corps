@@ -22,6 +22,10 @@
 		if(isnull(test_chip.list_reagents))
 			continue
 
+		// Skip lewd neuroware chips
+		if(test_chip.is_lewd)
+			continue
+
 		// Setup default synthetic humanoid
 		var/mob/living/carbon/human/species/synth/test_robot = EASY_ALLOCATE()
 		// Installation should succeed on a compatible synthetic humanoid
@@ -44,9 +48,26 @@
 		for(var/reagent_type in test_chip.list_reagents)
 			TEST_ASSERT(!lab_rat.has_reagent(reagent_type), "\"[reagent_type]\" is present when it's expected to be missing after using \"[test_chip.type]\" on default human.")
 
+		// Setup human with NIF implant
+		lab_rat = EASY_ALLOCATE()
+		var/obj/item/organ/cyberimp/brain/nif/standard/nif_implant = EASY_ALLOCATE()
+		nif_implant.Insert(lab_rat, special = TRUE)
+
+		// Installation should succeed on a compatible human with a NIF implant
+		test_chip = allocate(chip_type)
+		install_status = test_chip.try_install(lab_rat, lab_rat)
+		TEST_ASSERT_EQUAL(install_status, TRUE, "\"[test_chip.type]/proc/try_install()\" should return TRUE when used on human with NIF implant.")
+
 		// Ensure the reagents were added
 		for(var/reagent_type in test_chip.list_reagents)
 			TEST_ASSERT(lab_rat.has_reagent(reagent_type), "\"[reagent_type]\" is missing when its presence is expected after using \"[test_chip.type]\" on human with NIF implant.")
+
+		// Setup human with a broken NIF implant
+		lab_rat = EASY_ALLOCATE()
+		nif_implant = EASY_ALLOCATE()
+		nif_implant.Insert(lab_rat, special = TRUE)
+		nif_implant.durability = 0
+		nif_implant.broken = TRUE
 
 		// Installation should fail on a human with a broken NIF implant
 		test_chip = allocate(chip_type)

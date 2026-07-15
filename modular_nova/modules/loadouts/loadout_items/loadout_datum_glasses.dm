@@ -265,43 +265,43 @@
 /datum/loadout_item/glasses/sechud
 	name = "Security HUD"
 	item_path = /obj/item/clothing/glasses/hud/security
-	restricted_roles = list(ALL_JOBS_SEC)
+	restricted_roles = list(ALL_JOBS_DEPTGUARD, ALL_JOBS_SEC)
 	group = "Job-Locked"
 
 /datum/loadout_item/glasses/secpatch
 	name = "Security HUD - Eyepatch"
 	item_path = /obj/item/clothing/glasses/hud/security/sunglasses/eyepatch
-	restricted_roles = list(ALL_JOBS_SEC)
+	restricted_roles = list(ALL_JOBS_DEPTGUARD, ALL_JOBS_SEC)
 	group = "Job-Locked"
 
 /datum/loadout_item/glasses/sechud_glasses
 	name = "Security HUD - Prescription"
 	item_path = /obj/item/clothing/glasses/hud/security/prescription
-	restricted_roles = list(ALL_JOBS_SEC)
+	restricted_roles = list(ALL_JOBS_DEPTGUARD, ALL_JOBS_SEC)
 	group = "Job-Locked"
 
 /datum/loadout_item/glasses/prescription_aviator_security
 	name = "Security HUD - Prescription Sunglasses"
 	item_path = /obj/item/clothing/glasses/hud/ar/aviator/security/prescription
-	restricted_roles = list(ALL_JOBS_SEC)
+	restricted_roles = list(ALL_JOBS_DEPTGUARD, ALL_JOBS_SEC)
 	group = "Job-Locked"
 
 /datum/loadout_item/glasses/aviator_security
 	name = "Security HUD - Sunglasses"
 	item_path = /obj/item/clothing/glasses/hud/ar/aviator/security
-	restricted_roles = list(ALL_JOBS_SEC)
+	restricted_roles = list(ALL_JOBS_DEPTGUARD, ALL_JOBS_SEC)
 	group = "Job-Locked"
 
 /datum/loadout_item/glasses/sechud_sunglasses_blue
 	name = "Security HUD - Sunglasses (Blue)"
 	item_path = /obj/item/clothing/glasses/hud/security/sunglasses/blue
-	restricted_roles = list(ALL_JOBS_SEC)
+	restricted_roles = list(ALL_JOBS_DEPTGUARD, ALL_JOBS_SEC)
 	group = "Job-Locked"
 
 /datum/loadout_item/glasses/retinal_projector_security
 	name = "Security HUD - Retinal Projector"
 	item_path = /obj/item/clothing/glasses/hud/ar/projector/security
-	restricted_roles = list(ALL_JOBS_SEC)
+	restricted_roles = list(ALL_JOBS_DEPTGUARD, ALL_JOBS_SEC)
 	group = "Job-Locked"
 
 /*

@@ -109,6 +109,7 @@ GLOBAL_LIST_INIT(common_loot, list( //common: basic items
 		/obj/item/radio/headset/headset_frontier_colonist = 1, // NOVA EDIT ADDITION
 		/obj/item/clothing/suit/frontier_colonist_flak = 1, // NOVA EDIT ADDITION
 		/obj/item/clothing/head/frontier_colonist_helmet = 1, // NOVA EDIT ADDITION
+		/obj/item/storage/pouch/cin_general = 1, // NOVA EDIT ADDITION
 		) = 1,
 
 	list(//construction and crafting

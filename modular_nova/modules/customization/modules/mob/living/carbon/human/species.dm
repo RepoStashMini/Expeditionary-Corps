@@ -137,8 +137,11 @@ GLOBAL_LIST_EMPTY(customizable_races)
 		mutantpart_list = existing_mutant_bodyparts.Copy()
 
 	var/list/default_bodypart_data = GLOB.default_mutant_bodyparts[name]
+	var/erp_disabled = CONFIG_GET(flag/disable_erp_preferences)
 
 	for(var/key, bodypart_to_add in default_bodypart_data)
+		if(erp_disabled && GLOB.possible_genitals[key])
+			continue
 		// Skip if there's an existing sprite accessory
 		if(LAZYLEN(existing_mutant_bodyparts) && existing_mutant_bodyparts[key])
 			continue
@@ -211,7 +214,6 @@ GLOBAL_LIST_EMPTY(customizable_races)
 
 				// Apply accessory flags & layers
 				replacement.sprite_accessory_flags = mutant_accessory.flags_for_organ
-				replacement.relevant_layers = mutant_accessory.relevent_layers
 
 				if(robot_organs)
 					replacement.organ_flags |= ORGAN_ROBOTIC

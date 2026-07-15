@@ -72,7 +72,6 @@
 #define EXP_TYPE_ENGINEERING "Engineering"
 #define EXP_TYPE_MEDICAL "Medical"
 #define EXP_TYPE_SCIENCE "Science"
-#define EXP_TYPE_EXPEDITIONARY "Expeditionary"
 #define EXP_TYPE_SUPPLY "Supply"
 #define EXP_TYPE_SECURITY "Security"
 #define EXP_TYPE_SILICON "Silicon"

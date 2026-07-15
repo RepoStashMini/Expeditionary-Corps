@@ -88,6 +88,7 @@
 	chat_color = DEFAULT_RUNECHAT_GUN_COLOR
 	chat_color_darkened = process_chat_color(DEFAULT_RUNECHAT_GUN_COLOR, sat_shift = 0.85, lum_shift = 0.85)
 	last_charge = cell.charge
+	tracked_soulcatcher = AddComponent(/datum/component/soulcatcher/modular_laser)
 	create_weapon_mode_stuff()
 	voice = null
 
@@ -96,9 +97,11 @@
 	. += span_notice("You can <b>Alt-Click</b> this gun to access the <b>internal soulcatcher</b>.")
 
 /obj/item/gun/energy/modular_laser_rifle/Destroy()
+	QDEL_NULL(tracked_soulcatcher)
 	return ..()
 
 /obj/item/gun/energy/modular_laser_rifle/click_alt(mob/user)
+	tracked_soulcatcher?.ui_interact(user)
 	return CLICK_ACTION_SUCCESS
 
 /// Handles filling out all of the lists regarding weapon modes and radials around that

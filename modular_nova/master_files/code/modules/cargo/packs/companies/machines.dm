@@ -123,6 +123,20 @@
 	cost = CARGO_CRATE_VALUE * 1.5 // since the circuit board can be exported for 0.75 of a CCV, we need to be careful with the price of this one.
 	auto_name = FALSE
 
+// HC
+
+/datum/supply_pack/companies/machines/hc_surplus
+
+/datum/supply_pack/companies/machines/hc_surplus/food_replicator
+	name = "Food Replicator"
+	desc = "A widespread technology previously used by far colonies on the HC's borders, over time being shifted from the foundation of colonies \
+		to a simple disaster relief solution. It can turn spoiled or inedible plant matter into food, medical supplies, and other general items. \
+		These particular units were displaced during a stock count in an HC warehouse."
+	contains = list(/obj/item/flatpack/food_replicator)
+	cost = CARGO_CRATE_VALUE * 9
+	discountable = SUPPLY_PACK_UNCOMMON_DISCOUNTABLE 
+	auto_name = FALSE
+
 // Vitezstvi
 
 /datum/supply_pack/companies/machines/vitezstvi
@@ -157,4 +171,4 @@
 /datum/supply_pack/companies/machines/donk/vendors
 	contains = list(/obj/item/summon_beacon/vendors)
 	cost = CARGO_CRATE_VALUE * 3
-	discountable = SUPPLY_PACK_UNCOMMON_DISCOUNTABLE
+	discountable = SUPPLY_PACK_UNCOMMON_DISCOUNTABLE 

@@ -135,10 +135,20 @@
 			frequency = rand(MIN_EMOTE_PITCH, MAX_EMOTE_PITCH) * (1 + sqrt(abs(user.pitch)) * sign(user.pitch) * EMOTE_TTS_PITCH_MULTIPLIER)
 		else if(vary)
 			frequency = rand(MIN_EMOTE_PITCH, MAX_EMOTE_PITCH)
+		/* // NOVA EDIT REMOBAL START - Moving this into the 'else' below
 		if(use_sound_tokens && sound_wall_ignore)
 			playsoundtoken(source = user, soundin = tmp_sound, range = SOUND_RANGE, volume = 50)
 		else
 			playsound(source = user,soundin = tmp_sound,vol = 50, vary = FALSE, ignore_walls = sound_wall_ignore, frequency = frequency)
+		*/ // NOVA EDIT REMOVAL END
+		// NOVA EDIT ADDITION START - Lewd emote prefs
+		if(running_emote_type & EMOTE_LEWD)
+			playsound_if_pref(source = user, soundin = tmp_sound, vol = sound_volume, vary = FALSE, frequency = frequency, pref_to_check = /datum/preference/toggle/erp/sounds)
+		else if(use_sound_tokens && sound_wall_ignore)
+			playsoundtoken(source = user, soundin = tmp_sound, range = SOUND_RANGE, volume = 50)
+		else
+			playsound(source = user,soundin = tmp_sound,vol = 50, vary = FALSE, ignore_walls = sound_wall_ignore, frequency = frequency)
+		// NOVA EDIT ADDITION END
 
 
 	var/is_important = running_emote_type & EMOTE_IMPORTANT
@@ -157,6 +167,10 @@
 					continue
 				if(is_visual && viewer.is_blind())
 					continue
+				// NOVA EDIT ADDITION START - Pref checked emotes
+				if((running_emote_type & EMOTE_LEWD) && !pref_check_emote(viewer))
+					continue
+				// NOVA EDIT ADDITION END
 			if(user.runechat_prefs_check(viewer, EMOTE_MESSAGE))
 				viewer.create_chat_message(
 					speaker = user,
@@ -195,6 +209,7 @@
 			self_message = msg,
 			audible_message_flags = EMOTE_MESSAGE|ALWAYS_SHOW_SELF_MESSAGE|additional_message_flags,
 			separation = space, // NOVA EDIT ADDITION
+			pref_to_check = pref_to_check, // NOVA EDIT ADDITION
 		)
 	// Emote is entirely audible, no visible component
 	else if(is_audible)
@@ -203,6 +218,7 @@
 			self_message = msg,
 			audible_message_flags = EMOTE_MESSAGE|additional_message_flags,
 			separation = space, // NOVA EDIT ADDITION
+			pref_to_check = pref_to_check, // NOVA EDIT ADDITION
 		)
 	// Emote is entirely visible, no audible component
 	else if(is_visual)
@@ -211,10 +227,45 @@
 			self_message = msg,
 			visible_message_flags = EMOTE_MESSAGE|ALWAYS_SHOW_SELF_MESSAGE|additional_message_flags,
 			separation = space, // NOVA EDIT ADDITION
+			pref_to_check = pref_to_check, // NOVA EDIT ADDITION
 		)
 	else
 		CRASH("Emote [type] has no valid emote type set!")
 
+	// NOVA EDIT ADDITION START - AI QOL - RELAY EMOTES OVER HOLOPADS
+	var/obj/effect/overlay/holo_pad_hologram/hologram = GLOB.hologram_impersonators[user]
+	if(hologram)
+		if(is_important)
+			for(var/mob/living/viewer in viewers(world.view, hologram))
+				if((emote_type & EMOTE_LEWD) && !pref_check_emote(viewer))
+					continue
+				to_chat(viewer, msg)
+		else if(is_visual && is_audible)
+			hologram.audible_message(
+				message = msg,
+				deaf_message = "<span class='emote'>You see how <b>[user]</b> [msg]</span>",
+				self_message = msg,
+				audible_message_flags = EMOTE_MESSAGE|ALWAYS_SHOW_SELF_MESSAGE,
+				separation = space,
+				pref_to_check = pref_to_check,
+			)
+		else if(is_audible)
+			hologram.audible_message(
+				message = msg,
+				self_message = msg,
+				audible_message_flags = EMOTE_MESSAGE,
+				separation = space,
+				pref_to_check = pref_to_check,
+			)
+		else if(is_visual)
+			hologram.visible_message(
+				message = msg,
+				self_message = msg,
+				visible_message_flags = EMOTE_MESSAGE|ALWAYS_SHOW_SELF_MESSAGE,
+				separation = space,
+				pref_to_check = pref_to_check,
+			)
+	// NOVA EDIT ADDITION END
 	if(!isnull(user.client))
 		var/dchatmsg = "<b>[user]</b>[space][msg]" // NOVA EDIT CHANGE - ORIGINAL: var/dchatmsg = "<b>[user]</b> [msg]"
 		for(var/mob/ghost as anything in GLOB.dead_mob_list - viewers(get_turf(user)))
@@ -222,6 +273,10 @@
 				continue
 			if(!(get_chat_toggles(ghost.client) & CHAT_GHOSTSIGHT))
 				continue
+			// NOVA EDIT ADDITION START - Pref checked emotes
+			if((emote_type & EMOTE_LEWD) && !pref_check_emote(ghost))
+				continue
+			// NOVA EDIT ADDITION END
 			to_chat(ghost, span_emote("[FOLLOW_LINK(ghost, user)] [dchatmsg]"))
 
 	return

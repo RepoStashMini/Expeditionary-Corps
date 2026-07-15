@@ -184,6 +184,11 @@
 			if(!gun.chambered)
 				. = TRUE
 				gun.recharge_newshot() //try to reload a new shot.
+		/// NOVA EDIT START - Cargo borgs
+		else if(istype(module, /obj/item/hand_labeler/cyborg))
+			var/obj/item/hand_labeler/cyborg/labeler = module
+			labeler.labels_left = 30
+		/// NOVA EDIT END
 
 	if(cyborg.toner < cyborg.tonermax)
 		. = TRUE
@@ -255,6 +260,10 @@
 	cyborg.diag_hud_set_aishell()
 	log_silicon("CYBORG: [key_name(cyborg)] has transformed into the [new_model] model.")
 
+	//NOVA EDIT ADDITION BEGIN - ALTBORGS - Old check for 'dogborg' var no longer necessary, refactored into model_features instead.
+	new_model.update_quadborg()
+	new_model.update_tallborg()
+	//NOVA EDIT ADDITION END
 	if(transform)
 		INVOKE_ASYNC(new_model, PROC_REF(do_transform_animation))
 	qdel(src)
@@ -270,14 +279,26 @@
 		for(var/skin in borg_skins)
 			var/list/details = borg_skins[skin]
 			reskin_icons[skin] = image(icon = details[SKIN_ICON] || 'icons/mob/silicon/robots.dmi', icon_state = details[SKIN_ICON_STATE])
+			//NOVA EDIT ADDITION BEGIN - ALTBORGS
+			if (!isnull(details[SKIN_FEATURES]))
+				if (TRAIT_R_WIDE in details[SKIN_FEATURES])
+					var/image/reskin = reskin_icons[skin]
+					reskin.pixel_x -= 16
+			//NOVA EDIT END
 		var/borg_skin = show_radial_menu(cyborg, cyborg, reskin_icons, custom_check = CALLBACK(src, PROC_REF(check_menu), cyborg, old_model), radius = 38, require_near = TRUE)
 		if(!borg_skin)
 			return FALSE
 		var/list/details = borg_skins[borg_skin]
+		//NOVA EDIT START
+		if(cyborg.hasExpanded && (((TRAIT_R_WIDE in details[SKIN_FEATURES]) && (TRAIT_R_WIDE in model_features)) || ((TRAIT_R_TALL in details[SKIN_FEATURES]) && (TRAIT_R_TALL in model_features))))
+			to_chat(cyborg, span_warning("You can't make yourself into a larger frame when you've already used an expander!"))
+			return FALSE
+		//NOVA EDIT END
 		if(!isnull(details[SKIN_ICON_STATE]))
 			cyborg_base_icon = details[SKIN_ICON_STATE]
 		if(!isnull(details[SKIN_ICON]))
 			cyborg.icon = details[SKIN_ICON]
+			cyborg_icon_override = details[SKIN_ICON] // NOVA EDIT ADDITION
 		if(!isnull(details[SKIN_PIXEL_X]))
 			cyborg.base_pixel_x = details[SKIN_PIXEL_X]
 		if(!isnull(details[SKIN_PIXEL_Y]))
@@ -288,6 +309,10 @@
 			hat_offset = details[SKIN_HAT_OFFSET]
 		if(!isnull(details[SKIN_TRAITS]))
 			model_traits += details[SKIN_TRAITS]
+		//NOVA EDIT ADDITION
+		if(!isnull(details[SKIN_FEATURES]))
+			model_features += details[SKIN_FEATURES]
+		//NOVA EDIT END
 	for(var/i in old_model.added_modules)
 		added_modules += i
 		old_model.added_modules -= i
@@ -396,6 +421,8 @@
 		/obj/item/weldingtool/largetank/cyborg,
 		/obj/item/borg/cyborg_omnitool/engineering,
 		/obj/item/multitool/cyborg, // NOVA EDIT CHANGE - Keep multiool here for quicker access - ORIGINAL: obj/item/borg/cyborg_omnitool/engineering,
+		/obj/item/crowbar/cyborg/power, // NOVA EDIT ADDITION
+		/obj/item/screwdriver/cyborg/power, // NOVA EDIT ADDITION
 		/obj/item/t_scanner,
 		/obj/item/analyzer,
 		/obj/item/holosign_creator/atmos, // NOVA EDIT ADDITION - Adds Holofans to engineering borgos
@@ -455,6 +482,7 @@
 	name = "Janitor"
 	basic_modules = list(
 		/obj/item/assembly/flash/cyborg,
+		/obj/item/borg/cleaner_box,
 		/obj/item/screwdriver/cyborg,
 		/obj/item/crowbar/cyborg,
 		/obj/item/stack/tile/iron/base/cyborg, // haha jani will have old tiles >:D

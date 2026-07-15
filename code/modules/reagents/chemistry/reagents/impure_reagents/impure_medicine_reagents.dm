@@ -32,7 +32,6 @@
 	addiction_types = list(/datum/addiction/medicine = 400)
 	ph = 11
 	affected_biotype = MOB_ORGANIC | MOB_MINERAL | MOB_PLANT // no healing ghosts
-	affected_respiration_type = ALL
 
 //Random healing of the 4 main groups
 /datum/reagent/impurity/healing/medicine_failure/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, metabolization_ratio)
@@ -47,7 +46,7 @@
 		if("tox")
 			need_mob_update = affected_mob.adjust_tox_loss(-0.2 * metabolization_ratio * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype)
 		if("oxy")
-			need_mob_update = affected_mob.adjust_oxy_loss(-0.2 * metabolization_ratio * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype, required_respiration_type = affected_respiration_type)
+			need_mob_update = affected_mob.adjust_oxy_loss(-0.2 * metabolization_ratio * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype)
 	if(need_mob_update)
 		return UPDATE_MOB_HEALTH
 
@@ -653,6 +652,7 @@ Basically, we fill the time between now and 2s from now with hands based off the
 			/datum/brain_trauma/special/honorbound, // Designed to be chaplain exclusive
 			/datum/brain_trauma/voided, // Voidwalker exclusive and more of a magical status effect than a trauma
 		)
+		forbiddentraumas += typesof(/datum/brain_trauma/very_special) // NOVA EDIT ADDITION - No very special (lewd) quirks gained by inverse neurine
 
 		// Do give out these traumas but not any of their subtypes, usually because the trauma replaces itself with a subtype
 		var/list/forbiddensubtypes = list(

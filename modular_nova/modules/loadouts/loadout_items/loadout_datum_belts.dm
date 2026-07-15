@@ -72,6 +72,10 @@
 	name = "Lantern"
 	item_path = /obj/item/flashlight/lantern
 
+/datum/loadout_item/belts/thigh_satchel
+	name = "Thigh Satchel"
+	item_path = /obj/item/storage/belt/thigh_satchel
+
 // HOLSTERS
 
 /datum/loadout_item/belts/holster_shoulders

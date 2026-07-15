@@ -43,6 +43,8 @@
 		/obj/item/extinguisher/mini,
 		/obj/item/weldingtool/largetank/cyborg,
 		/obj/item/borg/cyborg_omnitool/engineering,
+		/obj/item/crowbar/cyborg/power,
+		/obj/item/screwdriver/cyborg/power,
 		/obj/item/multitool/cyborg,
 		/obj/item/stack/sheet/iron,
 		/obj/item/stack/sheet/glass,
@@ -62,9 +64,16 @@
 		/obj/item/mop, // Soap's good and all, but a mop is good, too
 		/obj/item/lightreplacer,
 		/obj/item/borg/cyborghug,
-		/obj/item/reagent_containers/borghypo)
+		/obj/item/quadborg_nose,
+		/obj/item/quadborg_tongue,
+		/obj/item/reagent_containers/borghypo,
+		/obj/item/borg_shapeshifter/stable)
 	hat_offset = -3
 
+/obj/item/borg_shapeshifter/stable
+	signalCache = list()
+	activationCost = 0
+	activationUpkeep = 0
 
 /obj/item/robot_model/roleplay/respawn_consumable(mob/living/silicon/robot/cyborg, coeff = 1)
 	. = ..()

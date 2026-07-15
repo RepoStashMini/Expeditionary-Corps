@@ -76,6 +76,10 @@
 /datum/supply_pack/companies/tools_weapons/hc_surplus
 	cost = CARGO_CRATE_VALUE * 0.25
 
+/datum/supply_pack/companies/tools_weapons/hc_surplus/flares
+	contains = list(/obj/item/storage/box/nri_flares)
+	cost = CARGO_CRATE_VALUE * 0.3
+
 /datum/supply_pack/companies/tools_weapons/hc_surplus/binoculars
 	contains = list(/obj/item/binoculars)
 

@@ -142,6 +142,9 @@
 	name = "Binary Encryption Key"
 	item_type = /obj/item/encryptionkey/binary
 
+/datum/opposing_force_equipment/gadget_stealth/borgupgrader
+	item_type = /obj/item/borg/upgrade/transform/syndicatejack
+
 /datum/opposing_force_equipment/gadget_stealth/cloakerbelt
 	item_type = /obj/item/shadowcloak
 	description = "A belt that allows its wearer to temporarily turn invisible. Only recharges in dark areas. Use wisely."

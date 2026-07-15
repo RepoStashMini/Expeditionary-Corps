@@ -210,6 +210,23 @@
 	// Setup default human
 	var/mob/living/carbon/human/consistent/lab_rat = EASY_ALLOCATE()
 
+	// Human species without NIF implant should not be affected by neuroware reagents
+	lab_rat.reagents.add_reagent(neuroware_mute_toxin, 15)
+	lab_rat.Life(SSMOBS_DT)
+	TEST_ASSERT(!lab_rat.has_status_effect(/datum/status_effect/neuroware), "Neuroware status effect is present in default human.")
+	TEST_ASSERT(!lab_rat.has_status_effect(/datum/status_effect/silenced), "Default human affected by neuroware reagents.")
+
+	// Setup the human with a NIF implant
+	lab_rat = EASY_ALLOCATE()
+	var/obj/item/organ/cyberimp/brain/nif/standard/nif_implant = EASY_ALLOCATE()
+	nif_implant.Insert(lab_rat, special = TRUE)
+
+	// Human with NIF should always be affected by neuroware reagents
+	lab_rat.reagents.add_reagent(neuroware_mute_toxin, 15)
+	lab_rat.Life(SSMOBS_DT)
+	TEST_ASSERT(lab_rat.has_status_effect(/datum/status_effect/neuroware), "Neuroware status effect is missing in human with NIF implant.")
+	TEST_ASSERT(lab_rat.has_status_effect(/datum/status_effect/silenced), "Human with NIF implant not affected by neuroware reagents.")
+
 	// Setup the human with a synth liver
 	lab_rat = EASY_ALLOCATE()
 	var/obj/item/organ/liver/synth/synth_liver = EASY_ALLOCATE()

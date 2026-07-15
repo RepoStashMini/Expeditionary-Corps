@@ -29,6 +29,9 @@
 /datum/supply_pack/companies/apparel/kahraman/webbing
 	contains = list(/obj/item/clothing/accessory/webbing)
 
+/datum/supply_pack/companies/apparel/kahraman/colonial_webbing
+	contains = list(/obj/item/clothing/accessory/webbing/colonial)
+
 /datum/supply_pack/companies/apparel/kahraman/webbing_vest
 	contains = list(/obj/item/clothing/accessory/webbing/vest)
 
@@ -37,6 +40,15 @@
 
 /datum/supply_pack/companies/apparel/kahraman/storage_rigging
 	contains = list(/obj/item/clothing/accessory/webbing/pilot)
+
+/datum/supply_pack/companies/apparel/kahraman/medipen
+	contains = list(/obj/item/storage/pouch/cin_medipens)
+
+/datum/supply_pack/companies/apparel/kahraman/medikit
+	contains = list(/obj/item/storage/pouch/cin_medkit)
+
+/datum/supply_pack/companies/apparel/kahraman/general
+	contains = list(/obj/item/storage/pouch/cin_general)
 
 /datum/supply_pack/companies/apparel/kahraman/gas_mask
 	contains = list(/obj/item/clothing/mask/gas/atmos/frontier_colonist)

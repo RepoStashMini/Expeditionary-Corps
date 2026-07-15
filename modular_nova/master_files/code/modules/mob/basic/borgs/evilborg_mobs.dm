@@ -159,6 +159,44 @@
 	ai_controller = /datum/ai_controller/basic_controller/evilborgs
 
 /*
+* Woof says the dog
+*/
+
+/mob/living/basic/evilborgs/evilborg/dog
+	name = "Malfunctioning Canine Cyborg"
+	desc = "A canine-borg, hacked or malfunctioning. This one appears to be a mining variant."
+	icon = 'modular_nova/master_files/icons/mob/newmobs64x32.dmi'
+	icon_state = "evilbotmine"
+	icon_living = "evilbotmine"
+	health = 155
+	maxHealth = 155
+	melee_damage_lower = 12
+	melee_damage_upper = 12
+	attack_verb_continuous = "cleaves"
+	attack_verb_simple = "smash"
+	attack_sound = 'sound/items/weapons/bladeslice.ogg'
+	ai_controller = /datum/ai_controller/basic_controller/evilborgs
+
+/*
+* Can i pet that dawg!?
+*/
+
+/mob/living/basic/evilborgs/evilborg/dogstrong
+	name = "Corrupt Hound"
+	desc = "A canine-borg, hacked or malfunctioning. This one is large, imposing, and can pack a big punch."
+	icon = 'modular_nova/master_files/icons/mob/newmobs64x32.dmi'
+	icon_state = "evilbotelite" // ported from VORE
+	icon_living = "evilbotelite"
+	health = 180
+	maxHealth = 180
+	melee_damage_lower = 18
+	melee_damage_upper = 18
+	attack_verb_continuous = "bites"
+	attack_verb_simple = "bite"
+	attack_sound = 'sound/items/weapons/bite.ogg'
+	ai_controller = /datum/ai_controller/basic_controller/evilborgs
+
+/*
 * Tank
 */
 

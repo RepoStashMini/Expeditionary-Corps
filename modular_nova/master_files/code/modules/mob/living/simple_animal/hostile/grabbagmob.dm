@@ -206,7 +206,7 @@
 /mob/living/simple_animal/hostile/mutantliz
 	name = "mutant lizard"
 	desc = "A large, mutated lizard-creature with jagged teeth and sharp claws."
-//	icon = 'modular_nova/master_files/icons/mob/newmobs64x64.dmi'
+	icon = 'modular_nova/master_files/icons/mob/newmobs64x64.dmi'
 	icon_state = "mutantliz"
 	icon_living = "mutantliz"
 	icon_dead = "mutantliz_d"
