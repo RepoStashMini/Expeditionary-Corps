@@ -40,13 +40,9 @@
 	var/reusable = TRUE
 	///How many times the chip can be used.
 	var/uses = 1
-	///Whether or not this chip requires lewd item preference enforcement.
-	var/is_lewd = FALSE
 
 /obj/item/disk/neuroware/Initialize(mapload)
 	. = ..()
-	if(is_lewd && CONFIG_GET(flag/disable_lewd_items))
-		return INITIALIZE_HINT_QDEL
 	if(isnull(manufacturer_tag))
 		return
 	desc += "<br>"
@@ -146,18 +142,6 @@
 	var/slot_name = SYNTH_SLOT_NAME
 
 	var/obj/item/organ/brain/owner_brain = target.get_organ_slot(ORGAN_SLOT_BRAIN)
-	// Allow install if they have either a robotic brain (synthetic, including cortical) OR a NIF
-	if(isnull(owner_brain) || !(owner_brain.organ_flags & ORGAN_ROBOTIC))
-		var/obj/item/organ/cyberimp/brain/nif/nif_implant = target.get_organ_slot(ORGAN_SLOT_BRAIN_NIF)
-		if(isnull(nif_implant) || nif_implant.broken)
-			balloon_alert(user, "synthetic brain or NIF required!")
-			return
-		// Target lacks a robotic brain, so use the NIF
-		slot_name = "[nif_implant] slot"
-
-	if(is_lewd && !(target.client?.prefs.read_preference(/datum/preference/toggle/erp/aphro)))
-		balloon_alert(user, "installation failed!")
-		return
 
 	if(target != user)
 		target.visible_message(

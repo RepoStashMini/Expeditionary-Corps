@@ -79,14 +79,6 @@ GLOBAL_LIST_INIT(modular_persistence_ignored_vars, list(
 
 		if(var_entry)
 			vars[var_name] = var_entry
-	if(findtext(nif_path, "/obj/item/organ/internal"))
-		var/trimmed_nif_path = copytext(nif_path, length("/obj/item/organ/internal") + 1)
-		nif_path = "/obj/item/organ[trimmed_nif_path]"
-	if(!our_brain.owner)
-		CRASH("Tried to load modular persistence on a brain with no owner! How did this happen?! (\ref[brain], [brain.brainmob?.ckey], [brain])")
-
-	var/mob/living/carbon/human/human = our_brain.owner
-	human.load_nif_data(src)
 
 /datum/modular_persistence/Destroy(force)
 	owner_brain = null
@@ -100,9 +92,6 @@ GLOBAL_LIST_INIT(modular_persistence_ignored_vars, list(
 	if(!our_brain)
 		owner_brain = null
 		return
-
-	var/mob/living/carbon/human/human = our_brain.owner
-	human.save_nif_data(src)
 
 	for(var/var_name in vars)
 		if(var_name in GLOB.modular_persistence_ignored_vars)

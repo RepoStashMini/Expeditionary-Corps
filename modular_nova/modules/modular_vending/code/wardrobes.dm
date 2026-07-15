@@ -274,7 +274,6 @@
 		/obj/item/clothing/under/rank/security/detective_bunnysuit = 2,
 		/obj/item/clothing/under/rank/security/detective_bunnysuit/noir = 2,
 	)
-	premium_nova = list(/obj/item/disk/nifsoft_uploader/job/summoner/detective = 2)
 
 /obj/machinery/vending/wardrobe/law_wardrobe
 	products_nova = list(
@@ -308,7 +307,7 @@
 		/obj/item/clothing/suit/jacket/tailcoat/janitor = 3,
 		/obj/item/clothing/under/rank/civilian/janitor/bunnysuit = 3,
 	)
-	premium_nova = list(/obj/item/disk/nifsoft_uploader/job/summoner/service = 2, /obj/item/flatpack/trash_compactor = 1)
+	premium_nova = list(/obj/item/flatpack/trash_compactor = 1)
 
 /obj/machinery/vending/wardrobe/curator_wardrobe
 	products_nova = list(

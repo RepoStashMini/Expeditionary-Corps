@@ -17,4 +17,3 @@
 		/obj/item/seeds/tea/catnip = 3,
 		/obj/item/seeds/banana/spider_banana = 1,
 	)
-	premium_nova = list(/obj/item/disk/nifsoft_uploader/job/summoner/service = 2)

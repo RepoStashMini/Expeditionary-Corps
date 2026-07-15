@@ -22,7 +22,6 @@
 				/obj/item/hairbrush = 3,
 				/obj/item/clothing/head/hair_tie/scrunchie = 3,
 				/obj/item/holocigarette = 5,
-				/obj/item/attachable_soulcatcher = 5,
 				/obj/item/disk/neuroware/synthesizer/brass = 2,
 				/obj/item/disk/neuroware/synthesizer/guitar = 2,
 				/obj/item/disk/neuroware/synthesizer/percussion = 2,

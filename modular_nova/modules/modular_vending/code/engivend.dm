@@ -5,4 +5,3 @@
 		/obj/item/storage/pouch/material = 2,
 		/obj/item/storage/bag/construction = 2,
 	)
-	premium_nova = list(/obj/item/disk/nifsoft_uploader/summoner/tools = 4)
