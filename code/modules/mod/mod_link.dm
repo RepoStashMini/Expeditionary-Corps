@@ -174,10 +174,6 @@
 
 /obj/item/clothing/neck/link_scryer/examine(mob/user)
 	. = ..()
-	// NOVA EDIT NIFSOFT SCRYERS - START
-	if(custom_examine_controls)
-		return
-	// NOVA EDIT NIFSOFT SCRYERS - END
 	if(cell)
 		. += span_notice("The battery charge reads [cell.percent()]%. <b>Right-click</b> with an empty hand to remove it.")
 	else

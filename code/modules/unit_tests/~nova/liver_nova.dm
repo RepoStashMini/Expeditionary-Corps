@@ -216,11 +216,6 @@
 	TEST_ASSERT(!lab_rat.has_status_effect(/datum/status_effect/neuroware), "Neuroware status effect is present in default human.")
 	TEST_ASSERT(!lab_rat.has_status_effect(/datum/status_effect/silenced), "Default human affected by neuroware reagents.")
 
-	// Setup the human with a NIF implant
-	lab_rat = EASY_ALLOCATE()
-	var/obj/item/organ/cyberimp/brain/nif/standard/nif_implant = EASY_ALLOCATE()
-	nif_implant.Insert(lab_rat, special = TRUE)
-
 	// Human with NIF should always be affected by neuroware reagents
 	lab_rat.reagents.add_reagent(neuroware_mute_toxin, 15)
 	lab_rat.Life(SSMOBS_DT)
