@@ -1,7 +1,5 @@
 ///Similar to name2reagent list but contains only neuroware reagents.
 GLOBAL_LIST_INIT(name2neuroware, build_name2neurowarelist())
-///name2neuroware list which omits lewd reagents
-GLOBAL_LIST_INIT(name2neuroware_safe, build_name2neurowarelist_safe())
 
 ///Same as build_name2reagentlist() but contains only neuroware reagents.
 /proc/build_name2neurowarelist()

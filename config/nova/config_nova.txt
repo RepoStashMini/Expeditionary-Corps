@@ -95,11 +95,6 @@ SSDECAY_NEST_PERCENT_CHANCE 1
 ## Percent chance that a light will be flickery, used with SSDecay.
 SSDECAY_LIGHT_FLICKER_PERCENT_CHANCE 10
 
-## Disables any ERP preferences for codebases that don't want it.
-#DISABLE_ERP_PREFERENCES
-#DISABLE_LEWD_ITEMS
-#ERP_EMOTES_TO_DISABLE cum
-
 ## Disables mismatched parts for codebases that don't want it.
 #DISABLE_MISMATCHED_PARTS
 

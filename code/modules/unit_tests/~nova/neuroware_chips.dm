@@ -22,10 +22,6 @@
 		if(isnull(test_chip.list_reagents))
 			continue
 
-		// Skip lewd neuroware chips
-		if(test_chip.is_lewd)
-			continue
-
 		// Setup default synthetic humanoid
 		var/mob/living/carbon/human/species/synth/test_robot = EASY_ALLOCATE()
 		// Installation should succeed on a compatible synthetic humanoid

@@ -114,8 +114,8 @@ GLOBAL_LIST_EMPTY_TYPED(interaction_instances, /datum/interaction)
 			message_admins("Deprecated sound handling for '[html_encode(name)]'. Correct format is a list with one entry. This message will only show once.")
 			sound_possible = list(sound_possible)
 		sound_cache = pick(sound_possible)
-		else
-			playsound(target.loc, sound_cache, 50, sound_vary, max(0, -SOUND_RANGE + sound_range))
+
+		playsound(target.loc, sound_cache, 50, sound_vary, max(0, -SOUND_RANGE + sound_range))
 
 	INVOKE_ASYNC(src, user, target)
 
@@ -144,16 +144,8 @@ GLOBAL_LIST_EMPTY_TYPED(interaction_instances, /datum/interaction)
 
 	user_messages = sanitize_islist(json["user_messages"], list())
 	user_required_parts = sanitize_islist(json["user_required_parts"], list())
-	user_arousal = sanitize_integer(json["user_arousal"], 0, 100, 0)
-	user_pleasure = sanitize_integer(json["user_pleasure"], 0, 100, 0)
-	user_pain = sanitize_integer(json["user_pain"], 0, 100, 0)
 	target_messages = sanitize_islist(json["target_messages"], list())
 	target_required_parts = sanitize_islist(json["target_required_parts"], list())
-	target_arousal = sanitize_integer(json["target_arousal"], 0, 100, 0)
-	target_pleasure = sanitize_integer(json["target_pleasure"], 0, 100, 0)
-	target_pain = sanitize_integer(json["target_pain"], 0, 100, 0)
-	lewd = sanitize_integer(json["lewd"], 0, 1, 0)
-	sexuality = sanitize_text(json["sexuality"])
 	return TRUE
 
 /datum/interaction/proc/json_save(path)
@@ -175,16 +167,8 @@ GLOBAL_LIST_EMPTY_TYPED(interaction_instances, /datum/interaction)
 		"color" = color,
 		"user_messages" = user_messages,
 		"user_required_parts" = user_required_parts,
-		"user_arousal" = user_arousal,
-		"user_pleasure" = user_pleasure,
-		"user_pain" = user_pain,
 		"target_messages" = target_messages,
 		"target_required_parts" = target_required_parts,
-		"target_arousal" = target_arousal,
-		"target_pleasure" = target_pleasure,
-		"target_pain" = target_pain,
-		"lewd" = lewd,
-		"sexuality" = sexuality,
 	)
 	var/file = file(fpath)
 	WRITE_FILE(file, json_encode(json))
@@ -242,16 +226,8 @@ GLOBAL_LIST_EMPTY_TYPED(interaction_instances, /datum/interaction)
 
 		interaction.user_messages = sanitize_islist(ijson["user_messages"], list())
 		interaction.user_required_parts = sanitize_islist(ijson["user_required_parts"], list())
-		interaction.user_arousal = sanitize_integer(ijson["user_arousal"], 0, 100, 0)
-		interaction.user_pleasure = sanitize_integer(ijson["user_pleasure"], 0, 100, 0)
-		interaction.user_pain = sanitize_integer(ijson["user_pain"], 0, 100, 0)
 		interaction.target_messages = sanitize_islist(ijson["target_messages"], list())
 		interaction.target_required_parts = sanitize_islist(ijson["target_required_parts"], list())
-		interaction.target_arousal = sanitize_integer(ijson["target_arousal"], 0, 100, 0)
-		interaction.target_pleasure = sanitize_integer(ijson["target_pleasure"], 0, 100, 0)
-		interaction.target_pain = sanitize_integer(ijson["target_pain"], 0, 100, 0)
-		interaction.lewd = sanitize_integer(ijson["lewd"], 0, 1, 0)
-		interaction.sexuality = sanitize_text(ijson["sexuality"])
 
 		GLOB.interaction_instances[iname] = interaction
 

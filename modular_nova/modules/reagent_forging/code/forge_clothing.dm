@@ -171,8 +171,8 @@
 /obj/item/clothing/neck/collar/reagent_clothing
 	name = "collar"
 	desc = "A collar that is ready to be worn for certain individuals."
-	icon = 'modular_nova/modules/modular_items/lewd_items/icons/obj/lewd_clothing/lewd_neck.dmi'
-	worn_icon = 'modular_nova/modules/modular_items/lewd_items/icons/mob/lewd_clothing/lewd_neck.dmi'
+//	icon = 'modular_nova/modules/modular_items/lewd_items/icons/obj/lewd_clothing/lewd_neck.dmi'
+//	worn_icon = 'modular_nova/modules/modular_items/lewd_items/icons/mob/lewd_clothing/lewd_neck.dmi'
 	icon_state = "thick_strip"
 	greyscale_colors = null
 	greyscale_config = null

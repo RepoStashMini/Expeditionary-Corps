@@ -322,7 +322,6 @@
 	back = /obj/item/storage/backpack
 	backpack_contents = list(
 		/obj/item/storage/box/survival/interdyne = 1,
-		/obj/item/storage/box/nif_ghost_box/ghost_role=1,
 		/obj/item/crowbar = 1,
 		)
 	id = /obj/item/card/id/advanced/black
@@ -336,7 +335,6 @@
 	back = /obj/item/storage/backpack/satchel/explorer
 	backpack_contents = list(
 		/obj/item/storage/box/survival/interdyne = 1,
-		/obj/item/storage/box/nif_ghost_box/ghost_role=1,
 		/obj/item/crowbar = 1,
 		/obj/item/knife/combat/survival = 1,
 		/obj/item/t_scanner/adv_mining_scanner/lesser = 1,
