@@ -6,19 +6,10 @@
 	. = ..()
 	mob_examine_panel = new(src) //create the datum
 	AddComponent(/datum/component/interactable)
-	//Removing ERP IC verbs depending on config
-	if(CONFIG_GET(flag/disable_erp_preferences))
-		verbs -= /mob/living/carbon/human/verb/toggle_genitals
-		verbs -= /mob/living/carbon/human/verb/toggle_arousal
-	if(CONFIG_GET(flag/disable_erp_preferences))
-		verbs -= /mob/living/carbon/human/verb/climax_verb
-	if(CONFIG_GET(flag/disable_lewd_items))
-		verbs -= /mob/living/carbon/human/verb/safeword
 
 
 /mob/living/carbon/human/Destroy()
 	QDEL_NULL(mob_examine_panel)
-	QDEL_NULL(genital_layering_panel)
 
 	if(held_left)
 		held_left.UnregisterSignal(src, COMSIG_ATOM_DIR_CHANGE)
