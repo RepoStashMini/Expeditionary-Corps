@@ -390,7 +390,6 @@
 		/obj/item/surgicaldrill,
 		/obj/item/tank/internals/emergency_oxygen,
 		/obj/item/weaponcell/medical,
-		/obj/item/handheld_soulcatcher,
 		/obj/item/wrench/medical,
 		/obj/item/emergency_bed,
 		/obj/item/storage/box/bandages,

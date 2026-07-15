@@ -8,8 +8,6 @@
 	var/interact_next = 0
 	/// Whether or not we are using subtler for lewd interactions.
 	var/use_subtler = TRUE
-	/// Whether or not we have an erp interaction available to us right now
-	var/has_erp_interaction = FALSE
 
 /datum/component/interactable/Initialize(...)
 	if(QDELETED(parent))
@@ -27,11 +25,6 @@
 	interactions = list()
 	for(var/iterating_interaction_id in GLOB.interaction_instances)
 		var/datum/interaction/interaction = GLOB.interaction_instances[iterating_interaction_id]
-		if(interaction.lewd)
-			if(!self.client?.prefs?.read_preference(/datum/preference/toggle/erp))
-				continue
-			if(interaction.sexuality != "" && interaction.sexuality != self.client?.prefs?.read_preference(/datum/preference/choiced/erp_sexuality))
-				continue
 		interactions.Add(interaction)
 
 /datum/component/interactable/RegisterWithParent()
@@ -57,8 +50,6 @@
 /datum/component/interactable/proc/can_interact(datum/interaction/interaction, mob/living/carbon/human/target)
 	if(!interaction.allow_act(target, self))
 		return FALSE
-	if(interaction.lewd && !target.client?.prefs?.read_preference(/datum/preference/toggle/erp))
-		return FALSE
 	if(!interaction.distance_allowed && !target.Adjacent(self))
 		return FALSE
 	if(interaction.category == INTERACTION_CAT_HIDE)
@@ -82,11 +73,6 @@
 
 /datum/component/interactable/ui_static_data(mob/user)
 	var/list/data = list()
-	data["arousalLimit"] = AROUSAL_LIMIT
-	// Genital config option labels, shared with the standalone layering panel.
-	data["genital_visibility_options"] = assoc_to_keys(GLOB.genital_visibility_options)
-	data["genital_layering_options"] = assoc_to_keys(GLOB.genital_layering_options)
-	data["genital_arousal_options"] = assoc_to_keys(GLOB.genital_arousal_options)
 	return data
 
 /datum/component/interactable/ui_data(mob/user)
@@ -130,27 +116,8 @@
 	data["ref_self"] = REF(self)
 	data["self"] = self.name
 	data["block_interact"] = interact_next >= world.time
-	data["use_subtler"] = use_subtler
-	data["erp_interaction"] = self.client?.prefs?.read_preference(/datum/preference/toggle/erp)
-	data["has_erp_interaction"] = has_erp_interaction
-
-	var/mob/living/carbon/human/human_user = user
 
 	data["isTargetSelf"] = (user == self)
-
-	// user (the one who opened the ui)
-	var/user_pleasure = 0
-	var/user_arousal = 0
-	var/user_pain = 0
-
-	if(user)
-		user_pleasure = human_user.pleasure
-		user_arousal = human_user.arousal
-		user_pain = human_user.pain
-
-		data["pleasure"] = user_pleasure
-		data["arousal"] = user_arousal
-		data["pain"] = user_pain
 
 
 	// self - the one who the interaction component belongs to, aka who it's opened on (confusing var name yep)

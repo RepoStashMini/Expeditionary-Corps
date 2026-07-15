@@ -80,8 +80,6 @@
 /obj/item/disk/bitrunning/item/tierrelax
 	name = "bitrunning gear: relaxation"
 	selectable_items = list(
-		/obj/item/summon_beacon/relax,
-		/obj/item/storage/box/nif_ghost_box,
 		/obj/item/storage/box/syndie_kit/chameleon/ghostcafe,
 		/obj/item/survivalcapsule/luxury,
 	)
