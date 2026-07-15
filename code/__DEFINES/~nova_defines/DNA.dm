@@ -6,19 +6,6 @@
 #define EXAMINE_DNA_FLAVOR_TEXT_NSFW "flavor_text_nsfw"
 /// Examine Panel OOC notes
 #define EXAMINE_DNA_OOC_NOTES "ooc_notes"
-/// Examine Panel NSFW ooc notes—requires you to click a tab to see
-#define EXAMINE_DNA_OOC_NOTES_NSFW "ooc_notes_nsfw"
-
-/// Examine text when a person has low arousal
-#define ERP_FLAVOR_DNA_LOW_AROUSAL "erp_low_arousal_text"
-/// Examine text when a person has medium arousal
-#define ERP_FLAVOR_DNA_MEDIUM_AROUSAL "erp_medium_arousal_text"
-/// Examine text when a person has high arousal
-#define ERP_FLAVOR_DNA_HIGH_AROUSAL "erp_high_arousal_text"
-/// Flavor text when licking someone
-#define ERP_FLAVOR_DNA_TASTE "erp_taste"
-/// Flavor text when smelling someone
-#define ERP_FLAVOR_DNA_SCENT "erp_scent"
 
 //We start from 30 to not interfere with TG species defines, should they add more
 /// We're using all three mutcolor features for our skin coloration
@@ -80,24 +67,6 @@
 #define BODY_SIZE_MAX 1.5
 #define BODY_SIZE_MIN 0.8
 
-//In inches
-#define PENIS_MIN_GIRTH PENIS_MIN_LENGTH
-#define PENIS_MAX_GIRTH 35
-/// for non oversized mobs with a 'normal' body size
-#define PENIS_MAX_GIRTH_NORMAL_SIZED 15
-#define PENIS_DEFAULT_GIRTH 5 // a lil big but not by much
-#define PENIS_MIN_LENGTH 1
-#define PENIS_MAX_LENGTH 86
-#define PENIS_DEFAULT_LENGTH 6 //still a lil long but not insane
-
-#define TESTICLES_MIN_SIZE 0
-#define TESTICLES_MAX_SIZE 8
-
-#define SHEATH_NONE	SPRITE_ACCESSORY_NONE
-#define SHEATH_NORMAL "Sheath"
-#define SHEATH_SLIT	"Slit"
-#define SHEATH_MODES list(SHEATH_NONE, SHEATH_NORMAL, SHEATH_SLIT)
-
 /// Used for making species blueprint singletons for GLOB.default_mutant_bodyparts
 #define MUTPART_BLUEPRINT new /datum/mutant_bodypart/species_blueprint
 
@@ -122,41 +91,6 @@
 #define FEATURE_SYNTH_CHASSIS "synth_chassis"
 #define FEATURE_SYNTH_HEAD "synth_head"
 #define FEATURE_SYNTH_HAIR "synth_hair"
-
-
-#define MANDATORY_FEATURE_LIST list(\
-	FEATURE_MUTANT_COLOR = "#FFFFBB",\
-	FEATURE_MUTANT_COLOR_TWO = "#FFFFBB",\
-	FEATURE_MUTANT_COLOR_THREE = "#FFFFBB",\
-	FEATURE_ETHEREAL_COLOR = "#FFCCCC",\
-	FEATURE_SKIN_COLOR = "#FFEEDD",\
-	EXAMINE_DNA_FLAVOR_TEXT = "",\
-	"breasts_size" = 1,\
-	"breasts_lactation" = FALSE,\
-	"penis_size" = 13,\
-	"penis_girth" = 9,\
-	"penis_taur_mode" = TRUE,\
-	"penis_sheath" = SHEATH_NONE,\
-	"balls_size" = 1,\
-	"body_size" = BODY_SIZE_NORMAL,\
-	"custom_species" = null,\
-	"penis_uses_skintones" = TRUE,\
-	"penis_uses_skincolor" = TRUE,\
-	"testicles_uses_skintones" = TRUE,\
-	"testicles_uses_skincolor" = TRUE,\
-	"vagina_uses_skintones" = TRUE,\
-	"vagina_uses_skincolor" = TRUE,\
-	"breasts_uses_skintones" = TRUE,\
-	"breasts_uses_skincolor" = TRUE,\
-	"butt_size" = 1,\
-	"butt_uses_skintones" = TRUE,\
-	"butt_uses_skincolor" = TRUE,\
-)
-
-#define AROUSAL_CANT 0
-#define AROUSAL_NONE 1
-#define AROUSAL_PARTIAL 2
-#define AROUSAL_FULL 3
 
 //Species IDs. If you wanna look at tg's species ID defines, go look in the *other* DNA.dm file
 #define SPECIES_AKULA "akula"
@@ -194,5 +128,4 @@
 #define SPECIES_MUTANT_FAST "fast_mutant"
 
 // Leaving this here because it's used for bodyparts, like SPECIES_X are, but since taurs aren't a species... Named it LIMBS instead.
-#define LIMBS_TAUR "taur"
 #define LIMBS_HARPY "harpy"
