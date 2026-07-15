@@ -32,11 +32,6 @@
 	name = "Stethoscope"
 	item_path = /obj/item/clothing/neck/stethoscope
 
-/datum/loadout_item/neck/tarkon_gauntlet
-	name = "Tarkon Confidante Gauntlet"
-	item_path = /obj/item/clothing/neck/security_cape/tarkon
-	blacklisted_roles = list(ALL_JOBS_SEC, ALL_JOBS_COM, JOB_PRISONER)
-
 /*
 *	COLLARS
 */

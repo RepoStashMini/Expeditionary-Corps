@@ -5,7 +5,7 @@
 // AAS
 /obj/machinery/announcement_system/tarkonize()
 	AddElement(/datum/element/manufacturer_examine, "It has <b>[span_brown("Tarkon Industries")]</b> logo on it.")
-	radio_type = /obj/item/radio/headset/tarkon/command
+//	radio_type = /obj/item/radio/headset/tarkon/command
 	QDEL_NULL(radio)
 	radio = new radio_type(src)
 	// Tweaking defaults a bit (requires TGcode tweaks to take effect, will be done for upstream)

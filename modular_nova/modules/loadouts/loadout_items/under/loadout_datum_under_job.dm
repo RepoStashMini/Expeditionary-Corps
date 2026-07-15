@@ -133,36 +133,6 @@
 *	No unique group for this because it's fairly niche
 */
 
-/datum/loadout_item/under/jumpsuit/tarkon //Not alphabetical because this is a base-entry for Tarkon blacklisted_roles
-	name = "Tarkon Deck Jumpsuit"
-	item_path = /obj/item/clothing/under/tarkon/general
-	blacklisted_roles = list(ALL_JOBS_COM, ALL_JOBS_SEC)
-	group = "Workwear"
-
-/datum/loadout_item/under/jumpsuit/tarkon/cargo
-	name = "Tarkon Cargo Jumpsuit"
-	item_path = /obj/item/clothing/under/tarkon
-
-/datum/loadout_item/under/jumpsuit/tarkon/com
-	name = "Tarkon Command Jumpsuit"
-	item_path = /obj/item/clothing/under/tarkon/com
-
-/datum/loadout_item/under/jumpsuit/tarkon/eng
-	name = "Tarkon Engineer Jumpsuit"
-	item_path = /obj/item/clothing/under/tarkon/eng
-
-/datum/loadout_item/under/jumpsuit/tarkon/sec
-	name = "Tarkon Guard Jumpsuit"
-	item_path = /obj/item/clothing/under/tarkon/sec
-
-/datum/loadout_item/under/jumpsuit/tarkon/med
-	name = "Tarkon Medical Jumpsuit"
-	item_path = /obj/item/clothing/under/tarkon/med
-
-/datum/loadout_item/under/jumpsuit/tarkon/sci
-	name = "Tarkon Science Jumpsuit"
-	item_path = /obj/item/clothing/under/tarkon/sci
-
 /*
 *	JOB-LOCKED
 *	Sorted by Job, within Department subsection. Because fully-alphabetized we'll never keep track.
