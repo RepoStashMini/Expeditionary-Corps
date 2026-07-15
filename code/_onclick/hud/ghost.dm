@@ -13,7 +13,6 @@
 	add_screen_object(/atom/movable/screen/ghost/minigames_menu, HUD_GHOST_MINIGAMES)
 	add_screen_object(/atom/movable/screen/language_menu, HUD_MOB_LANGUAGE_MENU, HUD_GROUP_STATIC, ui_style, ui_ghost_language_menu)
 	add_screen_object(/atom/movable/screen/floor_changer/vertical, HUD_MOB_FLOOR_CHANGER, HUD_GROUP_STATIC, ui_style, ui_ghost_floor_changer)
-	add_screen_object(/atom/movable/screen/ghost/join_soulcatcher, HUD_GHOST_SOULCATCHER) // NOVA EDIT ADDITION
 
 	var/list/hudboxes = valid_subtypesof(/atom/movable/screen/ghost/hudbox)
 	for(var/i in 1 to length(hudboxes))

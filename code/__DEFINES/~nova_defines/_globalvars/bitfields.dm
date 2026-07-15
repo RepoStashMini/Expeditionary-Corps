@@ -1,6 +1,5 @@
 DEFINE_BITFIELD(obj_flags_nova, list(
 	"ANVIL_REPAIR" = ANVIL_REPAIR,
-	"ERP_ITEM" = ERP_ITEM,
 	"NO_CRYO_FREEZE" = NO_CRYO_FREEZE,
 ))
 

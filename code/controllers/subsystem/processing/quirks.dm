@@ -103,10 +103,6 @@ PROCESSING_SUBSYSTEM_DEF(quirks)
 
 	for(var/type in quirk_list)
 		var/datum/quirk/quirk_type = type
-		// NOVA EDIT ADDITION START
-		if(initial(quirk_type.erp_quirk) && CONFIG_GET(flag/disable_erp_preferences))
-			continue
-		// Hidden quirks aren't visible to TGUI or the player
 		if (initial(quirk_type.hidden_quirk))
 			continue
 		// NOVA EDIT ADDITION END

@@ -584,10 +584,6 @@ GLOBAL_LIST_INIT(skin_tone_names, list(
 		// We've already added slimes.
 		if(isslime(mob_to_sort))
 			continue
-	// NOVA EDIT START - SOULCATCHERS
-	for(var/mob/living/soulcatcher_soul/mob_to_sort in sortmob)
-		moblist += mob_to_sort
-	// NOVA EDIT END - SOULCATCHERS
 	return moblist
 ///returns a mob type controlled by a specified ckey
 /proc/get_mob_by_ckey(key)

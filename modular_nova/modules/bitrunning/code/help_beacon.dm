@@ -178,7 +178,6 @@
 				/obj/item/storage/box/survival = 1,
 				/obj/item/storage/medkit/regular = 1,
 				/obj/item/flashlight = 1,
-				/obj/item/storage/box/nif_ghost_box = 1,
 				/obj/item/storage/box/syndie_kit/chameleon/ghostcafe = 1,
 			)
 
