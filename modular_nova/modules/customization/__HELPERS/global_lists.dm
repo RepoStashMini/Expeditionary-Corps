@@ -5,7 +5,6 @@
 	make_body_marking_set_references()
 	make_robotic_style_references()
 	make_augment_references()
-	build_erp_item_list()
 
 /proc/init_prefs_emotes()
 	//Scream types

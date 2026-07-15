@@ -745,7 +745,7 @@
 
 /obj/item/clothing/neck/inferno_collar/Initialize(mapload)
 	. = ..()
-	create_storage(storage_type = /datum/storage/collar)
+//	create_storage(storage_type = /datum/storage/collar)
 	if(treat_path)
 		new treat_path(src)
 

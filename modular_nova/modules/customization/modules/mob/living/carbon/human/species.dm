@@ -133,7 +133,6 @@ GLOBAL_LIST_EMPTY(customizable_races)
 		mutantpart_list = existing_mutant_bodyparts.Copy()
 
 	var/list/default_bodypart_data = GLOB.default_mutant_bodyparts[name]
-	var/erp_disabled = CONFIG_GET(flag/disable_erp_preferences)
 
 	for(var/key, bodypart_to_add in default_bodypart_data)
 		// Skip if there's an existing sprite accessory
