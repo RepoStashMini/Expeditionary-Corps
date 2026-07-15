@@ -141,8 +141,6 @@
 
 	var/slot_name = SYNTH_SLOT_NAME
 
-	var/obj/item/organ/brain/owner_brain = target.get_organ_slot(ORGAN_SLOT_BRAIN)
-
 	if(target != user)
 		target.visible_message(
 			span_danger("[user] tries to force [src] into [target]'s [slot_name]!"),

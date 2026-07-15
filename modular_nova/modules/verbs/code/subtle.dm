@@ -40,8 +40,6 @@
 	else
 		subtle_message = params
 
-	var/running_emote_type = type_override || emote_type
-
 	if(!can_run_emote(user))
 		to_chat(user, span_warning("You can't emote at this time."))
 		return FALSE
@@ -144,8 +142,6 @@
 	else
 		target = SUBTLE_ONE_TILE
 		subtler_message = subtler_emote
-
-	var/running_emote_type = type_override || emote_type
 
 	if(!can_run_emote(user))
 		to_chat(user, span_warning("You can't emote at this time."))
