@@ -64,9 +64,6 @@
 /datum/supply_pack/companies/armor/sol_fed/sf_soft_vest
 	contains = list(/obj/item/clothing/suit/armor/sf_peacekeeper)
 
-/datum/supply_pack/companies/armor/sol_fed/flak_jacket
-	contains = list(/obj/item/clothing/suit/armor/vest/sol)
-
 /datum/supply_pack/companies/armor/sol_fed/slim_vest
 	contains = list(/obj/item/clothing/suit/armor/vest)
 
@@ -98,12 +95,6 @@
 
 /datum/supply_pack/companies/armor/sol_fed/clothing
 	cost = CARGO_CRATE_VALUE * 0.25
-
-/datum/supply_pack/companies/armor/sol_fed/clothing/peacekeeper
-	contains = list(/obj/item/clothing/under/sol_peacekeeper)
-
-/datum/supply_pack/companies/armor/sol_fed/clothing/emt
-	contains = list(/obj/item/clothing/under/sol_emt)
 
 // HC surplus
 

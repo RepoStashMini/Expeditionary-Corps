@@ -51,7 +51,6 @@
 	id = /obj/item/card/id/advanced/silver
 	id_trim = /datum/id_trim/job/exp_officer
 	uniform = /obj/item/clothing/under/rank/expeditionary/com_forwarder
-	suit = /obj/item/clothing/suit/armor/hos/trenchcoat
 	ears = /obj/item/radio/headset/headset_frontier_colonist
 	shoes = /obj/item/clothing/shoes/workboots
 

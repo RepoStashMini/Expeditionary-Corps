@@ -82,19 +82,16 @@
 #define JOB_PARAMEDIC "Paramedic"
 #define JOB_CHEMIST "Chemist"
 #define JOB_VIROLOGIST "Virologist" // NOVA EDIT ADDITION
-#define JOB_ORDERLY "Orderly" // NOVA EDIT ADDITION
 //Science
 #define JOB_SCIENTIST "Scientist"
 #define JOB_ROBOTICIST "Roboticist"
 #define JOB_GENETICIST "Geneticist"
-#define JOB_SCIENCE_GUARD "Science Guard" // NOVA EDIT ADDITION
 //Supply
 #define JOB_QUARTERMASTER "Quartermaster"
 #define JOB_CARGO_TECHNICIAN "Cargo Technician"
 #define JOB_CARGO_GORILLA "Cargo Gorilla"
 #define JOB_SHAFT_MINER "Shaft Miner"
 #define JOB_BITRUNNER "Bitrunner"
-#define JOB_CUSTOMS_AGENT "Customs Agent" // NOVA EDIT ADDITION
 //Service
 #define JOB_BARTENDER "Bartender"
 #define JOB_BOTANIST "Botanist"
@@ -109,7 +106,6 @@
 #define JOB_PSYCHOLOGIST "Psychologist"
 #define JOB_PUN_PUN "Pun Pun"
 #define JOB_BARBER "Barber" // NOVA EDIT ADDITION
-#define JOB_BOUNCER "Service Guard" // NOVA EDIT ADDITION
 //ERTs
 #define JOB_ERT_DEATHSQUAD "Death Commando"
 #define JOB_ERT_COMMANDER "Emergency Response Team Commander"

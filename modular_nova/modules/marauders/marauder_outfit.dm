@@ -169,22 +169,6 @@
 		/obj/item/clothing/shoes/combat,
 		/obj/item/storage/toolbox/guncase/nova/green,
 	)
-
-/obj/structure/mannequin/operative_barracks/sol_militant
-	name = "\improper SolFed espatier mannequin"
-	desc = "They'll never know what hit 'em."
-	starting_items = list(
-		/obj/item/clothing/head/helmet/sf_peacekeeper,
-		/obj/item/clothing/mask/gas/hecu,
-		/obj/item/clothing/neck/mantle/solfed,
-		/obj/item/clothing/under/solfed,
-		/obj/item/clothing/suit/armor/vest/sol,
-		/obj/item/storage/belt/military/solfed,
-		/obj/item/clothing/gloves/frontier_colonist,
-		/obj/item/clothing/shoes/jackboots/frontier_colonist,
-		/obj/item/storage/toolbox/guncase/nova/solfed,
-	)
-
 ///
 /// Wildcard mannequins
 /obj/structure/mannequin/operative_barracks/wildcard/maid

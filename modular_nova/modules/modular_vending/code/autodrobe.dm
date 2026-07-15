@@ -25,7 +25,6 @@
 				/obj/item/clothing/suit/jacket/tailcoat/plasmaman = 6,
 				/obj/item/clothing/suit/jacket/tailcoat/usa = 6,
 				/obj/item/clothing/head/helmet/glassdome = 6,
-				/obj/item/clothing/under/camo/gags = 6,
 			),
 		),
 		list(

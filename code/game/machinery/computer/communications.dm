@@ -464,38 +464,6 @@ GLOBAL_VAR_INIT(cops_arrived, FALSE)
 			SSjob.safe_code_timer_id = addtimer(CALLBACK(SSjob, TYPE_PROC_REF(/datum/controller/subsystem/job, send_spare_id_safe_code), pod_location), 120 SECONDS, TIMER_UNIQUE | TIMER_STOPPABLE)
 			minor_announce("Due to staff shortages, your station has been approved for delivery of access codes to secure the Captain's Spare ID. Delivery via drop pod at [get_area(pod_location)]. ETA 120 seconds.")
 		// NOVA EDIT ADDITION START
-		if ("messagethefeds")
-			if(!message_federation(usr))
-				return
-			if(!COOLDOWN_FINISHED(src, important_action_cooldown))
-				return
-			finalizing_solfedmessage(usr)
-			COOLDOWN_START(src, important_action_cooldown, IMPORTANT_ACTION_COOLDOWN)
-		if ("callThePolice")
-			if(!pre_911_check(usr))
-				return
-			calling_911(usr, "Marshals", EMERGENCY_RESPONSE_POLICE)
-		if ("callTheCatmos")
-			if(!pre_911_check(usr))
-				return
-			calling_911(usr, "Advanced Atmospherics", EMERGENCY_RESPONSE_ATMOS)
-		if ("callTheParameds")
-			if(!pre_911_check(usr))
-				return
-			calling_911(usr, "EMTs", EMERGENCY_RESPONSE_EMT)
-		if("callThePizza")
-			if(!(obj_flags & EMAGGED))
-				return
-			if(!pre_911_check(usr))
-				return
-			GLOB.cops_arrived = TRUE
-			log_game("[key_name(usr)] has dialed for a pizza order from Dogginos using an emagged communications console.")
-			message_admins("[ADMIN_LOOKUPFLW(usr)] has dialed for a pizza order from Dogginos using an emagged communications console.")
-			deadchat_broadcast(" has dialed for a pizza order from Dogginos using an emagged communications console.", span_name("[usr.real_name]"), usr, message_type=DEADCHAT_ANNOUNCEMENT)
-			GLOB.pizza_order = pick(GLOB.pizza_names)
-			call_911(EMERGENCY_RESPONSE_EMAG)
-			to_chat(usr, span_notice("Thank you for choosing Dogginos, [GLOB.pizza_order]!"))
-			playsound(src, 'sound/machines/terminal/terminal_prompt_confirm.ogg', 50, FALSE)
 		if("toggleEngOverride")
 			if(emergency_access_cooldown(usr)) //if were in cooldown, dont allow the following code
 				return

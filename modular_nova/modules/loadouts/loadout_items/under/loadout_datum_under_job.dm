@@ -128,21 +128,6 @@
 	item_path = /obj/item/clothing/under/rank/medical/scrubs/nova/white
 	group = "Workwear"
 
-/datum/loadout_item/under/jumpsuit/sol_emt
-	name = "Sol Emergency Medical Uniform"
-	item_path = /obj/item/clothing/under/sol_emt
-	group = "Workwear"
-
-/datum/loadout_item/under/jumpsuit/sol_peacekeeper
-	name = "Sol Peacekeeper Uniform"
-	item_path = /obj/item/clothing/under/sol_peacekeeper
-	group = "Workwear"
-
-/datum/loadout_item/under/jumpsuit/utility
-	name = "Utility Uniform"
-	item_path = /obj/item/clothing/under/misc/nova/utility
-	group = "Workwear"
-
 /*
 *	JOB-BLACKLISTED
 *	No unique group for this because it's fairly niche

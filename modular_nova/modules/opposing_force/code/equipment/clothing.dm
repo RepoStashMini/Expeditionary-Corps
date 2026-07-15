@@ -120,23 +120,6 @@
 /datum/opposing_force_equipment/clothing_sol
 	category = OPFOR_EQUIPMENT_CATEGORY_CLOTHING_SOL
 
-/datum/opposing_force_equipment/clothing_sol/sol_militant
-	name = "Sol Militant"
-	description = "There is a war being fought, and it's taking place right here."
-	item_type = /obj/item/storage/backpack/ert/odst/hecu/sol_militant
-
-/obj/item/storage/backpack/ert/odst/hecu/sol_militant/PopulateContents()
-	new /obj/item/clothing/under/sol_peacekeeper(src)
-	new /obj/item/clothing/suit/armor/sf_peacekeeper(src)
-	new /obj/item/clothing/head/helmet/sf_peacekeeper(src)
-	new /obj/item/storage/belt/military/assault(src)
-	new /obj/item/clothing/mask/gas/hecu(src)
-	new /obj/item/clothing/shoes/combat(src)
-	new /obj/item/clothing/gloves/combat(src)
-	new /obj/item/clothing/glasses/night(src)
-	new /obj/item/radio/headset/syndicate/alt(src)
-	new /obj/item/card/id/advanced/chameleon(src)
-
 /datum/opposing_force_equipment/clothing_sol/dogginos
 	name = "Dogginos Courier"
 	description = "You're just doing your job."
