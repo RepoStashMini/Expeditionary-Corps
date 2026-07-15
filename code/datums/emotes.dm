@@ -135,20 +135,13 @@
 			frequency = rand(MIN_EMOTE_PITCH, MAX_EMOTE_PITCH) * (1 + sqrt(abs(user.pitch)) * sign(user.pitch) * EMOTE_TTS_PITCH_MULTIPLIER)
 		else if(vary)
 			frequency = rand(MIN_EMOTE_PITCH, MAX_EMOTE_PITCH)
-		/* // NOVA EDIT REMOBAL START - Moving this into the 'else' below
-		if(use_sound_tokens && sound_wall_ignore)
-			playsoundtoken(source = user, soundin = tmp_sound, range = SOUND_RANGE, volume = 50)
-		else
-			playsound(source = user,soundin = tmp_sound,vol = 50, vary = FALSE, ignore_walls = sound_wall_ignore, frequency = frequency)
-		*/ // NOVA EDIT REMOVAL END
-		// NOVA EDIT ADDITION START - Lewd emote prefs
 		if(running_emote_type & EMOTE_LEWD)
 			playsound_if_pref(source = user, soundin = tmp_sound, vol = sound_volume, vary = FALSE, frequency = frequency, pref_to_check = /datum/preference/toggle/erp/sounds)
 		else if(use_sound_tokens && sound_wall_ignore)
 			playsoundtoken(source = user, soundin = tmp_sound, range = SOUND_RANGE, volume = 50)
 		else
 			playsound(source = user,soundin = tmp_sound,vol = 50, vary = FALSE, ignore_walls = sound_wall_ignore, frequency = frequency)
-		// NOVA EDIT ADDITION END
+
 
 
 	var/is_important = running_emote_type & EMOTE_IMPORTANT
