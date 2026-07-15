@@ -6,23 +6,6 @@
 
 	if(href_list["lookup_info"])
 		switch(href_list["lookup_info"])
-			if("genitals")
-				var/list/line = list()
-				for(var/genital in GLOB.possible_genitals)
-					var/datum/mutant_bodypart/genital_part = dna.mutant_bodyparts[genital]
-					if(isnull(genital_part))
-						continue
-					var/datum/sprite_accessory/genital/genital_accessory = SSaccessories.sprite_accessories[genital][genital_part.name]
-					if(isnull(genital_accessory))
-						continue
-					if(genital_accessory.is_hidden(src))
-						continue
-					var/obj/item/organ/genital/genital_organ = get_organ_slot(genital_accessory.associated_organ_slot)
-					if(isnull(genital_organ))
-						continue
-					line += genital_organ.get_description_string(genital_accessory)
-				if(length(line))
-					to_chat(usr, span_notice("[jointext(line, "\n")]"))
 			if("open_examine_panel")
 				mob_examine_panel.ui_interact(usr) //datum has a examine_panel component, here we open the window
 			if("open_character_ad")

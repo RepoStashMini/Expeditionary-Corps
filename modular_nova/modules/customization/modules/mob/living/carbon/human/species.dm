@@ -10,8 +10,6 @@ GLOBAL_LIST_EMPTY(customizable_races)
 	var/reagent_flags = PROCESS_ORGANIC
 	///Whether a species can use augmentations in preferences
 	var/can_augment = TRUE
-	///Self explanatory
-	var/can_have_genitals = TRUE
 	///Override for the alpha of bodyparts and mutant parts.
 	var/specific_alpha = 255
 	///Override for alpha value of markings, should be much lower than the above value.
@@ -107,11 +105,9 @@ GLOBAL_LIST_EMPTY(customizable_races)
 
 /datum/species/plasmaman
 	can_augment = FALSE
-	can_have_genitals = FALSE
 
 /datum/species/ethereal
 	can_augment = FALSE
-	can_have_genitals = FALSE
 
 /datum/species/pod
 	name = "Primal Podperson"
@@ -140,8 +136,6 @@ GLOBAL_LIST_EMPTY(customizable_races)
 	var/erp_disabled = CONFIG_GET(flag/disable_erp_preferences)
 
 	for(var/key, bodypart_to_add in default_bodypart_data)
-		if(erp_disabled && GLOB.possible_genitals[key])
-			continue
 		// Skip if there's an existing sprite accessory
 		if(LAZYLEN(existing_mutant_bodyparts) && existing_mutant_bodyparts[key])
 			continue

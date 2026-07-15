@@ -60,22 +60,6 @@ GLOBAL_LIST_EMPTY_TYPED(interaction_instances, /datum/interaction)
 	if(target != user && usage == INTERACTION_SELF)
 		return FALSE
 
-	if(length(user_required_parts))
-		for(var/thing in user_required_parts)
-			var/obj/item/organ/genital/required_part = user.get_organ_slot(thing)
-			if(isnull(required_part))
-				return FALSE
-			if(!required_part.is_exposed())
-				return FALSE
-
-	if(length(target_required_parts))
-		for(var/thing in target_required_parts)
-			var/obj/item/organ/genital/required_part = target.get_organ_slot(thing)
-			if(isnull(required_part))
-				return FALSE
-			if(!required_part.is_exposed())
-				return FALSE
-
 	for(var/requirement in interaction_requires)
 		switch(requirement)
 			if(INTERACTION_REQUIRE_SELF_HAND)
