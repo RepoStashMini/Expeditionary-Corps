@@ -194,10 +194,6 @@ GLOBAL_LIST_EMPTY(name_to_appearance)
 		data["personalVisibility"] = READ_PREFS(user, toggle/show_in_directory)
 		data["personalAttraction"] = READ_PREFS(user, choiced/attraction)
 		data["personalGender"] = READ_PREFS(user, choiced/display_gender)
-		data["personalErpTag"] = READ_PREFS(user, choiced/erp_status)
-		data["personalVoreTag"] = READ_PREFS(user, choiced/erp_status_v)
-		data["personalNonconTag"] = READ_PREFS(user, choiced/erp_status_nc)
-		data["personalHypnoTag"] = READ_PREFS(user, choiced/erp_status_hypno)
 		data["prefsOnly"] = TRUE
 
 	data["assignedView"] = CHAR_DIRECTORY_ASSIGNED_VIEW(user.ckey)
@@ -273,10 +269,6 @@ GLOBAL_LIST_EMPTY(name_to_appearance)
 		gender = READ_PREFS(mob, choiced/display_gender) || "Unset"
 		if(gender == "Unset")
 			gender = capitalize(mob.gender)
-		erp = READ_PREFS(mob, choiced/erp_status) || "Ask"
-		vore = READ_PREFS(mob, choiced/erp_status_v) || "Ask"
-		noncon = READ_PREFS(mob, choiced/erp_status_nc) || "Ask"
-		hypno = READ_PREFS(mob, choiced/erp_status_hypno) || "Ask"
 		character_ad = READ_PREFS(mob, text/character_ad) || ""
 		ooc_notes = READ_PREFS(mob, text/ooc_notes) || ""
 		ooc_notes_nsfw = READ_PREFS(mob, text/ooc_notes_nsfw) || ""
