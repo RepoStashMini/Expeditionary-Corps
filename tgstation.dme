@@ -9751,6 +9751,5 @@
 #include "modular_teotr\modules\EvoMetric\code\poster.dm"
 #include "modular_teotr\modules\EvoMetric\code\weapon.dm"
 #include "modular_teotr\modules\floors\code\floors.dm"
-#include "modular_teotr\modules\tgmp\tgmd.dm"
 #include "modular_teotr\modules\Zipper\zipper.dm"
 // END_INCLUDE
