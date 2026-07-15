@@ -346,10 +346,11 @@ There are several things that need to be remembered:
 			if(species_icon_file)
 				icon_file = species_icon_file
 				mutant_override = TRUE
-		if(bodyshape)
-			return // We just don't want shoes that float if we're not displaying legs (useful for taurs, for now)
-		// NOVA EDIT ADDITION END
-		var/mutable_appearance/shoes_overlay = shoes.build_worn_icon(default_layer = SHOES_LAYER, default_icon_file = icon_file, bodyshape = bodyshape, override_file = mutant_override ? icon_file : null) // NOVA EDIT CHANGE - ORIGINAL: var/mutable_appearance/shoes_overlay = shoes.build_worn_icon(default_layer = SHOES_LAYER, default_icon_file = icon_file, bodyshape = bodyshape)
+
+		var/mutable_appearance/shoes_overlay = shoes.build_worn_icon(default_layer = SHOES_LAYER, default_icon_file = icon_file, override_file = mutant_override ? icon_file : null) // NOVA EDIT CHANGE
+
+		if(!shoes_overlay)
+			return
 
 		var/feature_y_offset = 0
 		for (var/body_zone in GLOB.leg_zones)
