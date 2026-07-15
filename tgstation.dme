@@ -509,7 +509,6 @@
 #include "code\__DEFINES\~nova_defines\signals.dm"
 #include "code\__DEFINES\~nova_defines\skills.dm"
 #include "code\__DEFINES\~nova_defines\solfed.dm"
-#include "code\__DEFINES\~nova_defines\soulcatcher.dm"
 #include "code\__DEFINES\~nova_defines\sound.dm"
 #include "code\__DEFINES\~nova_defines\span.dm"
 #include "code\__DEFINES\~nova_defines\species_clothing_paths.dm"
