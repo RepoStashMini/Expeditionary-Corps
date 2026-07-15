@@ -252,10 +252,6 @@
 				continue
 			if(!(get_chat_toggles(ghost.client) & CHAT_GHOSTSIGHT))
 				continue
-			// NOVA EDIT ADDITION START - Pref checked emotes
-			if((emote_type & EMOTE_LEWD) && !pref_check_emote(ghost))
-				continue
-			// NOVA EDIT ADDITION END
 			to_chat(ghost, span_emote("[FOLLOW_LINK(ghost, user)] [dchatmsg]"))
 
 	return

@@ -82,7 +82,6 @@
 		/obj/item/storage/hypospraykit,
 		/obj/item/reagent_containers/cup/vial,
 		/obj/item/weaponcell/medical,
-		/obj/item/handheld_soulcatcher,
 		// NOVA EDIT ADDITION END
 	))
 
