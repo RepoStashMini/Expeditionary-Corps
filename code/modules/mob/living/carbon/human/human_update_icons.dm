@@ -451,7 +451,6 @@ There are several things that need to be remembered:
 
 		// NOVA EDIT ADDITION START
 		var/mutant_override = FALSE
-		var/mutant_styles = NONE
 		if(bodyshape & BODYSHAPE_DIGITIGRADE)
 			if(worn_item.supports_variations_flags & CLOTHING_DIGITIGRADE_VARIATION)
 				icon_file = worn_item.worn_icon_digi || DIGITIGRADE_SUIT_FILE
