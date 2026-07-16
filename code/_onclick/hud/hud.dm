@@ -71,7 +71,6 @@ GLOBAL_LIST_INIT(available_ui_styles, list(
 
 	/// Subtypes can override this to force a specific UI style
 	var/ui_style = null
-	var/erp_ui_style = null //NOVA EDIT - ADDITION - ERP ICONS FIX
 	/// Assoc list of all screen objects we hold by their key
 	var/list/atom/movable/screen/screen_objects = list()
 	/// List of screen objects by their screen group

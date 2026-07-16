@@ -25,8 +25,6 @@
 
 	var/needs_update = TRUE
 
-	var/arousal_preview = AROUSAL_NONE
-
 	// BACKGROUND STUFF
 	var/general_record = ""
 	var/security_record = ""

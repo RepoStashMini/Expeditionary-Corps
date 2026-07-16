@@ -75,7 +75,6 @@
 	greyscale_config_worn = /datum/greyscale_config/depgag_skirt/worn
 	greyscale_colors = "#A52F29#39393F#39393F#A52F29"
 	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
-	gets_cropped_on_taurs = FALSE
 
 /obj/item/clothing/under/rank/security/nova/skirt/blue
 	icon_state = "/obj/item/clothing/under/rank/security/nova/skirt/blue"
@@ -91,7 +90,6 @@
 	greyscale_config_worn = /datum/greyscale_config/depgag_skirt_plain/worn
 	greyscale_colors = "#A52F29#39393F#39393F#A52F29"
 	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
-	gets_cropped_on_taurs = FALSE
 
 /obj/item/clothing/under/rank/security/nova/plainskirt/blue
 	icon_state = "/obj/item/clothing/under/rank/security/nova/plainskirt/blue"
@@ -106,7 +104,6 @@
 	greyscale_config = /datum/greyscale_config/depgag_mini
 	greyscale_config_worn = /datum/greyscale_config/depgag_mini/worn
 	greyscale_colors = "#A52F29#39393F"
-	gets_cropped_on_taurs = FALSE
 
 /obj/item/clothing/under/rank/security/nova/miniskirt/blue
 	icon_state = "/obj/item/clothing/under/rank/security/nova/miniskirt/blue"
@@ -116,7 +113,7 @@
 	name = "guard utility uniform"
 	desc = "A utility uniform worn by trained guards."
 	icon_state = "util_sec"
-	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION | CLOTHING_BIG_LEGS_MASK
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION
 	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
 	alt_covers_chest = TRUE
 
@@ -288,7 +285,6 @@
 	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 	bodyshapes_with_variations = NONE
-	gets_cropped_on_taurs = FALSE
 
 /*
 *	SYNDICATE

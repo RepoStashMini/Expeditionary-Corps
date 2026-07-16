@@ -238,8 +238,6 @@
 /datum/preference_middleware/limbs_and_markings/get_ui_data(mob/user)
 	var/list/data = list()
 
-	var/datum/preference/choiced/mutant_choice/taur/taur_choice = GLOB.preference_entries[/datum/preference/choiced/mutant_choice/taur]
-	data["taur_legs"] = (taur_choice.is_accessible(preferences) && preferences.read_preference(/datum/preference/choiced/mutant_choice/taur) != SPRITE_ACCESSORY_NONE)
 	data["digi_legs"] = preferences.read_preference(/datum/preference/choiced/digitigrade_legs) == DIGITIGRADE_LEGS
 	data["allow_mismatched_parts"] = preferences.read_preference(/datum/preference/toggle/allow_mismatched_parts)
 
@@ -267,11 +265,6 @@
 			return FALSE
 	if(aug.ckey_whitelist && !LAZYFIND(aug.ckey_whitelist, user?.client?.ckey))
 		return FALSE
-	var/datum/preference/choiced/mutant_choice/taur/taur_choice = GLOB.preference_entries[/datum/preference/choiced/mutant_choice/taur]
-	if(taur_choice.is_accessible(prefs) && prefs.read_preference(/datum/preference/choiced/mutant_choice/taur) != SPRITE_ACCESSORY_NONE)
-		var/datum/augment_item/limb/limb_aug = astype(aug, /datum/augment_item/limb)
-		if(limb_aug?.slot_flag && (limb_aug.slot_flag & (LEG_LEFT|LEG_RIGHT)))
-			return FALSE
 	if(SSquirks.points_enabled)
 		var/datum/augment_item/replaced_augment = GLOB.augment_items[prefs.augments[augment_slot]]
 		if((preferences.GetQuirkBalance() + replaced_augment?.cost - aug.cost) < 0)

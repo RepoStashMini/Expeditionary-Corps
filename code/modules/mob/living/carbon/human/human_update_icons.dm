@@ -116,25 +116,6 @@ There are several things that need to be remembered:
 			icon_file = DEFAULT_UNIFORM_FILE
 			handled_by_bodyshape = FALSE
 
-		// NOVA EDIT ADDITION START - Taur-friendly suits!
-		var/mutant_styles = NONE
-		if(bodyshape & BODYSHAPE_TAUR)
-			mutant_styles |= get_taur_mode()
-			female_sprite_flags &= ~FEMALE_UNIFORM_FULL // clear the FEMALE_UNIFORM_DIGI_FULL bit if it was set, we don't want that.
-			female_sprite_flags |= FEMALE_UNIFORM_TOP_ONLY // And set the FEMALE_UNIFORM_TOP_ONLY bit if it is unset.
-			if((mutant_styles & BODYSHAPE_TAUR_SNAKE) && uniform.worn_icon_taur_snake)
-				uniform.worn_x_offset = -16
-			else if ((mutant_styles & BODYSHAPE_TAUR_PAW) && uniform.worn_icon_taur_paw)
-				uniform.worn_x_offset = -16
-			else if ((mutant_styles & BODYSHAPE_TAUR_HOOF) && uniform.worn_icon_taur_hoof)
-				uniform.worn_x_offset = -16
-			//big legs
-			if((mutant_styles & BODYSHAPE_TAUR_BIG_LEGS_ALL) && (uniform.supports_variations_flags & CLOTHING_BIG_LEGS_VARIATION))
-				icon_file = mutant_styles & BODYSHAPE_TAUR_BIG_LEGS ? BIG_LEGS_UNIFORM_FILE : BIG_LEGS_STANCED_UNIFORM_FILE
-		else
-			uniform.worn_x_offset = 0
-		// NOVA EDIT ADDITION END
-
 		//END SPECIES HANDLING
 		var/mutable_appearance/uniform_overlay = uniform.build_worn_icon(
 			default_layer = UNIFORM_LAYER,
@@ -365,8 +346,6 @@ There are several things that need to be remembered:
 			if(species_icon_file)
 				icon_file = species_icon_file
 				mutant_override = TRUE
-		if(bodyshape & BODYSHAPE_HIDE_SHOES)
-			return // We just don't want shoes that float if we're not displaying legs (useful for taurs, for now)
 		// NOVA EDIT ADDITION END
 		var/mutable_appearance/shoes_overlay = shoes.build_worn_icon(default_layer = SHOES_LAYER, default_icon_file = icon_file, bodyshape = bodyshape, override_file = mutant_override ? icon_file : null) // NOVA EDIT CHANGE - ORIGINAL: var/mutable_appearance/shoes_overlay = shoes.build_worn_icon(default_layer = SHOES_LAYER, default_icon_file = icon_file, bodyshape = bodyshape)
 
@@ -481,17 +460,6 @@ There are several things that need to be remembered:
 			if(species_icon_file)
 				icon_file = species_icon_file
 				mutant_override = TRUE
-
-		if(bodyshape & BODYSHAPE_TAUR)
-			mutant_styles |= get_taur_mode()
-			if((mutant_styles & BODYSHAPE_TAUR_SNAKE) && worn_item.worn_icon_taur_snake)
-				worn_item.worn_x_offset = -16
-			else if ((mutant_styles & BODYSHAPE_TAUR_PAW) && worn_item.worn_icon_taur_paw)
-				worn_item.worn_x_offset = -16
-			else if ((mutant_styles & BODYSHAPE_TAUR_HOOF) && worn_item.worn_icon_taur_hoof)
-				worn_item.worn_x_offset = -16
-			else
-				worn_item.worn_x_offset = 0
 		else
 			worn_item.worn_x_offset = 0
 		// NOVA EDIT ADDITION END
@@ -696,33 +664,6 @@ There are several things that need to be remembered:
 			digitigrade_clothing_cache[index] = fcopy_rsc(resulting_icon)
 
 		return icon(resulting_icon)
-	// NOVA EDIT ADDITION START - generated taur clothing icons
-
-	var/taur_variation = GET_TAUR_VARIATION(src, bodyshape)
-	switch(taur_variation)
-		if(TAUR_VARIATION_CROP)
-			var/index = "[key]-[type]-[greyscale_colors]"
-			var/icon/taur_clothing_icon = GLOB.taur_clothing_icons[index]
-			if(!taur_clothing_icon) // Create standing/laying icons if they don't exist
-				taur_clothing_icon = generate_taur_clothing(index, base_icon, icon_state)
-			return taur_clothing_icon
-		if(TAUR_VARIATION_BIG_LEGS)
-			var/used_greyscale = greyscale_colors
-			if(isnull(used_greyscale) || length(SSgreyscale.ParseColorString(used_greyscale)) > 1)
-				used_greyscale = get_general_color(base_icon)
-			var/index = "[key]-[type]-[used_greyscale]-[bodyshape]"
-			var/static/list/big_legs_clothing_cache = list()
-			var/icon/resulting_icon = big_legs_clothing_cache[index]
-			if(!resulting_icon)
-				resulting_icon = generate_big_legs_icons(base_icon, used_greyscale, bodyshape)
-				if(!resulting_icon)
-					stack_trace("[type] is set to generate a masked big legs icon, but generate_big_legs_icons was not implemented (or error'd).")
-					return base_icon
-				big_legs_clothing_cache[index] = fcopy_rsc(resulting_icon)
-
-			return icon(resulting_icon)
-	return base_icon
-	// NOVA EDIT ADDITION END
 
 /// Modifies a sprite to replace the legs with a new version
 /proc/replace_icon_legs(icon/base_icon, icon/new_legs)
@@ -838,19 +779,6 @@ generate/load female uniform sprites matching all previously decided variables
 	override_file = null,
 	bodyshape = NONE,
 )
-
-	// NOVA EDIT ADDITION START - Taur-friendly uniforms and suits: pick a taur-fitted file if we have one
-	if(!isinhands && isnull(override_file) && (bodyshape & BODYSHAPE_TAUR) && !(bodyshape & BODYSHAPE_TAUR_BIG_LEGS_ALL))
-		if((bodyshape & BODYSHAPE_TAUR_SNAKE) && worn_icon_taur_snake)
-			override_file = worn_icon_taur_snake
-		else if((bodyshape & BODYSHAPE_TAUR_PAW) && worn_icon_taur_paw)
-			override_file = worn_icon_taur_paw
-		else if((bodyshape & BODYSHAPE_TAUR_HOOF) && worn_icon_taur_hoof)
-			override_file = worn_icon_taur_hoof
-		if(override_file || !gets_cropped_on_taurs)
-			bodyshape &= ~BODYSHAPE_TAUR
-
-	// NOVA EDIT ADDITION END
 	//Find a valid icon_state from variables+arguments
 	var/t_state = override_state || (isinhands ? inhand_icon_state : worn_icon_state) || icon_state
 	//Find a valid icon file from variables+arguments
@@ -869,7 +797,7 @@ generate/load female uniform sprites matching all previously decided variables
 			greyscale_colors = greyscale_colors,
 			bodyshape = bodyshape,
 		)
-	if(!isinhands && ((bodyshapes_with_variations & bodyshape) || (gets_cropped_on_taurs && (bodyshape & BODYSHAPE_TAUR)))) // NOVA EDIT CHANGE - taur cropping routes through get_bodyshape_icon - ORIGINAL: if(!isinhands && (bodyshapes_with_variations & bodyshape)) // NOVA EDIT CHANGE - ORIGINAL: if(!isinhands && (bodyshapes_with_variations & bodyshape))
+	if(!isinhands && (bodyshapes_with_variations & bodyshape)) // NOVA EDIT CHANGE - taur cropping routes through get_bodyshape_icon - ORIGINAL: if(!isinhands && (bodyshapes_with_variations & bodyshape)) // NOVA EDIT CHANGE - ORIGINAL: if(!isinhands && (bodyshapes_with_variations & bodyshape))
 		building_icon = get_bodyshape_icon(
 			base_icon = building_icon || icon(file2use, t_state),
 			key = "[t_state]-[file2use]-[female_uniform]",
@@ -982,13 +910,12 @@ generate/load female uniform sprites matching all previously decided variables
 	*/ // NOVA EDIT REMOVAL END
 	// NOVA EDIT ADDITION START - Nova socks - digi supported
 	if(socks && num_legs >= 2 && !(underwear_visibility & UNDERWEAR_HIDE_SOCKS))
-		var/datum/mutant_bodypart/taur_body = dna.mutant_bodyparts[FEATURE_TAUR]
-		if(isnull(taur_body))
-			var/datum/sprite_accessory/clothing/socks/sock_accessory = SSaccessories.socks_list[socks]
-			var/mutable_appearance/socks_overlay = sock_accessory?.make_appearance(socks_color, physique, bodyshape)
-			if(socks_overlay)
-				. += socks_overlay
+		var/datum/sprite_accessory/clothing/socks/sock_accessory = SSaccessories.socks_list[socks]
+		var/mutable_appearance/socks_overlay = sock_accessory?.make_appearance(socks_color, physique, bodyshape)
+		if(socks_overlay)
+			. += socks_overlay
 	// NOVA EDIT ADDITION END
+
 
 	return .
 

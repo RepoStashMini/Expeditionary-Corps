@@ -26,34 +26,6 @@ GLOBAL_LIST_EMPTY(name_to_appearance)
 /datum/preference/text/character_ad/apply_to_human(mob/living/carbon/human/target, value, datum/preferences/preferences)
 	return FALSE
 
-/datum/preference/choiced/attraction
-	savefile_key = "attraction"
-	category = PREFERENCE_CATEGORY_NON_CONTEXTUAL
-	savefile_identifier = PREFERENCE_CHARACTER
-
-/datum/preference/choiced/attraction/init_possible_values()
-	return list(
-		"Unset",
-		"Check OOC",
-		"Straight",
-		"Lesbian",
-		"Gay",
-		"Bisexual",
-		"Pansexual",
-		"Polysexual",
-		"Asexual",
-		"Aromantic",
-		"Aro/Ace",
-		"Skoliosexual",
-		"Omnisexual",
-	)
-
-/datum/preference/choiced/attraction/create_default_value()
-	return "Unset"
-
-/datum/preference/choiced/attraction/apply_to_human(mob/living/carbon/human/target, value, datum/preferences/preferences)
-	return FALSE
-
 /datum/preference/choiced/display_gender
 	savefile_key = "display_gender"
 	category = PREFERENCE_CATEGORY_NON_CONTEXTUAL
@@ -62,21 +34,9 @@ GLOBAL_LIST_EMPTY(name_to_appearance)
 /datum/preference/choiced/display_gender/init_possible_values()
 	return list(
 		"Unset",
-		"Check OOC",
 		"Male",
-		"Male - Femme",
-		"Male - Butch",
 		"Female",
-		"Female - Femme",
-		"Female - Butch",
 		"Nonbinary",
-		"Genderfluid",
-		"Trans",
-		"Andromorph",
-		"Gynomorph",
-		"Agender",
-		"Plural",
-		"Omnigender",
 	)
 
 /datum/preference/choiced/display_gender/create_default_value()
@@ -192,7 +152,6 @@ GLOBAL_LIST_EMPTY(name_to_appearance)
 	// Collect the user's own preferences for the top of the UI
 	if (user?.client?.prefs)
 		data["personalVisibility"] = READ_PREFS(user, toggle/show_in_directory)
-		data["personalAttraction"] = READ_PREFS(user, choiced/attraction)
 		data["personalGender"] = READ_PREFS(user, choiced/display_gender)
 		data["prefsOnly"] = TRUE
 
@@ -214,15 +173,8 @@ GLOBAL_LIST_EMPTY(name_to_appearance)
 	var/name
 	var/species
 	var/ooc_notes
-	var/ooc_notes_nsfw
 	var/flavor_text
-	var/flavor_text_nsfw
-	var/attraction
 	var/gender
-	var/erp
-	var/vore
-	var/noncon
-	var/hypno
 	var/nova_star_status
 	var/character_ad
 	var/headshot
@@ -250,7 +202,6 @@ GLOBAL_LIST_EMPTY(name_to_appearance)
 			if(species == "Unset")
 				species = "[human.dna.species.name]"
 			flavor_text = human.dna.features[EXAMINE_DNA_FLAVOR_TEXT] || ""
-			flavor_text_nsfw = human.dna.features[EXAMINE_DNA_FLAVOR_TEXT_NSFW] || ""
 			headshot = human.dna.features[EXAMINE_DNA_HEADSHOT] || ""
 		else if(issilicon(mob))
 			var/mob/living/silicon/silicon = mob
@@ -258,20 +209,17 @@ GLOBAL_LIST_EMPTY(name_to_appearance)
 			species = READ_PREFS(silicon, choiced/brain_type)
 			//Load silicon flavor text in place of normal flavor text
 			flavor_text = READ_PREFS(silicon, text/silicon_flavor_text) || ""
-			flavor_text_nsfw = READ_PREFS(silicon, text/silicon_flavor_text_nsfw) || ""
 			headshot = READ_PREFS(silicon, text/headshot/silicon) || ""
 		// Don't show if they are not a human or a silicon
 		else
 			continue
 
 		// List of all the shown ERP preferences in the Directory. If there is none, return "Unset"
-		attraction = READ_PREFS(mob, choiced/attraction) || "Unspecified"
 		gender = READ_PREFS(mob, choiced/display_gender) || "Unset"
 		if(gender == "Unset")
 			gender = capitalize(mob.gender)
 		character_ad = READ_PREFS(mob, text/character_ad) || ""
 		ooc_notes = READ_PREFS(mob, text/ooc_notes) || ""
-		ooc_notes_nsfw = READ_PREFS(mob, text/ooc_notes_nsfw) || ""
 		nova_star_status = mob.client && SSplayer_ranks.is_nova_star(mob.client, admin_bypass = FALSE)
 		// And finally, we want to get the mob's name, taking into account disguised names.
 		name = mob.real_name ? mob.name : mob.real_name
@@ -281,17 +229,10 @@ GLOBAL_LIST_EMPTY(name_to_appearance)
 			"appearance_name" = mob.real_name,
 			"species" = species,
 			"ooc_notes" = ooc_notes,
-			"ooc_notes_nsfw" = ooc_notes_nsfw,
-			"attraction" = attraction,
 			"gender" = gender,
-			"erp" = erp,
-			"vore" = vore,
-			"noncon" = noncon,
-			"hypno" = hypno,
 			"nova_star_status" = nova_star_status,
 			"character_ad" = character_ad,
 			"flavor_text" = flavor_text,
-			"flavor_text_nsfw" = flavor_text_nsfw,
 			"headshot" = headshot,
 			"ref" = ref
 		)))

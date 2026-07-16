@@ -129,7 +129,6 @@
 	greyscale_config_worn = /datum/greyscale_config/qipao/worn
 	greyscale_config_worn_digi = /datum/greyscale_config/qipao/worn/digi
 	flags_1 = IS_PLAYER_COLORABLE_1
-	gets_cropped_on_taurs = FALSE
 
 /obj/item/clothing/under/costume/nova/qipao/customtrim
 	greyscale_colors = "#2b2b2b#ffce5b"
@@ -175,7 +174,6 @@
 	greyscale_config_worn = /datum/greyscale_config/yukata/worn
 	greyscale_config_worn_digi = /datum/greyscale_config/yukata/worn/digi
 	flags_1 = IS_PLAYER_COLORABLE_1
-	gets_cropped_on_taurs = FALSE
 
 /obj/item/clothing/under/costume/nova/kamishimo
 	name = "kamishimo"

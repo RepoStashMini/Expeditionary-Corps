@@ -101,7 +101,6 @@
 			flavor_text = preferences.read_preference(/datum/preference/text/silicon_flavor_text)
 			flavor_text_nsfw = preferences.read_preference(/datum/preference/text/silicon_flavor_text_nsfw)
 			ooc_notes += preferences.read_preference(/datum/preference/text/ooc_notes)
-			ooc_notes_nsfw += preferences.read_preference(/datum/preference/text/ooc_notes_nsfw)
 			headshot += preferences.read_preference(/datum/preference/text/headshot/silicon)
 
 	if(ishuman(holder))
@@ -113,7 +112,6 @@
 		flavor_text_nsfw = obscured ? "Obscured" : holder_human.dna.features[EXAMINE_DNA_FLAVOR_TEXT_NSFW]
 		custom_species_lore = obscured ? "Obscured" : holder_human.dna.species.lore_protected ? holder_human.dna.species.get_species_lore().Join("\n") : holder_human.dna.features["custom_species_lore"]
 		ooc_notes += holder_human.dna.features[EXAMINE_DNA_OOC_NOTES]
-		ooc_notes_nsfw += holder_human.dna.features[EXAMINE_DNA_OOC_NOTES_NSFW]
 		if(!obscured)
 			headshot += holder_human.dna.features[EXAMINE_DNA_HEADSHOT]
 

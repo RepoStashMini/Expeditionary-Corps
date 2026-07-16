@@ -123,8 +123,6 @@
 		/obj/item/clothing/under/rank/security/officer/formal = 3,
 		/obj/item/clothing/suit/jacket/officer/blue = 3,
 		/obj/item/clothing/head/beret/sec/navyofficer = 3,
-		/obj/item/riding_saddle/leather = 3,
-		/obj/item/riding_saddle/leather/blue = 2,
 		/obj/item/clothing/head/helmet/hc_police = 3,
 		/obj/item/clothing/head/soft/hc_police = 3,
 		/obj/item/clothing/mask/gas/hc_police = 3,

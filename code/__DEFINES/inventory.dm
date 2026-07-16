@@ -127,10 +127,6 @@ DEFINE_BITFIELD(no_equip_flags, list(
 #define HIDETAIL (1<<16)
 /// Does this sprite also hide the spine on tails? Realistically only useful for the clothes that have a special tail overlay, like MODsuits
 #define HIDESPINE (1<<17)
-/// Does this sprite hide devious devices?
-#define HIDESEXTOY (1<<18)
-/// If this has our taur variant, do we hide our taur part?
-#define HIDETAUR (1<<19)
 //NOVA EDIT ADDITION END
 //bitflags for clothing coverage - also used for limbs
 #define CHEST (1<<0)
@@ -198,10 +194,6 @@ DEFINE_BITFIELD(no_equip_flags, list(
 #define CLOTHING_SNOUTED_BETTER_VOX_VARIATION (1<<7)
 /// The sprite works fine for vox snouts as is.
 #define CLOTHING_SNOUTED_BETTER_VOX_VARIATION_NO_NEW_ICON (1<<8)
-/// The clothing item has a custom sprite for the big legs type taur bodyshape
-#define CLOTHING_BIG_LEGS_VARIATION (1<<9)
-/// The sprite mask particularly for the big legs type taur bodyshape
-#define CLOTHING_BIG_LEGS_MASK (1<<10)
 // NOVA EDIT ADDITION END
 
 /// All variation flags which render "correctly" on a digitigrade leg setup

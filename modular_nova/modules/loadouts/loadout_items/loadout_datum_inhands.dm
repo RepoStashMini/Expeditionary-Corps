@@ -99,14 +99,6 @@
 	item_path = /obj/item/storage/toolbox/mechanical
 	blacklisted_roles = list(JOB_PRISONER)
 
-/datum/loadout_item/inhand/saddle // these should be in the other category but apparantly those are "pocket" loadout items so idk?
-	name = "Riding Saddle (Leather)"
-	item_path = /obj/item/riding_saddle/leather
-
-/datum/loadout_item/inhand/saddle_blue
-	name = "Riding Saddle (Blue)"
-	item_path = /obj/item/riding_saddle/leather/blue
-
 /datum/loadout_item/inhand/skateboard
 	name = "Skateboard"
 	item_path = /obj/item/melee/skateboard
@@ -114,10 +106,6 @@
 /datum/loadout_item/inhand/skub
 	name = "Skub"
 	item_path = /obj/item/skub
-
-/datum/loadout_item/inhand/saddlebags
-	name = "Saddlebags"
-	item_path = /obj/item/storage/backpack/saddlebags
 
 /datum/loadout_item/inhand/wheelchair
 	name = "Folded Wheelchair"

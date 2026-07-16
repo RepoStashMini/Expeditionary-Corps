@@ -243,9 +243,10 @@
 	var/mutable_appearance/appearance = mutable_appearance(icon_override || sprite_datum.get_special_icon(owner), image_icon_state, layer = layer_real)
 
 	if(sprite_datum.center)
-		center_image(appearance, sprite_datum.special_x_dimension ? sprite_datum.get_special_x_dimension(owner) : sprite_datum.dimension_x, sprite_datum.dimension_y)
+		center_image(appearance, sprite_datum.dimension_x, sprite_datum.dimension_y)
 
 	return appearance
+
 
 
 /**

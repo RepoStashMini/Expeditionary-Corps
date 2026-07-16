@@ -541,7 +541,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	return new_features
 
 /datum/species/proc/can_equip(obj/item/I, slot, disable_warning, mob/living/carbon/human/H, bypass_equip_delay_self = FALSE, ignore_equipped = FALSE, indirect_action = FALSE)
-	if(no_equip_flags & slot && !(I.is_mod_shell_component() && (modsuit_slot_exceptions & slot))) // NOVA EDIT ADDITION - ORIGINAL: if(no_equip_flags & slot)
+	if(no_equip_flags & slot)
 		if(!I.species_exception || !is_type_in_list(src, I.species_exception))
 			return FALSE
 

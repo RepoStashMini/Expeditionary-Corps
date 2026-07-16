@@ -25,7 +25,6 @@
 	greyscale_config_worn = /datum/greyscale_config/fancy_labcoat/worn
 	greyscale_config_worn_teshari = /datum/greyscale_config/fancy_labcoat/worn/teshari
 	greyscale_colors = "#EEEEEE#4A77A1"
-	gets_cropped_on_taurs = FALSE
 	flags_1 = IS_PLAYER_COLORABLE_1
 
 /obj/item/clothing/suit/toggle/labcoat/nova/fancy/rd
@@ -33,7 +32,6 @@
 	desc = "A Nanotrasen standard labcoat for certified Research Directors. It has an extra plastic-latex lining on the outside for more protection from chemical and viral hazards."
 	icon_state = "/obj/item/clothing/suit/toggle/labcoat/nova/fancy/rd"
 	greyscale_colors = "#620B73#EEEEEE"
-	gets_cropped_on_taurs = FALSE
 	body_parts_covered = CHEST|ARMS|LEGS
 	armor_type = /datum/armor/nova_rd
 
@@ -48,7 +46,6 @@
 	desc = "A Nanotrasen standard labcoat for researchers in the scientific field."
 	icon_state = "/obj/item/clothing/suit/toggle/labcoat/nova/fancy/regular"
 	greyscale_colors = "#EEEEEE#B347A1"
-	gets_cropped_on_taurs = FALSE
 
 /obj/item/clothing/suit/toggle/labcoat/nova/fancy/regular/Initialize(mapload)
 	. = ..()
@@ -59,28 +56,24 @@
 	desc = "A fashionable jacket bearing the La Lune insignia on the inside. It appears similar to a labcoat in design and materials, though the tag warns against it being a replacement for such."
 	icon_state = "/obj/item/clothing/suit/toggle/labcoat/nova/lalunevest"
 	icon_state = "labcoat_lalunevest"
-	gets_cropped_on_taurs = FALSE
 
 /obj/item/clothing/suit/toggle/labcoat/nova/fancy/pharmacist
 	name = "pharmacist's labcoat"
 	desc = "A standard labcoat for chemistry which protects the wearer from acid spills."
 	icon_state = "/obj/item/clothing/suit/toggle/labcoat/nova/fancy/pharmacist"
 	greyscale_colors = "#EEEEEE#E6935C"
-	gets_cropped_on_taurs = FALSE
 
 /obj/item/clothing/suit/toggle/labcoat/nova/fancy/geneticist
 	name = "geneticist's labcoat"
 	desc = "A standard labcoat for geneticist."
 	icon_state = "/obj/item/clothing/suit/toggle/labcoat/nova/fancy/geneticist"
 	greyscale_colors = "#EEEEEE#7497C0"
-	gets_cropped_on_taurs = FALSE
 
 /obj/item/clothing/suit/toggle/labcoat/nova/fancy/roboticist
 	name = "roboticist's labcoat"
 	desc = "A standard labcoat for roboticist."
 	icon_state = "/obj/item/clothing/suit/toggle/labcoat/nova/fancy/roboticist"
 	greyscale_colors = "#2F2E31#A52F29"
-	gets_cropped_on_taurs = FALSE
 
 /obj/item/clothing/suit/toggle/labcoat/nova/fancy/pharmacist/Initialize(mapload)
 	. = ..()

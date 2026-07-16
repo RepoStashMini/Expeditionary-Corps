@@ -1241,7 +1241,7 @@
 	if(owner_species && owner_species.specific_alpha != 255)
 		alpha = owner_species.specific_alpha
 
-	if(!(bodypart_flags & (BODYPART_PSEUDOPART | BODYPART_STUMP)) && !(bodyshape & BODYSHAPE_TAUR))
+	if(!(bodypart_flags & (BODYPART_PSEUDOPART | BODYPART_STUMP)))
 		if(body_zone in owner_dna.body_markings)
 			markings = LAZYLISTDUPLICATE(owner_dna.body_markings[body_zone])
 		else
@@ -1449,7 +1449,7 @@
 	if(is_husked)
 		override_color = "#888888"
 	// We need to check that the owner exists(could be a placed bodypart) and that it's not a chainsawhand and that they're a human with usable DNA.
-	if(!(bodypart_flags & (BODYPART_PSEUDOPART | BODYPART_STUMP)) && (!(bodyshape & BODYSHAPE_TAUR))) // taur legs never ever render
+	if(!(bodypart_flags & (BODYPART_PSEUDOPART | BODYPART_STUMP))) // taur legs never ever render
 		for(var/key, marking in markings) // Cycle through all of our currently selected markings.
 			var/datum/body_marking/body_marking = GLOB.body_markings[key]
 			if (!body_marking) // Edge case prevention.

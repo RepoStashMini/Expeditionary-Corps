@@ -2210,12 +2210,11 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/korpstech, 32)
 	desc = "An overly complicated network of securing straps and buckles. There remains plenty of slack and clips to fit any size."
 	icon = 'modular_nova/master_files/icons/donator/obj/clothing/uniform.dmi'
 	worn_icon = 'modular_nova/master_files/icons/donator/mob/clothing/uniform.dmi'
-	worn_icon_taur_snake = 'modular_nova/master_files/icons/donator/mob/clothing/uniform.dmi'
+//	worn_icon_taur_snake = 'modular_nova/master_files/icons/donator/mob/clothing/uniform.dmi'
 	icon_state = "ig_harness"
 	body_parts_covered = NONE
 	attachment_slot_override = CHEST
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
-	gets_cropped_on_taurs = FALSE
 	can_adjust = FALSE
 	slot_flags = ITEM_SLOT_ICLOTHING | ITEM_SLOT_OCLOTHING
 

@@ -195,26 +195,8 @@
 // NOVA EDIT ADDITION START
 ///The limb fits a modular custom shape
 #define BODYSHAPE_CUSTOM (1<<15)
-///The limb causes shoes to no longer be displayed, useful for taurs.
-#define BODYSHAPE_HIDE_SHOES (1<<16)
 ///The limb causes glasses and hats to be drawn on layers 5 and 4 respectively. Currently used for snouts with the (Top) suffix, which are drawn on layer 6 and would normally cover facewear
 #define BODYSHAPE_ALT_FACEWEAR_LAYER (1<<17)
-/// For when you just want the leg cropping for taurs
-#define BODYSHAPE_TAUR_GENERIC (1<<18)
-/// Snake taurs
-#define BODYSHAPE_TAUR_SNAKE (1<<19)
-/// Taurs with paws
-#define BODYSHAPE_TAUR_PAW (1<<20)
-/// Taurs with hooves
-#define BODYSHAPE_TAUR_HOOF (1<<21)
-/// Big leg
-#define BODYSHAPE_TAUR_BIG_LEGS (1<<22)
-/// Big leg stanced
-#define BODYSHAPE_TAUR_BIG_LEGS_STANCED (1<<23)
-/// Big legs - all types
-#define BODYSHAPE_TAUR_BIG_LEGS_ALL (BODYSHAPE_TAUR_BIG_LEGS|BODYSHAPE_TAUR_BIG_LEGS_STANCED)
-/// All-encompassing taur bodyshape flag
-#define BODYSHAPE_TAUR (BODYSHAPE_TAUR_GENERIC|BODYSHAPE_TAUR_SNAKE|BODYSHAPE_TAUR_PAW|BODYSHAPE_TAUR_HOOF|BODYSHAPE_TAUR_BIG_LEGS|BODYSHAPE_TAUR_BIG_LEGS_STANCED)
 // NOVA EDIT ADDITION END
 
 /// Check to see if a bodypart limb can be bioscrambled

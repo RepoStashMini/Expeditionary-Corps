@@ -86,7 +86,6 @@
 	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 	bodyshapes_with_variations = NONE
-	gets_cropped_on_taurs = FALSE
 
 /obj/item/clothing/neck/bowtie/green
 	name = "green bow tie"

@@ -35,5 +35,5 @@
 
 	var/mutable_appearance/uncached_appearance = mutable_appearance(cached_icon, layer = layer_real)
 	if(sprite_datum.center)
-		center_image(uncached_appearance, sprite_datum.special_x_dimension ? sprite_datum.get_special_x_dimension(owner) : sprite_datum.dimension_x, sprite_datum.dimension_y)
+		center_image(uncached_appearance, sprite_datum.dimension_x, sprite_datum.dimension_y)
 	return uncached_appearance

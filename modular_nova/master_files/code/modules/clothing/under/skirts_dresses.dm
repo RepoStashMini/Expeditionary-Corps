@@ -3,7 +3,6 @@
 	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY //For reference - We dont want to cut a random hole in dresses
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON	//For reference - keep in mind some dresses will need adjusted for digi thighs - hence the link below
 	worn_icon_digi = SKIRTS_DRESSES_DIGIFILE
-	gets_cropped_on_taurs = FALSE
 	//God bless the skirt being a subtype of the dress, only need one worn_digi_icon definition
 
 /obj/item/clothing/under/dress/nova
@@ -99,7 +98,6 @@
 	greyscale_config = /datum/greyscale_config/lone_skirt
 	greyscale_config_worn = /datum/greyscale_config/lone_skirt/worn
 	greyscale_colors = "#5f534a"
-	supports_variations_flags = CLOTHING_BIG_LEGS_MASK
 	flags_1 = IS_PLAYER_COLORABLE_1
 
 /obj/item/clothing/under/dress/skirt/nova/medium
@@ -351,7 +349,6 @@
 	body_parts_covered = CHEST|GROIN|LEGS
 	can_adjust = FALSE
 	alternate_worn_layer = ABOVE_SHOES_LAYER
-	gets_cropped_on_taurs = FALSE
 
 /obj/item/clothing/under/dress/nova/midnight_gown/setup_reskins()
 	AddComponent(/datum/component/reskinable_item, /datum/atom_skin/midnight_gown)
