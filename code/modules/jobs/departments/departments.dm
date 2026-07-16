@@ -207,7 +207,6 @@
     department_head = /datum/job/exp_officer
     department_experience_type = EXP_TYPE_EXPEDITIONARY
     display_order = 9
-    label_class = "expeditionary"
     ui_color = "#9924cf"
     nation_prefixes = list("exp", "exp1", "exp2")
     primary_work_area = /area/station/expeditionary
