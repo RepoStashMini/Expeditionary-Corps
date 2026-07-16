@@ -121,6 +121,33 @@
 	greyscale_config = /datum/greyscale_config/encryptionkey_medical
 	greyscale_colors = "#ebebeb#9d1de8"
 
+/obj/item/encryptionkey/headset_exp
+	name = "Expeditionary radio encryption key"
+	icon = 'icons/map_icons/items/encryptionkey.dmi'
+	icon_state = "/obj/item/encryptionkey/headset_exp"
+	post_init_icon_state = "cypherkey_research"
+	channels = list(RADIO_CHANNEL_EXP = 1)
+	greyscale_config = /datum/greyscale_config/encryptionkey_research
+	greyscale_colors = "#793a80#bc4a9b"
+
+/obj/item/encryptionkey/headset_medexp
+	name = "Medical expeditionary radio encryption key"
+	icon = 'icons/map_icons/items/encryptionkey.dmi'
+	icon_state = "/obj/item/encryptionkey/headset_exp"
+	post_init_icon_state = "cypherkey_research"
+	channels = list(RADIO_CHANNEL_EXP = 1, RADIO_CHANNEL_MEDICAL = 1)
+	greyscale_config = /datum/greyscale_config/encryptionkey_research
+	greyscale_colors = "#793a80#bc4a9b"
+
+/obj/item/encryptionkey/headset_engexp
+	name = "Expeditionary engineering encryption key"
+	icon = 'icons/map_icons/items/encryptionkey.dmi'
+	icon_state = "/obj/item/encryptionkey/headset_engexp"
+	post_init_icon_state = "cypherkey_research"
+	channels = list(RADIO_CHANNEL_EXP = 1, RADIO_CHANNEL_ENGINEERING)
+	greyscale_config = /datum/greyscale_config/encryptionkey_research
+	greyscale_colors = "#793a80#bc4a9b"
+
 /obj/item/encryptionkey/headset_srvsec
 	name = "law and order radio encryption key"
 	icon = 'icons/map_icons/items/encryptionkey.dmi'
@@ -173,6 +200,15 @@
 	name = "\proper the research director's encryption key"
 	icon = 'icons/map_icons/items/encryptionkey.dmi'
 	icon_state = "/obj/item/encryptionkey/heads/rd"
+	post_init_icon_state = "cypherkey_research"
+	channels = list(RADIO_CHANNEL_SCIENCE = 1, RADIO_CHANNEL_COMMAND = 1)
+	greyscale_config = /datum/greyscale_config/encryptionkey_research
+	greyscale_colors = "#bc4a9b#793a80"
+
+/obj/item/encryptionkey/heads/exp_officer
+	name = "\proper the expedition Officer's encryption key"
+	icon = 'icons/map_icons/items/encryptionkey.dmi'
+	icon_state = "/obj/item/encryptionkey/heads/exp_officer"
 	post_init_icon_state = "cypherkey_research"
 	channels = list(RADIO_CHANNEL_SCIENCE = 1, RADIO_CHANNEL_COMMAND = 1)
 	greyscale_config = /datum/greyscale_config/encryptionkey_research

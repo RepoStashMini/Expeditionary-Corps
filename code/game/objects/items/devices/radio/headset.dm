@@ -243,6 +243,27 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	worn_icon_state = "medsci_headset"
 	keyslot = /obj/item/encryptionkey/headset_medsci
 
+/obj/item/radio/headset/headset_exp
+	name = "Expeditionary medical radio headset"
+	desc = "Standard medical expeditionary personnel headset"
+	icon_state = "exp_headset"
+	worn_icon_state = "exp_headset"
+	keyslot = /obj/item/encryptionkey/headset_exp
+
+/obj/item/radio/headset/headset_medexp
+	name = "Expeditionary radio headset"
+	desc = "Standard expeditionary personnel headset"
+	icon_state = "medexpi_headset"
+	worn_icon_state = "medexpi_headset"
+	keyslot = /obj/item/encryptionkey/headset_medexp
+
+/obj/item/radio/headset/headset_engexp
+	name = "Expeditionary radio headset"
+	desc = "Standard engineering expeditionary personnel headset"
+	icon_state = "engexp_headset"
+	worn_icon_state = "engexp_headset"
+	keyslot = /obj/item/encryptionkey/headset_engexp
+
 /obj/item/radio/headset/headset_srvsec
 	name = "law and order headset"
 	desc = "In the criminal justice headset, the encryption key represents two separate but equally important groups. Sec, who investigate crime, and Service, who provide services. These are their comms."
@@ -295,6 +316,20 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	name = "\proper the research director's headset"
 	desc = "Headset of the fellow who keeps society marching towards technological singularity."
 	keyslot = /obj/item/encryptionkey/heads/rd
+
+/obj/item/radio/headset/heads/exp_officer
+	name = "\proper the expedition Officer's headset"
+	desc = "A headset from someone who's seen some shit."
+	keyslot = /obj/item/encryptionkey/heads/exp_officer
+	icon_state = "comexp_headset_alt"
+	worn_icon_state = "comexp_headset_alt"
+
+/obj/item/radio/headset/heads/med_exp_officer
+	name = "\proper the medical expedition Officer's headset"
+	desc = "A headset for those who are simply tired."
+	keyslot = /obj/item/encryptionkey/headset_medexp
+	icon_state = "medexp_headset_alt"
+	worn_icon_state = "medexp_headset_alt"
 
 /obj/item/radio/headset/heads/hos
 	name = "\proper the head of security's headset"
