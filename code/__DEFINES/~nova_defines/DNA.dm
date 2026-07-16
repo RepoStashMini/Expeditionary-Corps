@@ -90,6 +90,17 @@
 #define FEATURE_SYNTH_HEAD "synth_head"
 #define FEATURE_SYNTH_HAIR "synth_hair"
 
+#define MANDATORY_FEATURE_LIST list(\
+	FEATURE_MUTANT_COLOR = "#FFFFBB",\
+	FEATURE_MUTANT_COLOR_TWO = "#FFFFBB",\
+	FEATURE_MUTANT_COLOR_THREE = "#FFFFBB",\
+	FEATURE_ETHEREAL_COLOR = "#FFCCCC",\
+	FEATURE_SKIN_COLOR = "#FFEEDD",\
+	EXAMINE_DNA_FLAVOR_TEXT = "",\
+	"body_size" = BODY_SIZE_NORMAL,\
+	"custom_species" = null,\
+)
+
 //Species IDs. If you wanna look at tg's species ID defines, go look in the *other* DNA.dm file
 #define SPECIES_AKULA "akula"
 #define SPECIES_AQUATIC "aquatic"
