@@ -100,10 +100,6 @@
 			if(current_turf in tail_emotes)
 				key = "tail"
 
-			var/list/taur_emotes = list("coil")
-			if(current_turf in taur_emotes)
-				key = "taur"
-
 			//coloring
 			var/list/finished_list = list()
 			var/datum/mutant_bodypart/mutant_bodypart = human_user.dna.mutant_bodyparts[key]

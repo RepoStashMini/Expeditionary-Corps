@@ -27,6 +27,8 @@
 
 	///Set this to true to make an accessory appear as color customizable in preferences despite advanced color settings being off, will also prevent the accessory from being reset
 	var/always_color_customizable
+	///Special case of whether the accessory should be shifted in the X dimension.
+	var/special_x_dimension
 	///Special case for MODsuit overlays
 	var/use_custom_mod_icon
 	var/uses_emissives = FALSE

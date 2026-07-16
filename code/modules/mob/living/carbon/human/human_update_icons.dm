@@ -346,6 +346,8 @@ There are several things that need to be remembered:
 			if(species_icon_file)
 				icon_file = species_icon_file
 				mutant_override = TRUE
+		if(bodyshape)
+			return // We just don't want shoes that float if we're not displaying legs (useful for taurs, for now)
 		// NOVA EDIT ADDITION END
 		var/mutable_appearance/shoes_overlay = shoes.build_worn_icon(default_layer = SHOES_LAYER, default_icon_file = icon_file, bodyshape = bodyshape, override_file = mutant_override ? icon_file : null) // NOVA EDIT CHANGE - ORIGINAL: var/mutable_appearance/shoes_overlay = shoes.build_worn_icon(default_layer = SHOES_LAYER, default_icon_file = icon_file, bodyshape = bodyshape)
 
@@ -460,6 +462,7 @@ There are several things that need to be remembered:
 			if(species_icon_file)
 				icon_file = species_icon_file
 				mutant_override = TRUE
+
 		else
 			worn_item.worn_x_offset = 0
 		// NOVA EDIT ADDITION END
@@ -797,7 +800,7 @@ generate/load female uniform sprites matching all previously decided variables
 			greyscale_colors = greyscale_colors,
 			bodyshape = bodyshape,
 		)
-	if(!isinhands && (bodyshapes_with_variations & bodyshape)) // NOVA EDIT CHANGE - taur cropping routes through get_bodyshape_icon - ORIGINAL: if(!isinhands && (bodyshapes_with_variations & bodyshape)) // NOVA EDIT CHANGE - ORIGINAL: if(!isinhands && (bodyshapes_with_variations & bodyshape))
+	if(!isinhands && (bodyshapes_with_variations & bodyshape))
 		building_icon = get_bodyshape_icon(
 			base_icon = building_icon || icon(file2use, t_state),
 			key = "[t_state]-[file2use]-[female_uniform]",
@@ -901,20 +904,11 @@ generate/load female uniform sprites matching all previously decided variables
 		if(shirt_overlay)
 			. += shirt_overlay
 
-	/* // NOVA EDIT REMOVAL START - Original TG sock handling
-	if(socks && num_legs >= 2 && !(bodyshape & BODYSHAPE_DIGITIGRADE))
-		var/datum/sprite_accessory/clothing/socks/sock_accessory = SSaccessories.socks_list[socks]
-		var/mutable_appearance/socks_overlay = sock_accessory?.make_appearance(null, physique, bodyshape)
-		if(socks_overlay)
-			. += socks_overlay
-	*/ // NOVA EDIT REMOVAL END
-	// NOVA EDIT ADDITION START - Nova socks - digi supported
 	if(socks && num_legs >= 2 && !(underwear_visibility & UNDERWEAR_HIDE_SOCKS))
 		var/datum/sprite_accessory/clothing/socks/sock_accessory = SSaccessories.socks_list[socks]
 		var/mutable_appearance/socks_overlay = sock_accessory?.make_appearance(socks_color, physique, bodyshape)
 		if(socks_overlay)
 			. += socks_overlay
-	// NOVA EDIT ADDITION END
 
 
 	return .
