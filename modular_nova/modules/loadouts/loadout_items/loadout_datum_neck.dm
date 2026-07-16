@@ -36,6 +36,10 @@
 */
 
 /// THIN
+/datum/loadout_item/neck/thinchoker
+	name = "Choker"
+	item_path = /obj/item/clothing/neck/collar
+
 /*
 *	SCARVES
 */
@@ -360,6 +364,22 @@
 	item_path = /obj/item/clothing/neck/wide_cape
 	group = "Cloaks and Shrouds"
 
+/datum/loadout_item/neck/gags_cloak
+	name = "Cloak (Colorable)"
+	item_path = /obj/item/clothing/neck/cloak/colourable
+	group = "Cloaks and Shrouds"
+
+/datum/loadout_item/neck/colonial_cloak
+	name = "Colonial Cloak"
+	item_path = /obj/item/clothing/neck/cloak/colonial
+	group = "Cloaks and Shrouds"
+	species_blacklist = list(SPECIES_TESHARI)
+
+/datum/loadout_item/neck/coalition_police_cloak
+	name = "Colonial Cloak - Coalition Police"
+	item_path = /obj/item/clothing/neck/cloak/colonial/hc_police
+	group = "Cloaks and Shrouds"
+
 /datum/loadout_item/neck/mantle
 	name = "Mantle"
 	item_path = /obj/item/clothing/neck/mantle
@@ -368,6 +388,11 @@
 /datum/loadout_item/neck/gags_mantle
 	name = "Mantle (Colorable)"
 	item_path = /obj/item/clothing/neck/mantle/recolorable
+	group = "Cloaks and Shrouds"
+
+/datum/loadout_item/neck/gags_boat //This isn't actually a boatcloak (its way too short)
+	name = "Mantle - Long (Colorable)"
+	item_path = /obj/item/clothing/neck/cloak/colourable/boat
 	group = "Cloaks and Shrouds"
 
 /datum/loadout_item/neck/tesharian_mantle
@@ -387,7 +412,17 @@
 
 /datum/loadout_item/neck/security_cape
 	name = "Security Cape"
-	item_path = /obj/item/clothing/neck/security_cape
+	item_path = /obj/item/clothing/neck/security_cape/shoulder
+	group = "Cloaks and Shrouds"
+
+/datum/loadout_item/neck/gags_shroud
+	name = "Shroud (Colorable)"
+	item_path = /obj/item/clothing/neck/cloak/colourable/shroud
+	group = "Cloaks and Shrouds"
+
+/datum/loadout_item/neck/gags_veil
+	name = "Veil (Colorable)"
+	item_path = /obj/item/clothing/neck/cloak/colourable/veil
 	group = "Cloaks and Shrouds"
 
 /datum/loadout_item/neck/shortcloak
@@ -482,13 +517,24 @@
 	name = "Head of Security's Mantle"
 	item_path = /obj/item/clothing/neck/mantle/hosmantle
 	restricted_roles = list(JOB_HEAD_OF_SECURITY)
-	group = "Job-Locked"
+	group = "Guard"
 
 /datum/loadout_item/neck/security_gauntlet
-	name = "Security Gauntlet"
+	name = "Guard Gauntlet"
 	item_path = /obj/item/clothing/neck/security_cape/armplate
-	restricted_roles = list(ALL_JOBS_SEC)
-	group = "Job-Locked"
+	restricted_roles = list(ALL_JOBS_SEC, ALL_JOBS_DEPTGUARD)
+	group = "Guard"
+
+/datum/loadout_item/neck/security_caped_gauntlet
+	name = "Guard Caped Gauntlet (Colorable)"
+	item_path = /obj/item/clothing/neck/security_cape/armplate_caped
+	restricted_roles = list(ALL_JOBS_SEC, ALL_JOBS_DEPTGUARD)
+	group = "Guard"
+
+/datum/loadout_item/neck/security_cape
+	name = "Guard Cape (Colorable)"
+	item_path = /obj/item/clothing/neck/security_cape/shoulder
+	group = "Guard"
 
 /*
 *	DONATOR

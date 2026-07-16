@@ -43,8 +43,12 @@
 	if(!isnull(neuro_status))
 		neuro_status.adjust_program_count(-1)
 
+///Returns a random neuroware reagent type. Excludes aphrodisiac reagents.
+/proc/get_random_neuroware() // сломалось при удалении левд чипов
+//	return GLOB.name2neuroware_safe[pick(GLOB.name2neuroware_safe)]
+
 ///Returns TRUE if the given mob can metabolize neuroware reagents. Returns FALSE otherwise.
-///Neuroware requires a robotic brain.
+///Neuroware requires a robotic brain, or any brain combined with a functional NIF.
 /mob/living/proc/is_neuroware_compatible()
 	return FALSE
 

@@ -369,6 +369,7 @@
 		return
 
 	if(isliving(talking_movable))
+		/* NOVA EDIT REMOVAL START - ORIGINAL - We use our own radio sounds - see modular_nova/modules/radiosound/code/radio.dm - ORIGINAL:
 		var/mob/living/talking_living = talking_movable
 		var/volume_modifier = (talking_living.client?.prefs.read_preference(/datum/preference/numeric/volume/sound_radio_noise))
 		if(radio_noise && !HAS_TRAIT(talking_living, TRAIT_DEAF) && volume_modifier && signal.frequency != FREQ_COMMON && !LAZYACCESS(message_mods, MODE_SEQUENTIAL) && COOLDOWN_FINISHED(src, audio_cooldown))
@@ -376,6 +377,12 @@
 			var/sound/radio_noise = sound('sound/items/radio/radio_talk.ogg', volume = volume_modifier)
 			radio_noise.frequency = get_rand_frequency_low_range()
 			SEND_SOUND(talking_living, radio_noise)
+		NOVA EDIT REMOVAL END */
+		// NOVA EDIT ADDITION START - We play our radio sound for all mobs nearby to hear instead of just sending it to the person talking
+		if(radio_noise && COOLDOWN_FINISHED(src, audio_cooldown))
+			COOLDOWN_START(src, audio_cooldown, 0.5 SECONDS)
+			playsound(src, radio_talk_sound, radio_sound_volume, radio_sound_has_vary, radio_sound_range, SOUND_FALLOFF_EXPONENT, frequency = get_rand_frequency_low_range())
+		// NOVA EDIT ADDITION END
 
 	// All radios make an attempt to use the subspace system first
 	signal.send_to_receivers()
@@ -497,7 +504,6 @@
 	data["subspace"] = subspace_transmission
 	data["subspaceSwitchable"] = subspace_switchable
 	data["headset"] = FALSE
-	data["radio_noises"] = (user.client?.prefs.read_preference(/datum/preference/numeric/volume/sound_radio_noise))
 
 	return data
 
@@ -506,7 +512,6 @@
 	if(.)
 		return
 
-	var/mob/user = ui.user
 	switch(action)
 		if("frequency")
 			if(freqlock != RADIO_FREQENCY_UNLOCKED)
@@ -557,15 +562,6 @@
 				else
 					recalculateChannels()
 				. = TRUE
-		if("set_radio_volume")
-			if(!user.client)
-				return
-			user.client.prefs.write_preference(GLOB.preference_entries[/datum/preference/numeric/volume/sound_radio_noise], params["volume"])
-			//let them know what it'll sound like
-			//we get their read prefs instead of just taking the params beacuse write_preference is what handles ensuring
-			//there's no href exploits.
-			var/volume_modifier = (user.client.prefs.read_preference(/datum/preference/numeric/volume/sound_radio_noise))
-			SEND_SOUND(user, sound('sound/items/radio/radio_receive.ogg', volume = volume_modifier))
 
 /obj/item/radio/examine(mob/user)
 	. = ..()

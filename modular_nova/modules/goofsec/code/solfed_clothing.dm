@@ -348,6 +348,7 @@ SOLFED ARMOR VALUES!
 
 		/obj/item/storage/box/flashbangs = 2,
 		/obj/item/storage/box/handcuffs = 4,
+		/obj/item/storage/box/nri_flares = 16,
 	)
 
 /obj/item/radio/headset/headset_solfed/officials

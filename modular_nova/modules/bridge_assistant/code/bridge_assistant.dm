@@ -85,7 +85,7 @@
 	dying_key = DYE_REGISTRY_JUMPSKIRT
 	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
-	gets_cropped_on_taurs = FALSE
+	bodyshapes_with_variations = NONE
 
 /obj/item/clothing/neck/bowtie/green
 	name = "green bow tie"

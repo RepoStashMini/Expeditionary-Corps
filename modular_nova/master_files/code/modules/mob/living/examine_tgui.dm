@@ -60,24 +60,37 @@
 	var/datum/preferences/preferences = holder.client?.prefs
 
 	var/flavor_text
+	var/flavor_text_nsfw
 	var/custom_species
 	var/custom_species_lore
 	var/obscured
 	var/ooc_notes = ""
+	var/ooc_notes_nsfw = ""
 	var/ideal_antag_optin_status
 	var/current_antag_optin_status
+	var/ideal_conflict_optin_status
+	var/current_conflict_optin_status
 	var/headshot = ""
 
 	// OOC notes go first
 	if(preferences)
 
-		if(!CONFIG_GET(flag/disable_antag_opt_in_preferences))
-			var/antag_prefs = holder.mind?.ideal_opt_in_level
-			var/effective_opt_in_level = holder.mind?.get_effective_opt_in_level()
+
+/*		if(!CONFIG_GET(flag/disable_antag_opt_in_preferences))
+			var/antag_prefs = holder.mind?.ideal_antag_opt_in_level
+			var/effective_opt_in_level = holder.mind?.get_effective_antag_opt_in_level()
 			if(isnull(antag_prefs))
 				antag_prefs = preferences.read_preference(/datum/preference/choiced/antag_opt_in_status)
 			current_antag_optin_status = GLOB.antag_opt_in_strings[num2text(effective_opt_in_level)]
 			ideal_antag_optin_status = GLOB.antag_opt_in_strings[num2text(antag_prefs)]
+*/
+		if(!CONFIG_GET(flag/disable_conflict_opt_in_preferences))
+			var/conflict_prefs = holder.mind?.ideal_conflict_opt_in_level
+			var/effective_conflict_opt_in_level = holder.mind?.get_effective_conflict_opt_in_level()
+			if(isnull(conflict_prefs))
+				conflict_prefs = preferences.read_preference(/datum/preference/choiced/conflict_opt_in_status)
+			current_conflict_optin_status = GLOB.conflict_opt_in_strings[num2text(effective_conflict_opt_in_level)]
+			ideal_conflict_optin_status = GLOB.conflict_opt_in_strings[num2text(conflict_prefs)]
 
 	// Now we handle silicon and/or human, order doesn't matter as both obviously can't fire.
 	// If other variants of mob/living need to be handled at some point, put them here.
@@ -86,6 +99,7 @@
 		custom_species_lore = "A silicon unit, like a cyborg or pAI."
 		if(preferences)
 			flavor_text = preferences.read_preference(/datum/preference/text/silicon_flavor_text)
+			flavor_text_nsfw = preferences.read_preference(/datum/preference/text/silicon_flavor_text_nsfw)
 			ooc_notes += preferences.read_preference(/datum/preference/text/ooc_notes)
 			headshot += preferences.read_preference(/datum/preference/text/headshot/silicon)
 
@@ -95,6 +109,7 @@
 		obscured = !can_bypass_obscure && ((holder_human.wear_mask && (holder_human.wear_mask.flags_inv & HIDEFACE)) || (holder_human.head && (holder_human.head.flags_inv & HIDEFACE)))
 		custom_species = obscured ? "Obscured" : holder_human.dna.species.lore_protected ? holder_human.dna.species.name : holder_human.dna.features["custom_species"]
 		flavor_text = obscured ? "Obscured" : holder_human.dna.features[EXAMINE_DNA_FLAVOR_TEXT]
+		flavor_text_nsfw = obscured ? "Obscured" : holder_human.dna.features[EXAMINE_DNA_FLAVOR_TEXT_NSFW]
 		custom_species_lore = obscured ? "Obscured" : holder_human.dna.species.lore_protected ? holder_human.dna.species.get_species_lore().Join("\n") : holder_human.dna.features["custom_species_lore"]
 		ooc_notes += holder_human.dna.features[EXAMINE_DNA_OOC_NOTES]
 		if(!obscured)
@@ -113,16 +128,21 @@
 		"custom_species" = custom_species,
 		"custom_species_lore" = custom_species_lore,
 		// Descriptions, but requiring manual input to see
+		"flavor_text_nsfw" = flavor_text_nsfw,
+		"ooc_notes_nsfw" = ooc_notes_nsfw,
 		// Antaggery
-		"ideal_antag_optin_status" = ideal_antag_optin_status, // Our opt-in status from prefs when we joined the game
-		"current_antag_optin_status" = current_antag_optin_status, // What it's being forced to if applicable
+		"ideal_antag_optin_status" = ideal_antag_optin_status, // Our Antag Opt-In from prefs when we joined the game
+		"current_antag_optin_status" = current_antag_optin_status, // The current Antag Opt-In, if it was forced to be something different
+		"ideal_conflict_optin_status" = ideal_conflict_optin_status, // Our Conflict Opt-In from prefs when we joined the game
+		"current_conflict_optin_status" = current_conflict_optin_status, // The current Conflict Opt-In, if it was forced to be something different
 	)
 	return data
 
 /datum/examine_panel/ui_static_data(mob/user)
 	var/list/data = list(
 		"nova_star_status" = !!(holder.client && SSplayer_ranks.is_nova_star(holder.client, admin_bypass = FALSE)),
-		"opt_in_colors" = GLOB.antag_opt_in_colors,
+		"antag_opt_in_colors" = GLOB.antag_opt_in_colors,
+		"conflict_opt_in_colors" = GLOB.conflict_opt_in_colors,
 	)
 	return data
 

@@ -146,6 +146,7 @@
 /// Any model that has extra rest options
 #define TRAIT_RESTING_ALTS "extra_resting_alts"
 
+
 /// If clothing can also be damaged by piercing wound checks, instead of JUST slashes and burns
 #define TRAIT_CLOTHES_DAMAGED_BY_PIERCING "clothing_damaged_by_piercing"
 
@@ -166,6 +167,12 @@
 
 /// Trait for quirk: Illuminated
 #define TRAIT_COSGLOW "cosmetic_glow"
+
+/// Mob has a knot and can tie partners after climax.
+#define TRAIT_CAN_KNOT "can_knot"
+
+/// Mob is currently tied by a knotting interaction.
+#define TRAIT_KNOTTED "knotted"
 
 /// The trait for Holosynths
 #define TRAIT_HOLOSYNTH "holosynthetic"

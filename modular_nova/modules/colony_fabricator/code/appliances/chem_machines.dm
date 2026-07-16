@@ -100,7 +100,12 @@
 	// God's strongest coffee machine
 	dispensable_reagents = list(
 		/datum/reagent/water,
+		/datum/reagent/consumable/powdered_milk,
 		/datum/reagent/consumable/sugar,
+		/datum/reagent/consumable/powdered_lemonade,
+		/datum/reagent/consumable/powdered_coco,
+		/datum/reagent/consumable/powdered_coffee,
+		/datum/reagent/consumable/powdered_tea,
 		/datum/reagent/consumable/vanilla,
 		/datum/reagent/consumable/caramel,
 		/datum/reagent/consumable/korta_nectar,

@@ -64,8 +64,10 @@
 	src.speech_action_icon = speech_action_icon
 	src.speech_action_icon_state = speech_action_icon_state
 	src.speech_action_background_icon_state = speech_action_background_icon_state
+
 	master_speech = new(src)
 	master_speech.Grant(owner)
+
 
 /datum/component/mind_linker/Destroy(force)
 	for(var/mob/living/remaining_mob as anything in linked_mobs)

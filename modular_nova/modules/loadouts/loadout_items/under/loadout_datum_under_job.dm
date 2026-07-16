@@ -58,6 +58,27 @@
 	item_path = /obj/item/clothing/under/rank/medical/chemist/nova/formal
 	group = "Workwear"
 
+/datum/loadout_item/under/jumpsuit/cin_surplus_uniform
+	name = "CIN Combat Uniform"
+	item_path = /obj/item/clothing/under/syndicate/rus_army/cin_surplus
+	group = "Workwear"
+
+/datum/loadout_item/under/jumpsuit/colonial_uniform
+	name = "Colonial Uniform"
+	item_path = /obj/item/clothing/under/colonial
+	group = "Workwear"
+	species_blacklist = list(SPECIES_TESHARI)
+
+/datum/loadout_item/under/jumpsuit/colonial_uniform/coalition_police_uniform
+	name = "Coalition Police Uniform"
+	item_path = /obj/item/clothing/under/colonial/hc_police
+	group = "Workwear"
+
+/datum/loadout_item/under/jumpsuit/colonial_uniform/coalition_police_skirt
+	name = "Coalition Police Skirt"
+	item_path = /obj/item/clothing/under/colonial/hc_police/skirt
+	group = "Workwear"
+
 /datum/loadout_item/under/jumpsuit/utility_eng
 	name = "Engineering Utility Uniform"
 	item_path = /obj/item/clothing/under/rank/engineering/engineer/nova/utility
@@ -160,6 +181,13 @@
 	restricted_roles = list(ALL_JOBS_COM)
 	group = "Job-Locked"
 
+/datum/loadout_item/under/bunny/captain
+	name = "Bunny Suit (Captain)"
+	item_path = /obj/item/clothing/under/rank/captain/bunnysuit
+	erp_item = TRUE
+	group = "Bunny Suits"
+	restricted_roles = list(JOB_CAPTAIN)
+
 //SERV
 /datum/loadout_item/under/jumpsuit/imphop
 	name = "Head of Personnel's Naval Jumpsuit"
@@ -173,6 +201,27 @@
 	restricted_roles = list(JOB_HEAD_OF_PERSONNEL, JOB_NT_REP)
 	group = "Job-Locked"
 
+/datum/loadout_item/under/bunny/hop
+	name = "Bunny Suit (HoP)"
+	item_path = /obj/item/clothing/under/rank/civilian/hop_bunnysuit
+	erp_item = TRUE
+	group = "Bunny Suits"
+	restricted_roles = list(JOB_HEAD_OF_PERSONNEL)
+
+/datum/loadout_item/under/bunny/clown
+	name = "Bunny Suit (Clown)"
+	item_path = /obj/item/clothing/under/rank/civilian/clown/clown_bunnysuit
+	erp_item = TRUE
+	group = "Bunny Suits"
+	restricted_roles = list(JOB_CLOWN)
+
+/datum/loadout_item/under/bunny/mime
+	name = "Bunny Suit (Mime)"
+	item_path = /obj/item/clothing/under/rank/civilian/mime_bunnysuit
+	erp_item = TRUE
+	group = "Bunny Suits"
+	restricted_roles = list(JOB_MIME)
+
 //MED
 /datum/loadout_item/under/jumpsuit/impcmo
 	name = "Chief Medical Officer's Naval Uniform"
@@ -185,6 +234,48 @@
 	item_path = /obj/item/clothing/under/imperialskirt/cmo
 	restricted_roles = list(JOB_CHIEF_MEDICAL_OFFICER)
 	group = "Job-Locked"
+
+/datum/loadout_item/under/bunny/medical
+	name = "Bunny Suit (Medical)"
+	item_path = /obj/item/clothing/under/rank/medical/doctor_bunnysuit
+	erp_item = TRUE
+	group = "Bunny Suits"
+	restricted_roles = list(ALL_JOBS_MED)
+
+/datum/loadout_item/under/bunny/medical/paramed
+	name = "Bunny Suit (Paramedic)"
+	item_path = /obj/item/clothing/under/rank/medical/paramedic_bunnysuit
+	erp_item = TRUE
+	group = "Bunny Suits"
+	restricted_roles = list(ALL_JOBS_MED)
+
+/datum/loadout_item/under/bunny/medical/chem
+	name = "Bunny Suit (Chemist)"
+	item_path = /obj/item/clothing/under/rank/medical/chemist/bunnysuit
+	erp_item = TRUE
+	group = "Bunny Suits"
+	restricted_roles = list(ALL_JOBS_MED)
+
+/datum/loadout_item/under/bunny/medical/viro
+	name = "Bunny Suit (Virology)"
+	item_path = /obj/item/clothing/under/rank/medical/pathologist_bunnysuit
+	erp_item = TRUE
+	group = "Bunny Suits"
+	restricted_roles = list(ALL_JOBS_MED)
+
+/datum/loadout_item/under/bunny/medical/coroner
+	name = "Bunny Suit (Coroner)"
+	item_path = /obj/item/clothing/under/rank/medical/coroner_bunnysuit
+	erp_item = TRUE
+	group = "Bunny Suits"
+	restricted_roles = list(ALL_JOBS_MED)
+
+/datum/loadout_item/under/bunny/medical/coroner
+	name = "Bunny Suit (Chief Medical Officer)"
+	item_path = /obj/item/clothing/under/rank/medical/cmo_bunnysuit
+	erp_item = TRUE
+	group = "Bunny Suits"
+	restricted_roles = list(JOB_CHIEF_MEDICAL_OFFICER)
 
 
 //ENGI
@@ -200,6 +291,27 @@
 	restricted_roles = list(JOB_CHIEF_ENGINEER)
 	group = "Job-Locked"
 
+/datum/loadout_item/under/bunny/engineer
+	name = "Bunny Suit (Engineer)"
+	item_path = /obj/item/clothing/under/rank/engineering/engineer_bunnysuit
+	erp_item = TRUE
+	group = "Bunny Suits"
+	restricted_roles = list(ALL_JOBS_ENGI)
+
+/datum/loadout_item/under/bunny/engineer/atmos
+	name = "Bunny Suit (Atmos)"
+	item_path = /obj/item/clothing/under/rank/engineering/atmos_tech_bunnysuit
+	erp_item = TRUE
+	group = "Bunny Suits"
+	restricted_roles = list(ALL_JOBS_ENGI)
+
+/datum/loadout_item/under/bunny/engineer/ce
+	name = "Bunny Suit (Chief Engineer)"
+	item_path = /obj/item/clothing/under/rank/engineering/chief_engineer/bunnysuit
+	erp_item = TRUE
+	group = "Bunny Suits"
+	restricted_roles = list(JOB_CHIEF_ENGINEER)
+
 //SCI
 /datum/loadout_item/under/jumpsuit/imprd
 	name = "Research Director's Naval Uniform"
@@ -212,6 +324,34 @@
 	item_path = /obj/item/clothing/under/imperialskirt/rd
 	restricted_roles = list(JOB_RESEARCH_DIRECTOR)
 	group = "Job-Locked"
+
+/datum/loadout_item/under/bunny/rnd
+	name = "Bunny Suit (Science)"
+	item_path = /obj/item/clothing/under/rank/rnd/scientist/bunnysuit
+	erp_item = TRUE
+	group = "Bunny Suits"
+	restricted_roles = list(ALL_JOBS_SCI)
+
+/datum/loadout_item/under/bunny/rnd/robo
+	name = "Bunny Suit (Robotics)"
+	item_path = /obj/item/clothing/under/rank/rnd/scientist/roboticist_bunnysuit
+	erp_item = TRUE
+	group = "Bunny Suits"
+	restricted_roles = list(ALL_JOBS_SCI)
+
+/datum/loadout_item/under/bunny/rnd/gene
+	name = "Bunny Suit (Genetics)"
+	item_path = /obj/item/clothing/under/rank/rnd/geneticist/bunnysuit
+	erp_item = TRUE
+	group = "Bunny Suits"
+	restricted_roles = list(ALL_JOBS_SCI)
+
+/datum/loadout_item/under/bunny/rnd/rd
+	name = "Bunny Suit (Research Director)"
+	item_path = /obj/item/clothing/under/rank/rnd/research_director/bunnysuit
+	erp_item = TRUE
+	group = "Bunny Suits"
+	restricted_roles = list(ALL_JOBS_SCI)
 
 //CARGO
 /datum/loadout_item/under/miscellaneous/qm_gorka
@@ -232,6 +372,20 @@
 	restricted_roles = list(JOB_QUARTERMASTER)
 	group = "Job-Locked"
 
+/datum/loadout_item/under/bunny/quartermaster
+	name = "Bunny Suit (Quartermaster)"
+	item_path = /obj/item/clothing/under/rank/cargo/quartermaster_bunnysuit
+	erp_item = TRUE
+	group = "Bunny Suits"
+	restricted_roles = list(JOB_QUARTERMASTER)
+
+/datum/loadout_item/under/bunny/cargo
+	name = "Bunny Suit (Cargo)"
+	item_path = /obj/item/clothing/under/rank/cargo/cargo_bunnysuit
+	erp_item = TRUE
+	group = "Bunny Suits"
+	restricted_roles = list(ALL_JOBS_CARGO)
+/*
 //SEC
 /datum/loadout_item/under/jumpsuit/imphos
 	name = "Head of Security's Naval Uniform"
@@ -265,7 +419,7 @@
 
 /datum/loadout_item/under/jumpsuit/security_plain_skirt
 	name = "Security Jumpskirt (Blue, Plain)"
-	item_path = /obj/item/clothing/under/rank/security/nova/skirt/plain
+	item_path = /obj/item/clothing/under/rank/security/nova/plainskirt
 	restricted_roles = list(JOB_SECURITY_OFFICER, JOB_WARDEN, JOB_HEAD_OF_SECURITY)
 	group = "Job-Locked"
 
@@ -283,19 +437,19 @@
 
 /datum/loadout_item/under/jumpsuit/security_miniskirt
 	name = "Security Miniskirt"
-	item_path = /obj/item/clothing/under/rank/security/nova/skirt/mini
+	item_path = /obj/item/clothing/under/rank/security/nova/miniskirt
 	restricted_roles = list(JOB_SECURITY_OFFICER, JOB_WARDEN, JOB_HEAD_OF_SECURITY)
 	group = "Job-Locked"
 
 /datum/loadout_item/under/jumpsuit/security_miniskirt_blue
 	name = "Security Miniskirt (Blue)"
-	item_path = /obj/item/clothing/under/rank/security/nova/skirt/mini/blue
+	item_path = /obj/item/clothing/under/rank/security/nova/miniskirt/blue
 	restricted_roles = list(JOB_SECURITY_OFFICER, JOB_WARDEN, JOB_HEAD_OF_SECURITY)
 	group = "Job-Locked"
 
 /datum/loadout_item/under/jumpsuit/security_shorts
 	name = "Security Shorts"
-	item_path = /obj/item/clothing/under/rank/security/nova/trousers/shorts
+	item_path = /obj/item/clothing/under/rank/security/nova/secshorts
 	restricted_roles = list(JOB_SECURITY_OFFICER, JOB_WARDEN, JOB_HEAD_OF_SECURITY)
 	group = "Job-Locked"
 
@@ -322,3 +476,53 @@
 	item_path = /obj/item/clothing/under/rank/security/nova/utility
 	restricted_roles = list(ALL_JOBS_SEC)
 	group = "Job-Locked"
+
+/datum/loadout_item/under/bunny/sec
+	name = "Bunny Suit (Security)"
+	item_path = /obj/item/clothing/under/rank/security/security_bunnysuit
+	erp_item = TRUE
+	group = "Bunny Suits"
+	restricted_roles = list(ALL_JOBS_SEC)
+
+/datum/loadout_item/under/bunny/sec/dept
+	name = "Bunny Suit (Deputy)"
+	item_path = /obj/item/clothing/under/rank/security/security_assistant_bunnysuit
+	erp_item = TRUE
+	group = "Bunny Suits"
+	restricted_roles = list(ALL_JOBS_SEC)
+
+/datum/loadout_item/under/bunny/sec/med
+	name = "Bunny Suit (SecMed)"
+	item_path = /obj/item/clothing/under/rank/security/brig_phys_bunnysuit
+	erp_item = TRUE
+	group = "Bunny Suits"
+	restricted_roles = list(ALL_JOBS_SEC)
+
+/datum/loadout_item/under/bunny/sec/warden
+	name = "Bunny Suit (Warden)"
+	item_path = /obj/item/clothing/under/rank/security/warden_bunnysuit
+	erp_item = TRUE
+	group = "Bunny Suits"
+	restricted_roles = list(JOB_WARDEN, JOB_HEAD_OF_SECURITY)
+
+/datum/loadout_item/under/bunny/sec/det
+	name = "Bunny Suit (Detective)"
+	item_path = /obj/item/clothing/under/rank/security/detective_bunnysuit
+	erp_item = TRUE
+	group = "Bunny Suits"
+	restricted_roles = list(JOB_DETECTIVE)
+
+/datum/loadout_item/under/bunny/sec/det/noir
+	name = "Bunny Suit (Noir Detective)"
+	item_path = /obj/item/clothing/under/rank/security/detective_bunnysuit/noir
+	erp_item = TRUE
+	group = "Bunny Suits"
+	restricted_roles = list(JOB_DETECTIVE)
+
+/datum/loadout_item/under/bunny/sec/hos
+	name = "Bunny Suit (Head of Security)"
+	item_path = /obj/item/clothing/under/rank/security/head_of_security/bunnysuit
+	erp_item = TRUE
+	group = "Bunny Suits"
+	restricted_roles = list(JOB_HEAD_OF_SECURITY)
+*/

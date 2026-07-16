@@ -97,6 +97,7 @@
 		var/obj/item/clothing/under/uniform = w_uniform
 		uniform?.attach_accessory(new /obj/item/clothing/accessory/green_pin(), src, FALSE)
 
+
 	if(update)
 		update_clothing(update)
 

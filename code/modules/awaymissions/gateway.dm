@@ -197,6 +197,19 @@ GLOBAL_LIST_EMPTY(gateway_destinations)
 	var/teleportion_possible = FALSE
 	var/transport_active = FALSE
 
+	//NOVA EDIT ADDITION
+	var/requires_key = FALSE
+	var/key_used = FALSE
+
+/obj/machinery/gateway/attacked_by(obj/item/I, mob/living/user)
+	. = ..()
+	if(istype(I, /obj/item/key/gateway) && requires_key)
+		to_chat(user, "<span class='notice'>You insert [src] into the keyway, unlocking the gateway!</span>")
+		key_used = TRUE
+		qdel(I)
+		return
+	//NOVA EDIT END
+
 /obj/machinery/gateway/Initialize(mapload)
 	generate_destination()
 	update_appearance()
@@ -280,6 +293,10 @@ GLOBAL_LIST_EMPTY(gateway_destinations)
 /obj/machinery/gateway/proc/activate(datum/gateway_destination/D)
 	if(!powered() || target)
 		return
+	//NOVA EDIT ADDITION
+	if(requires_key && !key_used)
+		return
+	//NOVA EDIT END
 	target = D
 	target.activate(destination)
 	portal_visuals.setup_visuals(target)

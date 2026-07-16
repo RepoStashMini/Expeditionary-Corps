@@ -25,11 +25,11 @@
 /*
 *	ITEMS BELOW HERE
 */
-/*
+
 /datum/loadout_item/gloves/armwraps
 	name = "Arm Wraps (Colorable)"
 	item_path = /obj/item/clothing/gloves/bracer/wraps
-*/
+
 /datum/loadout_item/gloves/black
 	name = "Gloves (Black)"
 	item_path = /obj/item/clothing/gloves/color/black
@@ -122,6 +122,11 @@
 	name = "Long Fingerless Gloves (Colorable)"
 	item_path = /obj/item/clothing/gloves/recolorable/fingerless/long
 
+/datum/loadout_item/gloves/secgloves
+	name = "Guard Gloves (Colorable)"
+	item_path = /obj/item/clothing/gloves/color/black/security/depgag
+	restricted_roles = list(ALL_JOBS_SEC, ALL_JOBS_DEPTGUARD)
+
 /*
 *	RINGS
 */
@@ -137,6 +142,13 @@
 /datum/loadout_item/gloves/silverring
 	name = "Ring - Silver"
 	item_path = /obj/item/clothing/gloves/ring/silver
+
+/*
+*	erp_item
+*/
+
+
+
 /*
 *	DONATOR
 */

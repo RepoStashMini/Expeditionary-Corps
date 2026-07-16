@@ -8,3 +8,12 @@ GLOBAL_LIST_INIT(name2neuroware, build_name2neurowarelist())
 		if(reagent.chemical_flags & REAGENT_NEUROWARE)
 			neuroware_list[initial(reagent.name)] = reagent
 	return neuroware_list
+
+///Same as build_name2neurowarelist() but omits aphrodisiacs.
+/proc/build_name2neurowarelist_safe()
+	var/list/neuroware_list = GLOB.name2neuroware.Copy()
+	for (var/reagent_name in GLOB.name2neuroware)
+		var/datum/reagent/reagent = GLOB.name2neuroware[reagent_name]
+		if(ispath(reagent, /datum/reagent/drug/aphrodisiac))
+			neuroware_list.Remove(reagent_name)
+	return neuroware_list

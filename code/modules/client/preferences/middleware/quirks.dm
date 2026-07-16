@@ -85,7 +85,7 @@
 			"value" = initial(quirk.value),
 			"customizable" = constant_data?.is_customizable(),
 			"customization_options" = customization_options,
-			"nova_stars_only" = initial(quirk.nova_stars_only), // NOVA EDIT ADDITION - Veteran quirks// NOVA EDIT ADDITION - Purple ERP quirks
+			"nova_stars_only" = initial(quirk.nova_stars_only), // NOVA EDIT ADDITION - Veteran quirks
 		)
 
 	return list(
@@ -97,6 +97,7 @@
 
 /datum/preference_middleware/quirks/on_new_character(mob/user)
 	tainted = TRUE
+	preferences.update_static_data(user, always_instant = TRUE)
 
 /datum/preference_middleware/quirks/proc/give_quirk(list/params, mob/user)
 	var/quirk_name = params["quirk"]

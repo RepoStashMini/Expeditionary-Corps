@@ -10,8 +10,6 @@ GLOBAL_LIST_EMPTY(customizable_races)
 	var/reagent_flags = PROCESS_ORGANIC
 	///Whether a species can use augmentations in preferences
 	var/can_augment = TRUE
-	///Self explanatory
-	var/can_have_genitals = TRUE
 	///Override for the alpha of bodyparts and mutant parts.
 	var/specific_alpha = 255
 	///Override for alpha value of markings, should be much lower than the above value.
@@ -107,11 +105,9 @@ GLOBAL_LIST_EMPTY(customizable_races)
 
 /datum/species/plasmaman
 	can_augment = FALSE
-	can_have_genitals = FALSE
 
 /datum/species/ethereal
 	can_augment = FALSE
-	can_have_genitals = FALSE
 
 /datum/species/pod
 	name = "Primal Podperson"
@@ -211,7 +207,6 @@ GLOBAL_LIST_EMPTY(customizable_races)
 
 				// Apply accessory flags & layers
 				replacement.sprite_accessory_flags = mutant_accessory.flags_for_organ
-				replacement.relevant_layers = mutant_accessory.relevent_layers
 
 				if(robot_organs)
 					replacement.organ_flags |= ORGAN_ROBOTIC

@@ -7,6 +7,7 @@
 	worn_icon = 'modular_nova/master_files/icons/mob/clothing/under/medical.dmi'
 	worn_icon_digi = 'modular_nova/master_files/icons/mob/clothing/under/medical_digi.dmi'
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION
+	bodyshapes_with_variations = NONE
 	alternate_worn_layer = ABOVE_SHOES_LAYER
 
 /obj/item/clothing/under/rank/medical/doctor/nurse/seriouser
@@ -16,6 +17,7 @@
 	worn_icon = 'modular_nova/master_files/icons/mob/clothing/under/medical.dmi'
 	worn_icon_digi = 'modular_nova/master_files/icons/mob/clothing/under/medical_digi.dmi'
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION
+	bodyshapes_with_variations = NONE
 	alternate_worn_layer = ABOVE_SHOES_LAYER
 
 /obj/item/clothing/under/rank/medical/doctor/nova
@@ -25,6 +27,7 @@
 /obj/item/clothing/under/syndicate/scrubs
 	worn_icon_digi = 'modular_nova/master_files/icons/mob/clothing/under/medical_digi.dmi'
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION
+	bodyshapes_with_variations = NONE
 
 /obj/item/clothing/under/rank/medical/scrubs/nova
 	icon = 'modular_nova/master_files/icons/obj/clothing/under/medical.dmi'
@@ -32,6 +35,7 @@
 	icon_state = "scrubswhite" // Because for some reason TG's scrubs dont have an icon on their basetype
 	desc = "It's made of a special fiber that provides minor protection against biohazards. This one seems to be the original Scrub."
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION
+	bodyshapes_with_variations = NONE
 
 /obj/item/clothing/under/rank/medical/chemist/nova
 	icon = 'modular_nova/master_files/icons/obj/clothing/under/medical.dmi'
@@ -55,7 +59,7 @@
 	name = "medical utility uniform"
 	desc = "A utility uniform worn by Medical doctors."
 	icon_state = "util_med"
-	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION | CLOTHING_BIG_LEGS_MASK
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION
 	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
 	alt_covers_chest = TRUE
 
@@ -90,11 +94,7 @@
 	body_parts_covered = CHEST|GROIN|ARMS
 	dying_key = DYE_REGISTRY_JUMPSKIRT
 	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
-	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON | CLOTHING_BIG_LEGS_MASK
-	gets_cropped_on_taurs = FALSE
-
-/obj/item/clothing/under/rank/medical/chemist/skirt
-	gets_cropped_on_taurs = FALSE
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 
 /*
 *	PARAMEDIC
@@ -112,8 +112,7 @@
 	body_parts_covered = CHEST|GROIN|ARMS
 	dying_key = DYE_REGISTRY_JUMPSKIRT
 	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
-	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON | CLOTHING_BIG_LEGS_MASK
-	gets_cropped_on_taurs = FALSE
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 
 /*
 *	CHIEF MEDICAL OFFICER

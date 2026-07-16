@@ -27,6 +27,7 @@
 		/obj/item/clothing/head/hats/caphat/bicorne = 1,
 		/obj/item/clothing/under/rank/captain = 1,
 		/obj/item/clothing/under/rank/captain/skirt = 1,
+		/obj/item/clothing/under/rank/captain/dress = 1,
 		/obj/item/clothing/under/rank/captain/nova/kilt = 1,
 		/obj/item/clothing/under/rank/captain/royal = 1,
 		/obj/item/clothing/under/imperial/captain = 1,
@@ -43,6 +44,8 @@
 		/obj/item/storage/backpack/duffelbag/captain = 1,
 		/obj/item/storage/backpack/messenger/cap = 1,
 		/obj/item/clothing/shoes/sneakers/brown = 1,
+		/obj/item/clothing/head/hats/caphat/bunnyears_captain = 1,
+		/obj/item/clothing/under/rank/captain/bunnysuit = 1,
 		/obj/item/clothing/suit/armor/vest/capcarapace/tailcoat_captain = 1,
 		/obj/item/clothing/neck/tie/bunnytie/captain = 1,
 
@@ -89,6 +92,7 @@
 		/obj/item/storage/backpack/messenger/head_of_personnel = 1,
 		/obj/item/clothing/shoes/sneakers/brown = 1,
 		/obj/item/clothing/head/playbunnyears/hop = 1,
+		/obj/item/clothing/under/rank/civilian/hop_bunnysuit = 1,
 		/obj/item/clothing/suit/armor/hop_tailcoat = 1,
 		/obj/item/clothing/neck/tie/bunnytie/hop = 1,
 	)
@@ -105,6 +109,7 @@
 		/obj/item/clothing/neck/mantle/cmomantle = 1,
 		/obj/item/clothing/shoes/sneakers/brown = 1,
 		/obj/item/clothing/head/playbunnyears/cmo = 1,
+		/obj/item/clothing/under/rank/medical/cmo_bunnysuit = 1,
 		/obj/item/clothing/suit/toggle/labcoat/cmo/doctor_tailcoat = 1,
 		/obj/item/clothing/neck/tie/bunnytie/cmo = 1,
 	)
@@ -124,6 +129,7 @@
 		/obj/item/clothing/suit/toggle/labcoat = 1,
 		/obj/item/clothing/shoes/sneakers/brown = 1,
 		/obj/item/clothing/head/playbunnyears/rd = 1,
+		/obj/item/clothing/under/rank/rnd/research_director/bunnysuit = 1,
 		/obj/item/clothing/suit/toggle/labcoat/research_director/tailcoat = 1,
 		/obj/item/clothing/neck/tie/bunnytie/rd = 1,
 	)
@@ -138,6 +144,7 @@
 		/obj/item/clothing/neck/mantle/cemantle = 1,
 		/obj/item/clothing/shoes/sneakers/brown = 1,
 		/obj/item/clothing/head/playbunnyears/ce = 1,
+		/obj/item/clothing/under/rank/engineering/chief_engineer/bunnysuit = 1,
 		/obj/item/clothing/suit/utility/fire/ce_tailcoat = 1,
 		/obj/item/clothing/neck/tie/bunnytie/ce = 1,
 	)
@@ -173,6 +180,7 @@
 		/obj/item/clothing/under/rank/security/head_of_security/nova/alt = 1,
 		/obj/item/clothing/under/rank/security/head_of_security/nova/alt/skirt = 1,
 		/obj/item/clothing/head/playbunnyears/hos = 1,
+		/obj/item/clothing/under/rank/security/head_of_security/bunnysuit = 1,
 		/obj/item/clothing/suit/armor/hos_tailcoat = 1,
 	)
 	access_lists[ACCESS_QM] = list(
@@ -195,6 +203,7 @@
 		/obj/item/clothing/under/rank/cargo/qm/nova/formal/skirt = 1,
 		/obj/item/clothing/shoes/sneakers/brown = 1,
 		/obj/item/clothing/head/playbunnyears/quartermaster = 1,
+		/obj/item/clothing/under/rank/cargo/quartermaster_bunnysuit = 1,
 		/obj/item/clothing/suit/jacket/tailcoat/quartermaster = 1,
 		/obj/item/clothing/neck/tie/bunnytie/cargo = 1,
 	)
@@ -231,6 +240,7 @@
 		/obj/item/clothing/head/playbunnyears/centcom = 1,
 		/obj/item/clothing/neck/tie/bunnytie/centcom = 1,
 		/obj/item/clothing/suit/jacket/tailcoat/centcom = 1,
+		/obj/item/clothing/under/costume/playbunny/centcom = 1,
 	)
 
 	access_lists[ACCESS_COMMAND] = list(

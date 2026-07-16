@@ -74,7 +74,7 @@
 	dying_key = DYE_REGISTRY_JUMPSKIRT
 	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
-	gets_cropped_on_taurs = FALSE
+	bodyshapes_with_variations = NONE
 
 /obj/item/clothing/under/rank/blueshield/turtleneck
 	name = "blueshield's turtleneck"
@@ -89,7 +89,7 @@
 	dying_key = DYE_REGISTRY_JUMPSKIRT
 	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
-	gets_cropped_on_taurs = FALSE
+	bodyshapes_with_variations = NONE
 
 /obj/item/clothing/under/rank/blueshield/consult
 	name = "blueshield's consulting suit"
@@ -103,7 +103,7 @@
 	dying_key = DYE_REGISTRY_JUMPSKIRT
 	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
-	gets_cropped_on_taurs = FALSE
+	bodyshapes_with_variations = NONE
 
 /obj/item/clothing/under/rank/blueshield/russian
 	name = "blueshield's sweatsuit"
@@ -155,7 +155,7 @@
 	dying_key = DYE_REGISTRY_JUMPSKIRT
 	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
-	gets_cropped_on_taurs = FALSE
+	bodyshapes_with_variations = NONE
 
 /obj/item/clothing/under/imperial/nanotrasen_consultant
 	name = "nanotrasen consultant's naval uniform"
@@ -189,7 +189,6 @@
 	name = "bridge officer's jumpskirt"
 	desc = "It's a blue jumpskirt with silver markings denoting the rank of \"Bridge Officer\"."
 	icon_state = "bo_skirt"
-	gets_cropped_on_taurs = FALSE
 
 /obj/item/clothing/under/rank/bridge_officer/turtle
 	name = "bridge officer's turtleneck"
@@ -200,7 +199,6 @@
 	name = "bridge officer's skirtleneck"
 	desc = "It's a blue skirtleneck with silver markings denoting the rank of \"Bridge Officer\"."
 	icon_state = "bo_skirtleneck"
-	gets_cropped_on_taurs = FALSE
 
 /obj/item/clothing/under/imperial/bridge_officer
 	name = "bridge officer's naval uniform"
@@ -224,7 +222,7 @@
 	name = "command utility uniform"
 	desc = "A utility uniform worn by Station Command."
 	icon_state = "util_com"
-	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION | CLOTHING_BIG_LEGS_MASK
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION
 	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
 	alt_covers_chest = TRUE
 
@@ -235,7 +233,7 @@
 /obj/item/clothing/under/imperial
 	desc = "A naval uniform, with a rank badge denoting an Officer. Doesn't protect against blaster fire."
 	name = "officer's naval jumpsuit"
-	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION | CLOTHING_BIG_LEGS_MASK
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION
 	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
 	greyscale_colors = "#A49C9C#A49C9C#A49C9C#373741#FFFFFF#FFFFFF#FFFFFF"
 	icon = 'icons/map_icons/clothing/under/_under.dmi'
@@ -251,6 +249,7 @@
 	desc = "A naval skirt, with a rank badge denoting an Officer. Doesn't protect against blaster fire."
 	name = "officer's naval jumpskirt"
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
+	bodyshapes_with_variations = NONE
 	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
 	greyscale_colors = "#A49C9C#A49C9C#373741#FFFFFF#FFFFFF#FFFFFF"
 	icon = 'icons/map_icons/clothing/under/_under.dmi'
@@ -268,7 +267,7 @@
 	greyscale_config = /datum/greyscale_config/officersnavalvest
 	greyscale_config_worn = /datum/greyscale_config/officersnavalvest/worn
 	greyscale_config_worn_digi = /datum/greyscale_config/officersnavalvest/worn/digi
-	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION | CLOTHING_BIG_LEGS_MASK
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION
 	armor_type = /datum/armor/clothing_under/security_head_of_security
 	can_adjust = FALSE
 
@@ -280,6 +279,7 @@
 	greyscale_config_worn = /datum/greyscale_config/officersnavalskirtvest/worn
 	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
+	bodyshapes_with_variations = NONE
 	armor_type = /datum/armor/clothing_under/security_head_of_security
 	can_adjust = FALSE
 
@@ -308,4 +308,4 @@
 	dying_key = DYE_REGISTRY_JUMPSKIRT
 	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
-	gets_cropped_on_taurs = FALSE
+	bodyshapes_with_variations = NONE

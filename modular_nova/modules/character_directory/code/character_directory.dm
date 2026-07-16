@@ -26,34 +26,6 @@ GLOBAL_LIST_EMPTY(name_to_appearance)
 /datum/preference/text/character_ad/apply_to_human(mob/living/carbon/human/target, value, datum/preferences/preferences)
 	return FALSE
 
-/datum/preference/choiced/attraction
-	savefile_key = "attraction"
-	category = PREFERENCE_CATEGORY_NON_CONTEXTUAL
-	savefile_identifier = PREFERENCE_CHARACTER
-
-/datum/preference/choiced/attraction/init_possible_values()
-	return list(
-		"Unset",
-		"Check OOC",
-		"Straight",
-		"Lesbian",
-		"Gay",
-		"Bisexual",
-		"Pansexual",
-		"Polysexual",
-		"Asexual",
-		"Aromantic",
-		"Aro/Ace",
-		"Skoliosexual",
-		"Omnisexual",
-	)
-
-/datum/preference/choiced/attraction/create_default_value()
-	return "Unset"
-
-/datum/preference/choiced/attraction/apply_to_human(mob/living/carbon/human/target, value, datum/preferences/preferences)
-	return FALSE
-
 /datum/preference/choiced/display_gender
 	savefile_key = "display_gender"
 	category = PREFERENCE_CATEGORY_NON_CONTEXTUAL
@@ -62,21 +34,9 @@ GLOBAL_LIST_EMPTY(name_to_appearance)
 /datum/preference/choiced/display_gender/init_possible_values()
 	return list(
 		"Unset",
-		"Check OOC",
 		"Male",
-		"Male - Femme",
-		"Male - Butch",
 		"Female",
-		"Female - Femme",
-		"Female - Butch",
 		"Nonbinary",
-		"Genderfluid",
-		"Trans",
-		"Andromorph",
-		"Gynomorph",
-		"Agender",
-		"Plural",
-		"Omnigender",
 	)
 
 /datum/preference/choiced/display_gender/create_default_value()
@@ -192,7 +152,6 @@ GLOBAL_LIST_EMPTY(name_to_appearance)
 	// Collect the user's own preferences for the top of the UI
 	if (user?.client?.prefs)
 		data["personalVisibility"] = READ_PREFS(user, toggle/show_in_directory)
-		data["personalAttraction"] = READ_PREFS(user, choiced/attraction)
 		data["personalGender"] = READ_PREFS(user, choiced/display_gender)
 		data["prefsOnly"] = TRUE
 
@@ -215,7 +174,6 @@ GLOBAL_LIST_EMPTY(name_to_appearance)
 	var/species
 	var/ooc_notes
 	var/flavor_text
-	var/attraction
 	var/gender
 	var/nova_star_status
 	var/character_ad
@@ -257,7 +215,6 @@ GLOBAL_LIST_EMPTY(name_to_appearance)
 			continue
 
 		// List of all the shown ERP preferences in the Directory. If there is none, return "Unset"
-		attraction = READ_PREFS(mob, choiced/attraction) || "Unspecified"
 		gender = READ_PREFS(mob, choiced/display_gender) || "Unset"
 		if(gender == "Unset")
 			gender = capitalize(mob.gender)
@@ -272,7 +229,6 @@ GLOBAL_LIST_EMPTY(name_to_appearance)
 			"appearance_name" = mob.real_name,
 			"species" = species,
 			"ooc_notes" = ooc_notes,
-			"attraction" = attraction,
 			"gender" = gender,
 			"nova_star_status" = nova_star_status,
 			"character_ad" = character_ad,

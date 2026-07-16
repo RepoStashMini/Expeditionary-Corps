@@ -6,8 +6,6 @@
 #define EXAMINE_DNA_FLAVOR_TEXT_NSFW "flavor_text_nsfw"
 /// Examine Panel OOC notes
 #define EXAMINE_DNA_OOC_NOTES "ooc_notes"
-/// Examine Panel NSFW ooc notes—requires you to click a tab to see
-#define EXAMINE_DNA_OOC_NOTES_NSFW "ooc_notes_nsfw"
 
 //We start from 30 to not interfere with TG species defines, should they add more
 /// We're using all three mutcolor features for our skin coloration
@@ -92,7 +90,6 @@
 #define FEATURE_SYNTH_HEAD "synth_head"
 #define FEATURE_SYNTH_HAIR "synth_hair"
 
-
 #define MANDATORY_FEATURE_LIST list(\
 	FEATURE_MUTANT_COLOR = "#FFFFBB",\
 	FEATURE_MUTANT_COLOR_TWO = "#FFFFBB",\
@@ -138,3 +135,6 @@
 #define SPECIES_MUTANT_INFECTIOUS "infectious_mutant"
 #define SPECIES_MUTANT_SLOW "slow_mutant"
 #define SPECIES_MUTANT_FAST "fast_mutant"
+
+// Leaving this here because it's used for bodyparts, like SPECIES_X are, but since taurs aren't a species... Named it LIMBS instead.
+#define LIMBS_HARPY "harpy"

@@ -70,6 +70,7 @@
 		/obj/item/tank/internals/emergency_oxygen/double = 1,
 		/obj/item/storage/box/handcuffs = 1,
 		/obj/item/storage/box/flashbangs = 1,
+		/obj/item/storage/box/nri_flares = 1,
 		/obj/item/storage/medkit/frontier/stocked = 1,
 	)
 
@@ -83,6 +84,7 @@
 	ears = /obj/item/radio/headset/headset_solfed/espatier/engineer
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/c40sol_rifle/standard = 4,
+		/obj/item/storage/box/nri_flares = 1,
 		/obj/item/storage/box/smart_metal_foam = 1,
 		/obj/item/stack/sheet/iron/fifty = 1,
 		/obj/item/storage/medkit/frontier/stocked = 1,
@@ -103,6 +105,7 @@
 	ears = /obj/item/radio/headset/headset_solfed/espatier/corpsman
 	backpack_contents = list(
 		/obj/item/storage/medkit/surgery = 1,
+		/obj/item/storage/box/nri_flares = 1,
 		/obj/item/storage/medkit/tactical = 1,
 	)
 
@@ -124,6 +127,7 @@
 		/obj/item/storage/medkit/surgery = 1,
 		/obj/item/storage/medkit/tactical_lite = 1,
 		/obj/item/ammo_box/magazine/c40sol_rifle/standard = 4,
+		/obj/item/storage/box/nri_flares = 1,
 		/obj/item/binoculars = 1,
 	)
 
@@ -161,6 +165,7 @@
 		/obj/item/tank/internals/emergency_oxygen/double = 1,
 		/obj/item/storage/box/handcuffs = 1,
 		/obj/item/storage/box/flashbangs = 1,
+		/obj/item/storage/box/nri_flares = 1,
 		/obj/item/storage/medkit/frontier/stocked = 1,
 	)
 
@@ -174,6 +179,7 @@
 	ears = /obj/item/radio/headset/headset_solfed/espatier/engineer
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/c40sol_rifle/standard = 4,
+		/obj/item/storage/box/nri_flares = 1,
 		/obj/item/storage/box/smart_metal_foam = 1,
 		/obj/item/stack/sheet/iron/fifty = 1,
 		/obj/item/storage/medkit/frontier/stocked = 1,
@@ -194,6 +200,7 @@
 	ears = /obj/item/radio/headset/headset_solfed/espatier/corpsman
 	backpack_contents = list(
 		/obj/item/storage/medkit/surgery = 1,
+		/obj/item/storage/box/nri_flares = 1,
 		/obj/item/storage/medkit/tactical = 1,
 	)
 
@@ -215,6 +222,7 @@
 		/obj/item/storage/medkit/surgery = 1,
 		/obj/item/storage/medkit/tactical_lite = 1,
 		/obj/item/ammo_box/magazine/c40sol_rifle/standard = 4,
+		/obj/item/storage/box/nri_flares = 1,
 		/obj/item/binoculars = 1,
 	)
 

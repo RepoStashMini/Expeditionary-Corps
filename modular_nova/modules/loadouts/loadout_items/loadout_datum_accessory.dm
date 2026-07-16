@@ -289,6 +289,10 @@
 	name = "Webbing - Basic"
 	item_path = /obj/item/clothing/accessory/webbing
 
+/datum/loadout_item/accessory/colonial_webbing
+	name = "Webbing - Colonial"
+	item_path = /obj/item/clothing/accessory/webbing/colonial
+
 /datum/loadout_item/accessory/webbing_vest
 	name = "Webbing - Vest"
 	item_path = /obj/item/clothing/accessory/webbing/vest

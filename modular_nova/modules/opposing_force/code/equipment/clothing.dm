@@ -219,6 +219,7 @@
 	new /obj/item/clothing/mask/gas/hecu(src)
 	new /obj/item/clothing/suit/armor/vest/marine(src)
 	new /obj/item/clothing/head/beret/sec/nri(src)
+	new /obj/item/storage/belt/military/nri/plus_mre(src)
 	new /obj/item/radio/headset/syndicate/alt(src)
 	new /obj/item/card/id/advanced/chameleon(src)
 	new /obj/item/clothing/glasses/sunglasses(src)

@@ -117,6 +117,11 @@
 
 	if(CONFIG_GET(flag/usewhitelist))
 		load_whitelist()
+	// NOVA EDIT ADDITION START
+	populate_interaction_instances()
+	setup_gas_prices()
+	GLOB.nova_star_restrictions = CONFIG_GET(flag/enable_nova_star_restrictions)
+	// NOVA EDIT ADDITION END
 
 	loaded = TRUE
 

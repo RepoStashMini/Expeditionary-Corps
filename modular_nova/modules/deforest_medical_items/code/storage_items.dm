@@ -227,6 +227,7 @@
 		/obj/item/stack/medical/wound_recovery = 1,
 		/obj/item/stack/medical/wound_recovery/rapid_coagulant = 1,
 		/obj/item/stack/medical/suture/coagulant = 1,
+		/obj/item/stack/medical/suture/bloody = 2,
 		/obj/item/stack/medical/mesh = 2,
 		/obj/item/stack/medical/wrap/gauze/sterilized = 1,
 		/obj/item/stack/medical/wrap/gauze = 1,

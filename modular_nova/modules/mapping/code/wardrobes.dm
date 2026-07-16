@@ -41,6 +41,7 @@
 		/obj/item/clothing/head/playbunnyears/syndicate = 5,
 		/obj/item/clothing/neck/tie/bunnytie/syndicate = 5,
 		/obj/item/clothing/suit/jacket/tailcoat/syndicate = 5,
+		/obj/item/clothing/under/syndicate/syndibunny = 5,
 	)
 
 	refill_canister = /obj/item/vending_refill/wardrobe/syndie_wardrobe
@@ -152,11 +153,6 @@
 	refill_canister = /obj/item/vending_refill/wardrobe/syndie_wardrobe
 	light_color = COLOR_GREEN
 
-/obj/machinery/vending/wardrobe/syndie_wardrobe/interdyne/ghost_cafe/Initialize(mapload)
-	if(isnull(excluded_products))
-		excluded_products = typecacheof(list(
-		))
-	return ..()
 
 /obj/item/vending_refill/wardrobe/syndie_wardrobe/interdyne
 	machine_name = "InterDrobe"

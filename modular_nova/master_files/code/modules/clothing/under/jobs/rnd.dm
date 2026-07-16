@@ -9,6 +9,7 @@
 	desc = "A utility uniform worn by NT-certified Genetics staff."
 	icon_state = "util_gene"
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION
+	bodyshapes_with_variations = NONE
 	can_adjust = FALSE
 
 /obj/item/clothing/under/rank/rnd/geneticist/nova/utility/syndicate
@@ -24,7 +25,7 @@
 	name = "science utility uniform"
 	desc = "A utility uniform worn by NT-certified Science staff."
 	icon_state = "util_sci"
-	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION | CLOTHING_BIG_LEGS_MASK
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION
 	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
 	alt_covers_chest = TRUE
 

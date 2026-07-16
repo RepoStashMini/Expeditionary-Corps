@@ -96,7 +96,6 @@
 /datum/dna_block/feature/mutant/xenohead
 	feature_key = FEATURE_XENOHEAD
 
-
 #undef FEATURE_HASH_PART_START
 #undef FEATURE_HASH_PART_END
 #undef FEATURE_HASH_COLOR1_START

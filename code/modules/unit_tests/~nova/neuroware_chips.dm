@@ -44,6 +44,11 @@
 		for(var/reagent_type in test_chip.list_reagents)
 			TEST_ASSERT(!lab_rat.has_reagent(reagent_type), "\"[reagent_type]\" is present when it's expected to be missing after using \"[test_chip.type]\" on default human.")
 
+		// Installation should succeed on a compatible human with a NIF implant
+		test_chip = allocate(chip_type)
+		install_status = test_chip.try_install(lab_rat, lab_rat)
+		TEST_ASSERT_EQUAL(install_status, TRUE, "\"[test_chip.type]/proc/try_install()\" should return TRUE when used on human with NIF implant.")
+
 		// Ensure the reagents were added
 		for(var/reagent_type in test_chip.list_reagents)
 			TEST_ASSERT(lab_rat.has_reagent(reagent_type), "\"[reagent_type]\" is missing when its presence is expected after using \"[test_chip.type]\" on human with NIF implant.")

@@ -208,8 +208,7 @@
 		/obj/machinery/vending/deforest_medvend, // "DeForest Med-Vend"
 	)
 
-/obj/item/summon_beacon/vendors/equipped(mob/user, slot, initial)
-	. = ..()
+
 
 /obj/item/summon_beacon/gas_miner/hacked
 	name = "hacked gas miner beacon"

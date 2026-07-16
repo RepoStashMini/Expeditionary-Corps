@@ -222,7 +222,7 @@
 	var/mob/living/carbon/human/human_parent = parent
 	human_parent.add_movespeed_modifier(/datum/movespeed_modifier/human_carry)
 
-	if(ride_check_flags & RIDER_NEEDS_ARMS)
+	if(ride_check_flags & RIDER_NEEDS_ARMS) // piggyback
 		human_parent.buckle_lying = 0
 		// the riding mob is made nondense so they don't bump into any dense atoms the carrier is pulling,
 		// since pulled movables are moved before buckled movables
@@ -292,7 +292,6 @@
 
 /datum/component/riding/creature/human/get_rider_offsets_and_layers(pass_index, mob/offsetter)
 	var/mob/living/carbon/human/seat = parent
-	/* // NOVA EDIT REMOVAL START
 	// fireman carry
 	if(seat.buckle_lying)
 		return list(
@@ -308,33 +307,6 @@
 		TEXT_EAST =  list(-6, 8, MOB_BELOW_PIGGYBACK_LAYER),
 		TEXT_WEST =  list( 6, 8, MOB_BELOW_PIGGYBACK_LAYER),
 	)
-	*/ // NOVA EDIT REMOVAL END
-	// NOVA EDIT ADDITION START - Oversized offsets
-	if(seat.buckle_lying)
-		return HAS_TRAIT(seat, TRAIT_OVERSIZED) ? list(
-				TEXT_NORTH = list(0, OVERSIZED_OFFSET, MOB_ABOVE_PIGGYBACK_LAYER),
-				TEXT_SOUTH = list(0, OVERSIZED_OFFSET, MOB_BELOW_PIGGYBACK_LAYER),
-				TEXT_EAST = list(0, OVERSIZED_OFFSET, MOB_BELOW_PIGGYBACK_LAYER),
-				TEXT_WEST = list(0, OVERSIZED_OFFSET, MOB_BELOW_PIGGYBACK_LAYER),
-			) : list(
-				TEXT_NORTH = list(0, REGULAR_OFFSET, MOB_ABOVE_PIGGYBACK_LAYER),
-				TEXT_SOUTH = list(0, REGULAR_OFFSET, MOB_BELOW_PIGGYBACK_LAYER),
-				TEXT_EAST = list(0, REGULAR_OFFSET, MOB_BELOW_PIGGYBACK_LAYER),
-				TEXT_WEST = list(0, REGULAR_OFFSET, MOB_BELOW_PIGGYBACK_LAYER),
-			)
-	else if (!(ride_check_flags))
-		return HAS_TRAIT(seat, TRAIT_OVERSIZED) ? list(
-				TEXT_NORTH = list(0, OVERSIZED_OFFSET, MOB_ABOVE_PIGGYBACK_LAYER),
-				TEXT_SOUTH = list(0, OVERSIZED_OFFSET, MOB_BELOW_PIGGYBACK_LAYER),
-				TEXT_EAST = list(-OVERSIZED_SIDE_OFFSET, OVERSIZED_OFFSET, MOB_BELOW_PIGGYBACK_LAYER),
-				TEXT_WEST = list(OVERSIZED_SIDE_OFFSET, OVERSIZED_OFFSET, MOB_BELOW_PIGGYBACK_LAYER),
-			) : list(
-				TEXT_NORTH = list(0, REGULAR_OFFSET, MOB_ABOVE_PIGGYBACK_LAYER),
-				TEXT_SOUTH = list(0, REGULAR_OFFSET, MOB_BELOW_PIGGYBACK_LAYER),
-				TEXT_EAST = list(-REGULAR_OFFSET, REGULAR_SIDE_OFFSET, MOB_BELOW_PIGGYBACK_LAYER),
-				TEXT_WEST = list(REGULAR_OFFSET, REGULAR_SIDE_OFFSET, MOB_BELOW_PIGGYBACK_LAYER)
-			)
-	// NOVA EDIT ADDITION END
 
 /datum/component/riding/creature/human/get_parent_offsets_and_layers()
 	return list(

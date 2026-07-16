@@ -15,7 +15,6 @@
 	worn_icon = 'modular_nova/master_files/icons/mob/clothing/suit.dmi'
 	icon_state = "dutchjacket"
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
-	gets_cropped_on_taurs = FALSE
 
 
 /obj/item/clothing/suit/toggle/trackjacket
@@ -290,7 +289,6 @@
 	worn_icon = 'modular_nova/modules/GAGS/icons/suit/suit.dmi'
 	worn_icon_teshari = 'modular_nova/modules/GAGS/icons/suit/suit_teshari.dmi'
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
-	gets_cropped_on_taurs = FALSE
 	greyscale_colors = "#ffffff"
 	icon = 'icons/map_icons/clothing/suit/_suit.dmi'
 	icon_state = "/obj/item/clothing/suit/apron/chef/colorable_apron"
@@ -339,7 +337,6 @@
 	greyscale_colors = "#867361"
 	flags_1 = IS_PLAYER_COLORABLE_1
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
-	gets_cropped_on_taurs = FALSE
 
 /obj/item/clothing/suit/heart_sweater
 	name = "heart sweater"
@@ -353,7 +350,6 @@
 	greyscale_colors = "#867361#8f3a3a"
 	flags_1 = IS_PLAYER_COLORABLE_1
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
-	gets_cropped_on_taurs = FALSE
 
 /obj/item/clothing/suit/dagger_mantle
 	name = "'dagger' designer mantle"
@@ -369,7 +365,6 @@
 	greyscale_colors = "#d6f7ff"
 	flags_1 = IS_PLAYER_COLORABLE_1
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
-	gets_cropped_on_taurs = FALSE
 	slot_flags = ITEM_SLOT_OCLOTHING|ITEM_SLOT_NECK
 
 /obj/item/clothing/under/pants/nova/double_skirt_dress
@@ -384,7 +379,6 @@
 	flags_1 = IS_PLAYER_COLORABLE_1
 	body_parts_covered = CHEST|GROIN
 	cold_protection = CHEST|GROIN
-	gets_cropped_on_taurs = FALSE
 
 /obj/item/clothing/suit/nova
 	icon = 'modular_nova/master_files/icons/obj/clothing/suits.dmi'
@@ -408,7 +402,6 @@
 	greyscale_config_worn_digi = /datum/greyscale_config/overalls_loneskirt/worn/digi
 	greyscale_colors = "#252525#CCCED1"
 	flags_1 = IS_PLAYER_COLORABLE_1
-	gets_cropped_on_taurs = FALSE
 	body_parts_covered = CHEST|GROIN
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 

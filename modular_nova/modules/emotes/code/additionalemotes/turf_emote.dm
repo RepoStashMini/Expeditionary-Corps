@@ -14,14 +14,8 @@
 	var/mob/living/carbon/human/human_user = user
 
 	if(ishuman(user))
-		//feet
-		if(!(human_user.bodyshape & BODYSHAPE_DIGITIGRADE))
-			user.allowed_turfs += "footprint"
 
-		if((human_user.bodyshape & BODYSHAPE_DIGITIGRADE))
-			user.allowed_turfs += list("pawprint", "hoofprint", "clawprint")
-
-		//species & taurs
+		//species
 		if(islizard(user) || HAS_TRAIT(user, TRAIT_ASH_ASPECT))
 			user.allowed_turfs += "smoke"
 			user.allowed_turfs -= list("pawprint", "hoofprint")
@@ -58,13 +52,6 @@
 			var/datum/sprite_accessory/tails/tail = SSaccessories.sprite_accessories[FEATURE_TAIL][our_tail.name]
 			if(tail.fluffy)
 				user.allowed_turfs += "tails"
-
-
-		//clothing
-		var/obj/item/shoes = user.get_item_by_slot(ITEM_SLOT_FEET)
-		if(istype(shoes, /obj/item/clothing/shoes))
-			user.allowed_turfs += "shoeprint"
-
 	if(issilicon(user))
 		user.allowed_turfs += list("holoseat", "holobed", "borgmat")
 

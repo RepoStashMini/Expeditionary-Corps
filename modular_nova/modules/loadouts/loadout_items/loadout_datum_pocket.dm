@@ -213,6 +213,21 @@
 *	UTILITY
 */
 
+/datum/loadout_item/pocket_items/medkit_pouch
+	name = "Colonial First Aid Pouch (Empty)"
+	item_path = /obj/item/storage/pouch/cin_medkit
+	group = "Gear"
+
+/datum/loadout_item/pocket_items/general_pouch
+	name = "Colonial General Purpose Pouch (Empty)"
+	item_path = /obj/item/storage/pouch/cin_general
+	group = "Gear"
+
+/datum/loadout_item/pocket_items/medipen_pouch
+	name = "Colonial Medipen Pouch (Empty)"
+	item_path = /obj/item/storage/pouch/cin_medipens
+	group = "Gear"
+
 /datum/loadout_item/pocket_items/deforest_cheesekit
 	name = "Medical Kit - Civil Defense"
 	item_path = /obj/item/storage/medkit/civil_defense/stocked
@@ -276,6 +291,11 @@
 /datum/loadout_item/pocket_items/moth_mre
 	name = "Rations - Mothic"
 	item_path = /obj/item/storage/box/mothic_rations
+	group = "Comfort"
+
+/datum/loadout_item/pocket_items/colonial_mre
+	name = "Rations - Colonial"
+	item_path = /obj/item/storage/box/colonial_rations
 	group = "Comfort"
 
 /datum/loadout_item/pocket_items/drugs_weed

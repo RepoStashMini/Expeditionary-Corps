@@ -1,7 +1,7 @@
 /datum/outfit/clock
 	name = "Default Clock Cultist"
 
-	uniform = /obj/item/clothing/suit/clockwork
+	uniform = /obj/item/clothing/under/occult //meh.
 	suit = /obj/item/clothing/suit/clockwork/cloak
 	shoes = /obj/item/clothing/shoes/clockwork
 	gloves = /obj/item/clothing/gloves/clockwork

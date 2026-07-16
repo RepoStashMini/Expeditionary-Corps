@@ -7,7 +7,6 @@
 
 #define MODULAR_SAVEFILE_UP_TO_DATE -1
 
-#define VERSION_GENITAL_TOGGLES 1
 #define VERSION_BREAST_SIZE_CHANGE 2
 #define VERSION_SYNTH_REFACTOR 3
 #define VERSION_UNDERSHIRT_BRA_SPLIT 4
@@ -95,6 +94,7 @@
 
 /// Brings a savefile up to date with modular preferences. Called if savefile_needs_update_nova() returned a value higher than 0
 /datum/preferences/proc/update_character_nova(current_version, list/save_data)
+
 	if(current_version < VERSION_SYNTH_REFACTOR)
 		var/old_species = save_data["species"]
 		if(istext(old_species) && (old_species in list("synthhuman", "synthliz", "synthmammal", "ipc")))
@@ -533,6 +533,10 @@
 			/obj/item/bodypart/arm/right/mutant/shadekin = /datum/augment_item/limb/r_arm/species/shadekin,
 			/obj/item/bodypart/leg/left/mutant/shadekin = /datum/augment_item/limb/l_leg/species/shadekin,
 			/obj/item/bodypart/leg/right/mutant/shadekin = /datum/augment_item/limb/r_leg/species/shadekin,
+			/obj/item/bodypart/leg/left/mutant/harpy = /datum/augment_item/limb/l_leg/species/mutant/harpy,
+			/obj/item/bodypart/leg/right/mutant/harpy = /datum/augment_item/limb/r_leg/species/mutant/harpy,
+			/obj/item/bodypart/leg/left/mutant/harpy_skin = /datum/augment_item/limb/l_leg/species/harpy,
+			/obj/item/bodypart/leg/right/mutant/harpy_skin = /datum/augment_item/limb/r_leg/species/harpy,
 			/obj/item/bodypart/leg/left/robot/surplus/digi = /datum/augment_item/limb/l_leg/digi_prosthetic,
 			/obj/item/bodypart/leg/left/robot/digi = /datum/augment_item/limb/l_leg/digi_cybernetic,
 			/obj/item/bodypart/leg/right/robot/surplus/digi = /datum/augment_item/limb/r_leg/digi_prosthetic,
@@ -561,7 +565,6 @@
 #undef MODULAR_SAVEFILE_VERSION_MAX
 #undef MODULAR_SAVEFILE_UP_TO_DATE
 
-#undef VERSION_GENITAL_TOGGLES
 #undef VERSION_BREAST_SIZE_CHANGE
 #undef VERSION_SYNTH_REFACTOR
 #undef VERSION_UNDERSHIRT_BRA_SPLIT

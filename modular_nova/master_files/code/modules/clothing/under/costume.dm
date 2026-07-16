@@ -37,6 +37,7 @@
 	worn_icon = 'modular_nova/modules/GAGS/icons/suit/suit.dmi'
 	worn_icon_teshari = 'modular_nova/modules/GAGS/icons/suit/suit_teshari.dmi'
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
+	bodyshapes_with_variations = NONE
 	greyscale_colors = "#ffffff"
 	greyscale_config = /datum/greyscale_config/bathrobe
 	greyscale_config_worn = /datum/greyscale_config/bathrobe/worn
@@ -128,7 +129,6 @@
 	greyscale_config_worn = /datum/greyscale_config/qipao/worn
 	greyscale_config_worn_digi = /datum/greyscale_config/qipao/worn/digi
 	flags_1 = IS_PLAYER_COLORABLE_1
-	gets_cropped_on_taurs = FALSE
 
 /obj/item/clothing/under/costume/nova/qipao/customtrim
 	greyscale_colors = "#2b2b2b#ffce5b"
@@ -152,7 +152,6 @@
 	greyscale_config_worn = /datum/greyscale_config/cheongsam/worn
 	greyscale_config_worn_digi = /datum/greyscale_config/cheongsam/worn/digi
 	flags_1 = IS_PLAYER_COLORABLE_1
-	gets_cropped_on_taurs = FALSE
 
 /obj/item/clothing/under/costume/nova/cheongsam/customtrim
 	greyscale_colors = "#2b2b2b#ffce5b#353535"
@@ -175,7 +174,6 @@
 	greyscale_config_worn = /datum/greyscale_config/yukata/worn
 	greyscale_config_worn_digi = /datum/greyscale_config/yukata/worn/digi
 	flags_1 = IS_PLAYER_COLORABLE_1
-	gets_cropped_on_taurs = FALSE
 
 /obj/item/clothing/under/costume/nova/kamishimo
 	name = "kamishimo"
@@ -189,6 +187,7 @@
 	body_parts_covered = CHEST|GROIN|ARMS
 	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
+	bodyshapes_with_variations = NONE
 
 /obj/item/clothing/under/costume/nova/shihakusho
 	name = "shihakusho"
@@ -208,6 +207,7 @@
 	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
 	alternate_worn_layer = UNDER_SUIT_LAYER
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
+	bodyshapes_with_variations = NONE
 	flags_1 = IS_PLAYER_COLORABLE_1
 
 /*

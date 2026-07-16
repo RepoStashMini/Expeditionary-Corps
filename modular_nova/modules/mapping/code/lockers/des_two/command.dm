@@ -2,7 +2,7 @@
 	icon_door = "admiral"
 	icon_state = "admiral"
 	name = "\proper ship admiral's locker"
-//	icon = 'modular_nova/modules/ds2_fluff/icons/closet_wide.dmi'
+	icon = 'modular_nova/modules/ds2_fluff/icons/closet_wide.dmi'
 
 /obj/item/clothing/accessory/medal/gold/admiral
 	name = "medal of admiralty"
@@ -35,7 +35,7 @@
 	icon_state = "masteratarms"
 	name = "master at arms' locker"
 	req_access = list("syndicate_leader")
-//	icon = 'modular_nova/modules/ds2_fluff/icons/closet_wide.dmi'
+	icon = 'modular_nova/modules/ds2_fluff/icons/closet_wide.dmi'
 
 /obj/item/clothing/accessory/medal/silver/maa_medal
 	name = "military excellence medal"
@@ -76,7 +76,7 @@
 	new /obj/item/gun/energy/disabler(src)
 
 /obj/structure/closet/secure_closet/des_two/cl_locker
-//	icon = 'modular_nova/modules/ds2_fluff/icons/closet_wide.dmi'
+	icon = 'modular_nova/modules/ds2_fluff/icons/closet_wide.dmi'
 	icon_door = "liason"
 	icon_state = "liason"
 	name = "\proper corporate liaison's locker"
