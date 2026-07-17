@@ -211,7 +211,6 @@
     nation_prefixes = list("exp", "exp1", "exp2")
     primary_work_area = /area/station/expeditionary
     department_delivery_areas = list(/area/station/expeditionary)
-    associated_cargo_groups = list("Service", "Food & Hydroponics", "Livestock", "Costumes & Toys")
     head_of_staff_access = ACCESS_EXP_OFFICER
     department_access = list(ACCESS_EXP)
 

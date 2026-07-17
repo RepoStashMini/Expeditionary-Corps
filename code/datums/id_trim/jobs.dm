@@ -1410,7 +1410,6 @@
 		ACCESS_AUX_BASE,
 		ACCESS_BRIG_ENTRANCE,
 		ACCESS_BUDGET,
-		ACCESS_COMMAND,
 		ACCESS_CONSTRUCTION,
 		ACCESS_EVA,
 		ACCESS_GATEWAY,
@@ -1443,8 +1442,139 @@
 		)
 	job = /datum/job/exp_officer
 	big_pointer = TRUE
-	pointer_color = COLOR_SCIENCE_PINK
+	pointer_color = COLOR_EXP_CORP
 	honorifics = list("Officer")
+	honorific_positions = HONORIFIC_POSITION_FIRST | HONORIFIC_POSITION_LAST | HONORIFIC_POSITION_FIRST_FULL | HONORIFIC_POSITION_NONE
+
+/datum/id_trim/job/exp_forwarder
+	assignment = JOB_FORWARDER
+	intern_alt_name = "Rookie forwarder"
+	trim_state = "trim_forwarder"
+	department_color = COLOR_EXP_CORP
+	subdepartment_color = COLOR_EXP_CORP
+	sechud_icon_state = SECHUD_FORWARDER
+	minimal_access = list(
+		ACCESS_EXP,
+		ACCESS_EXP_STORAGE,
+		ACCESS_AUX_BASE,
+		ACCESS_EVA,
+		ACCESS_GATEWAY,
+		ACCESS_MAINT_TUNNELS,
+		ACCESS_MECH_ENGINE,
+		ACCESS_MECH_MINING,
+		ACCESS_MECH_SECURITY,
+		ACCESS_MECH_SCIENCE,
+		ACCESS_MINERAL_STOREROOM,
+		ACCESS_ORDNANCE,
+		ACCESS_ORDNANCE_STORAGE,
+		ACCESS_ROBOTICS,
+		ACCESS_SCIENCE,
+		ACCESS_TECH_STORAGE,
+		)
+	minimal_wildcard_access = list(
+		ACCESS_EXP,
+		)
+	extra_access = list()
+	extra_wildcard_access = list()
+	job = /datum/job/exp_forwarder
+	big_pointer = TRUE
+	pointer_color = COLOR_EXP_CORP
+	honorific_positions = HONORIFIC_POSITION_FIRST | HONORIFIC_POSITION_LAST | HONORIFIC_POSITION_FIRST_FULL | HONORIFIC_POSITION_NONE
+
+/datum/id_trim/job/exp_eng_forwarder
+	assignment = JOB_FORWARDER_ENGINEER
+	intern_alt_name = "Rookie expeditionary engineer"
+	trim_state = "trim_stationengineer"
+	department_color = COLOR_EXP_CORP
+	subdepartment_color = COLOR_EXP_CORP
+	sechud_icon_state = SECHUD_FORWARDER_ENGINEE
+	minimal_access = list(
+		ACCESS_EXP,
+		ACCESS_EXP_STORAGE,
+		ACCESS_AUX_BASE,
+		ACCESS_CONSTRUCTION,
+		ACCESS_EVA,
+		ACCESS_GATEWAY,
+		ACCESS_MAINT_TUNNELS,
+		ACCESS_MECH_ENGINE,
+		ACCESS_MECH_MINING,
+		ACCESS_MECH_SECURITY,
+		ACCESS_MECH_SCIENCE,
+		)
+	minimal_wildcard_access = list(
+		ACCESS_EXP,
+		)
+	extra_access = list()
+	extra_wildcard_access = list()
+	job = /datum/job/exp_eng_forwarder
+	big_pointer = TRUE
+	pointer_color = COLOR_EXP_CORP
+	honorific_positions = HONORIFIC_POSITION_FIRST | HONORIFIC_POSITION_LAST | HONORIFIC_POSITION_FIRST_FULL | HONORIFIC_POSITION_NONE
+
+/datum/id_trim/job/exp_med_forwarder
+	assignment = JOB_FORWARDER_PARAMEDIC
+	intern_alt_name = "Rookie expeditionary medic"
+	trim_state = "trim_medicaldoctor"
+	department_color = COLOR_EXP_CORP
+	subdepartment_color = COLOR_EXP_CORP
+	sechud_icon_state = SECHUD_FORWARDER_PARAMEDIC
+	minimal_access = list(
+		ACCESS_EXP,
+		ACCESS_EXP_STORAGE,
+		ACCESS_AUX_BASE,
+		ACCESS_CONSTRUCTION,
+		ACCESS_EVA,
+		ACCESS_GATEWAY,
+		ACCESS_MECH_MEDICAL,
+		ACCESS_MEDICAL,
+		ACCESS_MORGUE,
+		ACCESS_MAINT_TUNNELS,
+		ACCESS_MECH_ENGINE,
+		ACCESS_MECH_MINING,
+		ACCESS_MECH_SECURITY,
+		ACCESS_MECH_SCIENCE,
+		)
+	minimal_wildcard_access = list(
+		ACCESS_EXP,
+		)
+	extra_access = list()
+	extra_wildcard_access = list()
+	job = /datum/job/exp_med_forwarder
+	big_pointer = TRUE
+	pointer_color = COLOR_EXP_CORP
+	honorific_positions = HONORIFIC_POSITION_FIRST | HONORIFIC_POSITION_LAST | HONORIFIC_POSITION_FIRST_FULL | HONORIFIC_POSITION_NONE
+
+/datum/id_trim/job/exp_med_officer
+	assignment = JOB_EXP_MEDICAL_OFFICER
+	intern_alt_name = "Promoted expeditionary medic"
+	trim_state = "trim_medicaldoctor"
+	department_color = COLOR_EXP_CORP
+	subdepartment_color = COLOR_EXP_CORP
+	sechud_icon_state = SECHUD_JOB_EXP_MEDICAL_OFFICER
+	minimal_access = list(
+		ACCESS_EXP,
+		ACCESS_EXP_STORAGE,
+		ACCESS_AUX_BASE,
+		ACCESS_CONSTRUCTION,
+		ACCESS_EVA,
+		ACCESS_GATEWAY,
+		ACCESS_MECH_MEDICAL,
+		ACCESS_MEDICAL,
+		ACCESS_MORGUE,
+		ACCESS_MAINT_TUNNELS,
+		ACCESS_MECH_ENGINE,
+		ACCESS_MECH_MINING,
+		ACCESS_MECH_SECURITY,
+		ACCESS_MECH_SCIENCE,
+		)
+	minimal_wildcard_access = list(
+		ACCESS_EXP,
+		)
+	extra_access = list()
+	extra_wildcard_access = list()
+	job = /datum/job/exp_med_officer
+	big_pointer = TRUE
+	pointer_color = COLOR_EXP_CORP
 	honorific_positions = HONORIFIC_POSITION_FIRST | HONORIFIC_POSITION_LAST | HONORIFIC_POSITION_FIRST_FULL | HONORIFIC_POSITION_NONE
 
 /datum/id_trim/job/human_ai

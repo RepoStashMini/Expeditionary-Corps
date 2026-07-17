@@ -88,6 +88,11 @@
 #define JOB_ROBOTICIST "Roboticist"
 #define JOB_GENETICIST "Geneticist"
 #define JOB_SCIENCE_GUARD "Science Guard" // NOVA EDIT ADDITION
+//Expeditionary
+#define JOB_FORWARDER "Forwarder"
+#define JOB_FORWARDER_PARAMEDIC "Expeditionary medic"
+#define JOB_FORWARDER_ENGINEER  "Expeditionary engineer"
+#define JOB_EXP_MEDICAL_OFFICER "Expeditionary Medical Officer"
 //Supply
 #define JOB_QUARTERMASTER "Quartermaster"
 #define JOB_CARGO_TECHNICIAN "Cargo Technician"
@@ -204,6 +209,12 @@
 #define JOB_DISPLAY_ORDER_ROBOTICIST 3
 #define JOB_DISPLAY_ORDER_GENETICIST 4
 #define JOB_DISPLAY_ORDER_SCIENCE_GUARD 21 //NOVA EDIT ADDITION
+//Expeditionary
+#define JOB_DISPLAY_ORDER_EXP_OFFICER 1
+#define JOB_DISPLAY_ORDER_FORWARDER 5
+#define JOB_DISPLAY_ORDER_FORWARDER_PARAMEDIC 4
+#define JOB_DISPLAY_ORDER_FORWARDER_ENGINEER  3
+#define JOB_DISPLAY_ORDER_EXP_MEDICAL_OFFICER 2
 // Cargo
 #define JOB_DISPLAY_ORDER_QUARTERMASTER 1
 #define JOB_DISPLAY_ORDER_CARGO_TECHNICIAN 2
@@ -341,6 +352,8 @@ DEFINE_BITFIELD(job_flags, list(
 #define SUPERVISOR_HOS "the Head of Security"
 #define SUPERVISOR_QM "the Quartermaster"
 #define SUPERVISOR_RD "the Research Director"
+#define SUPERVISOR_EXP "the Expedition Officerr"
+#define SUPERVISOR_MED_EXP "Expeditionary Medical Officer"
 
 /// Mind traits that should be shared by every head of staff. has to be this way cause byond lists lol
 #define HEAD_OF_STAFF_MIND_TRAITS TRAIT_FAST_TYING, TRAIT_HIGH_VALUE_RANSOM
