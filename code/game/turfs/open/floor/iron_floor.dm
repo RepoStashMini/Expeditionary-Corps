@@ -317,10 +317,15 @@
 	icon_state = "recharge_floor_asteroid"
 	base_icon_state = "recharge_floor_asteroid"
 
+//////////////////////
+//smooth   greyscale//
+//////////////////////
+
 /turf/open/floor/iron/smooth
 	icon_state = "smooth"
 	base_icon_state = "smooth"
 	floor_tile = /obj/item/stack/tile/iron/smooth
+	color = "#808080"
 
 /turf/open/floor/iron/smooth/airless
 	initial_gas_mix = AIRLESS_ATMOS
@@ -329,6 +334,7 @@
 	icon_state = "smooth_edge"
 	base_icon_state = "smooth_edge"
 	floor_tile = /obj/item/stack/tile/iron/smooth_edge
+	color = "#808080"
 
 /turf/open/floor/iron/smooth_edge/airless
 	initial_gas_mix = AIRLESS_ATMOS
@@ -337,6 +343,7 @@
 	icon_state = "smooth_half"
 	base_icon_state = "smooth_half"
 	floor_tile = /obj/item/stack/tile/iron/smooth_half
+	color = "#808080"
 
 /turf/open/floor/iron/smooth_half/airless
 	initial_gas_mix = AIRLESS_ATMOS
@@ -345,6 +352,7 @@
 	icon_state = "smooth_corner"
 	base_icon_state = "smooth_corner"
 	floor_tile = /obj/item/stack/tile/iron/smooth_corner
+	color = "#808080"
 
 /turf/open/floor/iron/smooth_corner/airless
 	initial_gas_mix = AIRLESS_ATMOS
@@ -353,9 +361,296 @@
 	icon_state = "smooth_large"
 	base_icon_state = "smooth_large"
 	floor_tile = /obj/item/stack/tile/iron/smooth_large
+	color = "#808080"
 
 /turf/open/floor/iron/smooth_large/airless
 	initial_gas_mix = AIRLESS_ATMOS
+
+// smooth dark
+
+/turf/open/floor/iron/dark_smooth
+	icon_state = "smooth"
+	base_icon_state = "smooth"
+	floor_tile = /obj/item/stack/tile/iron/dark_smooth
+	color = "#36373a"
+
+/turf/open/floor/iron/dark_smooth/airless
+	initial_gas_mix = AIRLESS_ATMOS
+
+/turf/open/floor/iron/dark_smooth_edge
+	icon_state = "smooth_edge"
+	base_icon_state = "smooth_edge"
+	floor_tile = /obj/item/stack/tile/iron/dark_smooth_edge
+	color = "#36373a"
+
+/turf/open/floor/iron/dark_smooth_edge/airless
+	initial_gas_mix = AIRLESS_ATMOS
+
+/turf/open/floor/iron/dark_smooth_half
+	icon_state = "smooth_half"
+	base_icon_state = "smooth_half"
+	floor_tile = /obj/item/stack/tile/iron/dark_smooth_half
+	color = "#36373a"
+
+/turf/open/floor/iron/dark_smooth_half/airless
+	initial_gas_mix = AIRLESS_ATMOS
+
+/turf/open/floor/iron/dark_smooth_corner
+	icon_state = "smooth_corner"
+	base_icon_state = "smooth_corner"
+	floor_tile = /obj/item/stack/tile/iron/dark_smooth_corner
+	color = "#36373a"
+
+/turf/open/floor/iron/dark_smooth_corner/airless
+	initial_gas_mix = AIRLESS_ATMOS
+
+/turf/open/floor/iron/dark_smooth_large
+	icon_state = "smooth_large"
+	base_icon_state = "smooth_large"
+	floor_tile = /obj/item/stack/tile/iron/dark_smooth_large
+	color = "#36373a"
+
+/turf/open/floor/iron/dark_smooth_large/airless
+	initial_gas_mix = AIRLESS_ATMOS
+
+// smooth green
+
+/turf/open/floor/iron/green_smooth
+	icon_state = "smooth"
+	base_icon_state = "smooth"
+	floor_tile = /obj/item/stack/tile/iron/green_smooth
+	color = "#535C5B"
+
+/turf/open/floor/iron/green_smooth/airless
+	initial_gas_mix = AIRLESS_ATMOS
+
+/turf/open/floor/iron/green_smooth_edge
+	icon_state = "smooth_edge"
+	base_icon_state = "smooth_edge"
+	floor_tile = /obj/item/stack/tile/iron/green_smooth_edge
+	color = "#535C5B"
+
+/turf/open/floor/iron/green_smooth_edge/airless
+	initial_gas_mix = AIRLESS_ATMOS
+
+/turf/open/floor/iron/green_smooth_half
+	icon_state = "smooth_half"
+	base_icon_state = "smooth_half"
+	floor_tile = /obj/item/stack/tile/iron/green_smooth_half
+	color = "#535C5B"
+
+/turf/open/floor/iron/green_smooth_half/airless
+	initial_gas_mix = AIRLESS_ATMOS
+
+/turf/open/floor/iron/green_smooth_corner
+	icon_state = "smooth_corner"
+	base_icon_state = "smooth_corner"
+	floor_tile = /obj/item/stack/tile/iron/green_smooth_corner
+	color = "#535C5B"
+
+/turf/open/floor/iron/green_smooth_corner/airless
+	initial_gas_mix = AIRLESS_ATMOS
+
+/turf/open/floor/iron/green_smooth_large
+	icon_state = "smooth_large"
+	base_icon_state = "smooth_large"
+	floor_tile = /obj/item/stack/tile/iron/green_smooth_large
+	color = "#535C5B"
+
+/turf/open/floor/iron/green_smooth_large/airless
+	initial_gas_mix = AIRLESS_ATMOS
+
+// white
+
+/turf/open/floor/iron/white_smooth
+	icon_state = "smooth"
+	base_icon_state = "smooth"
+	floor_tile = /obj/item/stack/tile/iron/white_smooth
+
+/turf/open/floor/iron/white_smooth/airless
+	initial_gas_mix = AIRLESS_ATMOS
+
+/turf/open/floor/iron/white_smooth_edge
+	icon_state = "smooth_edge"
+	base_icon_state = "smooth_edge"
+	floor_tile = /obj/item/stack/tile/iron/white_smooth_edge
+
+/turf/open/floor/iron/smooth_edge/airless
+	initial_gas_mix = AIRLESS_ATMOS
+
+/turf/open/floor/iron/white_smooth_half
+	icon_state = "smooth_half"
+	base_icon_state = "smooth_half"
+	floor_tile = /obj/item/stack/tile/iron/white_smooth_half
+
+/turf/open/floor/iron/white_smooth_half/airless
+	initial_gas_mix = AIRLESS_ATMOS
+
+/turf/open/floor/iron/white_smooth_corner
+	icon_state = "smooth_corner"
+	base_icon_state = "smooth_corner"
+	floor_tile = /obj/item/stack/tile/iron/white_smooth_corner
+
+/turf/open/floor/iron/white_smooth_corner/airless
+	initial_gas_mix = AIRLESS_ATMOS
+
+/turf/open/floor/iron/white_smooth_large
+	icon_state = "smooth_large"
+	base_icon_state = "smooth_large"
+	floor_tile = /obj/item/stack/tile/iron/white_smooth_large
+
+/turf/open/floor/iron/white_smooth_large/airless
+	initial_gas_mix = AIRLESS_ATMOS
+
+// techfloor grid
+
+/turf/open/floor/iron/techfloor_grid
+	icon_state = "techfloor_grid"
+	base_icon_state = "techfloor_grid_edge"
+
+/turf/open/floor/iron/techfloor_grid/airless
+	initial_gas_mix = AIRLESS_ATMOS
+
+/turf/open/floor/iron/techfloor_grid_edge
+	icon_state = "techfloor_grid_edge"
+	base_icon_state = "techfloor_grid_edge"
+
+/turf/open/floor/iron/techfloor_grid_edge/airless
+	initial_gas_mix = AIRLESS_ATMOS
+
+/turf/open/floor/iron/techfloor_grid_half
+	icon_state = "techfloor_grid_half"
+	base_icon_state = "techfloor_grid_half"
+
+/turf/open/floor/iron/techfloor_grid_half/airless
+	initial_gas_mix = AIRLESS_ATMOS
+
+/turf/open/floor/iron/techfloor_grid_corner
+	icon_state = "techfloor_grid_corner"
+	base_icon_state = "techfloor_grid_corner"
+
+/turf/open/floor/iron/techfloor_grid_corner/airless
+	initial_gas_mix = AIRLESS_ATMOS
+
+/turf/open/floor/iron/techfloor_grid_large
+	icon_state = "techfloor_grid_large"
+	base_icon_state = "techfloor_grid_large"
+
+/turf/open/floor/iron/techfloor_grid_large/airless
+	initial_gas_mix = AIRLESS_ATMOS
+
+// techfloor
+
+/turf/open/floor/iron/techfloor_gray_edge
+	icon_state = "techfloor_gray"
+	base_icon_state = "techfloor_gray"
+
+/turf/open/floor/iron/techfloor_gray_edge/airless
+	initial_gas_mix = AIRLESS_ATMOS
+
+/turf/open/floor/iron/techfloor_gray_edge
+	icon_state = "techfloor_gray_edge"
+	base_icon_state = "techfloor_gray_edge"
+
+/turf/open/floor/iron/techfloor_gray_edge/airless
+	initial_gas_mix = AIRLESS_ATMOS
+
+/turf/open/floor/iron/techfloor_gray_half
+	icon_state = "techfloor_gray_half"
+	base_icon_state = "techfloor_gray_half"
+
+/turf/open/floor/iron/techfloor_gray_half/airless
+	initial_gas_mix = AIRLESS_ATMOS
+
+/turf/open/floor/iron/techfloor_gray_corner
+	icon_state = "techfloor_gray_corner"
+	base_icon_state = "techfloor_gray_corner"
+
+/turf/open/floor/iron/techfloor_gray_corner/airless
+	initial_gas_mix = AIRLESS_ATMOS
+
+/turf/open/floor/iron/techfloor_gray_large
+	icon_state = "techfloor_gray_large"
+	base_icon_state = "techfloor_gray_large"
+
+/turf/open/floor/iron/techfloor_gray_large/airless
+	initial_gas_mix = AIRLESS_ATMOS
+
+// techmaint
+
+/turf/open/floor/iron/techmaint
+	icon_state = "techmaint"
+	base_icon_state = "techmaint"
+
+/turf/open/floor/iron/techmaint/airless
+	initial_gas_mix = AIRLESS_ATMOS
+
+/turf/open/floor/iron/techmaint_edge
+	icon_state = "techmaint_edge"
+	base_icon_state = "techmaint_edge"
+
+/turf/open/floor/iron/techmaint_edge/airless
+	initial_gas_mix = AIRLESS_ATMOS
+
+/turf/open/floor/iron/techmaint_half
+	icon_state = "techmaint_half"
+	base_icon_state = "techmaint_half"
+
+/turf/open/floor/iron/techmaint_half/airless
+	initial_gas_mix = AIRLESS_ATMOS
+
+/turf/open/floor/iron/techmaint_corner
+	icon_state = "techmaint_corner"
+	base_icon_state = "techmaint_corner"
+
+/turf/open/floor/iron/techmaint_corner/airless
+	initial_gas_mix = AIRLESS_ATMOS
+
+/turf/open/floor/iron/techmaint_large
+	icon_state = "techmaint_large"
+	base_icon_state = "techmaint_large"
+
+/turf/open/floor/iron/techmaint_large/airless
+	initial_gas_mix = AIRLESS_ATMOS
+
+// steel ridged
+
+/turf/open/floor/iron/steel_ridged
+	icon_state = "steel_ridged"
+	base_icon_state = "steel_ridged"
+
+/turf/open/floor/iron/steel_ridged/airless
+	initial_gas_mix = AIRLESS_ATMOS
+
+/turf/open/floor/iron/steel_ridged_edge
+	icon_state = "steel_ridged_edge"
+	base_icon_state = "steel_ridged_edge"
+
+/turf/open/floor/iron/steel_ridged_edge/airless
+	initial_gas_mix = AIRLESS_ATMOS
+
+/turf/open/floor/iron/steel_ridged_half
+	icon_state = "steel_ridged_half"
+	base_icon_state = "steel_ridged_half"
+
+/turf/open/floor/iron/steel_ridged_half/airless
+	initial_gas_mix = AIRLESS_ATMOS
+
+/turf/open/floor/iron/steel_ridged_corner
+	icon_state = "steel_ridged_corner"
+	base_icon_state = "steel_ridged_corner"
+
+/turf/open/floor/iron/steel_ridged_corner/airless
+	initial_gas_mix = AIRLESS_ATMOS
+
+/turf/open/floor/iron/steel_ridged_large
+	icon_state = "steel_ridged_large"
+	base_icon_state = "steel_ridged_large"
+
+/turf/open/floor/iron/steel_ridged_large/airless
+	initial_gas_mix = AIRLESS_ATMOS
+
+
 
 /turf/open/floor/iron/terracotta
 	icon_state = "terracotta"

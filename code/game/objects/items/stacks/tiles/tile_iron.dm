@@ -62,11 +62,6 @@
 		/obj/item/stack/tile/iron/white/textured_corner,
 		/obj/item/stack/tile/iron/white/textured_large,
 		/obj/item/stack/tile/iron/recharge_floor,
-		/obj/item/stack/tile/iron/smooth,
-		/obj/item/stack/tile/iron/smooth_edge,
-		/obj/item/stack/tile/iron/smooth_half,
-		/obj/item/stack/tile/iron/smooth_corner,
-		/obj/item/stack/tile/iron/smooth_large,
 		/obj/item/stack/tile/iron/terracotta,
 		/obj/item/stack/tile/iron/terracotta/small,
 		/obj/item/stack/tile/iron/terracotta/diagonal,
@@ -484,10 +479,15 @@
 	turf_type = /turf/open/floor/iron/recharge_floor
 	merge_type = /obj/item/stack/tile/iron/recharge_floor
 
+//////////////////////
+//smooth   greyscale//
+//////////////////////
+
 /obj/item/stack/tile/iron/smooth
 	name = "smooth tile"
 	singular_name = "smooth floor tile"
 	icon_state = "tile_smooth"
+	color = "#808080"
 	turf_type = /turf/open/floor/iron/smooth
 	merge_type = /obj/item/stack/tile/iron/smooth
 
@@ -495,6 +495,7 @@
 	name = "smooth edge tile"
 	singular_name = "edged smooth floor tile"
 	icon_state = "tile_smooth_edge"
+	color = "#808080"
 	turf_type = /turf/open/floor/iron/smooth_edge
 	merge_type = /obj/item/stack/tile/iron/smooth_edge
 	tile_rotate_dirs = list(SOUTH, NORTH, EAST, WEST)
@@ -503,6 +504,7 @@
 	name = "smooth half tile"
 	singular_name = "halved smooth floor tile"
 	icon_state = "tile_smooth_half"
+	color = "#808080"
 	turf_type = /turf/open/floor/iron/smooth_half
 	merge_type = /obj/item/stack/tile/iron/smooth_half
 	tile_rotate_dirs = list(SOUTH, NORTH)
@@ -511,6 +513,7 @@
 	name = "smooth corner tile"
 	singular_name = "cornered smooth floor tile"
 	icon_state = "tile_smooth_corner"
+	color = "#808080"
 	turf_type = /turf/open/floor/iron/smooth_corner
 	merge_type = /obj/item/stack/tile/iron/smooth_corner
 	tile_rotate_dirs = list(SOUTH, NORTH, EAST, WEST)
@@ -519,8 +522,184 @@
 	name = "smooth large tile"
 	singular_name = "large smooth floor tile"
 	icon_state = "tile_smooth_large"
+	color = "#808080"
 	turf_type = /turf/open/floor/iron/smooth_large
 	merge_type = /obj/item/stack/tile/iron/smooth_large
+
+// smooth black
+
+/obj/item/stack/tile/iron/dark_smooth
+	name = "dark smooth tile"
+	singular_name = "smooth dark floor tile"
+	icon_state = "tile_smooth"
+	color = "#36373a"
+	turf_type = /turf/open/floor/iron/dark_smooth
+	merge_type = /obj/item/stack/tile/iron/dark_smooth
+
+/obj/item/stack/tile/iron/dark_smooth_edge
+	name = "dark smooth edge tile"
+	singular_name = "edged dark smooth floor tile"
+	icon_state = "tile_smooth_edge"
+	color = "#36373a"
+	turf_type = /turf/open/floor/iron/dark_smooth_edge
+	merge_type = /obj/item/stack/tile/iron/dark_smooth_edge
+	tile_rotate_dirs = list(SOUTH, NORTH, EAST, WEST)
+
+/obj/item/stack/tile/iron/dark_smooth_half
+	name = "dark smooth half tile"
+	singular_name = "halved dark smooth floor tile"
+	icon_state = "tile_smooth_half"
+	color = "#36373a"
+	turf_type = /turf/open/floor/iron/dark_smooth_half
+	merge_type = /obj/item/stack/tile/iron/dark_smooth_half
+	tile_rotate_dirs = list(SOUTH, NORTH)
+
+/obj/item/stack/tile/iron/dark_smooth_corner
+	name = "dark mooth corner tile"
+	singular_name = "cornered dark smooth floor tile"
+	icon_state = "tile_smooth_corner"
+	color = "#36373a"
+	turf_type = /turf/open/floor/iron/dark_smooth_corner
+	merge_type = /obj/item/stack/tile/iron/dark_smooth_corner
+	tile_rotate_dirs = list(SOUTH, NORTH, EAST, WEST)
+
+/obj/item/stack/tile/iron/dark_smooth_large
+	name = "dark smooth large tile"
+	singular_name = "large dark smooth floor tile"
+	icon_state = "tile_smooth_large"
+	color = "#36373a"
+	turf_type = /turf/open/floor/iron/dark_smooth_large
+	merge_type = /obj/item/stack/tile/iron/dark_smooth_large
+
+// smooth green
+
+/obj/item/stack/tile/iron/green_smooth
+	name = "dark green smooth tile"
+	singular_name = "dark green smooth floor tile"
+	icon_state = "tile_smooth"
+	color = "#535C5B"
+	turf_type = /turf/open/floor/iron/green_smooth
+	merge_type = /obj/item/stack/tile/iron/green_smooth
+
+/obj/item/stack/tile/iron/green_smooth_edge
+	name = "dark green smooth edge tile"
+	singular_name = "edged dark green smooth floor tile"
+	icon_state = "tile_smooth_edge"
+	color = "#535C5B"
+	turf_type = /turf/open/floor/iron/green_smooth_edge
+	merge_type = /obj/item/stack/tile/iron/green_smooth_edge
+	tile_rotate_dirs = list(SOUTH, NORTH, EAST, WEST)
+
+/obj/item/stack/tile/iron/green_smooth_half
+	name = "dark green smooth half tile"
+	singular_name = "halved dark green smooth floor tile"
+	icon_state = "tile_smooth_half"
+	color = "#535C5B"
+	turf_type = /turf/open/floor/iron/green_smooth_half
+	merge_type = /obj/item/stack/tile/iron/green_smooth_half
+	tile_rotate_dirs = list(SOUTH, NORTH)
+
+/obj/item/stack/tile/iron/green_smooth_corner
+	name = "dark green smooth corner tile"
+	singular_name = "cornered dark green smooth floor tile"
+	icon_state = "tile_smooth_corner"
+	color = "#535C5B"
+	turf_type = /turf/open/floor/iron/green_smooth_corner
+	merge_type = /obj/item/stack/tile/iron/green_smooth_corner
+	tile_rotate_dirs = list(SOUTH, NORTH, EAST, WEST)
+
+/obj/item/stack/tile/iron/green_smooth_large
+	name = "dark green smooth large tile"
+	singular_name = "large dark green smooth floor tile"
+	icon_state = "tile_smooth_large"
+	color = "#535C5B"
+	turf_type = /turf/open/floor/iron/green_smooth_large
+	merge_type = /obj/item/stack/tile/iron/green_smooth_large
+
+// white
+
+/obj/item/stack/tile/iron/white_smooth
+	name = "white smooth tile"
+	singular_name = "white smooth floor tile"
+	icon_state = "tile_smooth"
+	color = null
+	turf_type = /turf/open/floor/iron/white_smooth
+	merge_type = /obj/item/stack/tile/iron/white_smooth
+
+/obj/item/stack/tile/iron/white_smooth_edge
+	name = "white smooth edge tile"
+	singular_name = "edged white smooth floor tile"
+	icon_state = "tile_smooth_edge"
+	color = null
+	turf_type = /turf/open/floor/iron/white_smooth_edge
+	merge_type = /obj/item/stack/tile/iron/white_smooth_edge
+	tile_rotate_dirs = list(SOUTH, NORTH, EAST, WEST)
+
+/obj/item/stack/tile/iron/white_smooth_half
+	name = "white smooth half tile"
+	singular_name = "halved white smooth floor tile"
+	icon_state = "tile_smooth_half"
+	color = null
+	turf_type = /turf/open/floor/iron/white_smooth_half
+	merge_type = /obj/item/stack/tile/iron/white_smooth_half
+	tile_rotate_dirs = list(SOUTH, NORTH)
+
+/obj/item/stack/tile/iron/white_smooth_corner
+	name = "whitesmooth corner tile"
+	singular_name = "cornered white smooth floor tile"
+	icon_state = "tile_smooth_corner"
+	color = null
+	turf_type = /turf/open/floor/iron/white_smooth_corner
+	merge_type = /obj/item/stack/tile/iron/white_smooth_corner
+	tile_rotate_dirs = list(SOUTH, NORTH, EAST, WEST)
+
+/obj/item/stack/tile/iron/white_smooth_large
+	name = "white smooth large tile"
+	singular_name = "large white smooth floor tile"
+	icon_state = "tile_smooth_large"
+	color = null
+	turf_type = /turf/open/floor/iron/white_smooth_large
+	merge_type = /obj/item/stack/tile/iron/white_smooth_large
+
+// techfloor grid
+
+/obj/item/stack/tile/iron/techfloor_grid
+	name = "techfloor tile"
+	singular_name = "techfloor tile"
+	icon_state = "tile_smooth"
+	turf_type = /turf/open/floor/iron/techfloor_grid
+	merge_type = /obj/item/stack/tile/iron/techfloor_grid
+
+/obj/item/stack/tile/iron/techfloor_grid_edge
+	name = "techfloor edge tile"
+	singular_name = "edged techfloor floor tile"
+	icon_state = "techfloor_grid_edge"
+	turf_type = /turf/open/floor/iron/techfloor_grid_edge
+	merge_type = /obj/item/stack/tile/iron/techfloor_grid_edge
+	tile_rotate_dirs = list(SOUTH, NORTH, EAST, WEST)
+
+/obj/item/stack/tile/iron/techfloor_grid_half
+	name = "techfloor half tile"
+	singular_name = "halved techfloor floor tile"
+	icon_state = "techfloor_grid_half"
+	turf_type = /turf/open/floor/iron/techfloor_grid_half
+	merge_type = /obj/item/stack/tile/iron/techfloor_grid_half
+	tile_rotate_dirs = list(SOUTH, NORTH)
+
+/obj/item/stack/tile/iron/techfloor_grid_corner
+	name = "techfloor corner tile"
+	singular_name = "cornered techfloor floor tile"
+	icon_state = "techfloor_grid_corner"
+	turf_type = /turf/open/floor/iron/techfloor_grid_corner
+	merge_type = /obj/item/stack/tile/iron/techfloor_grid_corner
+	tile_rotate_dirs = list(SOUTH, NORTH, EAST, WEST)
+
+/obj/item/stack/tile/iron/techfloor_grid_large
+	name = "techfloor large tile"
+	singular_name = "large techfloor floor tile"
+	icon_state = "techfloor_grid_large"
+	turf_type = /turf/open/floor/iron/techfloor_grid_large
+	merge_type = /obj/item/stack/tile/iron/techfloor_grid_large
 
 /obj/item/stack/tile/iron/terracotta
 	name = "terracotta floor tile"

@@ -1,5 +1,4 @@
-/turf/open/floor
-	icon = 'modular_nova/modules/aesthetics/floors/icons/floors.dmi'
+
 
 /turf/open/floor/catwalk_floor
 	icon = 'modular_nova/modules/aesthetics/floors/icons/catwalk_plating.dmi'
@@ -113,11 +112,6 @@
 		/obj/item/stack/tile/iron/white_corner,
 		/obj/item/stack/tile/iron/cafeteria,
 		/obj/item/stack/tile/iron/recharge_floor,
-		/obj/item/stack/tile/iron/smooth,
-		/obj/item/stack/tile/iron/smooth_edge,
-		/obj/item/stack/tile/iron/smooth_half,
-		/obj/item/stack/tile/iron/smooth_corner,
-		/obj/item/stack/tile/iron/smooth_large,
 		/obj/item/stack/tile/iron/terracotta,
 		/obj/item/stack/tile/iron/terracotta/small,
 		/obj/item/stack/tile/iron/terracotta/diagonal,

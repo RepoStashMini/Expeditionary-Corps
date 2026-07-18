@@ -1,5 +1,4 @@
-/turf/open/floor
-	icon = 'modular_teotr/modules/floors/icons/floors.dmi'
+
 
 /turf/open/floor/catwalk_floor
 	icon = 'modular_teotr/modules/floors/icons/catwalk_plating.dmi'

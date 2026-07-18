@@ -53,7 +53,7 @@
 	uniform = /obj/item/clothing/under/rank/expeditionary/com_forwarder
 
 	shoes = /obj/item/clothing/shoes/combat/expeditionary_corps
-	backpack = 	/obj/item/storage/backpack/duffelbag/expeditionary_corps
+	backpack = /obj/item/storage/backpack/duffelbag/expeditionary_corps
 	gloves = /obj/item/clothing/gloves/color/black/expeditionary_corps
 
 	ears = /obj/item/radio/headset/heads/exp_officer
