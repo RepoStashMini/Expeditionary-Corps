@@ -507,6 +507,7 @@
 /turf/open/floor/iron/techfloor_grid
 	icon_state = "techfloor_grid"
 	base_icon_state = "techfloor_grid_edge"
+	floor_tile = /obj/item/stack/tile/iron/techfloor_grid
 
 /turf/open/floor/iron/techfloor_grid/airless
 	initial_gas_mix = AIRLESS_ATMOS
@@ -514,6 +515,7 @@
 /turf/open/floor/iron/techfloor_grid_edge
 	icon_state = "techfloor_grid_edge"
 	base_icon_state = "techfloor_grid_edge"
+	floor_tile = /obj/item/stack/tile/iron/techfloor_grid_edge
 
 /turf/open/floor/iron/techfloor_grid_edge/airless
 	initial_gas_mix = AIRLESS_ATMOS
@@ -521,6 +523,7 @@
 /turf/open/floor/iron/techfloor_grid_half
 	icon_state = "techfloor_grid_half"
 	base_icon_state = "techfloor_grid_half"
+	floor_tile = /obj/item/stack/tile/iron/techfloor_grid_half
 
 /turf/open/floor/iron/techfloor_grid_half/airless
 	initial_gas_mix = AIRLESS_ATMOS
@@ -528,6 +531,7 @@
 /turf/open/floor/iron/techfloor_grid_corner
 	icon_state = "techfloor_grid_corner"
 	base_icon_state = "techfloor_grid_corner"
+	floor_tile = /obj/item/stack/tile/iron/techfloor_grid_corner
 
 /turf/open/floor/iron/techfloor_grid_corner/airless
 	initial_gas_mix = AIRLESS_ATMOS
@@ -535,22 +539,25 @@
 /turf/open/floor/iron/techfloor_grid_large
 	icon_state = "techfloor_grid_large"
 	base_icon_state = "techfloor_grid_large"
+	floor_tile = /obj/item/stack/tile/iron/techfloor_grid_large
 
 /turf/open/floor/iron/techfloor_grid_large/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-// techfloor
+// techfloor gray
 
-/turf/open/floor/iron/techfloor_gray_edge
+/turf/open/floor/iron/techfloor_gray
 	icon_state = "techfloor_gray"
 	base_icon_state = "techfloor_gray"
+	floor_tile = /obj/item/stack/tile/iron/techfloor_gray
 
-/turf/open/floor/iron/techfloor_gray_edge/airless
+/turf/open/floor/iron/techfloor_gray/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
 /turf/open/floor/iron/techfloor_gray_edge
 	icon_state = "techfloor_gray_edge"
 	base_icon_state = "techfloor_gray_edge"
+	floor_tile = /obj/item/stack/tile/iron/techfloor_gray_edge
 
 /turf/open/floor/iron/techfloor_gray_edge/airless
 	initial_gas_mix = AIRLESS_ATMOS
@@ -558,6 +565,7 @@
 /turf/open/floor/iron/techfloor_gray_half
 	icon_state = "techfloor_gray_half"
 	base_icon_state = "techfloor_gray_half"
+	floor_tile = /obj/item/stack/tile/iron/techfloor_gray_half
 
 /turf/open/floor/iron/techfloor_gray_half/airless
 	initial_gas_mix = AIRLESS_ATMOS
@@ -565,6 +573,7 @@
 /turf/open/floor/iron/techfloor_gray_corner
 	icon_state = "techfloor_gray_corner"
 	base_icon_state = "techfloor_gray_corner"
+	floor_tile = /obj/item/stack/tile/iron/techfloor_gray_corner
 
 /turf/open/floor/iron/techfloor_gray_corner/airless
 	initial_gas_mix = AIRLESS_ATMOS
@@ -572,6 +581,7 @@
 /turf/open/floor/iron/techfloor_gray_large
 	icon_state = "techfloor_gray_large"
 	base_icon_state = "techfloor_gray_large"
+	floor_tile = /obj/item/stack/tile/iron/techfloor_gray_large
 
 /turf/open/floor/iron/techfloor_gray_large/airless
 	initial_gas_mix = AIRLESS_ATMOS
@@ -581,6 +591,7 @@
 /turf/open/floor/iron/techmaint
 	icon_state = "techmaint"
 	base_icon_state = "techmaint"
+	floor_tile = /obj/item/stack/tile/iron/techmaint
 
 /turf/open/floor/iron/techmaint/airless
 	initial_gas_mix = AIRLESS_ATMOS
@@ -588,6 +599,7 @@
 /turf/open/floor/iron/techmaint_edge
 	icon_state = "techmaint_edge"
 	base_icon_state = "techmaint_edge"
+	floor_tile = /obj/item/stack/tile/iron/techmaint_edge
 
 /turf/open/floor/iron/techmaint_edge/airless
 	initial_gas_mix = AIRLESS_ATMOS
@@ -595,6 +607,7 @@
 /turf/open/floor/iron/techmaint_half
 	icon_state = "techmaint_half"
 	base_icon_state = "techmaint_half"
+	floor_tile = /obj/item/stack/tile/iron/techmaint_half
 
 /turf/open/floor/iron/techmaint_half/airless
 	initial_gas_mix = AIRLESS_ATMOS
@@ -602,6 +615,7 @@
 /turf/open/floor/iron/techmaint_corner
 	icon_state = "techmaint_corner"
 	base_icon_state = "techmaint_corner"
+	floor_tile = /obj/item/stack/tile/iron/techmaint_corner
 
 /turf/open/floor/iron/techmaint_corner/airless
 	initial_gas_mix = AIRLESS_ATMOS
@@ -609,6 +623,7 @@
 /turf/open/floor/iron/techmaint_large
 	icon_state = "techmaint_large"
 	base_icon_state = "techmaint_large"
+	floor_tile = /obj/item/stack/tile/iron/techmaint_large
 
 /turf/open/floor/iron/techmaint_large/airless
 	initial_gas_mix = AIRLESS_ATMOS
@@ -618,6 +633,7 @@
 /turf/open/floor/iron/steel_ridged
 	icon_state = "steel_ridged"
 	base_icon_state = "steel_ridged"
+	floor_tile = /obj/item/stack/tile/iron/steel_ridged
 
 /turf/open/floor/iron/steel_ridged/airless
 	initial_gas_mix = AIRLESS_ATMOS
@@ -625,6 +641,7 @@
 /turf/open/floor/iron/steel_ridged_edge
 	icon_state = "steel_ridged_edge"
 	base_icon_state = "steel_ridged_edge"
+	floor_tile = /obj/item/stack/tile/iron/steel_ridged_edge
 
 /turf/open/floor/iron/steel_ridged_edge/airless
 	initial_gas_mix = AIRLESS_ATMOS
@@ -632,6 +649,7 @@
 /turf/open/floor/iron/steel_ridged_half
 	icon_state = "steel_ridged_half"
 	base_icon_state = "steel_ridged_half"
+	floor_tile = /obj/item/stack/tile/iron/steel_ridged_half
 
 /turf/open/floor/iron/steel_ridged_half/airless
 	initial_gas_mix = AIRLESS_ATMOS
@@ -639,6 +657,7 @@
 /turf/open/floor/iron/steel_ridged_corner
 	icon_state = "steel_ridged_corner"
 	base_icon_state = "steel_ridged_corner"
+	floor_tile = /obj/item/stack/tile/iron/steel_ridged_corner
 
 /turf/open/floor/iron/steel_ridged_corner/airless
 	initial_gas_mix = AIRLESS_ATMOS
@@ -646,6 +665,7 @@
 /turf/open/floor/iron/steel_ridged_large
 	icon_state = "steel_ridged_large"
 	base_icon_state = "steel_ridged_large"
+	floor_tile = /obj/item/stack/tile/iron/steel_ridged_large
 
 /turf/open/floor/iron/steel_ridged_large/airless
 	initial_gas_mix = AIRLESS_ATMOS

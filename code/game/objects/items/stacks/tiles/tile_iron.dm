@@ -82,6 +82,165 @@
 		/obj/item/stack/tile/iron/sepia,
 	)
 
+/obj/item/stack/tile/iron/ship
+	name = "ship's floor tile"
+	singular_name = "A regular ship's tile... what are you staring at?"
+	desc = "The ground you walk on."
+	icon = 'icons/obj/tiles.dmi'
+	icon_state = "tile_smooth"
+	inhand_icon_state = "tile"
+	force = 6
+	mats_per_unit = list(/datum/material/iron=SHEET_MATERIAL_AMOUNT*0.25)
+	throwforce = 10
+	obj_flags = CONDUCTS_ELECTRICITY
+
+	turf_type = /obj/item/stack/tile/iron/smooth
+
+	armor_type = /datum/armor/tile_iron
+	resistance_flags = FIRE_PROOF
+	matter_amount = 1
+	cost = HALF_SHEET_MATERIAL_AMOUNT * 0.5
+	source = /datum/robot_energy_storage/material/iron
+	merge_type = /obj/item/stack/tile/iron/ship
+	tile_reskin_types = list(
+		/obj/item/stack/tile/iron/smooth,
+		/obj/item/stack/tile/iron/smooth_edge,
+		/obj/item/stack/tile/iron/smooth_half,
+		/obj/item/stack/tile/iron/smooth_corner,
+		/obj/item/stack/tile/iron/smooth_large,
+		/obj/item/stack/tile/iron/dark_smooth,
+		/obj/item/stack/tile/iron/dark_smooth_edge,
+		/obj/item/stack/tile/iron/dark_smooth_half,
+		/obj/item/stack/tile/iron/dark_smooth_corner,
+		/obj/item/stack/tile/iron/dark_smooth_large,
+		/obj/item/stack/tile/iron/green_smooth,
+		/obj/item/stack/tile/iron/green_smooth_edge,
+		/obj/item/stack/tile/iron/green_smooth_half,
+		/obj/item/stack/tile/iron/green_smooth_corner,
+		/obj/item/stack/tile/iron/green_smooth_large,
+		/obj/item/stack/tile/iron/white_smooth,
+		/obj/item/stack/tile/iron/white_smooth_edge,
+		/obj/item/stack/tile/iron/white_smooth_half,
+		/obj/item/stack/tile/iron/white_smooth_corner,
+		/obj/item/stack/tile/iron/white_smooth_large,
+	)
+
+/obj/item/stack/tile/iron/techfloor_grid
+	name = "techfloor floor tile"
+	singular_name = "A regular ship's tile... what are you staring at?"
+	desc = "The ground you walk on."
+	icon = 'icons/obj/tiles.dmi'
+	icon_state = "tile_techfloor_grid"
+	inhand_icon_state = "tile"
+	force = 6
+	mats_per_unit = list(/datum/material/iron=SHEET_MATERIAL_AMOUNT*0.25)
+	throwforce = 10
+	obj_flags = CONDUCTS_ELECTRICITY
+
+	turf_type = /obj/item/stack/tile/iron/techfloor_grid
+
+	armor_type = /datum/armor/tile_iron
+	resistance_flags = FIRE_PROOF
+	matter_amount = 1
+	cost = HALF_SHEET_MATERIAL_AMOUNT * 0.5
+	source = /datum/robot_energy_storage/material/iron
+	merge_type = /obj/item/stack/tile/iron/techfloor_grid
+	tile_reskin_types = list(
+		/obj/item/stack/tile/iron/techfloor_grid,
+		/obj/item/stack/tile/iron/techfloor_grid_edge,
+		/obj/item/stack/tile/iron/techfloor_grid_half,
+		/obj/item/stack/tile/iron/techfloor_grid_corner,
+		/obj/item/stack/tile/iron/techfloor_grid_large,
+
+	)
+
+/obj/item/stack/tile/iron/techfloor_gray
+	name = "gray techfloor floor tile"
+	singular_name = "A regular ship's tile... what are you staring at?"
+	desc = "The ground you walk on."
+	icon = 'icons/obj/tiles.dmi'
+	icon_state = "tile_techfloor_gray"
+	inhand_icon_state = "tile"
+	force = 6
+	mats_per_unit = list(/datum/material/iron=SHEET_MATERIAL_AMOUNT*0.25)
+	throwforce = 10
+	obj_flags = CONDUCTS_ELECTRICITY
+
+	turf_type = /obj/item/stack/tile/iron/techfloor_gray
+
+	armor_type = /datum/armor/tile_iron
+	resistance_flags = FIRE_PROOF
+	matter_amount = 1
+	cost = HALF_SHEET_MATERIAL_AMOUNT * 0.5
+	source = /datum/robot_energy_storage/material/iron
+	merge_type = /obj/item/stack/tile/iron/techfloor_gray
+	tile_reskin_types = list(
+		/obj/item/stack/tile/iron/techfloor_gray,
+		/obj/item/stack/tile/iron/techfloor_gray_edge,
+		/obj/item/stack/tile/iron/techfloor_gray_half,
+		/obj/item/stack/tile/iron/techfloor_gray_corner,
+		/obj/item/stack/tile/iron/techfloor_gray_large,
+
+	)
+
+/obj/item/stack/tile/iron/techmaint
+	name = "techmaint floor tile"
+	singular_name = "A regular ship's tile... what are you staring at?"
+	desc = "The ground you walk on."
+	icon = 'icons/obj/tiles.dmi'
+	icon_state = "tile_techmaint"
+	inhand_icon_state = "tile"
+	force = 6
+	mats_per_unit = list(/datum/material/iron=SHEET_MATERIAL_AMOUNT*0.25)
+	throwforce = 10
+	obj_flags = CONDUCTS_ELECTRICITY
+
+	turf_type = /obj/item/stack/tile/iron/techmaint
+
+	armor_type = /datum/armor/tile_iron
+	resistance_flags = FIRE_PROOF
+	matter_amount = 1
+	cost = HALF_SHEET_MATERIAL_AMOUNT * 0.5
+	source = /datum/robot_energy_storage/material/iron
+	merge_type = /obj/item/stack/tile/iron/techmaint
+	tile_reskin_types = list(
+		/obj/item/stack/tile/iron/techmaint,
+		/obj/item/stack/tile/iron/techmaint_edge,
+		/obj/item/stack/tile/iron/techmaint_half,
+		/obj/item/stack/tile/iron/techmaint_corner,
+		/obj/item/stack/tile/iron/techmaint_large,
+
+	)
+
+/obj/item/stack/tile/iron/steel_ridged
+	name = "steel ridged floor tile"
+	singular_name = "A regular ship's tile... what are you staring at?"
+	desc = "The ground you walk on."
+	icon = 'icons/obj/tiles.dmi'
+	icon_state = "tile_steel_ridged"
+	inhand_icon_state = "tile"
+	force = 6
+	mats_per_unit = list(/datum/material/iron=SHEET_MATERIAL_AMOUNT*0.25)
+	throwforce = 10
+	obj_flags = CONDUCTS_ELECTRICITY
+
+	turf_type = /obj/item/stack/tile/iron/steel_ridged
+
+	armor_type = /datum/armor/tile_iron
+	resistance_flags = FIRE_PROOF
+	matter_amount = 1
+	cost = HALF_SHEET_MATERIAL_AMOUNT * 0.5
+	source = /datum/robot_energy_storage/material/iron
+	merge_type = /obj/item/stack/tile/iron/steel_ridged
+	tile_reskin_types = list(
+		/obj/item/stack/tile/iron/steel_ridged,
+		/obj/item/stack/tile/iron/steel_ridged_edge,
+		/obj/item/stack/tile/iron/steel_ridged_half,
+		/obj/item/stack/tile/iron/steel_ridged_corner,
+		/obj/item/stack/tile/iron/steel_ridged_large,
+
+	)
+
 /obj/item/stack/tile/iron/two
 	amount = 2
 
@@ -666,14 +825,14 @@
 /obj/item/stack/tile/iron/techfloor_grid
 	name = "techfloor tile"
 	singular_name = "techfloor tile"
-	icon_state = "tile_smooth"
+	icon_state = "tile_techfloor_grid"
 	turf_type = /turf/open/floor/iron/techfloor_grid
 	merge_type = /obj/item/stack/tile/iron/techfloor_grid
 
 /obj/item/stack/tile/iron/techfloor_grid_edge
 	name = "techfloor edge tile"
 	singular_name = "edged techfloor floor tile"
-	icon_state = "techfloor_grid_edge"
+	icon_state = "tile_techfloor_grid_edge"
 	turf_type = /turf/open/floor/iron/techfloor_grid_edge
 	merge_type = /obj/item/stack/tile/iron/techfloor_grid_edge
 	tile_rotate_dirs = list(SOUTH, NORTH, EAST, WEST)
@@ -681,7 +840,7 @@
 /obj/item/stack/tile/iron/techfloor_grid_half
 	name = "techfloor half tile"
 	singular_name = "halved techfloor floor tile"
-	icon_state = "techfloor_grid_half"
+	icon_state = "tile_techfloor_grid_half"
 	turf_type = /turf/open/floor/iron/techfloor_grid_half
 	merge_type = /obj/item/stack/tile/iron/techfloor_grid_half
 	tile_rotate_dirs = list(SOUTH, NORTH)
@@ -689,7 +848,7 @@
 /obj/item/stack/tile/iron/techfloor_grid_corner
 	name = "techfloor corner tile"
 	singular_name = "cornered techfloor floor tile"
-	icon_state = "techfloor_grid_corner"
+	icon_state = "tile_techfloor_grid_corner"
 	turf_type = /turf/open/floor/iron/techfloor_grid_corner
 	merge_type = /obj/item/stack/tile/iron/techfloor_grid_corner
 	tile_rotate_dirs = list(SOUTH, NORTH, EAST, WEST)
@@ -697,9 +856,129 @@
 /obj/item/stack/tile/iron/techfloor_grid_large
 	name = "techfloor large tile"
 	singular_name = "large techfloor floor tile"
-	icon_state = "techfloor_grid_large"
+	icon_state = "tile_techfloor_grid_large"
 	turf_type = /turf/open/floor/iron/techfloor_grid_large
 	merge_type = /obj/item/stack/tile/iron/techfloor_grid_large
+
+// techfloor gray
+
+/obj/item/stack/tile/iron/techfloor_gray
+	name = "gray techfloor tile"
+	singular_name = "gray techfloor floor tile"
+	icon_state = "tile_techfloor_gray"
+	turf_type = /turf/open/floor/iron/techfloor_gray
+	merge_type = /obj/item/stack/tile/iron/techfloor_gray
+
+/obj/item/stack/tile/iron/techfloor_gray_edge
+	name = "gray techfloor tile"
+	singular_name = "gray techfloor floor tile"
+	icon_state = "tile_techfloor_gray_edge"
+	turf_type = /turf/open/floor/iron/techfloor_gray_edge
+	merge_type = /obj/item/stack/tile/iron/techfloor_gray_edge
+	tile_rotate_dirs = list(SOUTH, NORTH, EAST, WEST)
+
+/obj/item/stack/tile/iron/techfloor_gray_half
+	name = "gray techfloor tile"
+	singular_name = "halved gray techfloor floor tile"
+	icon_state = "tile_techfloor_gray_half"
+	turf_type = /turf/open/floor/iron/techfloor_gray_half
+	merge_type = /obj/item/stack/tile/iron/techfloor_gray_half
+	tile_rotate_dirs = list(SOUTH, NORTH)
+
+/obj/item/stack/tile/iron/techfloor_gray_corner
+	name = "gray techfloor corner tile"
+	singular_name = "cornered gray techfloor floor tile"
+	icon_state = "tile_techfloor_gray_corner"
+	turf_type = /turf/open/floor/iron/techfloor_gray_corner
+	merge_type = /obj/item/stack/tile/iron/techfloor_gray_corner
+	tile_rotate_dirs = list(SOUTH, NORTH, EAST, WEST)
+
+/obj/item/stack/tile/iron/techfloor_gray_large
+	name = "gray techfloor large tile"
+	singular_name = "large gray techfloor floor tile"
+	icon_state = "tile_techfloor_gray_large"
+	turf_type = /turf/open/floor/iron/techfloor_gray_large
+	merge_type = /obj/item/stack/tile/iron/techfloor_gray_large
+
+// techmaint
+
+/obj/item/stack/tile/iron/techmaint
+	name = "techmaint tile"
+	singular_name = "smooth floor tile"
+	icon_state = "tile_techmaint"
+	turf_type = /turf/open/floor/iron/techmaint
+	merge_type = /obj/item/stack/tile/iron/techmaint
+
+/obj/item/stack/tile/iron/techmaint_edge
+	name = "techmaint edge tile"
+	singular_name = "edged techmaint floor tile"
+	icon_state = "tile_techmaint_edge"
+	turf_type = /turf/open/floor/iron/techmaint_edge
+	merge_type = /obj/item/stack/tile/iron/techmaint_edge
+	tile_rotate_dirs = list(SOUTH, NORTH, EAST, WEST)
+
+/obj/item/stack/tile/iron/techmaint_half
+	name = "techmaint half tile"
+	singular_name = "halved techmaint floor tile"
+	icon_state = "tile_techmaint_half"
+	turf_type = /turf/open/floor/iron/techmaint_half
+	merge_type = /obj/item/stack/tile/iron/techmaint_half
+	tile_rotate_dirs = list(SOUTH, NORTH)
+
+/obj/item/stack/tile/iron/techmaint_corner
+	name = "techmaint corner tile"
+	singular_name = "cornered techmaint floor tile"
+	icon_state = "tile_techmaint_corner"
+	turf_type = /turf/open/floor/iron/techmaint_corner
+	merge_type = /obj/item/stack/tile/iron/techmaint_corner
+	tile_rotate_dirs = list(SOUTH, NORTH, EAST, WEST)
+
+/obj/item/stack/tile/iron/techmaint_large
+	name = "techmaint large tile"
+	singular_name = "large techmaint floor tile"
+	icon_state = "tile_techmaint_large"
+	turf_type = /turf/open/floor/iron/techmaint_large
+	merge_type = /obj/item/stack/tile/iron/techmaint_large
+
+// steel ridged
+
+/obj/item/stack/tile/iron/steel_ridged
+	name = "steel ridged tile"
+	singular_name = "smooth steel ridged tile"
+	icon_state = "tile_steel_ridged"
+	turf_type = /turf/open/floor/iron/steel_ridged
+	merge_type = /obj/item/stack/tile/iron/steel_ridged
+
+/obj/item/stack/tile/iron/steel_ridged_edge
+	name = "steel ridged edge tile"
+	singular_name = "edged steel ridged floor tile"
+	icon_state = "tile_steel_ridged_edge"
+	turf_type = /turf/open/floor/iron/steel_ridged_edge
+	merge_type = /obj/item/stack/tile/iron/steel_ridged_edge
+	tile_rotate_dirs = list(SOUTH, NORTH, EAST, WEST)
+
+/obj/item/stack/tile/iron/steel_ridged_half
+	name = "steel ridged half tile"
+	singular_name = "halved steel ridged floor tile"
+	icon_state = "tile_steel_ridged_half"
+	turf_type = /turf/open/floor/iron/steel_ridged_half
+	merge_type = /obj/item/stack/tile/iron/steel_ridged_half
+	tile_rotate_dirs = list(SOUTH, NORTH)
+
+/obj/item/stack/tile/iron/steel_ridged_corner
+	name = "steel ridged corner tile"
+	singular_name = "cornered steel ridged floor tile"
+	icon_state = "tile_steel_ridged_corner"
+	turf_type = /turf/open/floor/iron/steel_ridged_corner
+	merge_type = /obj/item/stack/tile/iron/steel_ridged_corner
+	tile_rotate_dirs = list(SOUTH, NORTH, EAST, WEST)
+
+/obj/item/stack/tile/iron/steel_ridged_large
+	name = "steel ridged large tile"
+	singular_name = "large steel ridged floor tile"
+	icon_state = "tile_steel_ridged_large"
+	turf_type = /turf/open/floor/iron/steel_ridged_large
+	merge_type = /obj/item/stack/tile/iron/steel_ridged_large
 
 /obj/item/stack/tile/iron/terracotta
 	name = "terracotta floor tile"
