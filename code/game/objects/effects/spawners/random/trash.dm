@@ -331,7 +331,7 @@
 		"x", "strikethrough", "poop", "drawings", "heart", "fu_k_pigs", "greed", "hell",
 	)
 	// This sets the color of the graffiti (used for mapedits)
-	color = COLOR_RED
+	color = COLOR_WHITE
 	/// Whether the graffiti will spawn with a random color (used for mapedits)
 	random_color = TRUE
 	/// Whether the graffiti will spawn with this spawner's icon_state instead of a random one (used for mapedits)
