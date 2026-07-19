@@ -667,3 +667,12 @@
 
 /obj/effect/turf_decal/steel_decals_central/seven
 	icon_state = "steel_decals_central7"
+
+
+/// NanoTrasen Logo
+
+/obj/effect/turf_decal/nt_logo_old
+	icon_state = "ntlogo_old"
+
+/obj/effect/turf_decal/nt_logo
+	icon_state = "ntlogo"

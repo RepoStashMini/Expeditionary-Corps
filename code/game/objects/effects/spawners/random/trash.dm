@@ -323,6 +323,20 @@
 
 	return graffiti_decal
 
+/obj/effect/spawner/random/trash/graffiti/insult_nt
+	name = "random insult nt graffiti spawner"
+	icon_state = "insult_nt"
+	loot = list(/obj/effect/decal/cleanable/crayon/insult_nt)
+	graffiti_icons = list(
+		"x", "strikethrough", "poop", "drawings", "heart", "fu_k_pigs", "greed", "hell",
+	)
+	// This sets the color of the graffiti (used for mapedits)
+	color = COLOR_RED
+	/// Whether the graffiti will spawn with a random color (used for mapedits)
+	random_color = TRUE
+	/// Whether the graffiti will spawn with this spawner's icon_state instead of a random one (used for mapedits)
+	random_icon = TRUE
+
 /obj/effect/spawner/random/trash/mopbucket
 	name = "mop bucket spawner"
 	icon_state = "mopbucket"

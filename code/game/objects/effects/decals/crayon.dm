@@ -106,3 +106,7 @@
 /obj/effect/decal/cleanable/crayon/i/orange
 	name = "graffiti"
 	paint_colour = COLOR_CRAYON_ORANGE
+
+/obj/effect/decal/cleanable/crayon/insult_nt
+	icon = 'icons/effects/64x64_insult_nt.dmi'
+	icon_state = "x"
