@@ -164,6 +164,145 @@ TILE_DECAL_SUBTYPE_HELPER(/obj/effect/turf_decal/tile/holiday/random)
 
 #undef TILE_DECAL_SUBTYPE_HELPER
 
+
+
+/obj/effect/turf_decal/smooth
+	name = "tile smooth corner"
+	icon_state = "tile_smooth_corner"
+	layer = TURF_PLATING_DECAL_LAYER
+	alpha = 110
+	use_holiday_colors = FALSE
+
+
+#define TILE_DECAL_SUBTYPE_HELPER(path)\
+##path/opposingcorners {\
+	icon_state = "tile_smooth_corner_diagonal";\
+}\
+##path/half {\
+	icon_state = "tile_smooth_half";\
+}\
+##path/half/contrasted {\
+	icon_state = "tile_smooth_contrasted";\
+}\
+##path/anticorner {\
+	icon_state = "tile_smooth_anticorner";\
+}\
+##path/anticorner/contrasted {\
+	icon_state = "tile_smooth_anticorner_contrasted";\
+}\
+##path/fourcorners {\
+	icon_state = "tile_smooth_fourcorners";\
+}\
+##path/full {\
+	icon_state = "tile_smooth_full";\
+}
+
+/// Blue tiles
+/obj/effect/turf_decal/smooth/blue
+	name = "blue tile decal"
+	color = "#52B4E9"
+
+TILE_DECAL_SUBTYPE_HELPER(/obj/effect/turf_decal/smooth/blue)
+
+/// Dark blue tiles
+/obj/effect/turf_decal/smooth/dark_blue
+	name = "dark blue tile decal"
+	color = "#486091"
+
+TILE_DECAL_SUBTYPE_HELPER(/obj/effect/turf_decal/smooth/dark_blue)
+
+/// Green tiles
+
+/obj/effect/turf_decal/smooth/green
+	name = "green tile decal"
+	color = "#9FED58"
+
+TILE_DECAL_SUBTYPE_HELPER(/obj/effect/turf_decal/smooth/green)
+
+/// Dark green tiles
+
+/obj/effect/turf_decal/smooth/dark_green
+	name = "dark green tile decal"
+	color = "#439C1E"
+
+TILE_DECAL_SUBTYPE_HELPER(/obj/effect/turf_decal/smooth/dark_green)
+
+/// Yellow tiles
+
+/obj/effect/turf_decal/smooth/yellow
+	name = "yellow tile decal"
+	color = "#EFB341"
+
+TILE_DECAL_SUBTYPE_HELPER(/obj/effect/turf_decal/smooth/yellow)
+
+/// Red tiles
+
+/obj/effect/turf_decal/smooth/red
+	name = "red tile decal"
+	color = "#DE3A3A"
+
+TILE_DECAL_SUBTYPE_HELPER(/obj/effect/turf_decal/smooth/red)
+
+/// Dark red tiles
+
+/obj/effect/turf_decal/smooth/dark_red
+	name = "dark red tile decal"
+	color = "#B11111"
+
+TILE_DECAL_SUBTYPE_HELPER(/obj/effect/turf_decal/smooth/dark_red)
+
+/// Bar tiles
+
+/obj/effect/turf_decal/smooth/bar
+	name = "bar tile decal"
+	color = "#791500"
+	alpha = 130
+
+TILE_DECAL_SUBTYPE_HELPER(/obj/effect/turf_decal/smooth/bar)
+
+/// Purple tiles
+
+/obj/effect/turf_decal/smooth/purple
+	name = "purple tile decal"
+	color = "#D381C9"
+
+TILE_DECAL_SUBTYPE_HELPER(/obj/effect/turf_decal/smooth/purple)
+
+/// Purple tiles
+
+/obj/effect/turf_decal/smooth/purple
+	name = "purple tile decal"
+	color = "#9924cf"
+
+TILE_DECAL_SUBTYPE_HELPER(/obj/effect/turf_decal/smooth/purple)
+
+/// Brown violet
+
+/obj/effect/turf_decal/smooth/violet
+	name = "brown tile decal"
+	color = "#A46106"
+
+TILE_DECAL_SUBTYPE_HELPER(/obj/effect/turf_decal/smooth/violet)
+
+/// Neutral tiles
+
+/obj/effect/turf_decal/smooth/neutral
+	name = "neutral tile decal"
+	color = "#D4D4D4"
+	alpha = 50
+
+TILE_DECAL_SUBTYPE_HELPER(/obj/effect/turf_decal/smooth/neutral)
+
+/// Dark tiles
+
+/obj/effect/turf_decal/smooth/dark
+	name = "dark tile decal"
+	color = "#0e0f0f"
+
+TILE_DECAL_SUBTYPE_HELPER(/obj/effect/turf_decal/smooth/dark)
+
+#undef TILE_DECAL_SUBTYPE_HELPER
+
 /// Trimlines
 /obj/effect/turf_decal/trimline
 	layer = TURF_PLATING_DECAL_LAYER
@@ -336,4 +475,121 @@ TRIMLINE_SUBTYPE_HELPER(/obj/effect/turf_decal/trimline/tram)
 TRIMLINE_SUBTYPE_HELPER(/obj/effect/turf_decal/trimline/dark)
 
 #undef TRIMLINE_SUBTYPE_HELPER
+
+/// borderfloor
+/obj/effect/turf_decal/borderfloor
+	layer = TURF_PLATING_DECAL_LAYER
+	alpha = 255
+	icon_state = "borderfloor"
+	use_holiday_colors = FALSE
+
+/// Automatically generates all trimlines for a decal with the given path.
+#define TRIMLINE_SUBTYPE_HELPER(path)\
+##path/corner {\
+	icon_state = "borderfloor_corner";\
+}\
+##path/corner2 {\
+	icon_state = "borderfloor_corner2";\
+}\
+
+
+/// White trimlines
+/obj/effect/turf_decal/borderfloor/white
+
+TRIMLINE_SUBTYPE_HELPER(/obj/effect/turf_decal/borderfloor/white)
+
+
+/// Red trimlines
+/obj/effect/turf_decal/borderfloor/red
+	color = "#DE3A3A"
+
+TRIMLINE_SUBTYPE_HELPER(/obj/effect/turf_decal/borderfloor/red)
+
+/// Dark red trimlines
+/obj/effect/turf_decal/borderfloor/dark_red
+	color = "#B11111"
+
+TRIMLINE_SUBTYPE_HELPER(/obj/effect/turf_decal/borderfloor/dark_red)
+
+/// Green trimlines
+/obj/effect/turf_decal/borderfloor/green
+	color = "#9FED58"
+
+TRIMLINE_SUBTYPE_HELPER(/obj/effect/turf_decal/borderfloor/green)
+
+/// Dark green Trimlines
+/obj/effect/turf_decal/borderfloor/dark_green
+	color = "#439C1E"
+
+TRIMLINE_SUBTYPE_HELPER(/obj/effect/turf_decal/borderfloor/dark_green)
+
+/// Dark green Trimlines
+/obj/effect/turf_decal/borderfloor/dark_green_alt
+	color = "#535C5B"
+
+TRIMLINE_SUBTYPE_HELPER(/obj/effect/turf_decal/borderfloor/dark_green_alt)
+
+/// Blue trimlines
+/obj/effect/turf_decal/borderfloor/blue
+	color = "#52B4E9"
+
+TRIMLINE_SUBTYPE_HELPER(/obj/effect/turf_decal/borderfloor/blue)
+
+/// Dark blue trimlines
+/obj/effect/turf_decal/borderfloor/dark_blue
+	color = "#486091"
+
+TRIMLINE_SUBTYPE_HELPER(/obj/effect/turf_decal/borderfloor/dark_blue)
+
+/// Yellow trimlines
+/obj/effect/turf_decal/borderfloor/yellow
+	color = "#EFB341"
+
+TRIMLINE_SUBTYPE_HELPER(/obj/effect/turf_decal/borderfloor/yellow)
+
+/// Purple trimlines
+/obj/effect/turf_decal/borderfloor/purple
+	color = "#D381C9"
+
+TRIMLINE_SUBTYPE_HELPER(/obj/effect/turf_decal/borderfloor/purple)
+
+/// Purple tiles
+/obj/effect/turf_decal/borderfloor/purple
+	color = "#9924cf"
+
+TRIMLINE_SUBTYPE_HELPER(/obj/effect/turf_decal/borderfloor/purple)
+
+/// Brown trimlines
+/obj/effect/turf_decal/borderfloor/brown
+	color = "#A46106"
+
+TRIMLINE_SUBTYPE_HELPER(/obj/effect/turf_decal/borderfloor/brown)
+
+/// Gray trimlines
+/obj/effect/turf_decal/borderfloor/gray
+	color = "#808080"
+
+TRIMLINE_SUBTYPE_HELPER(/obj/effect/turf_decal/borderfloor/gray)
+
+/// Neutral trimlines
+/obj/effect/turf_decal/borderfloor/neutral
+	color = "#D4D4D4"
+
+TRIMLINE_SUBTYPE_HELPER(/obj/effect/turf_decal/borderfloor/neutral)
+
+/// Dark trimlines
+/obj/effect/turf_decal/borderfloor/dark
+	color = "#0e0f0f"
+
+TRIMLINE_SUBTYPE_HELPER(/obj/effect/turf_decal/borderfloor/dark)
+
+/// Dark trimlines
+/obj/effect/turf_decal/borderfloor/dark_alt
+	color = "#36373a"
+
+TRIMLINE_SUBTYPE_HELPER(/obj/effect/turf_decal/borderfloor/dark_alt)
+
+
+#undef TRIMLINE_SUBTYPE_HELPER
+
 #undef DECAL_ALPHA

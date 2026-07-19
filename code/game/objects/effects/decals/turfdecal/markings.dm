@@ -590,3 +590,80 @@
 
 /obj/effect/turf_decal/recharge
 	icon_state = "recharge"
+
+/// techfloor edges
+
+/obj/effect/turf_decal/techfloor_edges
+	icon_state = "techfloor_edges"
+
+/obj/effect/turf_decal/techfloor_edges/corners
+	icon_state = "techfloor_corners"
+
+/obj/effect/turf_decal/techfloor_orange_edges
+	icon_state = "techfloor_orange_edges"
+
+/obj/effect/turf_decal/techfloor_orange/corners
+	icon_state = "techfloor_orange_corners"
+
+/obj/effect/turf_decal/techfloor_hole_left
+	icon_state = "techfloor_hole_left"
+
+/obj/effect/turf_decal/techfloor_hole_right
+	icon_state = "techfloor_hole_right"
+
+/// steel decals
+
+/obj/effect/turf_decal/steel_decals
+	icon_state = "steel_decals1"
+	color = "#1e2225"
+
+/obj/effect/turf_decal/steel_decals/two
+	icon_state = "steel_decals2"
+
+/obj/effect/turf_decal/steel_decals/three
+	icon_state = "steel_decals3"
+
+/obj/effect/turf_decal/steel_decals/four
+	icon_state = "steel_decals4"
+
+/obj/effect/turf_decal/steel_decals/five
+	icon_state = "steel_decals5"
+
+/obj/effect/turf_decal/steel_decals/six
+	icon_state = "steel_decals6"
+
+/obj/effect/turf_decal/steel_decals/seven
+	icon_state = "steel_decals7"
+
+/obj/effect/turf_decal/steel_decals/eight
+	icon_state = "steel_decals8"
+
+/obj/effect/turf_decal/steel_decals/nine
+	icon_state = "steel_decals9"
+
+/obj/effect/turf_decal/steel_decals/ten
+	icon_state = "steel_decals10"
+
+/// steel decals central
+
+/obj/effect/turf_decal/steel_decals_central
+	icon_state = "steel_decals_central1"
+	color = "#1e2225"
+
+/obj/effect/turf_decal/steel_decals_central/two
+	icon_state = "steel_decals_central2"
+
+/obj/effect/turf_decal/steel_decals_central/three
+	icon_state = "steel_decals_central3"
+
+/obj/effect/turf_decal/steel_decals_central/four
+	icon_state = "steel_decals_central4"
+
+/obj/effect/turf_decal/steel_decals_central/five
+	icon_state = "steel_decals_central5"
+
+/obj/effect/turf_decal/steel_decals_central/six
+	icon_state = "steel_decals_central6"
+
+/obj/effect/turf_decal/steel_decals_central/seven
+	icon_state = "steel_decals_central7"
