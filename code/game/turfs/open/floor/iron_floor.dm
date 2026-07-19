@@ -322,46 +322,41 @@
 //////////////////////
 
 /turf/open/floor/iron/smooth
-	icon_state = "smooth"
-	base_icon_state = "smooth"
+	icon_state = "grey_smooth"
+	base_icon_state = "grey_smooth"
 	floor_tile = /obj/item/stack/tile/iron/smooth
-	color = "#808080"
 
 /turf/open/floor/iron/smooth/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
 /turf/open/floor/iron/smooth_edge
-	icon_state = "smooth_edge"
-	base_icon_state = "smooth_edge"
+	icon_state = "grey_smooth_edge"
+	base_icon_state = "grey_smooth_edge"
 	floor_tile = /obj/item/stack/tile/iron/smooth_edge
-	color = "#808080"
 
 /turf/open/floor/iron/smooth_edge/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
 /turf/open/floor/iron/smooth_half
-	icon_state = "smooth_half"
-	base_icon_state = "smooth_half"
+	icon_state = "grey_smooth_half"
+	base_icon_state = "grey_smooth_half"
 	floor_tile = /obj/item/stack/tile/iron/smooth_half
-	color = "#808080"
 
 /turf/open/floor/iron/smooth_half/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
 /turf/open/floor/iron/smooth_corner
-	icon_state = "smooth_corner"
-	base_icon_state = "smooth_corner"
+	icon_state = "grey_smooth_corner"
+	base_icon_state = "grey_smooth_corner"
 	floor_tile = /obj/item/stack/tile/iron/smooth_corner
-	color = "#808080"
 
 /turf/open/floor/iron/smooth_corner/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
 /turf/open/floor/iron/smooth_large
-	icon_state = "smooth_large"
-	base_icon_state = "smooth_large"
+	icon_state = "grey_smooth_large"
+	base_icon_state = "grey_smooth_large"
 	floor_tile = /obj/item/stack/tile/iron/smooth_large
-	color = "#808080"
 
 /turf/open/floor/iron/smooth_large/airless
 	initial_gas_mix = AIRLESS_ATMOS
@@ -369,46 +364,41 @@
 // smooth dark
 
 /turf/open/floor/iron/dark_smooth
-	icon_state = "smooth"
-	base_icon_state = "smooth"
+	icon_state = "dark_smooth"
+	base_icon_state = "dark_smooth"
 	floor_tile = /obj/item/stack/tile/iron/dark_smooth
-	color = "#36373a"
 
 /turf/open/floor/iron/dark_smooth/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
 /turf/open/floor/iron/dark_smooth_edge
-	icon_state = "smooth_edge"
-	base_icon_state = "smooth_edge"
+	icon_state = "dark_smooth_edge"
+	base_icon_state = "dark_smooth_edge"
 	floor_tile = /obj/item/stack/tile/iron/dark_smooth_edge
-	color = "#36373a"
 
 /turf/open/floor/iron/dark_smooth_edge/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
 /turf/open/floor/iron/dark_smooth_half
-	icon_state = "smooth_half"
-	base_icon_state = "smooth_half"
+	icon_state = "dark_smooth_half"
+	base_icon_state = "dark_smooth_half"
 	floor_tile = /obj/item/stack/tile/iron/dark_smooth_half
-	color = "#36373a"
 
 /turf/open/floor/iron/dark_smooth_half/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
 /turf/open/floor/iron/dark_smooth_corner
-	icon_state = "smooth_corner"
-	base_icon_state = "smooth_corner"
+	icon_state = "dark_smooth_corner"
+	base_icon_state = "dark_smooth_corner"
 	floor_tile = /obj/item/stack/tile/iron/dark_smooth_corner
-	color = "#36373a"
 
 /turf/open/floor/iron/dark_smooth_corner/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
 /turf/open/floor/iron/dark_smooth_large
-	icon_state = "smooth_large"
-	base_icon_state = "smooth_large"
+	icon_state = "dark_smooth_large"
+	base_icon_state = "dark_smooth_large"
 	floor_tile = /obj/item/stack/tile/iron/dark_smooth_large
-	color = "#36373a"
 
 /turf/open/floor/iron/dark_smooth_large/airless
 	initial_gas_mix = AIRLESS_ATMOS
@@ -419,7 +409,6 @@
 	icon_state = "smooth"
 	base_icon_state = "smooth"
 	floor_tile = /obj/item/stack/tile/iron/green_smooth
-	color = "#535C5B"
 
 /turf/open/floor/iron/green_smooth/airless
 	initial_gas_mix = AIRLESS_ATMOS
@@ -428,7 +417,6 @@
 	icon_state = "smooth_edge"
 	base_icon_state = "smooth_edge"
 	floor_tile = /obj/item/stack/tile/iron/green_smooth_edge
-	color = "#535C5B"
 
 /turf/open/floor/iron/green_smooth_edge/airless
 	initial_gas_mix = AIRLESS_ATMOS
@@ -437,7 +425,6 @@
 	icon_state = "smooth_half"
 	base_icon_state = "smooth_half"
 	floor_tile = /obj/item/stack/tile/iron/green_smooth_half
-	color = "#535C5B"
 
 /turf/open/floor/iron/green_smooth_half/airless
 	initial_gas_mix = AIRLESS_ATMOS
@@ -446,7 +433,6 @@
 	icon_state = "smooth_corner"
 	base_icon_state = "smooth_corner"
 	floor_tile = /obj/item/stack/tile/iron/green_smooth_corner
-	color = "#535C5B"
 
 /turf/open/floor/iron/green_smooth_corner/airless
 	initial_gas_mix = AIRLESS_ATMOS
@@ -455,7 +441,6 @@
 	icon_state = "smooth_large"
 	base_icon_state = "smooth_large"
 	floor_tile = /obj/item/stack/tile/iron/green_smooth_large
-	color = "#535C5B"
 
 /turf/open/floor/iron/green_smooth_large/airless
 	initial_gas_mix = AIRLESS_ATMOS
