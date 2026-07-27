@@ -697,3 +697,10 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/cryopod/prison, 18)
 	)
 
 #undef AHELP_FIRST_MESSAGE
+
+
+/obj/structure/cryofeed
+	name = "cryogenic feed"
+	desc = "A bewildering tangle of machinery and pipes."
+	icon = 'modular_nova/modules/cryosleep/icons/cryogenics.dmi'
+	icon_state = "cryo_rear"

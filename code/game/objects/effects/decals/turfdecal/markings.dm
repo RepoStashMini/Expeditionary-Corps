@@ -13,6 +13,9 @@
 /obj/effect/turf_decal/stripes/full
 	icon_state = "warn_full"
 
+/obj/effect/turf_decal/stripes/warning_fulltile
+	icon_state = "warning_fulltile"
+
 /obj/effect/turf_decal/stripes/asteroid/line
 	icon_state = "ast_warn"
 
@@ -615,7 +618,7 @@
 
 /obj/effect/turf_decal/steel_decals
 	icon_state = "steel_decals1"
-	color = "#1e2225"
+	color = "#596269"
 
 /obj/effect/turf_decal/steel_decals/two
 	icon_state = "steel_decals2"
@@ -648,7 +651,7 @@
 
 /obj/effect/turf_decal/steel_decals_central
 	icon_state = "steel_decals_central1"
-	color = "#1e2225"
+	color = "#596269"
 
 /obj/effect/turf_decal/steel_decals_central/two
 	icon_state = "steel_decals_central2"
@@ -676,3 +679,45 @@
 
 /obj/effect/turf_decal/nt_logo
 	icon_state = "ntlogo"
+
+/// Rust
+
+/obj/effect/turf_decal/rust
+	icon_state = "rust"
+
+/// Techfloor
+
+/obj/effect/turf_decal/techfloor_gray
+	icon_state = "corner_techfloor_gray"
+
+/obj/effect/turf_decal/techfloor_gray/diagonal
+	icon_state = "corner_techfloor_gray_diagonal"
+
+/obj/effect/turf_decal/techfloor_gray/full
+	icon_state = "corner_techfloor_gray_full"
+
+/obj/effect/turf_decal/techfloor_grid
+	icon_state = "corner_techfloor_grid"
+
+/obj/effect/turf_decal/techfloor_grid/diagonal
+	icon_state = "corner_techfloor_grid_diagonal"
+
+/obj/effect/turf_decal/techfloor_grid/full
+	icon_state = "corner_techfloor_grid_full"
+
+/obj/effect/turf_decal/steel_grid
+	icon_state = "corner_steel_grid"
+
+/obj/effect/turf_decal/steel_grid/diagonal
+	icon_state = "corner_steel_grid_diagonal"
+
+/obj/effect/turf_decal/steel_grid_gray/full
+	icon_state = "corner_steel_grid_full"
+
+/// Danger
+
+/obj/effect/turf_decal/danger
+	icon_state = "danger"
+
+/obj/effect/turf_decal/danger/corner
+	icon_state = "dangercorner"

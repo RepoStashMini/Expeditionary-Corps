@@ -71,6 +71,12 @@
 	floor_tile = /obj/item/stack/tile/catwalk_tile/iron
 	catwalk_type = "iron"
 
+/turf/open/floor/catwalk_floor/altiron
+	name = "iron plated catwalk floor"
+	icon_state = "altiron_above"
+	floor_tile = /turf/open/floor/iron/smooth
+	catwalk_type = "altiron"
+
 /turf/open/floor/catwalk_floor/iron_white
 	name = "white plated catwalk floor"
 	icon_state = "whiteiron_above"

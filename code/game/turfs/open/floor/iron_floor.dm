@@ -406,40 +406,40 @@
 // smooth green
 
 /turf/open/floor/iron/green_smooth
-	icon_state = "smooth"
-	base_icon_state = "smooth"
+	icon_state = "green_smooth"
+	base_icon_state = "green_smooth"
 	floor_tile = /obj/item/stack/tile/iron/green_smooth
 
 /turf/open/floor/iron/green_smooth/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
 /turf/open/floor/iron/green_smooth_edge
-	icon_state = "smooth_edge"
-	base_icon_state = "smooth_edge"
+	icon_state = "green_smooth_edge"
+	base_icon_state = "green_smooth_edge"
 	floor_tile = /obj/item/stack/tile/iron/green_smooth_edge
 
 /turf/open/floor/iron/green_smooth_edge/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
 /turf/open/floor/iron/green_smooth_half
-	icon_state = "smooth_half"
-	base_icon_state = "smooth_half"
+	icon_state = "green_smooth_half"
+	base_icon_state = "green_smooth_half"
 	floor_tile = /obj/item/stack/tile/iron/green_smooth_half
 
 /turf/open/floor/iron/green_smooth_half/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
 /turf/open/floor/iron/green_smooth_corner
-	icon_state = "smooth_corner"
-	base_icon_state = "smooth_corner"
+	icon_state = "green_smooth_corner"
+	base_icon_state = "sgreen_mooth_corner"
 	floor_tile = /obj/item/stack/tile/iron/green_smooth_corner
 
 /turf/open/floor/iron/green_smooth_corner/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
 /turf/open/floor/iron/green_smooth_large
-	icon_state = "smooth_large"
-	base_icon_state = "smooth_large"
+	icon_state = "green_smooth_large"
+	base_icon_state = "sgreen_mooth_large"
 	floor_tile = /obj/item/stack/tile/iron/green_smooth_large
 
 /turf/open/floor/iron/green_smooth_large/airless

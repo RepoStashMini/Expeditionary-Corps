@@ -2202,6 +2202,7 @@
 "AM" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/turf_decal/smooth/blue,
 /turf/open/floor/plating,
 /area/station/construction/storage_wing)
 "Bp" = (
@@ -2430,11 +2431,11 @@
 /turf/open/floor/iron/smooth,
 /area/station/commons/storage/primary)
 "ER" = (
-/mob/living/carbon/human,
 /obj/machinery/light/directional/north,
 /obj/effect/turf_decal/smooth/blue{
 	dir = 1
 	},
+/mob/living/carbon/human/species/felinid,
 /turf/open/floor/iron/white_smooth,
 /area/station/medical/medbay)
 "EU" = (

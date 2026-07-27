@@ -195,3 +195,16 @@
 /obj/structure/railing/corner/end/flip/wooden_fence
 	icon = 'icons/obj/structures.dmi'
 	icon_state = "wooden_railing_corner_flipped"
+	color = "#767d78"
+
+
+
+/obj/structure/railing/alt
+	icon = 'icons/obj/railings_alt.dmi'
+	icon_state = "alt_railing"
+	color = "#767d78"
+
+/obj/structure/railing/corner/alt
+	icon = 'icons/obj/railings_alt.dmi'
+	icon_state = "alt_railing_corner"
+	color = "#767d78"
