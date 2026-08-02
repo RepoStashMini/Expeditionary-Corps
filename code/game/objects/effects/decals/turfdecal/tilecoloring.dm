@@ -268,13 +268,13 @@ TILE_DECAL_SUBTYPE_HELPER(/obj/effect/turf_decal/smooth/bar)
 
 TILE_DECAL_SUBTYPE_HELPER(/obj/effect/turf_decal/smooth/purple)
 
-/// Purple tiles
+/// Dark purple tiles
 
-/obj/effect/turf_decal/smooth/purple
-	name = "purple tile decal"
+/obj/effect/turf_decal/smooth/dark_purple
+	name = "dark purple tile decal"
 	color = "#9924cf"
 
-TILE_DECAL_SUBTYPE_HELPER(/obj/effect/turf_decal/smooth/purple)
+TILE_DECAL_SUBTYPE_HELPER(/obj/effect/turf_decal/smooth/dark_purple)
 
 /// Brown violet
 
@@ -553,8 +553,8 @@ TRIMLINE_SUBTYPE_HELPER(/obj/effect/turf_decal/borderfloor/yellow)
 
 TRIMLINE_SUBTYPE_HELPER(/obj/effect/turf_decal/borderfloor/purple)
 
-/// Purple tiles
-/obj/effect/turf_decal/borderfloor/purple
+/// Dark purple tiles
+/obj/effect/turf_decal/borderfloor/dark_purple
 	color = "#9924cf"
 
 TRIMLINE_SUBTYPE_HELPER(/obj/effect/turf_decal/borderfloor/purple)
@@ -669,11 +669,11 @@ TRIMLINE_SUBTYPE_HELPER(/obj/effect/turf_decal/bordercolor/yellow)
 
 TRIMLINE_SUBTYPE_HELPER(/obj/effect/turf_decal/bordercolor/purple)
 
-/// Purple tiles
-/obj/effect/turf_decal/bordercolor/purple
+/// Dark purple tiles
+/obj/effect/turf_decal/bordercolor/dark_purple
 	color = "#9924cf"
 
-TRIMLINE_SUBTYPE_HELPER(/obj/effect/turf_decal/bordercolor/purple)
+TRIMLINE_SUBTYPE_HELPER(/obj/effect/turf_decal/bordercolor/dark_purple)
 
 /// Brown trimlines
 /obj/effect/turf_decal/bordercolor/brown

@@ -41,24 +41,6 @@
 	lefthand_file = 'modular_nova/modules/aesthetics/guns/icons/guns_lefthand.dmi'
 	righthand_file = 'modular_nova/modules/aesthetics/guns/icons/guns_righthand.dmi'
 
-/obj/item/gun/ballistic/automatic/pistol/m1911
-	icon = 'modular_nova/modules/aesthetics/guns/icons/guns.dmi'
-	inhand_icon_state = "colt"
-	lefthand_file = 'modular_nova/modules/aesthetics/guns/icons/guns_lefthand.dmi'
-	righthand_file = 'modular_nova/modules/aesthetics/guns/icons/guns_righthand.dmi'
-
-/obj/item/gun/ballistic/automatic/c20r
-	icon = 'modular_nova/modules/aesthetics/guns/icons/guns.dmi'
-
-/obj/item/gun/ballistic/automatic/m90
-	icon = 'modular_nova/modules/aesthetics/guns/icons/guns.dmi'
-
-/obj/item/gun/ballistic/automatic/pistol
-	icon = 'modular_nova/modules/aesthetics/guns/icons/guns.dmi'
-
-/obj/item/gun/ballistic/automatic/pistol/aps
-	icon = 'modular_nova/modules/aesthetics/guns/icons/guns.dmi'
-
 /obj/item/gun/ballistic/automatic/pistol/clandestine
 	suppressor_x_offset = 17
 

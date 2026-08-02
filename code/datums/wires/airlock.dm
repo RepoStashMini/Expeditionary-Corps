@@ -34,6 +34,10 @@
 	dictionary_key = /datum/wires/airlock/science
 	proper_name = "Science Airlock"
 
+/datum/wires/airlock/expeditionary
+	dictionary_key = /datum/wires/airlock/expeditionary
+	proper_name = "Expeditionary Airlock"
+
 /datum/wires/airlock/ai
 	dictionary_key = /datum/wires/airlock/ai
 	proper_name = "AI Airlock"

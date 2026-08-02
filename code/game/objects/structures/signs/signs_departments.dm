@@ -153,6 +153,16 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/departments/genetics, 32)
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/departments/rndserver, 32)
 
+///////EXPEDITIONARY
+
+/obj/structure/sign/departments/expeditionary
+	name = "\improper expeditionary sign"
+	sign_change_name = "Department - Expeditionary"
+	desc = "A sign labelling an area where research and expeditionary is performed."
+	icon_state = "exp"
+
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/departments/expeditionary, 32)
+
 ///////SERVICE
 
 /obj/structure/sign/departments/botany

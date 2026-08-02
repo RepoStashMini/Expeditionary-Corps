@@ -1,4 +1,4 @@
-/* NOVA EDIT REMOVAL BEGIN
+
 GLOBAL_LIST_INIT(generic_ambience,list(
 	'sound/ambience/general/ambigen1.ogg',
 	'sound/ambience/general/ambigen2.ogg',
@@ -13,8 +13,15 @@ GLOBAL_LIST_INIT(generic_ambience,list(
 	'sound/ambience/general/ambigen11.ogg',
 	'sound/ambience/general/ambigen13.ogg',
 	'sound/ambience/general/ambigen14.ogg',
+	'sound/ambience/general/ambigen15.ogg',
+	'sound/ambience/general/ambigen16.ogg',
+	'sound/ambience/general/ambigen17.ogg',
+	'sound/ambience/general/ambigen18.ogg',
+	'sound/ambience/general/ambigen19.ogg',
+	'sound/ambience/general/ambigen20.ogg',
+	'sound/ambience/general/ambigen21.ogg',
+	'sound/ambience/general/ambigen22.ogg',
 ))
-*/ //NOVA EDIT REMOVAL END
 
 GLOBAL_LIST_INIT(holy_ambience,list(
 	'sound/ambience/holy/ambicha1.ogg',
@@ -123,6 +130,7 @@ GLOBAL_LIST_INIT(space_ambience,list(
 ))
 
 GLOBAL_LIST_INIT(maint_ambience,list(
+	'sound/ambience/maintenance/ambimaint.ogg',
 	'sound/ambience/maintenance/ambimaint1.ogg',
 	'sound/ambience/maintenance/ambimaint2.ogg',
 	'sound/ambience/maintenance/ambimaint3.ogg',

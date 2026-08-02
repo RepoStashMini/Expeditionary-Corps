@@ -605,7 +605,7 @@
 /obj/effect/turf_decal/techfloor_orange_edges
 	icon_state = "techfloor_orange_edges"
 
-/obj/effect/turf_decal/techfloor_orange/corners
+/obj/effect/turf_decal/techfloor_orange_edges/corners
 	icon_state = "techfloor_orange_corners"
 
 /obj/effect/turf_decal/techfloor_hole_left
