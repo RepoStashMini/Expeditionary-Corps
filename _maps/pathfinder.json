@@ -1,0 +1,19 @@
+{
+	"version": 1,
+	"map_name": "ECRSV Pathfinder",
+	"map_path": "map_files/Pathfinder",
+	"map_file": "pathfinder.dmm",
+	"shuttles": {
+		"emergency": "emergency_delta",
+		"ferry": "ferry_fancy",
+		"cargo": "cargo_nova_delta",
+		"whiteship": "whiteship_delta"
+	},
+	"exclude_from_ci": true,
+	"job_changes": {
+		"Cook": {
+			"additional_cqc_areas": ["/area/station/service/cafeteria"]
+		}
+	},
+	"bonus_weakpoints": 2
+}
