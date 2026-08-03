@@ -153,3 +153,43 @@
 /area/station/hallway/floor4/fore
 	name = "\improper Fourth Floor Fore Hallway"
 	icon_state = "4_fore"
+
+// Below the Pathfinder zone
+
+/area/station/hallway/floor1/staircase
+	name = "\improper Staircase 1st floor"
+
+/area/station/hallway/floor1/staircase/fore
+	name = "\improper Fore staircase 1st floor"
+
+
+/area/station/hallway/floor2/staircase
+	name = "\improper Staircase 2nd floor"
+
+/area/station/hallway/floor2/staircase/aft
+	name = "\improper Aft Staircase 2st floor"
+
+/area/station/hallway/floor2/staircase/fore
+	name = "\improper Fore stairs 2nd floor"
+
+
+
+/area/station/hallway/floor3/staircase
+	name = "\improper Staircase 3rd floor"
+
+/area/station/hallway/floor3/staircase/aft
+	name = "\improper Aft Staircase 3st floor"
+
+/area/station/hallway/floor3/staircase/fore
+	name = "\improper Fore staircase 3rd floor"
+
+
+
+/area/station/hallway/floor4/staircase
+	name = "\improper Staircase 4th floor"
+
+/area/station/hallway/floor4/staircase/aft
+	name = "\improper Aft Staircase 4st floor"
+
+/area/station/hallway/floor4/staircase/fore
+	name = "\improper Fore staircase 4th floor"

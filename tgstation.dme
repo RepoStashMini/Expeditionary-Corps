@@ -2351,6 +2351,7 @@
 #include "code\game\area\areas\misc.dm"
 #include "code\game\area\areas\shuttles.dm"
 #include "code\game\area\areas\pathfinder\expedition.dm"
+#include "code\game\area\areas\pathfinder\hangar.dm"
 #include "code\game\area\areas\ruins\_ruins.dm"
 #include "code\game\area\areas\ruins\icemoon.dm"
 #include "code\game\area\areas\ruins\lavaland.dm"

@@ -420,3 +420,32 @@
 /area/station/maintenance/floor4/starboard/aft
 	name = "\improper 4th Floor Aft Starboard Maint"
 	icon_state = "maintaft"
+
+
+// Below the Pathfinder zone
+
+/area/station/maintenance/main_technical_communication_shaft/floor1
+	name = "\improper  Main technical communication shaft 1th Floor"
+
+/area/station/maintenance/main_technical_communication_shaft/floor2
+	name = "\improper  Main technical communication shaft 2th Floor"
+
+/area/station/maintenance/main_technical_communication_shaft/floor3
+	name = "\improper  Main technical communication shaft 3th Floor"
+
+/area/station/maintenance/main_technical_communication_shaft/floor4
+	name = "\improper  Main technical communication shaft 4th Floor"
+
+
+/area/station/maintenance/alt_technical_communication_shaft/floor1
+	name = "\improper  Alt technical communication shaft 1th Floor"
+
+/area/station/maintenance/alt_technical_communication_shaft/floor2
+	name = "\improper  Alt technical communication shaft 2th Floor"
+
+/area/station/maintenance/alt_technical_communication_shaft/floor3
+	name = "\improper  Alt technical communication shaft 3th Floor"
+
+/area/station/maintenance/alt_technical_communication_shaft/floor4
+	name = "\improper  Alt technical communication shaft 4th Floor"
+
