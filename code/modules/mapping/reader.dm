@@ -92,6 +92,7 @@
 	var/list/parsed_bounds
 	/// Offset bounds. Same as parsed_bounds until load().
 	var/list/bounds
+	var/did_expand = FALSE
 
 	///any turf in this list is skipped inside of build_coordinate. Lazy assoc list
 	var/list/turf_blacklist

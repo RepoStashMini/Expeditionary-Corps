@@ -28,6 +28,9 @@ SUBSYSTEM_DEF(mapping)
 
 	var/list/shuttle_templates = list()
 	var/list/shelter_templates = list()
+
+	///Random rooms template list, gets initialized and filled when server starts.
+	var/list/random_room_templates = list()
 	var/list/holodeck_templates = list()
 
 	var/list/areas_in_z = list()
@@ -364,6 +367,7 @@ Used by the AI doomsday and the self-destruct nuke.
 		themed_ruins[theme] = SSmapping.themed_ruins[theme]
 
 	shuttle_templates = SSmapping.shuttle_templates
+	random_room_templates = SSmapping.random_room_templates
 	shelter_templates = SSmapping.shelter_templates
 	unused_turfs = SSmapping.unused_turfs
 	turf_reservations = SSmapping.turf_reservations
@@ -457,6 +461,8 @@ Used by the AI doomsday and the self-destruct nuke.
 	add_startup_message("Loading [current_map.map_name]...") // NOVA EDIT CHANGE - ORIGINAL: INIT_ANNOUNCE("Loading [current_map.map_name]...")
 	LoadGroup(FailedZs, "Station", current_map.map_path, current_map.map_file, current_map.traits, ZTRAITS_STATION, height_autosetup = current_map.height_autosetup)
 
+	LoadStationRoomTemplates()
+
 	if(SSdbcore.Connect())
 		var/datum/db_query/query_round_map_name = SSdbcore.NewQuery({"
 			UPDATE [format_table_name("round")] SET map_name = :map_name WHERE id = :round_id
@@ -525,6 +531,14 @@ GLOBAL_LIST_EMPTY(the_station_areas)
 	preloadShuttleTemplates()
 	preloadShelterTemplates()
 	preloadHolodeckTemplates()
+
+/datum/controller/subsystem/mapping/proc/LoadStationRoomTemplates()
+	for(var/datum/map_template/random_room/room_type as anything in subtypesof(/datum/map_template/random_room))
+		if(!initial(room_type.mappath))
+			continue
+		var/datum/map_template/random_room/loaded_room = new room_type()
+		random_room_templates += loaded_room
+		map_templates[loaded_room.room_id] = loaded_room
 
 /datum/controller/subsystem/mapping/proc/preloadRuinTemplates()
 	// Still supporting bans by filename

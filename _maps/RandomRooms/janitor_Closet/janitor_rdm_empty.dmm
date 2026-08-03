@@ -1,0 +1,44 @@
+"a" = (/turf/closed/wall,/area/station/service/janitor)
+"b" = (/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,/obj/structure/cable,/obj/structure/disposalpipe/segment,/obj/machinery/door/airlock{name = "Custodial Closet"},/obj/effect/mapping_helpers/airlock/access/all/service/janitor,/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating,/area/station/service/janitor)
+"c" = (/obj/structure/cable,/obj/item/radio/intercom/directional/east,/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,/obj/structure/disposalpipe/segment{dir = 9},/turf/open/floor/plating,/area/station/service/janitor)
+"i" = (/obj/structure/sink/directional/south,/obj/effect/turf_decal/stripes/corner{dir = 1},/turf/open/floor/plating,/area/station/service/janitor)
+"j" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating,/area/station/service/janitor)
+"o" = (/obj/machinery/disposal/bin,/obj/effect/turf_decal/stripes/end{dir = 8},/obj/structure/disposalpipe/trunk{dir = 4},/turf/open/floor/plating,/area/station/service/janitor)
+"p" = (/obj/structure/cable,/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,/obj/structure/disposalpipe/sorting{dir = 4},/turf/open/floor/plating,/area/station/service/janitor)
+"q" = (/obj/structure/cable,/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,/obj/structure/disposalpipe/segment,/obj/machinery/door/airlock{name = "Custodial Closet"},/obj/effect/mapping_helpers/airlock/access/all/service/janitor,/obj/effect/decal/cleanable/dirt,/turf/open/floor/iron/dark_smooth,/area/station/service/janitor)
+"r" = (/obj/effect/turf_decal/borderfloor/dark_alt/corner{dir = 8},/obj/effect/turf_decal/danger/corner{dir = 1},/obj/effect/decal/cleanable/dirt/dust,/turf/template_noop,/area/template_noop)
+"t" = (/obj/effect/turf_decal/stripes/corner{dir = 4},/obj/machinery/button/door/directional/north{id = "custodialshutters"; name = "shutters control"; pixel_x = 8},/mob/living/basic/lizard/wags_his_tail,/obj/machinery/camera/directional/north{c_tag = "Service - Janitorial Closet"; name = "service camera"},/obj/machinery/light/small/directional/north,/turf/open/floor/plating,/area/station/service/janitor)
+"u" = (/obj/effect/turf_decal/stripes{dir = 1},/turf/open/floor/plating,/area/station/service/janitor)
+"x" = (/obj/effect/turf_decal/borderfloor/dark_alt,/obj/effect/turf_decal/danger,/obj/effect/decal/cleanable/dirt/dust,/turf/template_noop,/area/template_noop)
+"z" = (/obj/machinery/power/apc/auto_name/directional/south,/obj/structure/cable,/obj/effect/decal/cleanable/dirt/dust,/turf/open/floor/plating,/area/station/service/janitor)
+"A" = (/obj/machinery/requests_console/directional/south{department = "Janitorial"; name = "Janitor's Request Console"},/obj/effect/mapping_helpers/requests_console/assistance,/turf/open/floor/plating,/area/station/service/janitor)
+"B" = (/obj/effect/decal/cleanable/dirt/dust,/turf/open/floor/plating,/area/station/service/janitor)
+"C" = (/obj/effect/decal/cleanable/dirt/dust,/turf/template_noop,/area/template_noop)
+"D" = (/turf/closed/wall/r_wall,/area/station/service/janitor)
+"H" = (/obj/effect/decal/cleanable/dirt,/turf/template_noop,/area/template_noop)
+"J" = (/obj/machinery/light/small/dim/directional/south,/turf/open/floor/plating,/area/station/service/janitor)
+"L" = (/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{dir = 4},/turf/open/floor/plating,/area/station/service/janitor)
+"M" = (/obj/machinery/airalarm/directional/south,/obj/structure/cable,/obj/effect/decal/cleanable/dirt/dust,/turf/open/floor/plating,/area/station/service/janitor)
+"O" = (/obj/structure/disposalpipe/segment{dir = 4},/turf/open/floor/plating,/area/station/service/janitor)
+"P" = (/obj/item/reagent_containers/cup/bucket,/obj/item/mop,/turf/open/floor/plating,/area/station/service/janitor)
+"Q" = (/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{dir = 8},/turf/open/floor/plating,/area/station/service/janitor)
+"R" = (/turf/template_noop,/area/template_noop)
+"S" = (/turf/open/floor/plating,/area/station/service/janitor)
+"T" = (/obj/effect/turf_decal/borderfloor/dark_alt/corner,/obj/effect/turf_decal/danger/corner,/obj/effect/decal/cleanable/dirt/dust,/turf/template_noop,/area/template_noop)
+"U" = (/obj/effect/turf_decal/bot,/obj/structure/cable,/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,/obj/structure/disposalpipe/segment{dir = 4},/turf/open/floor/plating,/area/station/service/janitor)
+"V" = (/obj/structure/cable,/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,/obj/structure/disposalpipe/segment{dir = 4},/turf/open/floor/plating,/area/station/service/janitor)
+"W" = (/obj/structure/cable,/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,/obj/structure/disposalpipe/segment,/turf/open/floor/plating,/area/station/service/janitor)
+"Y" = (/obj/machinery/door/poddoor/shutters{dir = 1; id = "custodialshutters"; name = "Custodial Closet Shutters"},/obj/effect/decal/cleanable/dirt/dust,/turf/open/floor/iron/dark_smooth,/area/station/service/janitor)
+
+(1,1,1) = {"
+RRRRRRRRR
+RRHRCCCCC
+RRTxxxrCC
+DaaYYYaqa
+DStuuuiWa
+DoOpUVVca
+DSLWPSSSa
+DBSWQSSSa
+DzMWASJja
+Daabaaaaa
+"}
