@@ -78,9 +78,40 @@
 	desc = "A stationary computer. This one comes preloaded with generic programs."
 	starting_programs = list(
 		/datum/computer_file/program/chatclient,
+		/datum/computer_file/program/bounty_board,
+		/datum/computer_file/program/budgetorders,
+	)
+
+/obj/machinery/modular_computer/preset/civilian/gamer
+	name = "civilian console"
+	desc = "A stationary computer. This one comes preloaded with generic programs."
+	starting_programs = list(
+		/datum/computer_file/program/chatclient,
 		/datum/computer_file/program/arcade,
 		/datum/computer_file/program/bounty_board,
 		/datum/computer_file/program/budgetorders,
+	)
+
+/obj/machinery/modular_computer/preset/civilian/cargo
+	name = "civilian console"
+	desc = "A stationary computer. This one comes preloaded with generic programs."
+	starting_programs = list(
+		/datum/computer_file/program/chatclient,
+		/datum/computer_file/program/bounty_board,
+		/datum/computer_file/program/budgetorders,
+	)
+
+/obj/machinery/modular_computer/preset/civilian/pro
+	name = "HackerPro console"
+	desc = "A stationary computer. This is the computer of some professional hacker."
+	starting_programs = list(
+		/datum/computer_file/program/chatclient,
+		/datum/computer_file/program/arcade,
+		/datum/computer_file/program/bounty_board,
+		/datum/computer_file/program/budgetorders,
+		/datum/computer_file/program/secureye,
+		/datum/computer_file/program/revelation,
+		/datum/computer_file/program/ntnet_dos,
 	)
 
 // curator
