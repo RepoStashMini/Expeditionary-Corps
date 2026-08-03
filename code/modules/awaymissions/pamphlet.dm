@@ -4,56 +4,96 @@
 	show_written_words = FALSE
 
 /obj/item/paper/pamphlet/radstorm
-	name = "pamphlet - \'Radstorm Safety Measures and How to Not Become Monkey\'"
-	default_raw_text = "Has your station's preemptive radstorm safety alarm gone off and you don't see a nearby maintenance hatch to escape to? Never fear, for NT truly thinks of everything! \
-		Several public-access shelters have been installed around the upper station with express purpose of protecting your fragile meaty bits from becoming the next medical disaster! \
-		Please see subsection 4.3 V2-3 in your employee handbook for appropriate procedures to deal with excessive radiation damage if you do not make it to a shelter in time."
+	name = "брошюра — \'Меры безопасности при радиационной буре и как не стать обезьяной\'"
+	icon_state = "pamphlet_rad"
+	default_raw_text = "На вашем судне сработала система раннего предупреждения о радиационной буре, \
+		а поблизости нет ни одного технического шлюза, чтобы спрятаться? Не бойтесь, ведь НТ \
+		по-настоящему думает обо всём! На всех уровнях судна установлено несколько общедоступных \
+		убежищ, предназначенных исключительно для защиты ваших хрупких мясных тушек от превращения \
+		в очередную медицинскую катастрофу! Пожалуйста, ознакомьтесь с подразделом 4.3 V2-3 вашего \
+		руководства для сотрудников, чтобы узнать о надлежащих процедурах при получении избыточного \
+		радиационного урона, если вы не успели добраться до убежища вовремя."
 
 
 /obj/item/paper/pamphlet/violent_video_games
-	name = "pamphlet - \'Violent Video Games and You\'"
-	desc = "A pamphlet encouraging the reader to maintain a balanced lifestyle and take care of their mental health, while still enjoying video games in a healthy way. You probably don't need this..."
-	default_raw_text = "They don't make you kill people. There, we said it. Now get back to work!"
+	name = "брошюра — \'Жестокие видеоигры и вы\'"
+	icon_state = "pamphlet_violent_video_games"
+	desc = "Брошюра, призывающая читателя вести сбалансированный образ жизни и заботиться о своём ментальном здоровье, продолжая при этом наслаждаться видеоиграми без вреда для себя. Вам она, скорее всего, не нужна..."
+	default_raw_text = "Они не заставляют вас убивать людей. Вот, мы это сказали. А теперь возвращайтесь к работе!"
 
 /obj/item/paper/pamphlet/gateway
-	default_raw_text = "<b>Welcome to the Nanotrasen Gateway project...</b><br>\
-			Congratulations! If you're reading this, you and your superiors have decided that you're \
-			ready to commit to a life spent colonising the rolling hills of far away worlds. You \
-			must be ready for a lifetime of adventure, a little bit of hard work, and an award \
-			winning dental plan- but that's not all the Nanotrasen Gateway project has to offer.<br>\
-			<br>Because we care about you, we feel it is only fair to make sure you know the risks \
-			before you commit to joining the Nanotrasen Gateway project. All away destinations have \
-			been fully scanned by a Nanotrasen expeditionary team, and are certified to be 100% safe. \
-			We've even left a case of space beer along with the basic materials you'll need to expand \
-			Nanotrasen's operational area and start your new life.<br><br>\
-			<b>Gateway Operation Basics</b><br>\
-			All Nanotrasen approved Gateways operate on the same basic principals. They operate off \
-			area equipment power as you would expect, and without this supply, it cannot safely function, \
-			causinng it to reject all attempts at operation.<br><br>\
-			Once it is correctly setup, and once it has enough power to operate, the Gateway will begin \
-			searching for an output location. The amount of time this takes is variable, but the Gateway \
-			interface will give you an estimate accurate to the minute. Power loss will not interrupt the \
-			searching process. Influenza will not interrupt the searching process. Temporal anomalies \
-			may cause the estimate to be inaccurate, but will not interrupt the searching process.<br><br> \
-			<b>Life On The Other Side</b><br>\
-			Once you have traversed the Gateway, you may experience some disorientation. Do not panic. \
-			This is a normal side effect of travelling vast distances in a short period of time. You should \
-			survey the immediate area, and attempt to locate your complimentary case of space beer. Our \
-			expeditionary teams have ensured the complete safety of all away locations, but in a small \
-			number of cases, the Gateway they have established may not be immediately obvious. \
-			Do not panic if you cannot locate the return Gateway. Begin colonisation of the destination. \
-			<br><br><b>A New World</b><br>\
-			As a participant in the Nanotrasen Gateway Project, you will be on the frontiers of space. \
-			Though complete safety is assured, participants are advised to prepare for inhospitable \
-			environs."
+	default_raw_text = "<b>Добро пожаловать в проект «Врата» от НаноТрейзен...</b><br>\
+			Поздравляем! Если вы читаете это, значит, вы и ваше руководство решили, что вы \
+			готовы посвятить себя колонизации бескрайних просторов далеких миров. Вы должны быть \
+			готовы к целой жизни, полной приключений, небольшого количества упорного труда и \
+			лучшей программы стоматологического страхования — но это далеко не всё, что может \
+			предложить проект «Врата» от НаноТрейзен.<br><br>\
+			Поскольку мы заботимся о вас, мы считаем честным убедиться, что вы осознаёте все риски, \
+			прежде чем присоединиться к проекту. Все точки назначения были полностью исследованы \
+			экспедиционной группой НаноТрейзен и сертифицированы как безопасные на все 100%. Мы даже \
+			оставили для вас ящик космического пива вместе с базовыми материалами, которые понадобятся \
+			для расширения операционной зоны НаноТрейзен и начала вашей новой жизни.<br><br>\
+			<b>Основы работы Врат</b><br>\
+			Все одобренные НаноТрейзен Врата работают по одним и тем же базовым принципам. Как и \
+			ожидалось, они питаются от энергии оборудования локации, и без этого снабжения они не \
+			могут безопасно функционировать, из-за чего устройство будет отклонять любые попытки активации.<br><br>\
+			Как только Врата будут правильно настроены и получат достаточно энергии для работы, они \
+			начнут поиск точки выхода. Время, необходимое для этого, может варьироваться, но интерфейс \
+			Врат выдаст вам оценку с точностью до минуты. Потеря питания не прервёт процесс поиска. \
+			Грипп не прервёт процесс поиска. Временные аномалии могут сделать оценку времени неточной, \
+			но они не прервут процесс поиска.<br><br>\
+			<b>Жизнь на той стороне</b><br>\
+			Как только вы пройдёте сквозь Врата, вы можете почувствовать некоторую дезориентацию. Не паникуйте. \
+			Это нормальный побочный эффект путешествия на огромные расстояния за короткий промежуток времени. \
+			Вам следует осмотреть прилегающую территорию и попытаться найти ваш бесплатный ящик космического пива. \
+			Наши экспедиционные группы обеспечили полную безопасность всех удалённых локаций, но в редких \
+			случаях установленные ими обратные Врата могут быть не сразу заметны. Не паникуйте, если не можете \
+			обнаружить обратные Врата. Начинайте колонизацию точки назначения.<br><br>\
+			<b>Новый мир</b><br>\
+			Как участник проекта «Врата» от НаноТрейзен, вы окажетесь на самом краю неизведанного космоса. \
+			Несмотря на то, что полная безопасность гарантирована, участникам рекомендуется подготовиться \
+			к суровым условиям окружающей среды."
+
+/obj/item/paper/pamphlet/pathfinder_welcome
+	name = "брошюра — \'Добро пожаловать на ECRSV Pathfinder!\'"
+	desc = "Приветственная корпоративная брошюра для прибывших на ECRSV Pathfinder."
+	icon_state = "pamphlet_pathfinder"
+	default_raw_text = "<b>Добро пожаловать на флагман ваших возможностей — ECRSV Pathfinder!</b><br><br>\
+		Pathfinder — гордость НаноТрейзен и одно из 10 лучших судов в нашем экспедиционном флоте! \
+		Сами вы выбрали этот путь, или корпорация оптимизировала ваше распределение в рамках \
+		программы стратегического кадрового планирования — мы абсолютно уверены, что высокоэффективный \
+		экипаж Pathfinder примет вас в свою большую, дружную и строго регламентированную семью!<br><br>\
+		<b>Памятка по безопасности для оптимизации вашей жизнедеятельности:</b><br>\
+		1. В случае фиксации нештатной ситуации (разгерметизация, бунт, появление неизвестных \
+		форм жизни) немедленно примите позу максимальной корпоративной лояльности и ожидайте \
+		дальнейших распоряжений сотрудников службы безопасности. Не создавайте заторы в коридорах, \
+		уступайте дорогу офицерам.<br>\
+		2. Не прикасайтесь к оголённым проводам, светящимся артефактам, инженерам во время работы \
+		и странным зелёным лужам в техобслуживании. Помните: любопытство вне рамок должностной \
+		инструкции снижает квартальный бонус.<br>\
+		3. Вдыхание газов, отличных от стандартной дыхательной смеси (O2/N2), строго не рекомендуется \
+		и может аннулировать ваш полис медицинского страхования.<br><br>\
+		Желаем вам продуктивной смены и достижения новых KPI на рубежах неизведанного космоса!<br><br>\
+		<font size='1'>Внимание: Корпорация NanoTrasen (далее — Корпорация) не несёт юридической, \
+		моральной или материальной ответственности за травмы, расщепление на атомы, мутации, \
+		случайное клонирование или летальный исход, полученные на борту судна лицами, не являющимися \
+		штатными сотрудниками с уровнем допуска не ниже командного. Чтение данного текста автоматически \
+		означает ваше согласие с отказом от любых судебных исков.</font><br>\
+		— Департамент по связям с общественностью НаноТрейзен, 2680."
+
 
 /obj/item/paper/pamphlet/cybernetics
-	name = "pamphlet - 'Synthman's Cybernetic Starter Gear!'"
-	default_raw_text = "Join the Body Modder Revolution today! We are offering FREE SAMPLES of the latest and greatest \
-		cybernetic augments by Synthman Co. to you in this rare exclusive offer! With this letter, you are being gifted a \
-		special limited edition choice NTSDA-certified grade-A cybernetic implant, FREE OF CHARGE! Build up your body to \
-		GREATNESS with Synthman's new exclusive line of cybernetic products! Become greater, stronger, and BETTER today!"
+	name = "брошюра — 'Стартовое кибернетическое снаряжение от Synthman!'"
+	icon_state = "pamphlet_cybernetics"
+	desc = "Рекламная брошюра, призывающая к кибернетизации тела. К ней прикреплен какой-то образец."
+	default_raw_text = "Присоединяйтесь к революции бодимодификаций уже сегодня! В этом редком эксклюзивном \
+		предложении мы дарим вам БЕСПЛАТНЫЕ ОБРАЗЦЫ самых свежих и продвинутых кибернетических имплантов \
+		от Synthman Co.! Вместе с этой брошюрой вы получаете в подарок сертифицированный NTSDA \
+		высококлассный кибернетический имплант лимитированной серии абсолютно БЕСПЛАТНО! Модернизируйте \
+		своё тело до ИДЕАЛА с помощью новой эксклюзивной линейки кибернетических продуктов Synthman! \
+		Станьте масштабнее, сильнее и ЛУЧШЕ уже сегодня!"
 	var/obj/item/organ/heart/cybernetic/sample
+
 
 /obj/item/paper/pamphlet/cybernetics/Initialize(mapload)
 	. = ..()
@@ -62,7 +102,7 @@
 
 /obj/item/paper/pamphlet/cybernetics/update_desc(updates)
 	. = ..()
-	desc = "A pamphlet encouraging the reader to implant themselves.[sample ? " Has an attached \"sample\"..." : ""]"
+	desc = "Брошюра, призывающая читателя установить себе импланты.[sample ? " К ней прикреплён \"образец\"..." : ""]"
 
 /obj/item/paper/pamphlet/cybernetics/Destroy()
 	QDEL_NULL(sample)
@@ -76,6 +116,7 @@
 
 /obj/item/paper/pamphlet/cybernetics/attack_self(mob/user, modifiers)
 	. = ..()
-	to_chat(user, span_notice("As you read the pamphlet, a free sample falls out!"))
+	to_chat(user, span_notice("Пока вы читаете брошюру, из неё выпадает бесплатный образец!"))
 	sample.forceMove(drop_location())
 	playsound(sample, 'sound/misc/splort.ogg', 50, vary = TRUE)
+
