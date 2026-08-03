@@ -79,6 +79,8 @@
 	starting_programs = list(
 		/datum/computer_file/program/chatclient,
 		/datum/computer_file/program/arcade,
+		/datum/computer_file/program/bounty_board,
+		/datum/computer_file/program/budgetorders,
 	)
 
 // curator
