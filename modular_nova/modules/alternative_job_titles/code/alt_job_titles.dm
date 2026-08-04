@@ -13,7 +13,7 @@
 	alt_titles = list(
 		"AI",
 		"Automated Overseer",
-		"Station Intelligence",
+		"Ship's Intelligence",
 	)
 
 /datum/job/assistant
@@ -91,14 +91,6 @@
 		"Command Intern",
 	)
 
-/datum/job/blueshield
-	alt_titles = list(
-		"Blueshield",
-		"Command Bodyguard",
-		"Corporate Protection Specialist",
-		"Executive Protection Agent",
-	)
-
 /datum/job/botanist
 	alt_titles = list(
 		"Botanist",
@@ -112,33 +104,11 @@
 		"Junior Botanist",
 	)
 
-/datum/job/bouncer
-	alt_titles = list(
-		"Bouncer",
-		"Service Guard",
-		"Doorman",
-		"Civil Protection Officer",
-		"Public Peacekeeper",
-	)
-
-/datum/job/corrections_officer
-	alt_titles = list(
-		"Corrections Officer",
-		"Brig Officer",
-		"Brig Guard",
-		"Prison Guard",
-	)
-
 /datum/job/captain
 	alt_titles = list(
 		"Captain",
 		"Commanding Officer",
-		"Site Manager",
-		"Site Supervisor",
-		"Site Overseer",
-		"Site Director",
-		"Site Administrator",
-		"Station Commander",
+		"The first one who managed to take the card",
 	)
 
 /datum/job/cargo_technician
@@ -246,18 +216,9 @@
 		"Librarian",
 	)
 
-/datum/job/customs_agent
-	alt_titles = list(
-		"Customs Agent",
-		"Supply Guard",
-		"Deck Defense Officer",
-		"Delivery Escort",
-	)
-
 /datum/job/cyborg
 	alt_titles = list(
 		"Cyborg",
-		"Android",
 		"Robot",
 	)
 
@@ -285,14 +246,6 @@
 		"Physician Assistant",
 		"Emergency Physician",
 		"Registered Nurse",
-	)
-
-/datum/job/engineering_guard //see orderly
-	alt_titles = list(
-		"Engineering Guard",
-		"Tide Deterrent",
-		"Power Plant Guard",
-		"Construction Guard",
 	)
 
 /datum/job/geneticist
@@ -372,13 +325,6 @@
 		"Corporate Advocate",
 	)
 
-/datum/job/orderly
-	alt_titles = list(
-		"Orderly",
-		"Medical Guard",
-		"Medical Escort",
-	) //other dept guards' alt-titles should be kept to [department] guard to avoid confusion, unless the department gets a re-do.
-
 /datum/job/paramedic
 	alt_titles = list(
 		"Paramedic",
@@ -438,14 +384,6 @@
 		"Machinist",
 		"Mechatronic Engineer",
 		"Apprentice Roboticist",
-	)
-
-/datum/job/science_guard //See orderly
-	alt_titles = list(
-		"Science Guard",
-		"Hazardous Experiment Overwatch",
-		"Xenobiological Recontainment Officer",
-		"Expedition Protection Agent",
 	)
 
 /datum/job/scientist

@@ -1,6 +1,7 @@
+/*
 /obj/machinery/airalarm
 	icon = 'icons/obj/machines/wallmounts.dmi'
-
+*/
 /obj/machinery/airalarm/update_appearance(updates)
 	. = ..()
 
@@ -14,7 +15,8 @@
 	else if(danger_level == AIR_ALARM_ALERT_WARNING || my_area.active_alarms[ALARM_ATMOS])
 		color = LIGHT_COLOR_ORANGE
 
-	set_light(1.5, 1, color)
-
+	set_light(1.5, 0.5, color)
+/*
 /obj/item/wallframe/airalarm
 	icon = 'icons/obj/machines/wallmounts.dmi'
+*/
