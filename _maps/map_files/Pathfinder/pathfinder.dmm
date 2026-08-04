@@ -1335,6 +1335,7 @@
 /obj/structure/fans/tiny/forcefield{
 	dir = 4
 	},
+/obj/structure/inflatable,
 /turf/open/floor/engine/hull/reinforced,
 /area/station/hangar/b2)
 "bgc" = (
@@ -21478,7 +21479,7 @@
 /turf/open/floor/iron/green_smooth,
 /area/station/hallway/floor2/staircase/aft)
 "sMo" = (
-/obj/effect/spawner/room/special/janitor,
+/obj/effect/spawner/room/janitor,
 /turf/closed/wall/r_wall,
 /area/station/service/janitor)
 "sMW" = (
@@ -26573,6 +26574,7 @@
 /obj/structure/fans/tiny/forcefield{
 	dir = 4
 	},
+/obj/structure/inflatable,
 /turf/open/floor/plating/reinforced,
 /area/station/hangar/b1)
 "wZo" = (

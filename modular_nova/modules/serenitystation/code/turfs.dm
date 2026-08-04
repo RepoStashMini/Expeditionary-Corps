@@ -40,11 +40,11 @@
 
 	if(is_station_level(z))
 		GLOB.station_turfs += src
-
+/*
 /turf/open/misc/asteroid/forest/getDug()
 	. = ..()
 	AddComponent(/datum/component/simple_farm)
-
+*/
 /turf/open/misc/asteroid/forest/mushroom
 	name = "mushroom floor"
 	desc = "A patch of mushrooms."

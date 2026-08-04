@@ -23,7 +23,7 @@
 
 /datum/language/monkey
 	secret = FALSE
-	
+
 /datum/language/wormspeak
 	secret = TRUE
 
@@ -31,9 +31,6 @@
 	secret = TRUE
 
 /datum/language/narsie
-	secret = TRUE
-
-/datum/language/nekomimetic
 	secret = TRUE
 
 /datum/language/shadowtongue

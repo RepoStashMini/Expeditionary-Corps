@@ -13,11 +13,11 @@
 /turf/open/misc/dirt/icemoon
 	baseturfs = /turf/open/openspace/icemoon
 	initial_gas_mix = "ICEMOON_ATMOS"
-
+/*
 /turf/open/misc/dirt/icemoon/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/simple_farm, set_plant = TRUE)
-
+*/
 // Water that can be fished out of
 
 /turf/open/water/hot_spring/icemoon

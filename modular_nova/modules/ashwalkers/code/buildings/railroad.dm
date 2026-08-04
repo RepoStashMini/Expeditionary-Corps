@@ -108,9 +108,6 @@
 	if(has_buckled_mobs())
 		add_overlay(railoverlay)
 
-	if(connected_farm)
-		add_overlay("dirt_overlay")
-
 /obj/vehicle/ridden/rail_cart/relaymove(mob/living/user, direction)
 	var/obj/structure/railroad/locate_rail = locate() in get_step(src, direction)
 	if(!canmove || !locate_rail)
@@ -129,11 +126,6 @@
 	. = ..()
 	atom_storage?.show_contents(user)
 
-/obj/vehicle/ridden/rail_cart/shovel_act(mob/living/user, obj/item/tool)
-	if(!connected_farm)
-		return NONE
-
-	QDEL_NULL(connected_farm)
 	if(atom_storage)
 		atom_storage.click_alt_open = TRUE
 		atom_storage.insert_on_attack = TRUE
@@ -150,7 +142,6 @@
 		if(has_sand || !use_item.use(10))
 			return NONE
 
-		connected_farm = AddComponent(/datum/component/simple_farm, TRUE, TRUE, list(0, 24))
 		update_appearance(UPDATE_OVERLAYS)
 		has_sand = TRUE
 		max_drivers = 0
