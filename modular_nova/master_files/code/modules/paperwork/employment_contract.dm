@@ -13,45 +13,46 @@
 	AddElement(/datum/element/update_icon_blocker)
 	. = ..()
 	employee_name = new_employee_name
-	name = "paper- [employee_name] employment contract"
+	name = "paper- трудовой контракт [employee_name]"
 	add_raw_text("\
-	<center><font size=3>Conditions of Employment</center><font size=2>\
+	<center><font size=3>Условия найма</center><font size=2>\
 	<br><hr><br>\
-	This Agreement is made and entered into as of the date of last signature below, by and between [employee_name] (hereafter referred to as the <i><u>employee</u></i>),\
-	and Nanotrasen (hereafter referred to as the <i><u>employer</u></i>).\
+	Настоящее Соглашение заключено и вступает в силу с даты последней подписи ниже между [employee_name] (далее именуемым <i><u>работником</u></i>) \
+	и корпорацией Nanotrasen (далее именуемой <i><u>работодателем</u></i>).\
 	<br>\
-	<br><font size=3>WITNESSETH:<font size=2>\
+	<br><font size=3>СВИДЕТЕЛЬСТВО:</font><font size=2>\
 	<br>\
-	<br>WHEREAS, the <i><u>employee</u></i> is a natural born human, acceptable humanoid, or synthetic humanoid with proven sapience, possessing skills upon which the <i><u>employee</u></i> \
-	can aid the <i><u>employer</u></i>, and seeks employment with them.\
-	<br>WHEREAS, <i><u>employer</u></i> agrees to provide payment to the <i><u>employee</u></i> to the best of its ability depending on local circumstance and in a timely fashion, \
-	in exchange for the completion of work duties described by the individual job postings to which the <i><u>employee</u></i> is assigned.\
-	<br><br>NOW THEREFORE in consideration of the mutual covenants herein contained, and other good and valuable consideration, the parties hereto mutually agree as follows:\
-	<br><br>In exchange for a fixed wage, the <i><u>employee</u></i> agrees to work for the <i><u>employer</u></i>, for a standard contract of no less than four years.\
-	<br><br>The employee agrees to maintain confidentiality of all <i><u>employer</u></i> trade secrets, locations of stations or other strategically valuable items, \
-	value or condition of assets, existence of pending lawsuits, or any other material that may impact the profit and health of the <i><u>employer</u></i> as a whole.\
-	<br><br>Additionally, the <i><u>employee</u></i> allows the <i><u>employer</u></i> to access their medical, security and employment records for use in public relations, marketing, \
-	product placement, experiments, or other company purposes not detailed by the contract. This includes and is not limited to the <i><u>employee</u></i>'s voice,\
-	physical appearance, DNA sequences and Resonance; their provided criminal records and affiliations with any groups of interest; provided general background information \
-	and additional information provided by verified third-party investigators; provided medical records and so forth.\
-	<br><br>In case of lack of necessary skills to perform required tasks before the employment, the <i><u>employee</u></i> agrees to perform a skillchip installment and/or \
-	memory upload with qualifications/skills programs necessary to perform their duties, and a skillchip removal and/or memory wipe after their contract's over. The following procedures' \
-	medical fees, as well as the skillchip and/or memory altering procedures cost will be deducted from the <i><u>employee</u></i>'s payment at the end of the contract.\
-	<br><br>To note for the aforementioned, any ongoing or pending criminal investigations, if originated from the Sol Federation, are to be halted for the duration of work contract, \
-	with any possible crimes occuring within the <i><u>employer</u></i>'s facilities punished by the contracted or corporate paramilitary and security forces.\
-	<br>Finally, the <i><u>employee</u></i> understands that the <i><u>employer</u></i> is not bound by the same contract principles as them and may terminate the contract at any time, \
-	for any reason, and without warning if need be. The <i><u>employee</u></i> agrees to approach any and all employment disputes through the assigned Head of Personnel \
-	or Central Command Representative aboard the station at the time of the dispute. An <i><u>employer</u></i> contracted lawyer may be present for the dispute \
-	if requested by the <i><u>employee</u></i>. Wages are non-negotiable and no individual, including the Captain, on the station has the option to raise pay, \
-	so the <i><u>employee</u></i> agrees to handle payment disputes through the proper channels or risk breach of contract.\
-	<br><br>Signed, \
+	<br>ПОСКОЛЬКУ <i><u>работник</u></i> является рожденным естественным путем человеком, допустимым гуманоидом или синтетическим гуманоидом с доказанной разумностью, \
+	обладающим навыками, с помощью которых <i><u>работник</u></i> может содействовать <i><u>работодателю</u></i>, и ищет у него работу;\
+	<br>ПОСКОЛЬКУ <i><u>работодатель</u></i> обязуется выплачивать вознаграждение <i><u>работнику</u></i> в меру своих возможностей в зависимости от местных обстоятельств и своевременно, \
+	в обмен на выполнение трудовых обязанностей, описанных в индивидуальных вакансиях, на которые назначается <i><u>работник</u></i>;\
+	<br><br>ПОЭТОМУ, принимая во внимание взаимные обязательства, содержащиеся в настоящем документе, и иные встречные удовлетворения, стороны взаимно соглашаются о нижеследующем:\
+	<br><br>В обмен на фиксированную заработную плату <i><u>работник</u></i> обязуется работать на <i><u>работодателя</u></i> по стандартному контракту сроком не менее четырех лет.\
+	<br><br>Работник обязуется сохранять конфиденциальность в отношении всех коммерческих тайн <i><u>работодателя</u></i>, расположения станций или других стратегически ценных объектов, \
+	стоимости или состояния активов, наличия незавершенных судебных процессов или любых других материалов, которые могут повлиять на прибыль и благополучие <i><u>работодателя</u></i> в целом.\
+	<br><br>Кроме того, <i><u>работник</u></i> разрешает <i><u>работодателю</u></i> доступ к своим медицинским записям, личным делам службы безопасности и записям о трудоустройстве для использования в связях с общественностью, \
+	маркетинге, продакт-плейсменте, экспериментах или других корпоративных целях, не детализированных в контракте. Это включает в себя, помимо прочего: голос <i><u>работника</u></i>, \
+	его внешний вид, последовательности ДНК и Резонанс; предоставленные данные о судимостях и связях с какими-либо представляющими интерес группами; предоставленные общие биографические сведения \
+	и дополнительную информацию, полученную от проверенных сторонних следователей; предоставленные медицинские карты и так далее.\
+	<br><br>В случае нехватки необходимых навыков для выполнения требуемых задач перед началом работы, <i><u>работник</u></i> соглашается на установку скиллчипа (чипа навыков) \
+	и/или загрузку памяти с программами квалификации/навыков, необходимыми для выполнения своих обязанностей, а также на удаление чипа и/или удаление памяти после окончания контракта. \
+	Медицинские расходы на вышеуказанные процедуры, а также стоимость изменения памяти и/или установки скиллчипа будут удержаны из вознаграждения <i><u>работника</u></i> в конце срока действия контракта.\
+	<br><br>В дополнение к вышесказанному, любые текущие или незавершенные уголовные расследования, если они исходят от Солнечной Федерации, приостанавливаются на время действия трудового контракта, \
+	при этом любые возможные преступления, совершенные на объектах <i><u>работодателя</u></i>, караются контрактными или корпоративными военизированными формированиями и силами безопасности.\
+	<br>Наконец, <i><u>работник</u></i> понимает, что <i><u>работодатель</u></i> не связан теми же принципами контракта, что и он, и может расторгнуть контракт в любое время, \
+	по любой причине и без предупреждения в случае необходимости. <i><u>Работник</u></i> соглашается решать любые и все трудовые споры через назначенного Главу Персонала (Head of Personnel) \
+	или Представителя Центрального Командования (Central Command Representative), находящегося на борту станции во время спора. По запросу <i><u>работника</u></i> при споре может присутствовать \
+	нанятый <i><u>работодателем</u></i> юрист. Заработная плата не подлежит обсуждению, и ни одно лицо на станции, включая Капитана, не имеет возможности повысить выплаты, \
+	поэтому <i><u>работник</u></i> соглашается решать споры по оплате через надлежащие каналы под угрозой нарушения контракта.\
+	<br><br>Подпись, \
 	<br><span style=\"color:black;font-family:'Segoe Script';\"><p><b>[employee_name]</b></p></span>\
 	<br><br>\
 	<hr><center>-----------------------------------<br>\
-	<font size=3>❘❙❚❘❙❚|<span style=\"color:black;font-family:'Sitka Small Semibold';\">GLORY TO NANOTRASEN</span>™|❚❙❘❚❙❘</center></hr>\
+	<font size=3>❘❙❚❘❙❚|<span style=\"color:black;font-family:'Sitka Small Semibold';\">СЛАВА НАНОТРЕЙЗЕН</span>™|❚❙❘❚❙❘</center></hr>\
 	<br><br>\
-	<font size=1>Under Corporate Law section 201 subsection B.3. Defacement, publication, or theft of this document is punishable by demerit or immediate contractual termination. \
-	Central Command Representives are not responsible for possible loss of life, extermination, or bluespace occurances related to any sort of actions ordered to commit to."
+	<font size=1>В соответствии с Корпоративным Законом, раздел 201, подраздел B.3. Порча, публикация или кража этого документа караются выговором или немедленным расторжением контракта. \
+	Представители Центрального Командования не несут ответственности за возможную гибель людей, истребление или блюспейс-явления, связанные с любыми приказами, обязательными к исполнению."
 	)
+
 /obj/structure/filingcabinet/employment/addFile(mob/living/carbon/human/employee)
 	new /obj/item/paper/work_contract(src, employee.mind.name)
