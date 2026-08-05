@@ -38,40 +38,21 @@ export const feature_mcolor3: Feature<string> = {
 export const flavor_text: Feature<string> = {
   name: 'Flavor Text',
   description:
-    "Appears when your character is examined (but only if they're identifiable - try a gas mask). Do not put sexual things in here—move those to Flavor Text (NSFW).",
-  component: FeatureLongTextInput,
-};
-
-export const flavor_text_nsfw: Feature<string> = {
-  name: 'Flavor Text (NSFW)',
-  description: 'Same as Flavor Text but requires you to click a tab to view.',
+    "Appears when your character is examined (but only if they're identifiable - try a gas mask)..",
   component: FeatureLongTextInput,
 };
 
 export const silicon_flavor_text: Feature<string> = {
   name: 'Flavor Text (Silicon)',
   description:
-    "Only appears if you're playing as a borg/AI. Do not put sexual things in here—move those to Flavor Text (Silicon, NSFW).",
-  component: FeatureLongTextInput,
-};
-
-export const silicon_flavor_text_nsfw: Feature<string> = {
-  name: 'Flavor Text (Silicon, NSFW)',
-  description:
-    'Same as Silicon Flavor Text but requires you to click a tab to view.',
+    "Only appears if you're playing as a borg/AI.",
   component: FeatureLongTextInput,
 };
 
 export const ooc_notes: Feature<string> = {
   name: 'OOC Notes',
   description:
-    'Anything you want other players to know about you goes here, such as antag information, OOC triggers, etc. Do not put sexual things in here—move those to OOC Notes (NSFW).',
-  component: FeatureLongTextInput,
-};
-
-export const ooc_notes_nsfw: Feature<string> = {
-  name: 'OOC Notes (NSFW)',
-  description: 'Same as OOC Notes but requires you to click a tab to view.',
+    'Anything you want other players to know about you goes here, such as antag information.',
   component: FeatureLongTextInput,
 };
 
@@ -82,31 +63,11 @@ export const character_ad: Feature<string> = {
   component: FeatureLongTextInput,
 };
 
-export const attraction: FeatureChoiced = {
-  name: 'Character Attraction',
-  description:
-    'What your character is attracted to. This is displayed in the Directory.',
-  component: FeatureDropdownInput,
-};
-
 export const display_gender: FeatureChoiced = {
   name: 'Character Gender',
   description:
     'What classifies as the gender for your character. This is displayed in the Directory.',
   component: FeatureDropdownInput,
-};
-
-export const custom_species: Feature<string> = {
-  name: 'Custom Species Name',
-  description:
-    'Appears on examine. If left blank, you will use your default species name (E.g. Human, Lizardperson).',
-  component: FeatureShortTextInput,
-};
-
-export const custom_species_lore: Feature<string> = {
-  name: 'Custom Species Lore',
-  description: "Won't show up if there's no custom species.",
-  component: FeatureLongTextInput,
 };
 export const general_record: Feature<string> = {
   name: 'Records - General',
@@ -165,12 +126,6 @@ export const allow_mismatched_hair_color_toggle: FeatureToggle = {
   name: 'Allow Mismatched Hair Color',
   description:
     'Allows species who normally have a fixed hair color to have different hair colors. This includes in-round sources such as dyeing hair, alter form, etc. Currently only applicable to slimes.',
-  component: CheckboxInput,
-};
-
-export const allow_genitals_toggle: FeatureToggle = {
-  name: 'Allow Genital Parts',
-  description: 'Enables if you want to have genitals on your character.',
   component: CheckboxInput,
 };
 
@@ -674,38 +629,6 @@ export const skrell_hair_emissive: Feature<boolean[]> = {
   name: 'Skrell Hair Emissives',
   description: 'Emissive parts glow in the dark.',
   component: FeatureTriBoolInput,
-};
-
-export const taur_toggle: FeatureToggle = {
-  name: 'Taur',
-  component: CheckboxInput,
-};
-
-export const feature_taur: Feature<string> = {
-  name: 'Taur Selection',
-  component: (
-    props: FeatureValueProps<string, string, FeatureChoicedServerData>,
-  ) => {
-    return <FeatureDropdownInput buttons {...props} />;
-  },
-};
-
-export const taur_color: Feature<string[]> = {
-  name: 'Taur Colors',
-  component: FeatureTriColorInput,
-};
-
-export const taur_emissive: Feature<boolean[]> = {
-  name: 'Taur Emissives',
-  description: 'Emissive parts glow in the dark.',
-  component: FeatureTriBoolInput,
-};
-
-export const naga_sole: FeatureToggle = {
-  name: 'Taur (Naga) disable hardened soles',
-  description:
-    'If using a serpentine or fishlike taur body, determines if you are immune to caltrops and a few other effects of being barefoot.',
-  component: CheckboxInput,
 };
 
 export const xenodorsal_toggle: FeatureToggle = {
