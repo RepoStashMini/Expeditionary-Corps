@@ -79,7 +79,6 @@ GLOBAL_DATUM_INIT(language_holder_adjustor, /datum/language_holder_adjustor, new
 		/datum/language/calcic,
 		/datum/language/monkey,
 		/datum/language/mushroom,
-		/datum/language/nekomimetic,
 		/datum/language/shadowtongue,
 	)
 
