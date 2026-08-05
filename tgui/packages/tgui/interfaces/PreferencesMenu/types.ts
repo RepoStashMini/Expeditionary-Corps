@@ -283,7 +283,6 @@ export type PreferencesMenuData = {
 
   allow_mismatched_parts: BooleanLike;
   digi_legs: BooleanLike;
-  taur_legs: BooleanLike;
 
   selected_languages: Language[];
   unselected_languages: Language[];

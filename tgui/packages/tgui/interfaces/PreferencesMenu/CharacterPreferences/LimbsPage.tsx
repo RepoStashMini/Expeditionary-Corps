@@ -218,19 +218,17 @@ const isAugAllowed = (
   ckey: string,
   slot_flag?: number,
   digi_legs?: BooleanLike,
-  taur_legs?: BooleanLike,
 ): boolean => {
   if (isLegSlot(slot_flag) && digi_legs && !aug.has_digi) return false;
-  if (isLegSlot(slot_flag) && taur_legs) return false;
   if (aug.species_blacklist?.[species]) return false;
   if (aug.species_whitelist && !aug.species_whitelist[species]) return false;
   if (aug.ckey_whitelist && !aug.ckey_whitelist.includes(ckey)) return false;
   return true;
 };
 
-const showsInBodyPartsTab = (bodypart: BodypartData, taur_legs: BooleanLike) =>
+const showsInBodyPartsTab = (bodypart: BodypartData) =>
   hasAnyOptions(bodypart.aug_options) ||
-  (!!taur_legs && isLegSlot(bodypart.slot_flag));
+  (!!isLegSlot(bodypart.slot_flag));
 
 /** Resolves internal implant slots into AugmentData with filtered options and selected aug */
 const buildInternalImplantData = (
@@ -642,7 +640,7 @@ const CenterColumnExtras = (props: {
     return (
       <>
         {props.center
-          .filter((bodypart) => showsInBodyPartsTab(bodypart, data.taur_legs))
+          .filter((bodypart) => showsInBodyPartsTab(bodypart))
           .map((bodypart) => (
             <BodypartAugmentSection key={bodypart.slot} limb={bodypart} />
           ))}
@@ -780,7 +778,6 @@ export const LimbsPage = ({
             ckey,
             item.slot_flag,
             data.digi_legs,
-            data.taur_legs,
           ),
         );
         const implant_options = (item.implant_options ?? []).filter((aug) =>
@@ -790,7 +787,6 @@ export const LimbsPage = ({
             ckey,
             item.slot_flag,
             data.digi_legs,
-            data.taur_legs,
           ),
         );
         const chosen_style_name = data.augment_styles?.[item.slot] ?? null;
@@ -852,7 +848,7 @@ export const LimbsPage = ({
     if (tab === AugmentsTab.BodyParts)
       return (
         <BodyPartsColumn
-          limbs={limbs.filter((b) => showsInBodyPartsTab(b, data.taur_legs))}
+          limbs={limbs.filter((b) => showsInBodyPartsTab(b))}
         />
       );
     if (tab === AugmentsTab.InternalImplants)
