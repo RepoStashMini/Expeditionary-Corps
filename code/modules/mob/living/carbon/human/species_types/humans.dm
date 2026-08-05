@@ -1,5 +1,5 @@
 /datum/species/human
-	name = "\improper Human"
+	name = "\improper Человек"
 	id = SPECIES_HUMAN
 	inherent_traits = list(
 		TRAIT_USES_SKINTONES,
@@ -97,28 +97,39 @@
 	return 'sound/mobs/humanoids/human/hiss/human_hiss.ogg'
 
 /datum/species/human/get_species_description()
-	return "Humans are the dominant species in the known galaxy. \
-		Their kind extend from old Earth to the edges of known space."
+	return "Люди — доминирующий вид в известной галактике. \
+		Их род распространился от древней Земли до самых дальних рубежей неизведанного космоса."
+
+/datum/species/human/get_species_description()
+	return "Люди — доминирующий вид в известной галактике. \
+		Их род распространился от древней Земли до самых дальних рубежей неизведанного космоса."
+
+/datum/species/human/get_species_description()
+	return "Люди — доминирующий вид в известной галактике. \
+		Их род распространился от древней Земли до самых дальних рубежей неизведанного космоса."
 
 /datum/species/human/get_species_lore()
 	return list(
-		"These primate-descended creatures, originating from the mostly harmless Earth, \
-		have long-since outgrown their home and semi-benign designation. \
-		The space age has taken humans out of their solar system and into the galaxy-at-large.",
+		"Эти потомки приматов, происходящие с преимущественно безвредной Земли, \
+		уже давно переросли свой родной дом и статус «умеренно миролюбивых». \
+		Космическая эра вывела людей далеко за пределы их солнечной системы на просторы огромной галактики.",
 
-		"In traditional human fashion, this near-record pace from terra firma to the final frontier spat \
-		in the face of other races they now shared a stage with. \
-		This included the lizards - if anyone was offended by these upstarts, it was certainly lizardkind.",
+		"В традиционной для себя манере люди совершили этот почти рекордный рывок от тверди земной к последнему рубежу, \
+		буквально плюнув в лицо другим расам, с которыми им теперь приходится делить сцену. \
+		Сюда же относятся и Унати — если кто и был оскорблён этими выскочками, так это точно их чешуйчатый род.",
 
-		"Humanity never managed to find the kind of peace to fully unite under one banner like other species. \
-		The pencil and paper pushing of the UN bureaucrat lives on in the mosaic that is TerraGov; \
-		a composite of the nation-states that still live on in human society.",
+		"Человечеству так и не удалось сохранить былое величие под единым знаменем. В процессе разрушительной Великой войны, \
+		всепоглощающей коррупции и людских пороков Солнечная Федерация сейчас сжалась практически до границ самой Солнечной системы. \
+		Былые окраины раскололись, и теперь угасающее ядро окружают многочисленные мелкие суверенные государства и независимые звёздные системы.",
 
-		"The human spirit of opportunity and enterprise continues on in its peak form: \
-		the hypercorporation. Acting outside of TerraGov's influence, literally and figuratively, \
-		hypercorporations buy the senate votes they need and establish territory far past the Earth Government's reach. \
-		In hypercorporation territory company policy is law, giving new meaning to \"employee termination\".",
+		"Человеческий дух оппортунизма и предпринимательства продолжает существовать в своей пиковой форме: \
+		в лице гиперкорпораций. Действуя вне влияния Солнечной Федерации, как в буквальном, так и в переносном смысле, \
+		гиперкорпорации попросту скупают нужные им голоса в сенате и основывают территории далеко за пределами её досягаемости. \
+		На территориях гиперкорпораций политика компании — это закон, что придаёт совершенно новый смысл фразе «терминация сотрудника»."
 	)
+
+
+
 
 /datum/species/human/create_pref_unique_perks()
 	var/list/to_add = list()
@@ -127,9 +138,9 @@
 		to_add += list(list(
 			SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
 			SPECIES_PERK_ICON = "robot",
-			SPECIES_PERK_NAME = "Asimov Superiority",
-			SPECIES_PERK_DESC = "The AI and their cyborgs are, by default, subservient only \
-				to humans. As a human, silicons are required to both protect and obey you.",
+			SPECIES_PERK_NAME = "Превосходство Азимова",
+			SPECIES_PERK_DESC = "ИИ и его киборги по умолчанию подчиняются исключительно людям. \
+				Как человеку, синтетики обязаны беспрекословно защищать вас и подчиняться вашим приказам.",
 		))
 
 	var/human_authority_setting = CONFIG_GET(string/human_authority)
@@ -138,8 +149,9 @@
 		to_add += list(list(
 			SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
 			SPECIES_PERK_ICON = "bullhorn",
-			SPECIES_PERK_NAME = "Chain of Command",
-			SPECIES_PERK_DESC = "Nanotrasen only recognizes humans for command roles, such as Captain.",
+			SPECIES_PERK_NAME = "Цепочка командования",
+			SPECIES_PERK_DESC = "НаноТрейзен признаёт право занимать командные должности, такие как Капитан, только за людьми.",
 		))
+
 
 	return to_add

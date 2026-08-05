@@ -1,7 +1,7 @@
 #define MONKEY_SPEC_ATTACK_BITE_MISS_CHANCE 25
 
 /datum/species/monkey
-	name = "\improper Monkey"
+	name = "\improper Обезьяна"
 	id = SPECIES_MONKEY
 	mutant_organs = list(
 		/obj/item/organ/tail/monkey = "Monkey",
@@ -62,19 +62,19 @@
 	// we're both great apes, or something..
 
 /datum/species/monkey/get_physical_attributes()
-	return "Monkeys are slippery, can crawl into vents, and are more dextrous than humans.. but only when stealing things. \
-		Natural monkeys cannot operate machinery or most tools with their paws, but unusually clever monkeys or those that were once something else can."
+	return "Обезьяны очень юркие, способны пролезать в вентиляцию и куда более ловкие, чем люди... но только когда дело касается воровства. \
+		Обычные обезьяны не умеют управлять механизмами или использовать большинство инструментов своими лапами, но необычайно умные приматы — или те, кто раньше был кем-то другим — вполне на это способны."
 
 /datum/species/monkey/get_species_description()
-	return "Monkeys are a type of primate that exist between humans and animals on the evolutionary chain. \
-		Every year, on Monkey Day, Nanotrasen shows their respect for the little guys by allowing them to roam the station freely."
+	return "Обезьяны — это вид приматов, занимающий промежуточное положение между людьми и обычными животными на эволюционной лестнице. \
+		Каждый год в «День Обезьяны» НаноТрейзен выражает своё почтение этим малышам, позволяя им свободно разгуливать по станции."
 
 /datum/species/monkey/get_species_lore()
 	return list(
-		"Monkeys are commonly used as test subjects on board Space Station Thirteen. \
-		But what if... for one day... the Monkeys were allowed to be the scientists? \
-		What experiments would they come up it? Would they (stereotypically) be related to bananas somehow? \
-		There's only one way to find out.",
+		"Обезьян повсеместно используют в качестве подопытных на борту Космической Станции Тринадцать. \
+		Но что если... хотя бы на один день... обезьянам позволили бы самим стать учёными? \
+		Какие эксперименты они бы придумали? Будут ли они (стереотипно) как-то связаны с бананами? \
+		Есть только один способ это выяснить.",
 	)
 
 /datum/species/monkey/create_pref_unique_perks()
@@ -84,20 +84,21 @@
 		list(
 			SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
 			SPECIES_PERK_ICON = "spider",
-			SPECIES_PERK_NAME = "Vent Crawling",
-			SPECIES_PERK_DESC = "Monkeys can crawl through the vent and scrubber networks while wearing no clothing. \
-				Stay out of the kitchen!",
+			SPECIES_PERK_NAME = "Вентиляционный лаз",
+			SPECIES_PERK_DESC = "Обезьяны могут перемещаться по сети вентиляции и скрабберов, если на них нет одежды. \
+				Главное — держитесь подальше от кухни!",
 		),
 		list(
 			SPECIES_PERK_TYPE = SPECIES_NEGATIVE_PERK,
 			SPECIES_PERK_ICON = "paw",
-			SPECIES_PERK_NAME = "Primal Primate",
-			SPECIES_PERK_DESC = "Monkeys are primitive humans, and can't do most things a human can do. Computers are impossible, \
-				complex machines are right out, and most clothes don't fit your smaller form.",
+			SPECIES_PERK_NAME = "Первобытный примат",
+			SPECIES_PERK_DESC = "Обезьяны — примитивные предки людей и не способны делать большинство вещей, доступных человеку. Компьютеры для вас недосягаемы, \
+				сложные механизмы абсолютно исключены, а большая часть одежды просто не налезет на ваше маленькое тело.",
 		),
 	)
 
 	return to_add
+
 
 /datum/species/monkey/create_pref_language_perk()
 	var/list/to_add = list()
@@ -108,9 +109,9 @@
 	to_add += list(list(
 		SPECIES_PERK_TYPE = SPECIES_NEGATIVE_PERK,
 		SPECIES_PERK_ICON = "comment",
-		SPECIES_PERK_NAME = "Primitive Tongue",
-		SPECIES_PERK_DESC = "You may be able to understand [initial(common_language.name)], but you can't speak it. \
-			You can only speak [initial(monkey_language.name)].",
+		SPECIES_PERK_NAME = "Примитивный язык",
+		SPECIES_PERK_DESC = "Вы способны понимать [initial(common_language.name)], но не можете говорить на нём. \
+			Вам доступна только речь на [initial(monkey_language.name)].",
 	))
 
 	return to_add

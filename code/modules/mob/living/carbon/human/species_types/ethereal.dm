@@ -1,5 +1,5 @@
 /datum/species/ethereal
-	name = "\improper Ethereal"
+	name = "\improper Этериалы"
 	id = SPECIES_ETHEREAL
 	meat = /obj/item/food/meat/slab/human/mutant/ethereal
 	mutantlungs = /obj/item/organ/lungs/ethereal
@@ -242,20 +242,20 @@
 	return 'sound/mobs/humanoids/ethereal/ethereal_hiss.ogg'
 
 /datum/species/ethereal/get_physical_attributes()
-	return "Ethereals process electricity as their power supply, not food, and are somewhat resistant to it.\
-		They do so via their crystal core, their equivalent of a human heart, which will also encase them in a reviving crystal if they die.\
-		However, their skin is very thin and easy to pierce with brute weaponry."
+	return "Этериэлы используют электричество вместо еды в качестве источника энергии и обладают некоторой устойчивостью к нему.\
+		Они перерабатывают энергию с помощью своего кристаллического ядра — аналога человеческого сердца, которое в случае их смерти заключит их в защитный возрождающий кристалл.\
+		Однако их кожа очень тонка, и её легко пробить дробящим или рубящим оружием."
 
 /datum/species/ethereal/get_species_description()
-	return "Coming from the planet of Sprout, the theocratic ethereals are \
-		separated socially by caste, and espouse a dogma of aiding the weak and \
-		downtrodden."
+	return "Выходцы с планеты Спраут, теократические Этериэлы \
+		разделены в социальном плане на касты и поддерживают догму помощи слабым и \
+		угнетенным."
 
 /datum/species/ethereal/get_species_lore()
 	return list(
-		"Ethereals are a species native to the planet Sprout. \
-		When they were originally discovered, they were at a medieval level of technological progression, \
-		but due to their natural acclimation with electricity, they felt easy among the large Nanotrasen installations.",
+		"Этериэлы — вид, коренной для планеты Спраут. \
+		Когда они были первоначально обнаружены, они находились на средневековом уровне технологического развития, \
+		но из-за своей естественной акклиматизации к электричеству они быстро освоились на крупных объектах НаноТрейзен.",
 	)
 
 /datum/species/ethereal/create_pref_unique_perks()
@@ -265,33 +265,32 @@
 		list(
 			SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
 			SPECIES_PERK_ICON = "bolt",
-			SPECIES_PERK_NAME = "Shockingly Tasty",
-			SPECIES_PERK_DESC = "Ethereals can feed on electricity from APCs, and do not otherwise need to eat.",
+			SPECIES_PERK_NAME = "Шокирующе вкусно",
+			SPECIES_PERK_DESC = "Этериэлы могут питаться электричеством напрямую из АПК, и в остальном они не нуждаются в обычной еде.",
 		),
 		list(
 			SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
 			SPECIES_PERK_ICON = "lightbulb",
-			SPECIES_PERK_NAME = "Disco Ball",
-			SPECIES_PERK_DESC = "Ethereals passively generate their own light.",
+			SPECIES_PERK_NAME = "Диско-шар",
+			SPECIES_PERK_DESC = "Этериэлы пассивно излучают собственный свет в окружающее пространство.",
 		),
 		list(
 			SPECIES_PERK_TYPE = SPECIES_NEUTRAL_PERK,
 			SPECIES_PERK_ICON = "gem",
-			SPECIES_PERK_NAME = "Crystal Core",
-			SPECIES_PERK_DESC = "The Ethereal's heart will encase them in crystal should they die, returning them to life after a time - \
-				at the cost of a permanent brain trauma.",
+			SPECIES_PERK_NAME = "Кристаллическое ядро",
+			SPECIES_PERK_DESC = "В случае смерти сердце Этериэла заключает его в кристалл, возвращая к жизни через некоторое время — ценой перманентной травмы мозга.",
 		),
 		list(
 			SPECIES_PERK_TYPE = SPECIES_NEUTRAL_PERK,
 			SPECIES_PERK_ICON = "fist-raised",
-			SPECIES_PERK_NAME = "Elemental Attacker",
-			SPECIES_PERK_DESC = "Ethereals deal burn damage with their punches instead of brute.",
+			SPECIES_PERK_NAME = "Стихийный боец",
+			SPECIES_PERK_DESC = "Этериэлы наносят своими ударами кулаков урон ожогами вместо обычного физического урона.",
 		),
 		list(
 			SPECIES_PERK_TYPE = SPECIES_NEGATIVE_PERK,
 			SPECIES_PERK_ICON = "biohazard",
-			SPECIES_PERK_NAME = "Starving Artist",
-			SPECIES_PERK_DESC = "Ethereals take toxin damage while starving.",
+			SPECIES_PERK_NAME = "Голодающий художник",
+			SPECIES_PERK_DESC = "Этериэлы начинают получать урон от токсинов, когда уровень их энергии падает до критического голодания.",
 		),
 	)
 
@@ -322,8 +321,9 @@
 	)
 
 /datum/species/ethereal/lustrous/get_physical_attributes()
-	return "Lustrous are what remains of an Ethereal after freebasing esoteric drugs. \
-		They are pressure immune, virus immune, can see bluespace tears in reality, and have a really weird scream. They remain vulnerable to physical damage."
+	return "Сияющие — это то, что остаётся от Этериэла после злоупотребления эзотерическими наркотиками. \
+		Они невосприимчивы к давлению и вирусам, способны видеть блюспейс-разломы в реальности и издают крайне странный крик. \
+		При этом они остаются уязвимыми к обычному физическому урону."
 
 /datum/species/ethereal/lustrous/get_scream_sound(mob/living/carbon/human/ethereal)
 	return pick(

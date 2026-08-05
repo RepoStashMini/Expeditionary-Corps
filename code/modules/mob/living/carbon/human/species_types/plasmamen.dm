@@ -1,6 +1,6 @@
 /datum/species/plasmaman
-	name = "\improper Plasmaman"
-	plural_form = "Plasmamen"
+	name = "\improper Плазмамен"
+	plural_form = "Плазмамены"
 	id = SPECIES_PLASMAMAN
 	sexes = FALSE
 	meat = /obj/item/stack/sheet/mineral/plasma
@@ -79,31 +79,30 @@
 	)
 
 /datum/species/plasmaman/get_physical_attributes()
-	return "Plasmamen literally breathe and live plasma. They spontaneously combust on contact with oxygen, and besides all the quirks that go with that, \
-		they're very vulnerable to all kinds of physical damage due to their brittle structure."
+	return "Плазмомены в буквальном смысле живут и дышат плазмой. Они самовозгораются при малейшем контакте с кислородом, \
+		и помимо всех вытекающих из этого трудностей, они крайне уязвимы к любому физическому урону из-за своей хрупкой структуры."
 
 /datum/species/plasmaman/get_species_description()
-	return "Found on the Icemoon of Freyja, plasmamen consist of colonial \
-		fungal organisms which together form a sentient being. In human space, \
-		they're usually attached to skeletons to afford a human touch."
+	return "Обнаруженные на ледяной луне Фрейя, Плазмомены состоят из колониальных \
+		грибковых организмов, которые вместе образуют разумное существо. В человеческом космосе \
+		они обычно прикрепляются к скелетам, чтобы придать им более привычный людям вид."
 
 /datum/species/plasmaman/get_species_lore()
 	return list(
-		"A confusing species, plasmamen are truly \"a fungus among us\". \
-		What appears to be a singular being is actually a colony of millions of organisms \
-		surrounding a found (or provided) skeletal structure.",
+		"Крайне запутанный вид: Плазмомены — это буквально «грибы среди нас». \
+		То, что кажется единым живым существом, на самом деле является колонией из миллионов микроорганизмов, \
+		облепивших найденный (или предоставленный) человеческий скелет.",
 
-		"Originally discovered by NT when a researcher \
-		fell into an open tank of liquid plasma, the previously unnoticed fungal colony overtook the body creating \
-		the first \"true\" plasmaman. The process has since been streamlined via generous donations of convict corpses and plasmamen \
-		have been deployed en masse throughout NT to bolster the workforce.",
+		"Изначально они были обнаружены НаноТрейзен, когда один из исследователей случайно упал в открытый резервуар с жидкой плазмой. \
+		Ранее незамеченная грибковая колония полностью захватила тело, создав первого «истинного» Плазмолюда. С тех пор этот процесс \
+		был поставлен на поток благодаря щедрым пожертвованиям трупов заключённых, и Плазмомены начали массово внедряться на объекты НТ для усиления рабочей силы.",
 
-		"New to the galactic stage, plasmamen are a blank slate. \
-		Their appearance, generally regarded as \"ghoulish\", inspires a lot of apprehension in their crewmates. \
-		It might be the whole \"flammable purple skeleton\" thing.",
+		"Будучи новичками на галактической арене, Плазмомены представляют собой чистый лист. \
+		Их внешний вид, который обычно называют «упыриным», внушает немало опасений их коллегам по экипажу. \
+		Возможно, всё дело в концепции «пылающего фиолетового скелета».",
 
-		"The colonids that make up plasmamen require the plasma-rich atmosphere they evolved in. \
-		Their psuedo-nervous system runs with externalized electrical impulses that immediately ignite their plasma-based bodies when oxygen is present.",
+		"Микроорганизмы, из которых состоят Плазмомены, нуждаются в богатой плазмой атмосфере, в которой они эволюционировали. \
+		Их псевдонервная система работает за счёт внешних электрических импульсов, которые мгновенно воспламеняют их состоящие из плазмы тела при наличии кислорода."
 	)
 
 /datum/species/plasmaman/create_pref_unique_perks()
@@ -113,40 +112,39 @@
 		list(
 			SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
 			SPECIES_PERK_ICON = "user-shield",
-			SPECIES_PERK_NAME = "Protected",
-			SPECIES_PERK_DESC = "Plasmamen are immune to radiation, poisons, and most diseases.",
+			SPECIES_PERK_NAME = "Защищённость",
+			SPECIES_PERK_DESC = "Плазмолюды полностью невосприимчивы к радиации, ядам и большинству известных болезней.",
 		),
 		list(
 			SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
 			SPECIES_PERK_ICON = "bone",
-			SPECIES_PERK_NAME = "Wound Resistance",
-			SPECIES_PERK_DESC = "Plasmamen have higher tolerance for damage that would wound others.",
+			SPECIES_PERK_NAME = "Стойкость к ранениям",
+			SPECIES_PERK_DESC = "Плазмолюды обладают повышенной устойчивостью к физическому урону, который нанёс бы глубокие раны другим расам.",
 		),
 		list(
 			SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
 			SPECIES_PERK_ICON = "wind",
-			SPECIES_PERK_NAME = "Plasma Healing",
-			SPECIES_PERK_DESC = "Plasmamen can heal wounds by consuming plasma.",
+			SPECIES_PERK_NAME = "Плазменное исцеление",
+			SPECIES_PERK_DESC = "Плазмолюды могут залечивать свои повреждения и раны, поглощая чистую плазму.",
 		),
 		list(
 			SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
 			SPECIES_PERK_ICON = "hard-hat",
-			SPECIES_PERK_NAME = "Protective Helmet",
-			SPECIES_PERK_DESC = "Plasmamen's helmets provide them shielding from the flashes of welding, as well as an inbuilt flashlight.",
+			SPECIES_PERK_NAME = "Защитный шлем",
+			SPECIES_PERK_DESC = "Шлем Плазмолюда защищает глаза от вспышек сварки, а также имеет встроенный налобный фонарик.",
 		),
 		list(
 			SPECIES_PERK_TYPE = SPECIES_NEGATIVE_PERK,
 			SPECIES_PERK_ICON = "fire",
-			SPECIES_PERK_NAME = "Living Torch",
-			SPECIES_PERK_DESC = "Plasmamen instantly ignite when their body makes contact with oxygen.",
+			SPECIES_PERK_NAME = "Живой факел",
+			SPECIES_PERK_DESC = "Плазмолюды мгновенно воспламеняются, как только их тело вступает в контакт с кислородом.",
 		),
 		list(
 			SPECIES_PERK_TYPE = SPECIES_NEGATIVE_PERK,
 			SPECIES_PERK_ICON = "briefcase-medical",
-			SPECIES_PERK_NAME = "Complex Biology",
-			SPECIES_PERK_DESC = "Plasmamen take specialized medical knowledge to be \
-				treated. Do not expect speedy revival, if you are lucky enough to get \
-				one at all.",
+			SPECIES_PERK_NAME = "Сложная биология",
+			SPECIES_PERK_DESC = "Для лечения Плазмолюдов требуются специализированные медицинские знания. \
+				Не рассчитывайте на быстрое клонирование или реанимацию, если вам вообще повезёт вернуться к жизни.",
 		),
 	)
 

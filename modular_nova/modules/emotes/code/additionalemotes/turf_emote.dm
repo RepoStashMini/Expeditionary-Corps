@@ -33,9 +33,6 @@
 		if(isinsect(user) || HAS_TRAIT(user, TRAIT_WEBBING_ASPECT))
 			user.allowed_turfs += "web"
 
-		if(isaquatic(user) || isakula(user) || HAS_TRAIT(user, TRAIT_WATER_ASPECT))
-			user.allowed_turfs += "water"
-
 		if(ispodperson(user) || ispodweak(user) || HAS_TRAIT(user, TRAIT_FLORAL_ASPECT))
 			user.allowed_turfs += "vines"
 
@@ -86,7 +83,7 @@
 
 		var/list/colorable = list("dust", "slime", "vines", "footprint", "pawprint", "hoofprint", "clawprint")
 		if(current_turf in colorable) //These turfs are simply colored after their owner's primary
-			if(ishumanbasic(user) || ishumanoid(user))
+			if(ishumanbasic(user))
 				user.owned_turf.color = human_user.dna.features[FEATURE_SKIN_COLOR]
 			else
 				user.owned_turf.color = human_user.dna.features[FEATURE_MUTANT_COLOR]

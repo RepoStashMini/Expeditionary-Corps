@@ -1,6 +1,6 @@
 ///Spirit mob that lacks legs but still roams the station as part of the unliving.
 /datum/species/spirit
-	name = "Spirit"
+	name = "Дух"
 	id = SPECIES_SPIRIT
 	inherent_traits = list(
 		TRAIT_GENELESS,
@@ -46,17 +46,17 @@
 	return ..()
 
 /datum/species/spirit/get_physical_attributes()
-	return "Spirits are the spiritual remains of long-passed entities. They lack legs, can fly, but still eat, breathe, hear and see."
+	return "Духи — это призрачные останки давно ушедших существ. У них нет ног, они умеют летать, но всё ещё едят, дышат, слышат и видят."
 
 /datum/species/spirit/get_species_description()
-	return "Spirits are spirits of long-dead creatures whom, for one reason or another, still roam around."
+	return "Духи — это призраки давно умерших созданий, которые по той или иной причине всё ещё блуждают по миру."
 
 /datum/species/spirit/get_species_lore()
 	return list(
-		"Spirits are the non-physical remains that linger onto their mortal coil. \
-		They still need their protein and organs to keep themselves \"alive\", \
-		which leads to many of them still believing they are still part of the living, \
-		whether or not they are is a very open-ended debate between philosophers.",
+		"Духи представляют собой нематериальные останки, которые цепляются за свою смертную оболочку. \
+		Им всё ещё требуются белки и органы, чтобы поддерживать себя «живыми», \
+		из-за чего многие из них до сих пор верят, что они всё ещё часть мира живых. \
+		Является ли это правдой — до сих пор открытый предмет спора среди философов.",
 	)
 
 /datum/species/spirit/create_pref_unique_perks()
@@ -65,18 +65,19 @@
 	to_add += list(list(
 		SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
 		SPECIES_PERK_ICON = "body",
-		SPECIES_PERK_NAME = "Leg-less",
-		SPECIES_PERK_DESC = "Ghosts lack legs and float, preventing you from falling into holes in the ground.",
+		SPECIES_PERK_NAME = "Безногий",
+		SPECIES_PERK_DESC = "У духов нет ног, и они парят над землёй, что не позволяет вам падать в дыры и пропасти на поверхности.",
 	))
 
 	to_add += list(list(
 		SPECIES_PERK_TYPE = SPECIES_NEGATIVE_PERK,
 		SPECIES_PERK_ICON = "shoe-prints",
-		SPECIES_PERK_NAME = "No Feet",
-		SPECIES_PERK_DESC = "You lack feet, therefore the ability to wear any shoes!",
+		SPECIES_PERK_NAME = "Без стоп",
+		SPECIES_PERK_DESC = "У вас отсутствуют стопы, а вместе с ними и возможность носить какую-либо обувь!",
 	))
 
 	return to_add
+
 
 /**
  * Ghost subtype
@@ -85,7 +86,7 @@
  * is not something that is generally fun to play against.
  */
 /datum/species/spirit/ghost
-	name = "Ghost"
+	name = "Призрак"
 	id = SPECIES_GHOST
 	inherent_traits = list(
 		TRAIT_GENELESS,
@@ -115,16 +116,16 @@
 	var/datum/action/innate/toggle_passthrough/passthrough_ability
 
 /datum/species/spirit/ghost/get_physical_attributes()
-	return "Ghosts are the spiritual remains of long-passed entities. They lack legs, can fly, can choose at will to become incorporeal, \
-		but still eat, breathe, hear and see."
+	return "Призраки — это духовные останки давно ушедших существ. У них нет ног, они умеют летать, могут по своему желанию становиться нематериальными, \
+		но всё ещё едят, дышат, слышат и видят."
 
 /datum/species/spirit/ghost/get_species_lore()
 	return list(
-		"Ghosts are one of the spookiest creatures known in the galaxy. \
-		While they still need their protein to sustain themselves, they are able to control their own bodies, \
-		going through walls and getting rid of all their posessions at will. \
-		Most knowledge known about them is kept secret by Nanotrasen's top Chaplains, who are keen \
-		to keep it private.",
+		"Призраки — одни из самых жутких существ, известных в галактике. \
+		Хотя им всё ещё требуются белки для поддержания сил, они способны полностью контролировать свои тела, \
+		проходя сквозь стены и избавляясь от всех своих пожитков по первому желанию. \
+		Большая часть знаний о них хранится в секрете верховными Капелланами НаноТрейзен, которые стремятся \
+		не предавать эту информацию огласке.",
 	)
 
 /datum/species/spirit/ghost/on_species_gain(mob/living/carbon/human/new_ghost, datum/species/old_species, pref_load, regenerate_icons)
@@ -147,9 +148,9 @@
 	to_add += list(list(
 		SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
 		SPECIES_PERK_ICON = "ghost",
-		SPECIES_PERK_NAME = "Incorporeal",
-		SPECIES_PERK_DESC = "Ghost are able to control their body to the extent where you can willingly make yourself able \
-			to phase through anything, including your own equipment.",
+		SPECIES_PERK_NAME = "Нематериальность",
+		SPECIES_PERK_DESC = "Призраки способны контролировать своё тело до такой степени, что могут по собственному желанию \
+			проходить сквозь любые препятствия, включая собственное снаряжение.",
 	))
 
 	return to_add

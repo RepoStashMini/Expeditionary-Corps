@@ -1,4 +1,4 @@
-// THIS IS A NOVA SECTOR UI FILE
+// THIS IS A NOVA SECTOR UI FILE уже нет
 
 export type ExaminePanelData = {
   // Danger, do not use
@@ -10,11 +10,6 @@ export type ExaminePanelData = {
   // Descriptions
   flavor_text: string;
   ooc_notes: string;
-  custom_species: string;
-  custom_species_lore: string;
-  // Descriptions, but requiring manual input to see
-  flavor_text_nsfw: string;
-  ooc_notes_nsfw: string;
   // Antaggery
   ideal_antag_optin_status: string;
   current_antag_optin_status: string;

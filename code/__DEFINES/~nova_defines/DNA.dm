@@ -2,8 +2,6 @@
 #define EXAMINE_DNA_HEADSHOT "headshot"
 /// Examine Panel flavor text
 #define EXAMINE_DNA_FLAVOR_TEXT "flavor_text"
-/// Examine Panel NSFW flavor text—requires you to click a tab to see
-#define EXAMINE_DNA_FLAVOR_TEXT_NSFW "flavor_text_nsfw"
 /// Examine Panel OOC notes
 #define EXAMINE_DNA_OOC_NOTES "ooc_notes"
 
@@ -103,7 +101,7 @@
 
 //Species IDs. If you wanna look at tg's species ID defines, go look in the *other* DNA.dm file
 #define SPECIES_AKULA "akula"
-#define SPECIES_AQUATIC "aquatic"
+#define SPECIES_AQUATIC "shark"
 #define SPECIES_DWARF "dwarf"
 #define SPECIES_HUMANOID "humanoid"
 #define SPECIES_INSECT "insect"
@@ -113,7 +111,6 @@
 #define SPECIES_SLIMESTART "slimeperson"	//There's already SPECIES_SLIMEPERSON in tg
 #define SPECIES_SKRELL "skrell"
 #define SPECIES_TAJARAN "tajaran"
-#define SPECIES_UNATHI "unathi"
 #define SPECIES_VOX "vox"
 #define SPECIES_VOX_PRIMALIS "vox_primalis"
 #define SPECIES_VULP "vulpkanin"
@@ -122,7 +119,6 @@
 #define SPECIES_TESHARI "teshari"
 #define SPECIES_HEMOPHAGE "hemophage"
 #define SPECIES_FELINE_PRIMITIVE "primitive_felinid"
-#define SPECIES_ABDUCTORWEAK "abductorweak"
 #define SPECIES_GOLEMWEAK "golemweak"
 #define SPECIES_KOBOLD "kobold"
 #define SPECIES_KOBOLD_PRIMITIVE "lizard_monkey"

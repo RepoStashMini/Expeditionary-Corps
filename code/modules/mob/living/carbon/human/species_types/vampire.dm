@@ -5,7 +5,7 @@
 #define VAMP_DRAIN_AMOUNT 50
 
 /datum/species/human/vampire
-	name = "Vampire"
+	name = "Вампир"
 	id = SPECIES_VAMPIRE
 	examine_limb_id = SPECIES_HUMAN
 	inherent_traits = list(
@@ -80,17 +80,17 @@
 		MODIFY_ATTACK_FORCE_MULTIPLIER(attack_modifiers, 2)
 
 /datum/species/human/vampire/get_physical_attributes()
-	return "Vampires are afflicted with the Thirst, needing to sate it by draining the blood out of another living creature. However, they do not need to breathe or eat normally. \
-		They will instantly turn into dust if they run out of blood or enter a holy area. However, coffins stabilize and heal them, and they can transform into bats!"
+	return "Вампиры поражены Жаждой, которую они вынуждены утолять, высасывая кровь из других живых существ. При этом они не нуждаются в обычном дыхании или пище. \
+		Они мгновенно превращаются в прах, если у них полностью закончится кровь или если они вступят на святую землю. Однако гробы стабилизируют и исцеляют их, а ещё они умеют превращаться в летучих мышей!"
 
 /datum/species/human/vampire/get_species_description()
-	return "A classy Vampire! They descend upon Space Station Thirteen Every year to spook the crew! \"Bleeg!!\""
+	return "Первоклассный Вампир! Они слетаются на Космическую Станцию Тринадцать каждый год, чтобы нагнать жути на экипаж! «Бли-и-иг!!»"
 
 /datum/species/human/vampire/get_species_lore()
 	return list(
-		"Vampires are unholy beings blessed and cursed with The Thirst. \
-		The Thirst requires them to feast on blood to stay alive, and in return it gives them many bonuses. \
-		Because of this, Vampires have split into two clans, one that embraces their powers as a blessing and one that rejects it.",
+		"Вампиры — нечестивые существа, благословенные и одновременно проклятые Жаждой. \
+		Жажда заставляет их пировать кровью ради поддержания жизни, а взамен дарует множество бонусов. \
+		Из-за этого Вампиры разделились на два клана: один принимает свои силы как благословение, а другой отвергает их.",
 	)
 
 /datum/species/human/vampire/create_pref_unique_perks()
@@ -100,22 +100,22 @@
 		list(
 			SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
 			SPECIES_PERK_ICON = "bed",
-			SPECIES_PERK_NAME = "Coffin Brooding",
-			SPECIES_PERK_DESC = "Vampires can delay The Thirst and heal by resting in a coffin. So THAT'S why they do that!",
+			SPECIES_PERK_NAME = "Раздумья в гробу",
+			SPECIES_PERK_DESC = "Вампиры могут временно отсрочить Жажду и исцелить свои раны, отдыхая в гробу. Так вот ПОЧЕМУ они это делают!",
 		),
 		list(
 			SPECIES_PERK_TYPE = SPECIES_NEUTRAL_PERK,
 			SPECIES_PERK_ICON = "book-dead",
-			SPECIES_PERK_NAME = "Vampire Clans",
-			SPECIES_PERK_DESC = "Vampires belong to one of two clans - the Inoculated, and the Outcast. The Outcast \
-				don't follow many vampiric traditions, while the Inoculated are given unique names and flavor.",
+			SPECIES_PERK_NAME = "Вампирские кланы",
+			SPECIES_PERK_DESC = "Вампиры принадлежат к одному из двух кланов — Привитые (Inoculated) и Изгои (Outcast). Изгои \
+				игнорируют большинство вампирских традиций, в то время как Привитые получают уникальные имена и лорное описание.",
 		),
 		list(
 			SPECIES_PERK_TYPE = SPECIES_NEGATIVE_PERK,
 			SPECIES_PERK_ICON = "cross",
-			SPECIES_PERK_NAME = "Against God and Nature",
-			SPECIES_PERK_DESC = "Almost all higher powers are disgusted by the existence of \
-				Vampires, and entering the Chapel is essentially suicide. Do not do it!",
+			SPECIES_PERK_NAME = "Против Бога и природы",
+			SPECIES_PERK_DESC = "Почти все высшие силы испытывают отвращение к самому факту существования \
+				Вампиров, поэтому визит в Церковь для них — это буквально самоубийство. Не делайте этого!",
 		),
 	)
 
@@ -128,12 +128,12 @@
 	to_add += list(list(
 		SPECIES_PERK_TYPE = SPECIES_NEGATIVE_PERK,
 		SPECIES_PERK_ICON = "tint",
-		SPECIES_PERK_NAME = "The Thirst",
-		SPECIES_PERK_DESC = "In place of eating, Vampires suffer from The Thirst. \
-			Thirst of what? Blood! Their tongue allows them to grab people and drink \
-			their blood, and they will die if they run out. As a note, it doesn't \
-			matter whose blood you drink, it will all be converted into your blood \
-			type when consumed.",
+		SPECIES_PERK_NAME = "Жажда",
+		SPECIES_PERK_DESC = "Вместо потребности в еде Вампиры страдают от Жажды. \
+			Жажды чего? Крови! Их язык позволяет им хватать существ и пить \
+			их кровь, и они погибнут, если она полностью иссякнет. К слову, \
+			абсолютно неважно, чью именно кровь вы пьёте — при поглощении она \
+			в любом случае будет преобразована в вашу собственную группу крови.",
 	))
 
 	return to_add
@@ -145,14 +145,15 @@
 	to_add += list(list(
 		SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
 		SPECIES_PERK_ICON = "skull",
-		SPECIES_PERK_NAME = "Minor Undead",
-		SPECIES_PERK_DESC = "[name] are minor undead. \
-			Minor undead enjoy some of the perks of being dead, like \
-			not needing to breathe or eat, but do not get many of the \
-			environmental immunities involved with being fully undead.",
+		SPECIES_PERK_NAME = "Низшая нежить",
+		SPECIES_PERK_DESC = "[name] относятся к низшей нежити. \
+			Низшая нежить пользуется некоторыми преимуществами мертвецов — например, \
+			отсутствием необходимости дышать или есть, но не получает большинства \
+			иммунитетов к окружающей среде, которые есть у полноценной нежити.",
 	))
 
 	return to_add
+
 
 /obj/item/organ/tongue/vampire
 	name = "vampire teeth"

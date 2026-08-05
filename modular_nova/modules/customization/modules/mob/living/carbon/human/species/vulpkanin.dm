@@ -1,5 +1,6 @@
 /datum/species/vulpkanin
-	name = "Vulpkanin"
+	name = "Вульпканин"
+	plural_form = "Вульпканины"
 	id = SPECIES_VULP
 	inherent_traits = list(
 		TRAIT_ADVANCEDTOOLUSER,
@@ -11,6 +12,9 @@
 
 	mutanttongue = /obj/item/organ/tongue/vulpkanin
 	species_language_holder = /datum/language_holder/vulpkanin
+
+	coldmod = 0.6
+	heatmod = 1.3
 	payday_modifier = 1.0
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_MAGIC | MIRROR_PRIDE | ERT_SPAWN | RACE_SWAP | SLIME_EXTRACT
 	examine_limb_id = SPECIES_MAMMAL
@@ -91,3 +95,45 @@
 	vulp.dna.mutant_bodyparts[FEATURE_EARS] = build_mutant_part("Wolf", list(main_color, second_color, second_color))
 	regenerate_organs(vulp, src, visual_only = TRUE)
 	vulp.update_body(TRUE)
+
+/datum/species/vulpkanin/get_physical_attributes()
+	return "Вульпканины имеют плотный который мех защищает от холода, \
+		а острые клыки и когти дают небольшое преимущество в рукопашных стычках."
+
+/datum/species/vulpkanin/get_species_description()
+	return "Хитрые, преданные стае и высокотехнологичные Вульпканины родом с засушливой планеты Ауриум. \
+		Их общество прошло путь от разрозненных кочевых кланов до развитой звёздной цивилизации, \
+		которая теперь активно сотрудничает с НаноТрейзен в сферах инженерии и логистики."
+
+/datum/species/vulpkanin/get_species_lore()
+	return list(
+		"Родная планета Вульпканинов — Ауриум, мир бескрайних пустынь и каньонов, где выживание зависело от слаженной работы всей стаи.",
+
+		"В отличие от многих других рас, Вульпканины вышли в космос самостоятельно, используя собственные технологии, \
+		поэтому они общаются с людьми как равные партнёры, а не как дешёвая рабочая сила.",
+
+		"Культура Вульпканинов глубоко укоренена в понятии «Стаи» (клана). Одиночество для них — худшее наказание, \
+		поэтому на станциях они стараются держаться поближе к сородичам или верным друзьям.",
+
+		"Чуткий слух Вульпканинов — это и дар, и проклятие. Они могут услышать шаги за углом, но близкий взрыв \
+		или оглушающий крик способны полностью вывести их из строя на долгое время.",
+
+		"Среди Вульпканинов высоко ценится прагматизм и техническая смекалка. Из них выходят превосходные \
+		атмосферные техники, инженеры и квартирмейстеры, любящие копаться в механизмах.",
+
+		"Многие Вульпканины сохранили привычку метить свою территорию или использовать язык тела — \
+		виляние хвостом или прижатые уши могут сказать о них больше, чем любые слова.",
+
+		"Отношения между Вульпами и Синдикатом неоднозначны: некоторые независимые стаи с Ауриума \
+		охотно нанимаются к противникам НаноТрейзен, если это сулит выгоду для их семьи."
+	)
+
+/datum/species/akula/create_pref_unique_perks()
+	var/list/perks = list()
+	perks += list(list(
+		SPECIES_PERK_TYPE = SPECIES_NEGATIVE_PERK,
+		SPECIES_PERK_ICON = "assistive-listening-systems",
+		SPECIES_PERK_NAME = "Чуткие уши",
+		SPECIES_PERK_DESC = "Большие ушные раковины делают вас в два раза более уязвимым к оглушению от взрывов, флешек и светошумовых гранат.",
+	))
+	return perks

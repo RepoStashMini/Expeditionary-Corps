@@ -20,17 +20,11 @@
 /mob/living/carbon/human/species/synth
 	race = /datum/species/synthetic
 
-/mob/living/carbon/human/species/mammal
-	race = /datum/species/mammal
-
 /mob/living/carbon/human/species/vulpkanin
 	race = /datum/species/vulpkanin
 
 /mob/living/carbon/human/species/tajaran
 	race = /datum/species/tajaran
-
-/mob/living/carbon/human/species/unathi
-	race = /datum/species/unathi
 
 /mob/living/carbon/human/species/podweak
 	race = /datum/species/pod/podweak
@@ -55,9 +49,6 @@
 
 /mob/living/carbon/human/species/skrell
 	race = /datum/species/skrell
-
-/mob/living/carbon/human/species/abductorweak
-	race = /datum/species/abductor/abductorweak
 
 /mob/living/carbon/human/species/golem/weak
 	race = /datum/species/golem/weak

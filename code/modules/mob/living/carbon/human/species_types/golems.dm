@@ -1,6 +1,6 @@
 /// Animated beings of stone. They have increased defenses, and do not need to breathe. They must eat minerals to live, which give additional buffs.
 /datum/species/golem
-	name = "Golem"
+	name = "Голем"
 	id = SPECIES_GOLEM
 	inherent_traits = list(
 		TRAIT_GENELESS,
@@ -255,17 +255,17 @@
 		source.death()
 
 /datum/species/golem/get_physical_attributes()
-	return "Golems are hardy creatures made out of stone, which are thus naturally resistant to many dangers, including asphyxiation, fire, radiation, electricity, and viruses.\
-		They gain special abilities depending on the type of material consumed, but they need to consume material to keep their body animated."
+	return "Големы — выносливые существа из камня, обладающие естественной защитой от многих опасностей, включая удушье, огонь, радиацию, электричество и вирусы.\
+		Они получают уникальные способности в зависимости от типа поглощённого материала, но им необходимо регулярно питаться рудой, чтобы поддерживать жизнь в своём теле."
 
 /datum/species/golem/get_species_description()
-	return "Golems are lithoid creatures who eat rocks and minerals to survive and adapt."
+	return "Големы — литоидные создания, которые питаются горными породами и минералами для выживания и адаптации."
 
 /datum/species/golem/get_species_lore()
 	return list(
-		"While Golems have long been commonly found on frontier worlds, peacefully mining and otherwise living in harmony with the environment, \
-		it is believed they were originally constructed in Nanotrasen laboratories as a form of cheap labor. Whatever happened up to this point is unknown, \
-		but they have since gained freedom and are now a rare sight in the galaxy.",
+		"Хотя Големов уже давно можно встретить на фронтирных мирах, где они мирно добывают руду и живут в гармонии с природой, \
+		считается, что изначально они были созданы в лабораториях НаноТрейзен как дешёвая рабочая сила. Что произошло после этого — неизвестно, \
+		но с тех пор они обрели свободу и теперь стали редким зрелищем в галактике.",
 	)
 
 /datum/species/golem/create_pref_unique_perks()
@@ -274,33 +274,33 @@
 	to_add += list(list(
 		SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
 		SPECIES_PERK_ICON = "user-shield",
-		SPECIES_PERK_NAME = "Lithoid",
-		SPECIES_PERK_DESC = "Lithoids are creatures made out of minerals instead of \
-			blood and flesh. They are strong and immune to many environmental and personal dangers \
-			such as fire, radiation, lack of air, lava, viruses, and dismemberment.",
+		SPECIES_PERK_NAME = "Литоид",
+		SPECIES_PERK_DESC = "Литоиды — это существа, созданные из минералов вместо \
+			крови и плоти. Они сильны и невосприимчивы ко многим опасностям окружающей среды и физическим угрозам, \
+			таким как огонь, радиация, отсутствие воздуха, лава, вирусы и расчленение.",
 	))
 
 	to_add += list(list(
 		SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
 		SPECIES_PERK_ICON = "gem",
-		SPECIES_PERK_NAME = "Metamorphic Rock",
-		SPECIES_PERK_DESC = "Consuming minerals can grant Lithoids temporary benefits based on the type consumed.",
+		SPECIES_PERK_NAME = "Метаморфическая порода",
+		SPECIES_PERK_DESC = "Поглощение минералов может дать Литоидам временные бонусы в зависимости от типа съеденной руды.",
 	))
 
 	to_add += list(list(
 		SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
 		SPECIES_PERK_ICON = "tools",
-		SPECIES_PERK_NAME = "Natural Miners",
-		SPECIES_PERK_DESC = "Golems can see dimly in the dark, sense minerals, break boulders, and mine stone with their bare hands. \
-			They can even smelt ores in an internal furnace, if their surrounding environment is hot enough.",
+		SPECIES_PERK_NAME = "Прирождённые шахтёры",
+		SPECIES_PERK_DESC = "Големы могут смутно видеть в темноте, чуять минералы, разбивать валуны и добывать руду голыми руками. \
+			Они могут даже плавить руду во внутренней печи, если окружающая среда достаточно горячая.",
 	))
 
 	to_add += list(list(
 		SPECIES_PERK_TYPE = SPECIES_NEGATIVE_PERK,
 		SPECIES_PERK_ICON = "bolt",
-		SPECIES_PERK_NAME = "Anima",
-		SPECIES_PERK_DESC = "Maintaining the force animating stone is taxing. Lithoids must eat frequently \
-			in order to avoid returning to inanimate statues, and only derive nutrition from eating minerals.",
+		SPECIES_PERK_NAME = "Анима",
+		SPECIES_PERK_DESC = "Поддержание силы, оживляющей камень, требует много энергии. Литоиды должны часто есть, \
+			чтобы не превратиться обратно в неодушевлённые статуи, а питательные вещества они получают исключительно от поедания минералов.",
 	))
 
 	return to_add

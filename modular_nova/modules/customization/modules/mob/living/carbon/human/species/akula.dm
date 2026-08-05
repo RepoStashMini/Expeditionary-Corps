@@ -6,8 +6,8 @@
 #define WETSTACK_THRESHOLD 3
 
 /datum/species/akula
-	name = "Akula"
-	plural_form = "Akulae"
+	name = "Азулиан"
+	plural_form = "Азулиане"
 	id = SPECIES_AKULA
 	offset_features = list(
 		OFFSET_GLASSES = list(0, 1),
@@ -20,7 +20,7 @@
 	mutantheart = /obj/item/organ/heart/carp/akula
 	mutantlungs = /obj/item/organ/lungs/carp/akula
 	mutanttongue = /obj/item/organ/tongue/carp/akula
-	mutanteyes = /obj/item/organ/eyes/akula
+//	mutanteyes = /obj/item/organ/eyes/akula
 	meat = /obj/item/food/fishmeat/human
 	inherent_traits = list(
 		TRAIT_ADVANCEDTOOLUSER,
@@ -34,118 +34,150 @@
 	payday_modifier = 1.0
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_MAGIC | MIRROR_PRIDE | ERT_SPAWN | RACE_SWAP | SLIME_EXTRACT
 	bodypart_overrides = list(
-		BODY_ZONE_HEAD = /obj/item/bodypart/head/mutant/akula,
-		BODY_ZONE_CHEST = /obj/item/bodypart/chest/mutant/akula,
-		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/mutant/akula,
-		BODY_ZONE_R_ARM = /obj/item/bodypart/arm/right/mutant/akula,
-		BODY_ZONE_L_LEG = /obj/item/bodypart/leg/left/mutant/akula,
-		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/mutant/akula,
+		BODY_ZONE_HEAD = /obj/item/bodypart/head/mutant/aquatic,
+		BODY_ZONE_CHEST = /obj/item/bodypart/chest/mutant/aquatic,
+		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/mutant/aquatic,
+		BODY_ZONE_R_ARM = /obj/item/bodypart/arm/right/mutant/aquatic,
+		BODY_ZONE_L_LEG = /obj/item/bodypart/leg/left/mutant/aquatic,
+		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/mutant/aquatic,
 	)
 	/// This variable stores the timer datum which appears if the mob becomes wet
 	var/dry_up_timer = TIMER_ID_NULL
 
 /datum/species/akula/get_default_mutant_bodyparts()
 	return list(
-		FEATURE_EARS = MUTPART_BLUEPRINT(SPRITE_ACCESSORY_NONE, is_randomizable = FALSE),
-		FEATURE_TAIL = MUTPART_BLUEPRINT("Akula", is_randomizable = TRUE),
+		FEATURE_TAIL = MUTPART_BLUEPRINT("Shark", is_randomizable = TRUE),
+		FEATURE_SNOUT = MUTPART_BLUEPRINT("Shark", is_randomizable = TRUE),
+		FEATURE_HORNS = MUTPART_BLUEPRINT(SPRITE_ACCESSORY_NONE, is_randomizable = FALSE),
+		FEATURE_EARS = MUTPART_BLUEPRINT("Hammerhead", is_randomizable = TRUE),
 		FEATURE_LEGS = MUTPART_BLUEPRINT(NORMAL_LEGS, is_randomizable = FALSE, is_feature = TRUE),
+		FEATURE_WINGS = MUTPART_BLUEPRINT(SPRITE_ACCESSORY_NONE, is_randomizable = FALSE),
 	)
+
+/datum/species/akula/get_physical_attributes()
+	return "Акулы — амфибии с мощными челюстями и скользкой кожей, помогающей вырываться из захватов. \
+		Их жабры требуют постоянной влаги для дыхания, а природа кочевников заставляет всегда быть в движении. \
+		При этом они прирождённые пловцы, способные легко маневрировать даже в невесомости."
+
 
 /datum/species/akula/get_species_description()
-	return placeholder_description
+	return "Волевые и преданные монархии Акулы построили огромную космическую империю — Королевство Агуркррал. \
+		Выбравшись из глубин родных океанов к звёздам, эти коллективисты и оппортунисты \
+		создали сильное государство, способное на равных соперничать с Федерацией Сол."
 
 /datum/species/akula/get_species_lore()
-	return list("The Azuleans, known as 'Akulas' or 'Akulans' to humans, are a strong-willed and monarchist culture. A vast nation, the Kingdom of Agurkrral has achieved its status largely by sheer tenacity; Azuleans forcing themselves upwards from the depths of their home seas all the way to a monarchy that even dwarfs the Sol Federation. They are known to be an expansionist culture, collectivist opportunists that are driven by history and culture to push further, and to push onward. To keep moving, or to suffocate and stagnate.",
-	"Beginning their prehistory with total defeat of another intelligent species set to keep them in their waters forever, the Azuleans have forged themselves into a pioneering people willing to exploit even the most hostile lands; and turn foreign places, flora and fauna, and even people to their advantage. New colonies are being terraformed into 'Agurkrral-A-Likes' every day, strange bioengineered creatures released into the wilds and massive treatment machines being ran in the waters to accomodate the new biosphere. Even some foreign citizens have been forcibly turned into Azuleans through genemodding, before having their genes locked and unable to be altered by anyone else.",
-	"Their drive for constant expansion and 'the next great thing' has made the Kingdom a divided one; a culture split in two. Generations of Azuleans are separated not by age-based cohorts, but by distance; the 'Near' generations growing up in the Old Principalities, and the 'Far' generations growing up in the New Principalities.",
-	"The Old Principalities, coreward around their Homeworld, are a burgeoning place slowly falling victim to stagnation. The core worlds still cling to ancient traditions, ceremonies and expectation; old aristocratic houses, tracing their power from ancient ancestors placed to protect and shepherd their assigned lands, still thrive; and the King still rules over many systems of old. Constant reforms and false shake-ups of the status quo demand more and more. Longer bouts of service to achieve citizenship, reformation camps to 'iron out' those with physical and mental defects, and high reliance on exams, education, and pomp to create a hierarchy within its society.",
-	"The New Principalities, created and commandeered by edgerunning 'border princes' dwelling around the furthest reaches of the Kingdom, embody the Azulean spirit of opportunism and adventurism. Warlord-style nobles reign free, able to outswim any checks meant to control their power and influence. A laissez-faire approach is taken here, where anyone can do anything to become somebody; ambition and self-evolution valued far more than any birthright. Sprawling casino cities, pirate ports, and even luxurious resorts are known to be built up overnight, anyone being able to make money and become wealthy and even command naval ships on charisma and strength alone; fear being the second state currency right behind credits. Even some SolFed citizens are known to come here and profit as mercenaries, investors, gamblers, or even 'border princes.'",
-	"These generations split apart by distance are known for their animosity towards the other. To those in the New Principalities, their coreward cousins have lost the 'Azulean spirit;' rotting apart in their palaces, sitting in waters choked with ennui. Their forever expansion into the frontier colonies, their use of every useful material and lifeform is what they believe their Kingdom is fueled by. But to those in the Old Principalities, their edgeward descendants have lost their minds. They believe the spiritual and societal importance of their Homeworld has fallen on deaf ears, and the lackadaisical attitude about the core mechanisms and noble structures holding the Kingdom together has become nothing short of infuriating. It is the belief of many high-ranking members of the Monarchy that the ongoing terraforming processes in the frontiers are proof of the arrogance of the 'border princes' controlling them; each and every world made in the image of a planet the King himself is meant to protect.",
-	"Yet, despite their differences, all Agurkrral citizens swim freely in their kingdom's waters. Even the most controlling border princes, even those in the Old Principalities working the slave trade, know better than to openly erode a citizen's right to life, property, and speech. Any alien species can become an Agurkrral citizen, and even non-citizens enjoy the right to life, with executions outright banned. The aristocracy remains well-educated, even the edgerunner warlords of the New Principalities, and the Kingdom as a whole enjoys its status as a nation that's now a true rival to Sol. Larger, more populated, and better developed; though, having to 'integrate' Solarian technologies, goods, and peoples to fully succeed. The Azuleans are even known as an environmentally-focused people; although they hold no care for lands they cannot make use of, modern nobles are still in charge of maintaining the biosphere of lands they control, to allow their strangely engineered flora and fauna to thrive, and for the people to have healthy and clean waters to live in.",
+	return list(
+		"История и культура Акул обязывают их вечно двигаться вперёд. Для них остановиться — значит погибнуть.",
+
+		"Ещё в предыстории Акулы полностью разгромили враждебный вид, пытавшийся навсегда запереть их в океанах. \
+		Этот триумф превратил их в экспансионистов, готовых терраформировать любые враждебные миры под свои нужды.",
+
+		"Постоянное расширение разделило Королевство на два лагеря. Акулы разделены не по возрасту, а по расстоянию: \
+		«Ближние» поколения растут в консервативных Старых Княжествах, а «Дальние» — во фронтирных Новых Княжествах.",
+
+		"В Старых Княжествах ядра процветает аристократия, строго чтущая древние традиции и власть Короля. \
+		Здесь ценится образование, выслуга лет для получения гражданства и помпезная общественная иерархия.",
+
+		"Новые Княжества на окраинах контролируются вольными пограничными принцами-варлордами. \
+		В этих краях амбиции важнее происхождения, а города-казино и пиратские порты могут вырасти за одну ночь.",
+
+		"Поколения Акул недолюбливают друг друга. Окраинные считают кузенов из ядра задыхающимися от скуки в своих дворцах. \
+		Аристократы же уверены, что бунтари с фронтира сошли с ума и растеряли истинный акуланский дух.",
+
+		"Несмотря на разногласия, все граждане Агуркррала равны перед законом, а смертная казнь на их территориях запрещена. \
+		Акулы бережно относятся к экологии своих водных миров, поддерживая чистоту биосферы для будущих поколений.",
 	)
+
+
 
 /datum/species/akula/create_pref_unique_perks()
 	var/list/perks = list()
 	perks += list(list(
 		SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
 		SPECIES_PERK_ICON = FA_ICON_TOOTH,
-		SPECIES_PERK_NAME = "Big Bites",
-		SPECIES_PERK_DESC = "Instead of throwing punches, you use your sharp teeth to bite for more damage."
+		SPECIES_PERK_NAME = "Мощный укус",
+		SPECIES_PERK_DESC = "Вместо того чтобы наносить удары кулаками, вы используете свои острые зубы, нанося укусами повышенный урон."
 	))
 	perks += list(list(
 		SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
 		SPECIES_PERK_ICON = FA_ICON_PERSON_WALKING,
-		SPECIES_PERK_NAME = "Space Walking",
-		SPECIES_PERK_DESC = "You can move around in zero-gravity environments, just like your ancestors."
+		SPECIES_PERK_NAME = "Космическая ходьба",
+		SPECIES_PERK_DESC = "Вы можете свободно передвигаться в условиях нулевой гравитации, прямо как ваши предки."
 	))
 	perks += list(list(
 		SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
 		SPECIES_PERK_ICON = FA_ICON_HAND,
-		SPECIES_PERK_NAME = "Slippery Skin",
-		SPECIES_PERK_DESC = "When sufficiently wet, you have a bonus chance to escape from grabs."
+		SPECIES_PERK_NAME = "Скользкая кожа",
+		SPECIES_PERK_DESC = "Когда вы достаточно промокли, вы получаете бонусный шанс вырваться из чужих захватов."
 	))
 	perks += list(list(
 		SPECIES_PERK_TYPE = SPECIES_NEUTRAL_PERK,
 		SPECIES_PERK_ICON = FA_ICON_SHIRT,
-		SPECIES_PERK_NAME = "Wetsuits",
-		SPECIES_PERK_DESC = "You spawn with clothing that will keep you perpetually wet if not removed."
+		SPECIES_PERK_NAME = "Гидрокостюм",
+		SPECIES_PERK_DESC = "Вы появляетесь в одежде, которая будет постоянно поддерживать вас в мокром состоянии, если её не снять."
 	))
 	perks += list(list(
 		SPECIES_PERK_TYPE = SPECIES_NEGATIVE_PERK,
 		SPECIES_PERK_ICON = FA_ICON_LUNGS,
-		SPECIES_PERK_NAME = "Gills",
-		SPECIES_PERK_DESC = "If you are not wet, you will not be able to breathe oxygen!",
+		SPECIES_PERK_NAME = "Жабры",
+		SPECIES_PERK_DESC = "Если вы высохнете, вы потеряете способность дышать кислородом!",
 	))
 	perks += list(list(
 		SPECIES_PERK_TYPE = SPECIES_NEGATIVE_PERK,
 		SPECIES_PERK_ICON = FA_ICON_ARROW_DOWN,
-		SPECIES_PERK_NAME = "Nomadic DNA",
-		SPECIES_PERK_DESC = "You never want to stay in one place."
+		SPECIES_PERK_NAME = "ДНК кочевника",
+		SPECIES_PERK_DESC = "Вы никогда не хотите подолгу оставаться на одном месте."
 	))
 	perks += list(list(
 		SPECIES_PERK_TYPE = SPECIES_NEGATIVE_PERK,
 		SPECIES_PERK_ICON = FA_ICON_PERSON_FALLING,
-		SPECIES_PERK_NAME = "Slippery Soles",
-		SPECIES_PERK_DESC = "When sufficiently wet, all slips will send you flying, even just a wet floor.",
+		SPECIES_PERK_NAME = "Скользкие стопы",
+		SPECIES_PERK_DESC = "Когда вы достаточно промокли, любое поскальзывание (даже на обычном мокром полу) заставит вас буквально улететь.",
 	))
 	return perks
 
-/datum/species/akula/randomize_features()
+
+/datum/species/akula/randomize_features(mob/living/carbon/human/human_mob)
 	var/list/features = ..()
 	var/main_color
-	var/secondary_color
-	var/tertiary_color
-	var/random = rand(1, 4)
+	var/second_color
+	var/random = rand(1,5)
+	//Choose from a variety of sharkish colors, with a whiter secondary and tertiary
 	switch(random)
 		if(1)
-			main_color = "#1CD3E5"
-			secondary_color = "#6AF1D6"
-			tertiary_color = "#CCF6E2"
+			main_color = "#668899"
+			second_color = "#BBCCDD"
 		if(2)
-			main_color = "#CF3565"
-			secondary_color = "#d93554"
-			tertiary_color = "#fbc2dd"
+			main_color = "#334455"
+			second_color = "#DDDDEE"
 		if(3)
-			main_color = "#FFC44D"
-			secondary_color = "#FFE85F"
-			tertiary_color = "#FFF9D6"
+			main_color = "#445566"
+			second_color = "#DDDDEE"
 		if(4)
-			main_color = "#DB35DE"
-			secondary_color = "#BE3AFE"
-			tertiary_color = "#F5E2EE"
+			main_color = "#666655"
+			second_color = "#DDDDEE"
+		if(5)
+			main_color = "#444444"
+			second_color = "#DDDDEE"
 	features[FEATURE_MUTANT_COLOR] = main_color
-	features[FEATURE_MUTANT_COLOR_TWO] = secondary_color
-	features[FEATURE_MUTANT_COLOR_THREE] = tertiary_color
+	features[FEATURE_MUTANT_COLOR_TWO] = second_color
+	features[FEATURE_MUTANT_COLOR_THREE] = second_color
 	return features
 
 /datum/species/akula/prepare_human_for_preview(mob/living/carbon/human/akula)
-	var/main_color = "#1CD3E5"
-	var/secondary_color = "#6AF1D6"
-	var/tertiary_color = "#CCF6E2"
+	var/main_color = "#668899"
+	var/secondary_color = "#BBCCDD"
+	var/second_color = "#4FDCF3"
+
+	akula.set_haircolor("#0C45B3", update = FALSE) // pink
+	akula.set_hairstyle("Comet", update = TRUE)
+
 	akula.dna.features[FEATURE_MUTANT_COLOR] = main_color
 	akula.dna.features[FEATURE_MUTANT_COLOR_TWO] = secondary_color
-	akula.dna.features[FEATURE_MUTANT_COLOR_THREE] = tertiary_color
-	akula.dna.mutant_bodyparts[FEATURE_TAIL] = build_mutant_part("Akula", list(main_color, secondary_color, tertiary_color))
+	akula.dna.features[FEATURE_MUTANT_COLOR_THREE] = second_color
+	akula.dna.mutant_bodyparts[FEATURE_SNOUT] = build_mutant_part("Otie", list(main_color, secondary_color, second_color))
+	akula.dna.mutant_bodyparts[FEATURE_TAIL] = build_mutant_part("Data shark", list(main_color, secondary_color, second_color))
+	akula.dna.mutant_bodyparts[FEATURE_EARS] = build_mutant_part("Hare", list(main_color, second_color, second_color))
 	akula.dna.features[FEATURE_LEGS] = NORMAL_LEGS
 	regenerate_organs(akula, src, visual_only = TRUE)
 	akula.update_body(TRUE)

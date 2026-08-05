@@ -3,7 +3,6 @@
 	default_color = DEFAULT_SECONDARY
 	recommended_species = list(
 		SPECIES_LIZARD = 1,
-		SPECIES_UNATHI = 1,
 		SPECIES_LIZARD_ASH = 1,
 		SPECIES_LIZARD_SILVER = 1,
 	)

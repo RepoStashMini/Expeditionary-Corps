@@ -6,7 +6,6 @@
 	recommended_species = list(
 		SPECIES_MAMMAL = 1,
 		SPECIES_LIZARD = 1,
-		SPECIES_UNATHI = 1,
 		SPECIES_LIZARD_ASH = 1,
 		SPECIES_LIZARD_SILVER = 1,
 		SPECIES_KOBOLD = 1,

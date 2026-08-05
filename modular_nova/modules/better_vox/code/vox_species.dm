@@ -65,43 +65,52 @@
 	item.worn_icon_better_vox = icon
 
 /datum/species/vox_primalis/get_species_description()
-	return "The Vox seem to be nomadic, bio-engineered alien creatures that operate in and around human space at the behest of crazed and dreaming gods. \
-		In reality, we know them to be originally designed by the Vox Auralis, a wholly-reclusive variety of powerful psychics, and present a cold shoulder to all other known cultures, and generally their only visible role on the galactic stage is to act as auxiliary workforce of which they are functionally suited for. \
-		The massive moon-sized arkships that serve as their homes travel meandering and convoluted migratory trails through the Milky Way, and the appearance of their looted and repurposed ships is almost always a cause for alarm."
+	return "Воксы кажутся кочевыми, биоинженерными инопланетными существами, которые действуют внутри и вокруг человеческого космоса по воле безумных и дремлющих богов. \
+		В действительности мы знаем, что изначально они были спроектированы Вокс Ауралис, полностью затворнической разновидностью могущественных псиоников, и демонстрируют холодное отношение ко всем остальным известным культурам, а их единственная видимая роль на галактической арене обычно заключается в том, чтобы действовать в качестве вспомогательной рабочей силы, к которой они функционально приспособлены. \
+		Массивные ковчеги размером с луну, служащие им домом, перемещаются по извилистым и запутанным миграционным тропам через Млечный Путь, а появление их разграбленных и перепрофилированных кораблей почти всегда является причиной для тревоги."
+
+/datum/species/vox_primalis/get_species_description()
+	return "Воксы кажутся кочевыми, биоинженерными инопланетными существами, которые действуют внутри и вокруг человеческого космоса по воле безумных и дремлющих богов. \
+		В действительности мы знаем, что изначально они были спроектированы Вокс Ауралис, полностью затворнической разновидностью могущественных псиоников, и демонстрируют холодное отношение ко всем остальным известным культурам, а их единственная видимая роль на галактической арене обычно заключается в том, чтобы действовать в качестве вспомогательной рабочей силы, к которой они функционально приспособлены. \
+		Массивные ковчеги размером с луну, служащие им домом, перемещаются по извилистым и запутанным миграционным тропам через Млечный Путь, а появление их разграбленных и перепрофилированных кораблей почти всегда является причиной для тревоги."
 
 /datum/species/vox_primalis/get_species_lore()
 	return list(
-		"Designed and grown by the Apex, biocomputers the size of massive willow trees, the average Vox is a digitigrade, reptilian biped with stiff, semi-rigid keratin quills on their head, a long prehensile tail, and a teethed and bilaterally-split jaw. \
-		They have a flexible and lightweight skeleton and a two-channel redundant nervous system. They generally stand anywhere from 1.3 to 2 meters tall, averaging at 1.5 for most Vox, taller for Armalis, with a primarily green and brown coloration, but can have different colored quills and body markings. \
-		Their bodies are scaled with rigid, nonconducting plates in overlapping rows, which can be bristled or flattened at will to optimize cooling or form interior seals as to retain heat. \
-		Their aforementioned quills act as a supplementary cooling system, with tiny capillaries allowing bloodflow into the hollow recesses inside of the quills, which they may often violently shake to produce a cooling effect with the air; this also functions as a threat display, as many Vox will attempt to cool themselves down before engaging in a fight as to regulate their body-temperature though exertion. \
-		They do not respirate as humans do, but they do require a nitrogen-rich atmosphere to 'breathe', and suffer badly in the presence of oxygen. \
-		Their musculature is geared towards sudden bursts of rapid movement, with a vulnerability to lactic acid buildup as a result.",
+		"Сконструированный и выращенный Апексами (Apex) — биокомпьютерами размером с массивные ивы, среднестатистический Вокс представляет собой пальцеходящее рептилоидное двуногое существо с жесткими, полужесткими кератиновыми иглами на голове, длинным цепким хвостом и зубастой, двусторонне разделенной челюстью. \
+		Они обладают гибким и легким скелетом, а также двухканальной избыточной нервной системой. Обычно их рост составляет от 1,3 до 2 метров, в среднем 1,5 метра для большинства Воксов и выше для Армалисов (Armalis), с преимущественно зеленой и коричневой окраской, но они могут иметь разного цвета иглы и отметины на теле. \
+		Их тела покрыты чешуей из жестких непроводящих пластин, расположенных перекрывающимися рядами, которые можно топорщить или разглаживать по желанию, чтобы оптимизировать охлаждение или сформировать внутренние уплотнения для удержания тепла. \
+		Их вышеупомянутые иглы действуют как дополнительная система охлаждения с крошечными капиллярами, обеспечивающими приток крови в полые выемки внутри игл, которыми они часто яростно трясут для создания охлаждающего эффекта с помощью воздуха; это также функционирует как демонстрация угрозы, поскольку многие Воксы пытаются охладиться перед вступлением в бой, чтобы отрегулировать температуру своего тела при нагрузках. \
+		Они не дышат так, как люди, но им требуется богатая азотом атмосфера для «дыхания», и они сильно страдают в присутствии кислорода. \
+		Их мускулатура приспособлена к внезапным вспышкам быстрого движения, результатом чего является уязвимость к накоплению молочной кислоты.",
 
-		"While the brain of any sort of Vox up to the Auralis are certainly present, a Vox is not considered 'alive' without the Cortical Stack. This mechanical brain is installed the minute a Vox is produced by the Apex, mind uploading being one of the oldest disciplines of the Vox, and it holds their memories, personality, and body information. \
-		These machines also hold their genetic information, a newly 'resleeved' Vox physically mutating into the parameters set by their stack. A Vox is not considered 'dead' as long as their stack can be put in a new body, and this process affords them functional immortality. \
-		However, no other beings are considered 'alive' either due to their lack of one; their absence of the divine spark of the Auralis. They feel neither empathy nor hatred towards aliens, their short, violent and ephemeral existences ultimately meaning as little as furniture to the Vox.",
+		"Хотя мозг любого типа Воксов, вплоть до Ауралис, безусловно присутствует, Вокс не считается «живым» без Кортикального стека (Cortical Stack). Этот механический мозг устанавливается в ту же минуту, когда Вокс производится Апексом, ведь загрузка сознания является одной из старейших дисциплин Воксов, и он хранит их воспоминания, личность и информацию о теле. \
+		Эти устройства также хранят их генетическую информацию, благодаря чему недавно получивший новое тело («перерукавленный») Вокс физически мутирует под параметры, заданные их стеком. Вокс не считается «мертвым», пока их стек может быть помещен в новое тело, и этот процесс обеспечивает им функциональное бессмертие. \
+		Однако никакие другие существа не считаются «живыми» из-за отсутствия у них стека; отсутствия у них божественной искры Ауралис. Они не испытывают ни эмпатии, ни ненависти к пришельцам, их короткое, жестокое и эфемерное существование в конечном счете значит для Воксов не больше, чем мебель.",
 
-		"Artificially made by the Apex, Vox Primalis are grown for a purpose, their personalities and duties sourced by the cortical stacks installed in their heads. \
-		The exact specifications and duties of a Primalis may change throughout their life according to the enigmatic will of the biocomputers fabricating them, and their duties may be oddly specific at times; \
-		but seven core 'groups' of jobs are known by humans, signified by a series of neck, throat, facial, and back markings encoded with their role, genetic lineage, notable deeds, and arkship of origin.",
+		"Искусственно созданные Апексами, Вокс Прималис выращиваются для определенной цели, их личности и обязанности черпаются из кортикальных стеков, установленных в их головах. \
+		Точные характеристики и обязанности Прималиса могут меняться на протяжении всей их жизни в соответствии с загадочной волей изготавливающих их биокомпьютеров, и их обязанности порой могут быть на удивление специфическими; \
+		но людям известны семь основных «групп» профессий, обозначаемых серией отметин на шее, горле, лице и спине, в которых закодированы их роль, генетическая линия, выдающиеся деяния и ковчег происхождения.",
 
-		"'Drones' are the engineers, technicians, and builders of the Primalis. Their duties revolve around the upkeep of the Arkships themselves, and the operation of technologies new and old. \
-		'Servitors' are in charge of biological affairs; making sure stocks are full, meals are made, and Vox are healthy. They typically share work with Drones due to Vox technology being both synthetic and organic.",
+		"«Дроны» (Drones) — это инженеры, техники и строители Прималис. Их обязанности вращаются вокруг поддержания самих Ковчегов и эксплуатации технологий, как новых, так и старых. \
+		«Сервиторы» (Servitors) отвечают за biological вопросы; следят за тем, чтобы запасы были полны, еда приготовлена, а Воксы здоровы. Обычно они делят работу с Дронами, поскольку технологии Воксов являются одновременно синтетическими и органическими.",
 
-		"'Raiders' are those combat-focused Primalis sent on excursion teams from the ships to plunder goods, people, and other wares from aliens. \
-		'Scavengers' work alongside Raiders, pulling stations and ships apart to find anything even remotely valuable, down to the scrap metal and copper wiring in an outpost.",
+		"«Рейдеры» (Raiders) — это ориентированные на бой Прималис, отправляемые в составе экскурсионных групп с кораблей для грабежа товаров, людей и другого имущества пришельцев. \
+		«Стервятники» (Scavengers) работают вместе с Рейдерами, разбирая станции и корабли на части, чтобы найти хоть что-то мало-мальски ценное, вплоть до металлолома и медной проводки на аванпостах.",
 
-		"'Reavers' are essentially the white blood cells of an Arkship. Rarely seen but always around, these Vox are dedicated to expunging threats and ensuring that individuals in need of 'pruning' are brought in swiftly to the Armalis and Apex. \
-		If ever seen outside an Arkship, it's typically for the purpose of overseeing other Primalis in place of a proper Armalis.",
+		"«Риверы» (Reavers) — это, по сути, белые кровяные тельца Ковчега. Редко видимые, но всегда находящиеся рядом, эти Воксы посвятили себя искоренению угроз и обеспечению того, чтобы люди, нуждающиеся в «обрезке», были быстро доставлены к Армалисам и Апексам. \
+		Если их когда-либо и видят за пределами Ковчега, то обычно с целью надзора за другими Прималис вместо полноценного Армалиса.",
 
-		"'Leaders' are those that are in charge of a crew. Acting like a tightly-knit family, these work crews are kept in line not only by the Armalis, but by these typically very old Vox. \
-		These magnanimous (for a Primalis) individuals are very, very rarely seen outside of an Arkship due to their assignments requiring 'active duty'. \
-		To see a 'Leader,' in a place of aliens is to know that they are almost assuredly an exile, and shunned by all varieties of Vox. The Vox consider 'drains on resources' as inexcusable, and to be one is an act to be shunned upon.",
+		"«Лидеры» (Leaders) — это те, кто возглавляет экипаж. Действуя как сплоченная семья, эти рабочие бригады удерживаются в узде не только Армалисами, но и этими, как правило, очень старыми Воксами. \
+		Эти великодушные (для Прималис) особи очень-очень редко встречаются за пределами Ковчега, так как их назначения требуют «активной службы». \
+		Увидеть «Лидера» в месте обитания пришельцев — значит знать, что он почти наверняка изгнанник и отвергнут всеми разновидностями Воксов. Воксы считают «трату ресурсов» непростительной, а быть таковым — поступок, заслуживающий презрения.",
 
-		"'Larva' are not Primalis children, as they'd be less than a few months old at youngest, but a denigrating term for Vox that either have not yet been assigned a duty, or those currently inbetween them. \
-		While these Vox are often pushed by other Primalis to 'hurry up already,' it is the wide consensus of Vox that 'A lone leader is worse than a larva, for while even a larva has a future, all the leader has is a disgraced past.'"
+		"«Личинки» (Larva) — это не дети Прималис, так как им в самом младшем возрасте было бы меньше нескольких месяцев, а уничижительный термин для Воксов, которым либо еще не назначили обязанности, либо тех, кто сейчас находится в промежутке между ними. \
+		Хотя этих Воксов часто подталкивают другие Прималис фразами «поторапливайся уже», среди Воксов существует широкое мнение, что «Одинокий лидер хуже личинки, ибо в то время как даже у личинки есть будущее, у лидерa есть только позорное прошлое».",
+
+		"С началом разрушительной Великой войны Вокс Прималис под шумок принялись активно разграблять ослабленные и покинутые человеческие колонии, унося всё, что имело хоть какую-то ценность. \
+		В настоящее время их рейдерские и мародёрские группы проявляют колоссальную активность в стратегически важной системе Тау Кита (Tau Ceti), создавая постоянную угрозу для местных корпоративных объектов и торговых путей НаноТрейзен.",
 	)
+
 
 /datum/species/vox_primalis/on_species_gain(mob/living/carbon/human/transformer, datum/species/old_species, pref_load, regenerate_icons)
 	. = ..()

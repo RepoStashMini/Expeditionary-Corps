@@ -47,18 +47,19 @@
 	to_add += list(list(
 		SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
 		SPECIES_PERK_ICON = "lightbulb",
-		SPECIES_PERK_NAME = "Dark Regeneration",
-		SPECIES_PERK_DESC = "Shadekins regenerate their physical wounds while in the darkness.",
+		SPECIES_PERK_NAME = "Тёмная регенерация",
+		SPECIES_PERK_DESC = "Шэйдкины постепенно залечивают свои физические раны и повреждения, находясь в полной темноте.",
 	))
 
 	to_add += list(list(
 		SPECIES_PERK_TYPE = SPECIES_NEGATIVE_PERK,
 		SPECIES_PERK_ICON = "crutch",
-		SPECIES_PERK_NAME = "Light Averse",
-		SPECIES_PERK_DESC = "Shadekins move slightly slower while in the light.",
+		SPECIES_PERK_NAME = "Светобоязнь",
+		SPECIES_PERK_DESC = "Яркий свет угнетает Шэйдкинов, из-за чего они передвигаются немного медленнее, находясь на освещённых плитках.",
 	))
 
 	return to_add
+
 
 /// Clamps a hex color's brightness (HSV value) to SHADEKIN_MAX_BRIGHTNESS.
 /datum/species/shadekin/proc/clamp_color_brightness(color)

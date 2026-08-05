@@ -1,11 +1,17 @@
 /datum/species/lizard
 	// Reptilian humanoids with scaled skin and tails.
-	name = "\improper Lizardperson"
-	plural_form = "Lizardfolk"
+	name = "\improper Унати"
+	plural_form = "Унати"
 	id = SPECIES_LIZARD
 	inherent_traits = list(
+		TRAIT_ADVANCEDTOOLUSER,
+		TRAIT_CAN_STRIP,
+		TRAIT_LITERATE,
 		TRAIT_MUTANT_COLORS,
 	)
+	body_markings = list()
+	mutant_organs = list()
+	payday_modifier = 1.0
 	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID|MOB_REPTILE
 	/* NOVA EDIT REMOVAL START - Customization
 	body_markings = list(
@@ -22,6 +28,7 @@
 	mutanttongue = /obj/item/organ/tongue/lizard
 	mutanteyes = /obj/item/organ/eyes/lizard
 	mutantbrain = /obj/item/organ/brain/lizard
+
 	coldmod = 1.5
 	heatmod = 0.67
 	payday_modifier = 1.0
@@ -46,6 +53,18 @@
 		BODY_ZONE_R_ARM = /obj/item/bodypart/arm/right/lizard,
 		BODY_ZONE_L_LEG = /obj/item/bodypart/leg/left/lizard,
 		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/lizard,
+	)
+
+/datum/species/lizard/get_default_mutant_bodyparts() // nova
+	return list(
+		FEATURE_TAIL = MUTPART_BLUEPRINT("Smooth", is_randomizable = TRUE),
+		FEATURE_SNOUT = MUTPART_BLUEPRINT("Sharp + Light", is_randomizable = TRUE),
+		FEATURE_SPINES = MUTPART_BLUEPRINT("Long + Membrane", is_randomizable = TRUE),
+		FEATURE_FRILLS = MUTPART_BLUEPRINT("Short", is_randomizable = TRUE),
+		FEATURE_HORNS = MUTPART_BLUEPRINT("Curled", is_randomizable = TRUE),
+		FEATURE_MARKING_GENERIC = MUTPART_BLUEPRINT("Light Belly", is_randomizable = TRUE),
+		FEATURE_LEGS = MUTPART_BLUEPRINT(DIGITIGRADE_LEGS, is_randomizable = FALSE, is_feature = TRUE),
+		FEATURE_WINGS = MUTPART_BLUEPRINT(SPRITE_ACCESSORY_NONE, is_randomizable = FALSE),
 	)
 
 /// Lizards are cold blooded and do not stabilize body temperature naturally
@@ -128,33 +147,34 @@
 	return 'sound/mobs/humanoids/lizard/lizard_hiss.ogg'
 
 /datum/species/lizard/get_physical_attributes()
-	return "Lizardpeople can withstand slightly higher temperatures than most species, but they are very vulnerable to the cold \
-		and can't regulate their body-temperature internally, making the vacuum of space extremely deadly to them."
+	return "Унати способны выдерживать немного более высокие температуры, чем большинство других рас, но они крайне уязвимы к холоду \
+		и не могут регулировать температуру своего тела изнутри, из-за чего вакуум космоса для них смертельно опасен."
 
 /datum/species/lizard/get_species_description()
-	return "The militaristic Lizardpeople hail originally from Tizira, but have grown \
-		throughout their centuries in the stars to possess a large spacefaring \
-		empire: though now they must contend with their younger, more \
-		technologically advanced Human neighbours."
+	return "Милитаристские Унати родом с планеты Тизиран, в системе Ризкалон,. За века жизни среди звёзд они разрослись \
+		до масштабов огромной космической империи, однако теперь им приходится соперничать со своими \
+		более молодыми и технологически продвинутыми соседями — людьми."
 
 /datum/species/lizard/get_species_lore()
 	return list(
-		"The face of conspiracy theory was changed forever the day mankind met the lizards.",
+		"Лицо теорий заговора изменилось навсегда в тот день, когда человечество встретило Унати.",
 
-		"Hailing from the arid world of Tizira, lizards were travelling the stars back when mankind was first discovering how neat trains could be. \
-		However, much like the space-fable of the space-tortoise and space-hare, lizards have rejected their kin's motto of \"slow and steady\" \
-		in favor of resting on their laurels and getting completely surpassed by 'bald apes', due in no small part to their lack of access to plasma.",
+		"Происходя из засушливого мира Тизиран, Унати бороздили просторы космоса ещё в те времена, когда человечество только открывало для себя, насколько крутыми могут быть поезда. \
+		Однако, подобно космической басне о черепахе и зайце, Унати отвергли девиз своих предков «тише едешь — дальше будешь» в пользу почивания на лаврах, \
+		из-за чего их полностью обогнали «лысые обезьяны» — в немалой степени из-за отсутствия у Унати доступа к плазме.",
 
-		"The history between lizards and humans has resulted in many conflicts that lizards ended on the losing side of, \
-		with the finale being an explosive remodeling of their moon. Today's lizard-human relations are seeing the continuance of a record period of peace.",
+		"История взаимоотношений между Унати и людьми привела ко многим конфликтам, в которых Унати оказывались проигравшей стороной, \
+		а финалом стало взрывное переустройство их луны. Сегодня в отношениях между Унати и людьми наблюдается продолжение рекордного периода мира.",
 
-		"Lizard culture is inherently militaristic, though the influence the military has on lizard culture \
-		begins to lessen the further colonies lie from their homeworld - \
-		with some distanced colonies finding themselves subsumed by the cultural practices of other species nearby.",
+		"Культура Унати по своей природе милитаристская, хотя влияние армии на неё \
+		начинает слабеть по мере того, как колонии отдаляются от их родного мира — \
+		некоторые далёкие колонии и вовсе оказываются поглощены культурными традициями других соседних рас.",
 
-		"On their homeworld, lizards celebrate their 16th birthday by enrolling in a mandatory 5 year military tour of duty. \
-		Roles range from combat to civil service and everything in between. As the old slogan goes: \"Your place will be found!\"",
+		"На своей родной планете Унати празднуют 16-летие зачислением на обязательную 5-летнюю военную службу. \
+		Роли варьируются от боевых до гражданских и всего, что между ними. Как гласит старый слоган: «Твоё место будет найдено!»",
 	)
+
+
 
 // Override for the default temperature perks, so we can give our specific "cold blooded" perk.
 /datum/species/lizard/create_pref_temperature_perks()
@@ -163,26 +183,68 @@
 	to_add += list(list(
 		SPECIES_PERK_TYPE = SPECIES_NEUTRAL_PERK,
 		SPECIES_PERK_ICON = "thermometer-empty",
-		SPECIES_PERK_NAME = "Cold-blooded",
-		SPECIES_PERK_DESC = "Lizardpeople have higher tolerance for hot temperatures, but lower \
-			tolerance for cold temperatures. Additionally, they cannot self-regulate their body temperature - \
-			they are as cold or as warm as the environment around them is. Stay warm!",
+		SPECIES_PERK_NAME = "Хладнокровность",
+		SPECIES_PERK_DESC = "Унати обладают более высокой устойчивостью к жарким температурам, но гораздо хуже \
+			переносят холод. Кроме того, они не могут самостоятельно регулировать температуру своего тела — \
+			они ровно настолько холодные или тёплые, насколько холодно или тепло вокруг них. Держитесь в тепле!",
 	))
 
 	return to_add
+
+/datum/species/lizard/randomize_features()  // nova
+	var/list/features = ..()
+	if(istype(src, /datum/species/lizard/silverscale)) // don't randomize silvercale colors
+		return features
+
+	var/main_color
+	var/second_color
+	var/random = rand(1,5)
+	//Choose from a variety of green or brown colors, with a darker secondary and tertiary
+	switch(random)
+		if(1)
+			main_color = "#11CC00"
+			second_color = "#118800"
+		if(2)
+			main_color = "#55CC11"
+			second_color = "#55AA11"
+		if(3)
+			main_color = "#77AA11"
+			second_color = "#668811"
+		if(4)
+			main_color = "#886622"
+			second_color = "#774411"
+		if(5)
+			main_color = "#33BB11"
+			second_color = "#339911"
+	features[FEATURE_MUTANT_COLOR] = main_color
+	features[FEATURE_MUTANT_COLOR_TWO] = second_color
+	features[FEATURE_MUTANT_COLOR_THREE] = second_color
+	return features
+
+/datum/species/lizard/prepare_human_for_preview(mob/living/carbon/human/lizard, lizard_color = "#668811") // nova
+	lizard.dna.features[FEATURE_MUTANT_COLOR] = lizard_color
+	lizard.dna.mutant_bodyparts[FEATURE_TAIL] = build_mutant_part("Light Tiger", list(lizard_color, lizard_color, lizard_color))
+	lizard.dna.mutant_bodyparts[FEATURE_SNOUT] = build_mutant_part("Sharp + Light", list(lizard_color, lizard_color, lizard_color))
+	lizard.dna.mutant_bodyparts[FEATURE_HORNS] = build_mutant_part("Simple", list(lizard_color, lizard_color, lizard_color))
+	lizard.dna.mutant_bodyparts[FEATURE_FRILLS] = build_mutant_part("Aquatic", list(lizard_color, lizard_color, lizard_color))
+	lizard.dna.features[FEATURE_LEGS] = NORMAL_LEGS
+	regenerate_organs(lizard, src, visual_only = TRUE)
+	lizard.update_body(TRUE)
 
 /*
 Lizard subspecies: ASHWALKERS
 */
 /datum/species/lizard/ashwalker
-	name = "Ash Walker"
+	name = "Пеплоходец"
 	id = SPECIES_LIZARD_ASH
 	examine_limb_id = SPECIES_LIZARD
+	always_customizable = TRUE  // nova
 	mutantlungs = /obj/item/organ/lungs/lavaland
 	mutantbrain = /obj/item/organ/brain/primitive
 	inherent_traits = list(
 		TRAIT_MUTANT_COLORS,
 		TRAIT_VIRUSIMMUNE,
+		TRAIT_MUTANT_COLORS, // nova
 	)
 	// inherent_factions = list(FACTION_ASHWALKER) // NOVA EDIT REMOVAL: Moving to Ritual
 	species_language_holder = /datum/language_holder/lizard/ash
@@ -198,14 +260,22 @@ Lizard subspecies: ASHWALKERS
 	)
 
 /datum/species/lizard/ashwalker/get_physical_attributes()
-	return "Ash Walkers are identical to lizardpeople in almost all aspects. \
-		Unlike them, they're always digitigrade, they can breathe Lavaland's often noxious atmosphere and resist viruses. They are usually illiterate."
+	return "Пеплоходецы практически во всём идентичны Унати. \
+		В отличие от них, они всегда пальцеходящие, способны дышать зачастую ядовитой атмосферой Лавалэнда и сопротивляться вирусам. Обычно они неграмотны."
+
+/datum/species/lizard/ashwalker/get_default_mutant_bodyparts()  // nova
+	var/list/default_parts = ..()
+	default_parts[FEATURE_SPINES] = MUTPART_BLUEPRINT(SPRITE_ACCESSORY_NONE, is_randomizable = TRUE)
+	return default_parts
+
+/datum/species/lizard/ashwalker/prepare_human_for_preview(mob/living/carbon/human/lizard, lizard_color = "#990000") // nova
+	. = ..(lizard, lizard_color)
 
 /*
 Lizard subspecies: SILVER SCALED
 */
 /datum/species/lizard/silverscale
-	name = "Silver Scale"
+	name = "Серебряная чешуя"
 	id = SPECIES_LIZARD_SILVER
 	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID|MOB_REPTILE
 	inherent_traits = list(
@@ -227,9 +297,9 @@ Lizard subspecies: SILVER SCALED
 	var/old_mutcolor
 
 /datum/species/lizard/silverscale/get_physical_attributes()
-	return "Silver Scales are to lizardpeople what angels are to humans. \
-		Mostly identical, they are holy, don't breathe, don't get viruses, their hide cannot be pierced, love the taste of wine, \
-		and their tongue allows them to turn into a statue, for some reason."
+	return "Серебряные Чешуйки для Унати — то же самое, что ангелы для людей. \
+		Почти во всём идентичные, они святы, не дышат, не заражаются вирусами, их шкуру невозможно пробить, они обожают вкус вина, \
+		а их язык почему-то позволяет им превращаться в статую."
 
 /datum/species/lizard/silverscale/on_species_gain(mob/living/carbon/human/new_silverscale, datum/species/old_species, pref_load, regenerate_icons)
 	old_mutcolor = new_silverscale.dna.features[FEATURE_MUTANT_COLOR]
@@ -243,3 +313,13 @@ Lizard subspecies: SILVER SCALED
 	was_silverscale.remove_eye_color(EYE_COLOR_SPECIES_PRIORITY)
 	was_silverscale.remove_filter("silver_glint")
 	return ..()
+
+/datum/species/lizard/silverscale/get_default_mutant_bodyparts()  // nova
+	var/list/default_parts = ..()
+	default_parts[FEATURE_SPINES] = MUTPART_BLUEPRINT(SPRITE_ACCESSORY_NONE, is_randomizable = TRUE)
+	return default_parts
+
+
+/datum/species/lizard/silverscale/prepare_human_for_preview(mob/living/carbon/human/lizard, lizard_color = "#eeeeee") // nova
+	lizard.set_eye_color("#0000a0")
+	. = ..(lizard, lizard_color)

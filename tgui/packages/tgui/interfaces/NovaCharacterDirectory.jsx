@@ -1,7 +1,7 @@
 // THIS IS A NOVA SECTOR UI FILE
 import { useState } from 'react';
 import {
-  Box,
+ // Box,
   Button,
   Divider,
   Icon,
@@ -75,12 +75,7 @@ export const NovaCharacterDirectory = (props) => {
 
   const {
     personalVisibility,
-    personalAttraction,
     personalGender,
-    personalErpTag,
-    personalVoreTag,
-    personalNonconTag,
-    personalHypnoTag,
     assignedView,
     startViewing,
   } = data;
@@ -136,24 +131,6 @@ export const NovaCharacterDirectory = (props) => {
                     {personalVisibility ? 'Shown' : 'Not Shown'}
                   </Button>
                 </LabeledList.Item>
-                <LabeledList.Item label="Attraction">
-                  <Button fluid>{personalAttraction}</Button>
-                </LabeledList.Item>
-                <LabeledList.Item label="Gender">
-                  <Button fluid>{personalGender}</Button>
-                </LabeledList.Item>
-                <LabeledList.Item label="ERP">
-                  <Button fluid>{personalErpTag}</Button>
-                </LabeledList.Item>
-                <LabeledList.Item label="Vore">
-                  <Button fluid>{personalVoreTag}</Button>
-                </LabeledList.Item>
-                <LabeledList.Item label="Hypnosis">
-                  <Button fluid>{personalHypnoTag}</Button>
-                </LabeledList.Item>
-                <LabeledList.Item label="Noncon">
-                  <Button fluid>{personalNonconTag}</Button>
-                </LabeledList.Item>
               </LabeledList>
             </Section>
             <CharacterDirectoryList
@@ -204,33 +181,8 @@ const ViewCharacter = (props) => {
               fill
               title="Flavor Text:"
               preserveWhitespace
-              buttons={
-                <>
-                  <Button
-                    selected={flavorTextIndex === 'SFW'}
-                    bold={flavorTextIndex === 'SFW'}
-                    onClick={() => setFlavorTextIndex('SFW')}
-                    width="150px"
-                    textAlign="center"
-                  >
-                    SFW
-                  </Button>
-                  <Button
-                    selected={flavorTextIndex === 'NSFW'}
-                    disabled={!overlay.flavor_text_nsfw}
-                    bold={flavorTextIndex === 'NSFW'}
-                    onClick={() => setFlavorTextIndex('NSFW')}
-                    width="150px"
-                    textAlign="center"
-                  >
-                    NSFW
-                  </Button>
-                </>
-              }
             >
               {flavorTextIndex === 'SFW' && formatURLs(overlay.flavor_text)}
-              {flavorTextIndex === 'NSFW' &&
-                formatURLs(overlay.flavor_text_nsfw)}
             </Section>
           </Stack.Item>
           <Stack.Item grow>
@@ -242,31 +194,6 @@ const ViewCharacter = (props) => {
                   scrollable
                   title="OOC Notes"
                   preserveWhitespace
-                  buttons={
-                    <>
-                      <Button
-                        selected={oocNotesIndex === 'SFW'}
-                        bold={oocNotesIndex === 'SFW'}
-                        onClick={() => setOocNotesIndex('SFW')}
-                        width="100px"
-                        textAlign="center"
-                      >
-                        SFW
-                      </Button>
-                      <Button
-                        selected={oocNotesIndex === 'NSFW'}
-                        bold={oocNotesIndex === 'NSFW'}
-                        disabled={
-                          overlay.erp === 'No' && !overlay.ooc_notes_nsfw
-                        }
-                        onClick={() => setOocNotesIndex('NSFW')}
-                        width="100px"
-                        textAlign="center"
-                      >
-                        NSFW
-                      </Button>
-                    </>
-                  }
                 >
                   {!!overlay.veteran_status && (
                     <Stack.Item mb="30px">
@@ -279,32 +206,6 @@ const ViewCharacter = (props) => {
                         Player is a Veteran.
                       </span>
                     </Stack.Item>
-                  )}
-                  {oocNotesIndex === 'NSFW' && (
-                    <>
-                      <LabeledList>
-                        <LabeledList.Item label="Attraction">
-                          {overlay.attraction}
-                        </LabeledList.Item>
-                        <LabeledList.Item label="Gender">
-                          {overlay.gender}
-                        </LabeledList.Item>
-                        <LabeledList.Item label="ERP">
-                          {overlay.erp}
-                        </LabeledList.Item>
-                        <LabeledList.Item label="Vore">
-                          {overlay.vore}
-                        </LabeledList.Item>
-                        <LabeledList.Item label="Hypnosis">
-                          {overlay.hypno}
-                        </LabeledList.Item>
-                        <LabeledList.Item label="Noncon">
-                          {overlay.noncon}
-                        </LabeledList.Item>
-                      </LabeledList>
-                      <Box mt="6px" />
-                      {formatURLs(overlay.ooc_notes_nsfw)}
-                    </>
                   )}
                   {oocNotesIndex === 'SFW' && (
                     formatURLs(overlay.ooc_notes)
@@ -397,7 +298,7 @@ const CharacterDirectoryList = (props) => {
     return sortOrderValue * a[sortId].localeCompare(b[sortId]);
   });
 
-  return (
+    return (
     <Section
       title="Directory"
       buttons={
@@ -430,9 +331,8 @@ const CharacterDirectoryList = (props) => {
             onClick={(e) => {
               updateColorCodeEnabled(!colorCodeEnabled);
             }}
-            tooltip="Toggles the color coding for ERP Status."
           >
-            ERP Status Colors
+            Color Code
           </Button.Checkbox>
         </Stack.Item>
       </Stack>
@@ -455,65 +355,14 @@ const CharacterDirectoryList = (props) => {
           >
             Species
           </SortButton>
-          <SortButton
-            id="attraction"
-            sortId={sortId}
-            sortOrder={sortOrder}
-            onClick={handleSort}
-          >
-            Attraction
-          </SortButton>
-          <SortButton
-            id="gender"
-            sortId={sortId}
-            sortOrder={sortOrder}
-            onClick={handleSort}
-          >
-            Gender
-          </SortButton>
-          <SortButton
-            id="erp"
-            sortId={sortId}
-            sortOrder={sortOrder}
-            onClick={handleSort}
-          >
-            ERP
-          </SortButton>
-          <SortButton
-            id="vore"
-            sortId={sortId}
-            sortOrder={sortOrder}
-            onClick={handleSort}
-          >
-            Vore
-          </SortButton>
-          <SortButton
-            id="hypno"
-            sortId={sortId}
-            sortOrder={sortOrder}
-            onClick={handleSort}
-          >
-            Hypno
-          </SortButton>
-          <SortButton
-            id="noncon"
-            sortId={sortId}
-            sortOrder={sortOrder}
-            onClick={handleSort}
-          >
-            Noncon
-          </SortButton>
+          <Table.Cell>Gender</Table.Cell>
           <Table.Cell collapsing textAlign="right">
             Advert
           </Table.Cell>
         </Table.Row>
+
         {sortedDirectory.map((character, i) => (
-          <Table.Row
-            key={i}
-            backgroundColor={
-              colorCodeEnabled ? erpTagColor[character.erp] : 'transparent'
-            }
-          >
+          <Table.Row key={character.ref}>
             <Table.Cell p={1}>
               {canOrbit ? (
                 <Button
@@ -529,12 +378,7 @@ const CharacterDirectoryList = (props) => {
               )}
             </Table.Cell>
             <Table.Cell>{character.species}</Table.Cell>
-            <Table.Cell>{character.attraction}</Table.Cell>
             <Table.Cell>{character.gender}</Table.Cell>
-            <Table.Cell>{character.erp}</Table.Cell>
-            <Table.Cell>{character.vore}</Table.Cell>
-            <Table.Cell>{character.hypno}</Table.Cell>
-            <Table.Cell>{character.noncon}</Table.Cell>
             <Table.Cell collapsing textAlign="right">
               <Button
                 onClick={() => {

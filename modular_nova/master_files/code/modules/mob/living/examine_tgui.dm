@@ -60,12 +60,8 @@
 	var/datum/preferences/preferences = holder.client?.prefs
 
 	var/flavor_text
-	var/flavor_text_nsfw
-	var/custom_species
-	var/custom_species_lore
 	var/obscured
 	var/ooc_notes = ""
-	var/ooc_notes_nsfw = ""
 	var/ideal_antag_optin_status
 	var/current_antag_optin_status
 	var/ideal_conflict_optin_status
@@ -95,11 +91,8 @@
 	// Now we handle silicon and/or human, order doesn't matter as both obviously can't fire.
 	// If other variants of mob/living need to be handled at some point, put them here.
 	if(issilicon(holder))
-		custom_species = "Silicon"
-		custom_species_lore = "A silicon unit, like a cyborg or pAI."
 		if(preferences)
 			flavor_text = preferences.read_preference(/datum/preference/text/silicon_flavor_text)
-			flavor_text_nsfw = preferences.read_preference(/datum/preference/text/silicon_flavor_text_nsfw)
 			ooc_notes += preferences.read_preference(/datum/preference/text/ooc_notes)
 			headshot += preferences.read_preference(/datum/preference/text/headshot/silicon)
 
@@ -107,10 +100,7 @@
 		var/mob/living/carbon/human/holder_human = holder
 		var/can_bypass_obscure = holder == user || (user?.client?.holder && isobserver(user)) // A variable for bypassing data hide due to a mask, for the player themselves (against themselves) or for the administration as an observer.
 		obscured = !can_bypass_obscure && ((holder_human.wear_mask && (holder_human.wear_mask.flags_inv & HIDEFACE)) || (holder_human.head && (holder_human.head.flags_inv & HIDEFACE)))
-		custom_species = obscured ? "Obscured" : holder_human.dna.species.lore_protected ? holder_human.dna.species.name : holder_human.dna.features["custom_species"]
 		flavor_text = obscured ? "Obscured" : holder_human.dna.features[EXAMINE_DNA_FLAVOR_TEXT]
-		flavor_text_nsfw = obscured ? "Obscured" : holder_human.dna.features[EXAMINE_DNA_FLAVOR_TEXT_NSFW]
-		custom_species_lore = obscured ? "Obscured" : holder_human.dna.species.lore_protected ? holder_human.dna.species.get_species_lore().Join("\n") : holder_human.dna.features["custom_species_lore"]
 		ooc_notes += holder_human.dna.features[EXAMINE_DNA_OOC_NOTES]
 		if(!obscured)
 			headshot += holder_human.dna.features[EXAMINE_DNA_HEADSHOT]
@@ -125,11 +115,7 @@
 		// Descriptions
 		"flavor_text" = flavor_text,
 		"ooc_notes" = ooc_notes,
-		"custom_species" = custom_species,
-		"custom_species_lore" = custom_species_lore,
 		// Descriptions, but requiring manual input to see
-		"flavor_text_nsfw" = flavor_text_nsfw,
-		"ooc_notes_nsfw" = ooc_notes_nsfw,
 		// Antaggery
 		"ideal_antag_optin_status" = ideal_antag_optin_status, // Our Antag Opt-In from prefs when we joined the game
 		"current_antag_optin_status" = current_antag_optin_status, // The current Antag Opt-In, if it was forced to be something different

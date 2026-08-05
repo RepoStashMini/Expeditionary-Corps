@@ -1,6 +1,6 @@
 /datum/species/moth
-	name = "\improper Mothman"
-	plural_form = "Mothmen"
+	name = "\improper Моль"
+	plural_form = "Моли"
 	id = SPECIES_MOTH
 	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID|MOB_BUG
 	/* NOVA EDIT REMOVAL START - Customization
@@ -92,28 +92,29 @@
 	return 'sound/mobs/humanoids/human/sniff/male_sniff.ogg'
 
 /datum/species/moth/get_physical_attributes()
-	return "Moths have large and fluffy wings, which help them navigate the station if gravity is offline by pushing the air around them. \
-		Due to that, it isn't of much use out in space. Their eyes are very sensitive."
+	return "Моли обладают большими пушистыми крыльями, которые помогают им перемещаться по станции при отключённой гравитации, \
+		отталкивая окружающий воздух. Из-за этого принципа работы крылья бесполезны в открытом космосе. Их глаза также крайне чувствительны к свету."
 
 /datum/species/moth/get_species_description()
-	return "Hailing from a planet that was lost long ago, the moths travel \
-		the galaxy as a nomadic people aboard a colossal fleet of ships, seeking a new homeland."
+	return "Выходцы с планеты, которая была потеряна давным-давно, Моли путешествуют \
+		по галактике как кочевой народ на борту колоссального флота кораблей в поисках новой родины."
 
 /datum/species/moth/get_species_lore()
 	return list(
-		"Their homeworld lost to the ages, the moths live aboard the Grand Nomad Fleet. \
-		Made up of what could be found, bartered, repaired, or stolen the armada is a colossal patchwork \
-		built on a history of politely flagging travelers down and taking their things. Occasionally a moth \
-		will decide to leave the fleet, usually to strike out for fortunes to send back home.",
+		"Потеряв свой родной мир в веках, Моли живут на борту Великого Кочевого Флота. \
+		Собранная из всего, что удалось найти, выменять, починить или украсть, эта армада представляет собой колоссальное лоскутное одеяло, \
+		построенное на истории вежливого торможения путешественников и изъятия их пожитков. Время от времени моль решает покинуть флот — \
+		обычно ради поисков богатства, которое можно отправить обратно домой.",
 
-		"Nomadic life produces a tight-knit culture, with moths valuing their friends, family, and vessels highly. \
-		Moths are gregarious by nature and do best in communal spaces. This has served them well on the galactic stage, \
-		maintaining a friendly and personable reputation even in the face of hostile encounters. \
-		It seems that the galaxy has come to accept these former pirates.",
+		"Кочевая жизнь порождает сплочённую культуру, в которой Моли высоко ценят своих друзей, семью и корабли. \
+		По природе своей они очень общительны и лучше всего чувствуют себя в коллективе. Это сослужило им хорошую службу на галактической арене, \
+		позволив сохранить дружелюбную и обаятельную репутацию даже перед лицом враждебных столкновений. \
+		Похоже, галактика в конце концов приняла этих бывших пиратов.",
 
-		"Surprisingly, living together in a giant fleet hasn't flattened variance in dialect and culture. \
-		These differences are welcomed and encouraged within the fleet for the variety that they bring.",
+		"Удивительно, но совместная жизнь в гигантском флоте не стёрла различия в диалектах и культуре. \
+		Эти различия только приветствуются и поощряются внутри флота ради разнообразия, которое они приносят."
 	)
+
 
 /datum/species/moth/create_pref_unique_perks()
 	var/list/to_add = list()
@@ -122,28 +123,27 @@
 		list(
 			SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
 			SPECIES_PERK_ICON = "feather-alt",
-			SPECIES_PERK_NAME = "Precious Wings",
-			SPECIES_PERK_DESC = "Moths can fly in pressurized, zero-g environments and safely land short falls using their wings.",
+			SPECIES_PERK_NAME = "Драгоценные крылья",
+			SPECIES_PERK_DESC = "Моли могут летать в невесомости при наличии давления воздуха и безопасно приземляться при падении с небольшой высоты благодаря своим крыльям.",
 		),
 		list(
 			SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
 			SPECIES_PERK_ICON = "tshirt",
-			SPECIES_PERK_NAME = "Meal Plan",
-			SPECIES_PERK_DESC = "Moths can eat clothes for nourishment.",
+			SPECIES_PERK_NAME = "Диета из гардероба",
+			SPECIES_PERK_DESC = "Моли могут питаться одеждой для насыщения и восстановления сил.",
 		),
 		list(
 			SPECIES_PERK_TYPE = SPECIES_NEGATIVE_PERK,
 			SPECIES_PERK_ICON = "fire",
-			SPECIES_PERK_NAME = "Ablazed Wings",
-			SPECIES_PERK_DESC = "Moth wings are fragile, and can be easily burnt off.",
+			SPECIES_PERK_NAME = "Воспламеняемые крылья",
+			SPECIES_PERK_DESC = "Крылья Молей невероятно хрупкие — огонь может запросто и быстро их сжечь.",
 		),
 		list(
 			SPECIES_PERK_TYPE = SPECIES_NEGATIVE_PERK,
 			SPECIES_PERK_ICON = "sun",
-			SPECIES_PERK_NAME = "Bright Lights",
-			SPECIES_PERK_DESC = "Moths need an extra layer of flash protection to protect \
-				themselves, such as against security officers or when welding. Welding \
-				masks will work.",
+			SPECIES_PERK_NAME = "Яркий свет",
+			SPECIES_PERK_DESC = "Молям необходима дополнительная защита глаз от вспышек (например, от флешек офицеров СБ или при сварке). \
+				Сварочные маски отлично для этого подойдут.",
 		),
 	)
 

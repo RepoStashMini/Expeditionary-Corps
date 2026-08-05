@@ -10,7 +10,7 @@
 	id = SPECIES_PROTEAN
 	examine_limb_id = SPECIES_PROTEAN
 
-	name = "Protean"
+	name = "Протериан"
 	sexes = TRUE
 
 	siemens_coeff = 1.5 // Electricity messes you up.
@@ -198,16 +198,16 @@
 	return FALSE
 
 /datum/species/protean/get_species_description()
-	return "A coherent nanomachine swarm shaped into humanoid form. Fragile but unkillable, \
-		Proteans retreat into their modsuit core when critically damaged and sustain themselves by consuming metal."
+	return "Связанный рой наномашин, принявший гуманоидную форму. Хрупкие, но бессмертные, \
+		Протеаны отступают в ядро своего модсьюта при критических повреждениях и поддерживают жизнь, поглощая металл."
 
 /datum/species/protean/get_species_lore()
 	return list(
-		"Proteans are a synthetic species composed of a nanomachine swarm housed within a specialized modsuit. \
-		Rather than possessing a traditional biological form, their bodies are constructed from billions of microscopic machines \
-		that can reshape themselves as needed. When critically damaged, a Protean retreats into its modsuit core to rebuild, \
-		making them effectively immortal as long as their core remains intact. They sustain themselves by consuming metal, \
-		which fuels their nanomachine processes.",
+		"Протеаны — это синтетический вид, состоящий из роя наномашин, размещённого внутри специализированного модсьюта. \
+		Вместо традиционной биологической формы их тела построены из миллиардов микроскопических механизмов, \
+		способных перестраиваться по мере необходимости. При получении критического урона Протеан отступает в ядро модсьюта \
+		для восстановления, что делает их фактически бессмертными, пока цело само ядро. Они поддерживают своё существование \
+		поглощением металла, который подпитывает внутренние процессы наномашин.",
 	)
 
 /datum/species/protean/create_pref_unique_perks()
@@ -216,32 +216,33 @@
 	perk_descriptions += list(list(
 		SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
 		SPECIES_PERK_ICON = "robot",
-		SPECIES_PERK_NAME = "Nanomachine Swarm",
-		SPECIES_PERK_DESC = "Proteans are immortal nanomachine swarms. When critically damaged, they retreat into their modsuit core rather than dying.",
+		SPECIES_PERK_NAME = "Рой наномашин",
+		SPECIES_PERK_DESC = "Протеаны представляют собой бессмертный рой наномашин. При критическом уроне они прячутся в ядро модсьюта вместо того, чтобы погибнуть.",
 	))
 
 	perk_descriptions += list(list(
 		SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
 		SPECIES_PERK_ICON = "shield-halved",
-		SPECIES_PERK_NAME = "Modsuit Assimilation",
-		SPECIES_PERK_DESC = "Proteans can absorb other modsuits into their own, gaining their appearance and modules.",
+		SPECIES_PERK_NAME = "Ассимиляция модсьютов",
+		SPECIES_PERK_DESC = "Протеаны могут поглощать другие модсьюты, встраивая их в себя, тем самым перенимая их внешний вид и установленные модули.",
 	))
 
 	perk_descriptions += list(list(
 		SPECIES_PERK_TYPE = SPECIES_NEUTRAL_PERK,
 		SPECIES_PERK_ICON = "cube",
-		SPECIES_PERK_NAME = "Metal Metabolism",
-		SPECIES_PERK_DESC = "Proteans cannot eat normal food. They sustain themselves by consuming metal sheets, processed by their refactory organ.",
+		SPECIES_PERK_NAME = "Металлический метаболизм",
+		SPECIES_PERK_DESC = "Протеаны не могут есть обычную еду. Они поддерживают свои силы, поглощая листы металла, которые перерабатываются их рефакторным органом.",
 	))
 
 	perk_descriptions += list(list(
 		SPECIES_PERK_TYPE = SPECIES_NEGATIVE_PERK,
 		SPECIES_PERK_ICON = "bolt",
-		SPECIES_PERK_NAME = "Fragile Construction",
-		SPECIES_PERK_DESC = "Proteans take extra electrical damage and are easily dismembered.",
+		SPECIES_PERK_NAME = "Хрупкая конструкция",
+		SPECIES_PERK_DESC = "Протеаны получают повышенный урон от электричества, а их конечности очень легко отсечь или расчленить.",
 	))
 
 	return perk_descriptions
+
 
 /datum/species/protean/prepare_human_for_preview(mob/living/carbon/human/human_for_preview)
 	human_for_preview.set_haircolor("#746779", update = FALSE)
