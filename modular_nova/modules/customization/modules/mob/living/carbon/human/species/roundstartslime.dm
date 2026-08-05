@@ -651,6 +651,13 @@
 
 	return to_add
 
+/datum/species/jelly/roundstartslime/prepare_human_for_preview(mob/living/carbon/human/human)
+	human.dna.features[FEATURE_MUTANT_COLOR] = "#00ffaa"
+	human.hairstyle = "Bob Hair 2"
+	human.hair_color = "#00ffaa"
+	human.update_body(is_creating = TRUE)
+
+
 /datum/species/jelly/roundstartslime/apply_supplementary_body_changes(mob/living/carbon/human/target, datum/preferences/preferences, visuals_only = FALSE)
 	if(preferences.read_preference(/datum/preference/toggle/allow_mismatched_hair_color))
 		target.dna.species.hair_color_mode = null

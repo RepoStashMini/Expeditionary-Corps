@@ -1,6 +1,6 @@
 /datum/species/vox
 	// Bird-like humanoids
-	name = "Вокс"
+	name = "Vox"
 	id = SPECIES_VOX
 	can_augment = FALSE
 	inherent_traits = list(

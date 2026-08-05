@@ -10,7 +10,7 @@
 	id = SPECIES_PROTEAN
 	examine_limb_id = SPECIES_PROTEAN
 
-	name = "Протериан"
+	name = "Protean"
 	sexes = TRUE
 
 	siemens_coeff = 1.5 // Electricity messes you up.

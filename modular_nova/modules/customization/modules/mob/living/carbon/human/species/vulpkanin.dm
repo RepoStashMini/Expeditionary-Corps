@@ -1,6 +1,5 @@
 /datum/species/vulpkanin
-	name = "Вульпканин"
-	plural_form = "Вульпканины"
+	name = "Vulpkanin"
 	id = SPECIES_VULP
 	inherent_traits = list(
 		TRAIT_ADVANCEDTOOLUSER,

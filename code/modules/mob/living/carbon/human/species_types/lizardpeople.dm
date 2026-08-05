@@ -1,7 +1,7 @@
 /datum/species/lizard
 	// Reptilian humanoids with scaled skin and tails.
-	name = "\improper Унати"
-	plural_form = "Унати"
+	name = "\improper Unath"
+	plural_form = "Unathi"
 	id = SPECIES_LIZARD
 	inherent_traits = list(
 		TRAIT_ADVANCEDTOOLUSER,

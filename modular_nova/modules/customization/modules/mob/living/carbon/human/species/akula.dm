@@ -6,8 +6,8 @@
 #define WETSTACK_THRESHOLD 3
 
 /datum/species/akula
-	name = "Азулиан"
-	plural_form = "Азулиане"
+	name = "Azulian"
+	plural_form = "Azulians"
 	id = SPECIES_AKULA
 	offset_features = list(
 		OFFSET_GLASSES = list(0, 1),

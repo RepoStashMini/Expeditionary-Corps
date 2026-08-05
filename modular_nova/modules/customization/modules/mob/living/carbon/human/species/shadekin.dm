@@ -145,36 +145,39 @@
 
 /datum/species/shadekin/get_species_description()
 	return list(
-		"Shadekin first came about like dust bunnies that collect under a bed, of the collective consciousness \
-		\"Welcome, sibling,\" the first words felt in a sea of thought, guiding them to their first connection. ",
-		"Shadekin do not respirate, and their bodies are reformed in the darkness, although frail.",
+		"Шэйдкины впервые появились подобно клубкам пыли, собирающимся под кроватью коллективного сознания. / \
+		«Добро пожаловать, сородич» — первые слова, ощутимые в море мыслей, направили их к первому ментальному единению. ",
+		"Шэйдкины не дышат, а их тела восстанавливаются в темноте, хотя и остаются хрупкими.",
 	)
 
 /datum/species/shadekin/get_species_lore()
 	return list(
-		"It is unclear when exactly Shadekin first spawned, though it is assumedly a relatively recent development. \
-		They formed in dark and abandoned places where they are not witnessed-- observation would dispel their creation. \
-		When the process completed, the Shadekin collected its ability to move its limbs and communicate from surrounding minds \
-		and finally, it formed its first thought, the realization that it is alive.",
+		"До сих пор неясно, когда именно Шэйдкины впервые появились на свет, хотя предполагается, что это относительно недавнее явление. / \
+		Они формируются в тёмных и заброшенных местах, где за ними никто не наблюдает — простое созерцание способно разрушить процесс их создания. / \
+		Когда формирование завершается, Шэйдкин черпает способность двигать конечностями и общаться из окружающих разумов, \
+		и в конце концов у него рождается первая собственная мысль — осознание того, что он жив.",
 
-		"Shadekin are pitch darkness given form. Light seems to pass through their bodies, which tires them. They do not cast shadows. \
-		Shadekin elude definition in terms of size and appearance, as no two Shadekin are the same-- they tend to take features from the species around them \
-		that would otherwise not be seen as theirs. For example, Shadekin spawned in Tizira tend to have horns or frill-like ears. \
-		An average Shadekin would be slightly shorter than a human, with a similar lifespan. Shadekin that do not use other species' naming conventions will \
-		tend to name themselves after their place in the community, like a job or societal function.",
+		"Шэйдкины — это овеществлённая кромешная тьма. Свет словно проходит сквозь их тела, утомляя их. Они не отбрасывают теней. / \
+		Шэйдкинов трудно классифицировать по размеру и внешности, ведь среди них нет двух одинаковых — они склонны перенимать черты окружающих видов, \
+		которые иначе были бы им несвойственны. Например, Шэйдкины, зародившиеся на Тизиране, часто имеют рожки или уши в виде оборок. / \
+		Среднестатистический Шэйдкин немного ниже человека и обладает схожей продолжительностью жизни. Те из них, кто не использует чужие правила именования, \
+		обычно называют себя в честь своего места в общине — например, по названию профессии или социальной функции.",
 
-		"Shadekin are capable of reproducing sexually, though their minds need diverse surroundings to properly develop, making them fairly self-guided. \
-		Despite this, Shadekin easily find a space of their own, and become staples of their communities. They are more expressive than other species to compensate for a lack of psionic connection. \
-		Their language, Marish, is purely empathic and cannot be spoken by psychopaths. Their eye color is an important part of their biology, as it indicates temperament.",
+		"Шэйдкины способны размножаться половым путём, однако их разуму требуется разнообразное окружение для правильного развития, что делает их весьма самостоятельными. / \
+		Несмотря на это, Шэйдкины легко находят своё место в жизни и становятся неотъемлемой частью местных сообществ. Они более экспрессивны, чем другие виды, \
+		чтобы компенсировать отсутствие псионической связи. / Их язык, Мариш (Marish), является чисто эмпатическим — психопаты физически не способны говорить на нём. \
+		Цвет глаз играет важнейшую роль в их биологии, так как он указывает на темперамент.",
 
-		"A Shadekin is never truly alone, however, as Shadekin have formed in number on the treacherous moon Neoma, due to its darkness and isolation. \
-		While there is no central Shadekin government, this is the closest thing Shadekin have to a homeworld, devoid of light due to its orbit around Lusine, an extremely hot world that keeps Neoma's surface approaching habitable. \
-		It has become a notable tourist attraction in the few habitable areas. Neoma serves an important function of containing the collective knowledge of Shadekin society and its covens.",
+		"Тем не менее, Шэйдкин никогда не бывает по-настоящему одинок, поскольку они массово зародились на коварной луне Неома (Neoma) из-за её вечной тьмы и изоляции. / \
+		Хотя у них нет централизованного правительства, эта луна — ближайшее подобие родины для Шэйдкинов. Она лишена света из-за своей орбиты вокруг Люсины (Lusine) — \
+		экстремально горячего мира, который удерживает поверхность Неомы на грани обитаемости. / Немногие пригодные для жизни зоны даже стали заметной туристической достопримечательностью. \
+		Неома выполняет важнейшую функцию — хранит коллективные знания общества Шэйдкинов и их ковенов.",
 
-		"Covens are groups of Shadekin formed to maintain themselves and records of their existence, as well as guide new Shadekin as they develop. \
-		They are rarely associated with ideology alone, rather concepts and what they imply, and within a coven exist Coteries, interest groups within a coven, tailored to a specific aspect. \
-		In this regard, covens are societies in and of themselves, organized in a somewhat tribal manner. Covens do not solely exist on Neoma, they are spread throughout the universe, \
-		but most covens at least have archives on the moon, called \"Mindtrusts\".",
+		"Ковены — это группы Шэйдкинов, созданные для поддержания жизнедеятельности, ведения хроник своего существования и направления новорождённых по мере их развития. / \
+		Они редко связаны с какой-то конкретной идеологией, скорее с концепциями и тем, что они за собой влекут. Внутри ковенов существуют Котерии (Coteries) — группы по интересам, \
+		сосредоточенные на каком-то одном аспекте. / В этом отношении ковены сами по себе являются обществами, организованными в некоторой степени по племенному принципу. \
+		Ковены существуют не только на Неоме, они разбросаны по всей вселенной, но у большинства из них есть архивы на луне, называемые «Майндтрастами» (Mindtrusts)."
 	)
+
 
 #undef SHADEKIN_MAX_BRIGHTNESS

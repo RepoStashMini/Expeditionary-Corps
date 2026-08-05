@@ -1,6 +1,6 @@
 /datum/species/moth
-	name = "\improper Моль"
-	plural_form = "Моли"
+	name = "\improper Moth"
+	plural_form = "Moths"
 	id = SPECIES_MOTH
 	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID|MOB_BUG
 	/* NOVA EDIT REMOVAL START - Customization

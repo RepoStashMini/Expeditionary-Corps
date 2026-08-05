@@ -1,4 +1,4 @@
 /datum/species
-	var/placeholder_description = "Placeholder Description! Will you be the only to write a description?  (Contact a maintainer today!)"
-	var/placeholder_lore = "Placeholder Lore! Will you be the one to add lore here? (Contact a maintainer today!)"
+	var/placeholder_description = "Описание-заглушка! / Станете ли вы тем единственным, кто напишет сюда текст? / Обратитесь к разработчикам сегодня!"
+	var/placeholder_lore = "История-заглушка! / Будете ли вы тем, кто добавит сюда лор расы? / Обратитесь к разработчикам сегодня!"
 	payday_modifier = 1.0
