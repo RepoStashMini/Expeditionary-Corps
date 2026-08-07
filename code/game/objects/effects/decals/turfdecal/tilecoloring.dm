@@ -170,7 +170,7 @@ TILE_DECAL_SUBTYPE_HELPER(/obj/effect/turf_decal/tile/holiday/random)
 	name = "tile smooth corner"
 	icon_state = "tile_smooth_corner"
 	layer = TURF_PLATING_DECAL_LAYER
-	alpha = 110
+	alpha = 155
 	use_holiday_colors = FALSE
 
 
