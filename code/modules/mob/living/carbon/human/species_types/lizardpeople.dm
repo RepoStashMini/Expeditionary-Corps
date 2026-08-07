@@ -1,17 +1,11 @@
 /datum/species/lizard
 	// Reptilian humanoids with scaled skin and tails.
-	name = "\improper Unath"
+	name = "\improper Unathi"
 	plural_form = "Unathi"
 	id = SPECIES_LIZARD
 	inherent_traits = list(
-		TRAIT_ADVANCEDTOOLUSER,
-		TRAIT_CAN_STRIP,
-		TRAIT_LITERATE,
 		TRAIT_MUTANT_COLORS,
 	)
-	body_markings = list()
-	mutant_organs = list()
-	payday_modifier = 1.0
 	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID|MOB_REPTILE
 	/* NOVA EDIT REMOVAL START - Customization
 	body_markings = list(
@@ -28,7 +22,6 @@
 	mutanttongue = /obj/item/organ/tongue/lizard
 	mutanteyes = /obj/item/organ/eyes/lizard
 	mutantbrain = /obj/item/organ/brain/lizard
-
 	coldmod = 1.5
 	heatmod = 0.67
 	payday_modifier = 1.0
@@ -53,18 +46,6 @@
 		BODY_ZONE_R_ARM = /obj/item/bodypart/arm/right/lizard,
 		BODY_ZONE_L_LEG = /obj/item/bodypart/leg/left/lizard,
 		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/lizard,
-	)
-
-/datum/species/lizard/get_default_mutant_bodyparts() // nova
-	return list(
-		FEATURE_TAIL = MUTPART_BLUEPRINT("Smooth", is_randomizable = TRUE),
-		FEATURE_SNOUT = MUTPART_BLUEPRINT("Sharp + Light", is_randomizable = TRUE),
-		FEATURE_SPINES = MUTPART_BLUEPRINT("Long + Membrane", is_randomizable = TRUE),
-		FEATURE_FRILLS = MUTPART_BLUEPRINT("Short", is_randomizable = TRUE),
-		FEATURE_HORNS = MUTPART_BLUEPRINT("Curled", is_randomizable = TRUE),
-		FEATURE_MARKING_GENERIC = MUTPART_BLUEPRINT("Light Belly", is_randomizable = TRUE),
-		FEATURE_LEGS = MUTPART_BLUEPRINT(DIGITIGRADE_LEGS, is_randomizable = FALSE, is_feature = TRUE),
-		FEATURE_WINGS = MUTPART_BLUEPRINT(SPRITE_ACCESSORY_NONE, is_randomizable = FALSE),
 	)
 
 /// Lizards are cold blooded and do not stabilize body temperature naturally
@@ -174,8 +155,6 @@
 		Роли варьируются от боевых до гражданских и всего, что между ними. Как гласит старый слоган: «Твоё место будет найдено!»",
 	)
 
-
-
 // Override for the default temperature perks, so we can give our specific "cold blooded" perk.
 /datum/species/lizard/create_pref_temperature_perks()
 	var/list/to_add = list()
@@ -191,60 +170,18 @@
 
 	return to_add
 
-/datum/species/lizard/randomize_features()  // nova
-	var/list/features = ..()
-	if(istype(src, /datum/species/lizard/silverscale)) // don't randomize silvercale colors
-		return features
-
-	var/main_color
-	var/second_color
-	var/random = rand(1,5)
-	//Choose from a variety of green or brown colors, with a darker secondary and tertiary
-	switch(random)
-		if(1)
-			main_color = "#11CC00"
-			second_color = "#118800"
-		if(2)
-			main_color = "#55CC11"
-			second_color = "#55AA11"
-		if(3)
-			main_color = "#77AA11"
-			second_color = "#668811"
-		if(4)
-			main_color = "#886622"
-			second_color = "#774411"
-		if(5)
-			main_color = "#33BB11"
-			second_color = "#339911"
-	features[FEATURE_MUTANT_COLOR] = main_color
-	features[FEATURE_MUTANT_COLOR_TWO] = second_color
-	features[FEATURE_MUTANT_COLOR_THREE] = second_color
-	return features
-
-/datum/species/lizard/prepare_human_for_preview(mob/living/carbon/human/lizard, lizard_color = "#668811") // nova
-	lizard.dna.features[FEATURE_MUTANT_COLOR] = lizard_color
-	lizard.dna.mutant_bodyparts[FEATURE_TAIL] = build_mutant_part("Light Tiger", list(lizard_color, lizard_color, lizard_color))
-	lizard.dna.mutant_bodyparts[FEATURE_SNOUT] = build_mutant_part("Sharp + Light", list(lizard_color, lizard_color, lizard_color))
-	lizard.dna.mutant_bodyparts[FEATURE_HORNS] = build_mutant_part("Simple", list(lizard_color, lizard_color, lizard_color))
-	lizard.dna.mutant_bodyparts[FEATURE_FRILLS] = build_mutant_part("Aquatic", list(lizard_color, lizard_color, lizard_color))
-	lizard.dna.features[FEATURE_LEGS] = NORMAL_LEGS
-	regenerate_organs(lizard, src, visual_only = TRUE)
-	lizard.update_body(TRUE)
-
 /*
 Lizard subspecies: ASHWALKERS
 */
 /datum/species/lizard/ashwalker
-	name = "Пеплоходец"
+	name = "Ash Walker"
 	id = SPECIES_LIZARD_ASH
 	examine_limb_id = SPECIES_LIZARD
-	always_customizable = TRUE  // nova
 	mutantlungs = /obj/item/organ/lungs/lavaland
 	mutantbrain = /obj/item/organ/brain/primitive
 	inherent_traits = list(
 		TRAIT_MUTANT_COLORS,
 		TRAIT_VIRUSIMMUNE,
-		TRAIT_MUTANT_COLORS, // nova
 	)
 	// inherent_factions = list(FACTION_ASHWALKER) // NOVA EDIT REMOVAL: Moving to Ritual
 	species_language_holder = /datum/language_holder/lizard/ash
@@ -263,19 +200,11 @@ Lizard subspecies: ASHWALKERS
 	return "Пеплоходецы практически во всём идентичны Унати. \
 		В отличие от них, они всегда пальцеходящие, способны дышать зачастую ядовитой атмосферой Лавалэнда и сопротивляться вирусам. Обычно они неграмотны."
 
-/datum/species/lizard/ashwalker/get_default_mutant_bodyparts()  // nova
-	var/list/default_parts = ..()
-	default_parts[FEATURE_SPINES] = MUTPART_BLUEPRINT(SPRITE_ACCESSORY_NONE, is_randomizable = TRUE)
-	return default_parts
-
-/datum/species/lizard/ashwalker/prepare_human_for_preview(mob/living/carbon/human/lizard, lizard_color = "#990000") // nova
-	. = ..(lizard, lizard_color)
-
 /*
 Lizard subspecies: SILVER SCALED
 */
 /datum/species/lizard/silverscale
-	name = "Серебряная чешуя"
+	name = "Silver Scale"
 	id = SPECIES_LIZARD_SILVER
 	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID|MOB_REPTILE
 	inherent_traits = list(
@@ -313,13 +242,3 @@ Lizard subspecies: SILVER SCALED
 	was_silverscale.remove_eye_color(EYE_COLOR_SPECIES_PRIORITY)
 	was_silverscale.remove_filter("silver_glint")
 	return ..()
-
-/datum/species/lizard/silverscale/get_default_mutant_bodyparts()  // nova
-	var/list/default_parts = ..()
-	default_parts[FEATURE_SPINES] = MUTPART_BLUEPRINT(SPRITE_ACCESSORY_NONE, is_randomizable = TRUE)
-	return default_parts
-
-
-/datum/species/lizard/silverscale/prepare_human_for_preview(mob/living/carbon/human/lizard, lizard_color = "#eeeeee") // nova
-	lizard.set_eye_color("#0000a0")
-	. = ..(lizard, lizard_color)

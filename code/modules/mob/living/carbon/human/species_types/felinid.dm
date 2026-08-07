@@ -122,7 +122,7 @@
 		to_chat(purrbated_human, span_boldnotice("You are no longer a cat."))
 
 /datum/species/human/felinid/prepare_human_for_preview(mob/living/carbon/human/human_for_preview)
-	human_for_preview.set_haircolor("#4A3728", update = FALSE)
+	human_for_preview.set_haircolor("#A96835", update = FALSE)
 	human_for_preview.set_hairstyle("Long Emo", update = TRUE)
 
 	/* // NOVA EDIT REMOVAL START - Making the species menu icons work better - ORIGINAL:
