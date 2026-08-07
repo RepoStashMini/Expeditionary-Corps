@@ -1,0 +1,42 @@
+"a" = (/turf/closed/indestructible/titanium/nodiagonal,/area/shuttle/supply)
+"b" = (/obj/effect/turf_decal/bot,/turf/open/floor/mineral/titanium/blue,/area/shuttle/supply)
+"c" = (/obj/effect/decal/cleanable/dirt,/obj/effect/turf_decal/stripes/line{dir = 8},/obj/machinery/light/small/directional/west,/turf/open/floor/mineral/titanium,/area/shuttle/supply)
+"d" = (/obj/effect/decal/cleanable/dirt,/obj/effect/turf_decal/stripes/line{dir = 4},/turf/open/floor/mineral/titanium,/area/shuttle/supply)
+"g" = (/obj/effect/turf_decal/bot,/obj/effect/decal/cleanable/blood/oil,/turf/open/floor/mineral/titanium/purple,/area/shuttle/supply)
+"h" = (/obj/machinery/power/shuttle_engine/heater{dir = 1},/obj/structure/window/reinforced/spawner/directional/north{dir = 2},/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating,/area/shuttle/supply)
+"i" = (/obj/effect/decal/cleanable/dirt,/obj/effect/turf_decal/stripes/line{dir = 8},/turf/open/floor/mineral/titanium,/area/shuttle/supply)
+"k" = (/obj/machinery/power/shuttle_engine/propulsion{dir = 1},/obj/effect/turf_decal/stripes/line{dir = 1; layer = 10003},/turf/open/floor/plating,/area/shuttle/supply)
+"l" = (/obj/effect/turf_decal/stripes/line,/turf/open/floor/mineral/titanium,/area/shuttle/supply)
+"p" = (/obj/effect/turf_decal/bot,/turf/open/floor/mineral/titanium/purple,/area/shuttle/supply)
+"r" = (/obj/docking_port/mobile/supply{dir = 1; port_direction = 8},/turf/template_noop,/area/template_noop)
+"s" = (/obj/effect/turf_decal/stripes/line{dir = 6},/obj/effect/decal/cleanable/dirt,/obj/machinery/button/door/directional/south{name = "Loading Doors"; id = "cargoload"},/turf/open/floor/mineral/titanium,/area/shuttle/supply)
+"u" = (/obj/effect/decal/cleanable/dirt,/obj/effect/turf_decal/stripes/line{dir = 9},/turf/open/floor/mineral/titanium,/area/shuttle/supply)
+"x" = (/obj/machinery/power/shuttle_engine/propulsion{dir = 1},/obj/effect/turf_decal/stripes/line{dir = 1; layer = 10003},/obj/effect/decal/cleanable/dirt,/turf/open/floor/plating,/area/shuttle/supply)
+"y" = (/obj/effect/decal/cleanable/dirt,/obj/effect/turf_decal/stripes/line,/turf/open/floor/mineral/titanium,/area/shuttle/supply)
+"z" = (/obj/machinery/power/shuttle_engine/heater{dir = 1},/obj/structure/window/reinforced/spawner/directional/north{dir = 2},/turf/open/floor/plating,/area/shuttle/supply)
+"A" = (/obj/effect/turf_decal/stripes/line{dir = 1},/turf/open/floor/mineral/titanium,/area/shuttle/supply)
+"D" = (/obj/effect/turf_decal/stripes/line{dir = 4},/obj/machinery/light/small/directional/east,/turf/open/floor/mineral/titanium,/area/shuttle/supply)
+"G" = (/obj/effect/decal/cleanable/dirt,/obj/effect/turf_decal/stripes/line{dir = 10},/obj/machinery/button/door/directional/south{name = "Loading Doors"; id = "cargounload"},/turf/open/floor/mineral/titanium,/area/shuttle/supply)
+"H" = (/obj/effect/decal/cleanable/dirt,/obj/effect/turf_decal/bot,/turf/open/floor/mineral/titanium/yellow,/area/shuttle/supply)
+"J" = (/obj/effect/decal/cleanable/dirt,/obj/effect/turf_decal/bot,/turf/open/floor/mineral/titanium/blue,/area/shuttle/supply)
+"K" = (/obj/effect/turf_decal/stripes/line{dir = 5},/turf/open/floor/mineral/titanium,/area/shuttle/supply)
+"N" = (/obj/machinery/power/shuttle_engine/heater,/turf/closed/indestructible/titanium/nodiagonal,/area/shuttle/supply)
+"Q" = (/obj/machinery/power/shuttle_engine/propulsion,/turf/open/floor/plating,/area/shuttle/supply)
+"R" = (/turf/template_noop,/area/template_noop)
+"S" = (/obj/effect/landmark/flaps_install,/obj/machinery/door/poddoor{id = "cargounload"; name = "Supply Dock Unloading Door"},/obj/machinery/conveyor{dir = 2; id = "cargounload"},/turf/open/floor/plating,/area/shuttle/supply)
+"T" = (/obj/effect/turf_decal/stripes/line{dir = 8},/turf/open/floor/mineral/titanium,/area/shuttle/supply)
+"V" = (/obj/machinery/door/airlock/shuttle{name = "Supply Shuttle Airlock"},/turf/open/floor/plating,/area/shuttle/supply)
+"W" = (/obj/effect/decal/cleanable/dirt,/obj/effect/turf_decal/stripes/line{dir = 1},/turf/open/floor/mineral/titanium,/area/shuttle/supply)
+"X" = (/obj/effect/landmark/flaps_install,/obj/machinery/door/poddoor{id = "cargoload"; name = "Supply Dock Loading Door"},/obj/machinery/conveyor{dir = 1; id = "cargoload"},/turf/open/floor/plating,/area/shuttle/supply)
+
+(1,1,1) = {"
+akkkkxa
+azhzzza
+auAWWKa
+aipJHda
+acpJpDa
+aTHbgda
+aGyllsa
+aNSVXNa
+aQRrRQa
+"}
