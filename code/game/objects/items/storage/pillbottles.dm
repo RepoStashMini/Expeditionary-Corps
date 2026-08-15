@@ -68,6 +68,12 @@
 	spawn_count = 4
 	spawn_type = /obj/item/reagent_containers/applicator/pill/probital
 
+/obj/item/storage/pill_bottle/lidocaine
+	name = "bottle of lidocaine pills"
+	desc = "Contains tablets with a strong analgesic. The tag in the bottle states 'Causes numbness'."
+	spawn_count = 6
+	spawn_type = /obj/item/reagent_containers/applicator/pill/lidocaine
+
 /obj/item/storage/pill_bottle/iron
 	name = "bottle of iron pills"
 	desc = "Contains pills used to reduce blood loss slowly. The tag in the bottle states 'Only take one each five minutes'."

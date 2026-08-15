@@ -32,6 +32,8 @@
 	. = ..()
 	AddElement(/datum/element/cuffable_item)
 
+/// regular
+
 /obj/item/storage/medkit/regular
 	icon_state = "medkit"
 	desc = "A first aid kit with the ability to heal common types of injuries."
@@ -52,6 +54,53 @@
 	)
 	generate_items_inside(items_inside,src)
 
+/obj/item/storage/medkit/regular/big
+	name = "big medkit"
+	icon_state = "big_medkit"
+	desc = "A extended version first aid kit with the ability to heal common types of injuries."
+	storage_type = /datum/storage/medkit/big
+
+/obj/item/storage/medkit/regular/big/PopulateContents()
+	if(empty)
+		return
+	var/list/items_inside = list(
+		/obj/item/stack/medical/wrap/gauze = 1,
+		/obj/item/stack/medical/suture = 2,
+		/obj/item/stack/medical/mesh = 2,
+		/obj/item/reagent_containers/hypospray/medipen = 1,
+		/obj/item/reagent_containers/cup/bottle/morphine = 1,
+		/obj/item/reagent_containers/cup/bottle/multiver = 1,
+		/obj/item/reagent_containers/syringe = 1,
+		/obj/item/healthanalyzer/simple = 1,
+	)
+	generate_items_inside(items_inside,src)
+
+/obj/item/storage/medkit/regular/premium
+	name = "Premium medkit"
+	icon_state = "medkit_premium"
+	desc = "A extended premium version first aid kit with the ability to heal common types of injuries."
+	storage_type = /datum/storage/medkit/premium
+
+/obj/item/storage/medkit/regular/premium/PopulateContents()
+	if(empty)
+		return
+	var/list/items_inside = list(
+		/obj/item/stack/medical/wrap/gauze = 1,
+		/obj/item/stack/medical/suture = 2,
+		/obj/item/stack/medical/mesh = 2,
+		/obj/item/reagent_containers/hypospray/medipen = 2,
+		/obj/item/reagent_containers/hypospray/medipen/blood_loss = 1,
+		/obj/item/reagent_containers/hypospray/medipen/morphine = 1,
+		/obj/item/reagent_containers/hypospray/medipen/survival = 1,
+		/obj/item/storage/pill_bottle/multiver/less = 1,
+		/obj/item/healthanalyzer = 1,
+		/obj/item/bonesetter = 1,
+		/obj/item/clothing/gloves/latex = 1,
+	)
+	generate_items_inside(items_inside,src)
+
+/// emergency
+
 /obj/item/storage/medkit/emergency
 	icon_state = "medbriefcase"
 	inhand_icon_state = "medkit-emergency"
@@ -68,6 +117,76 @@
 		/obj/item/stack/medical/ointment = 1,
 		/obj/item/reagent_containers/hypospray/medipen/ekit = 2,
 		/obj/item/storage/pill_bottle/iron = 1,
+	)
+	generate_items_inside(items_inside,src)
+
+/obj/item/storage/medkit/emergency/big
+	icon_state = "big_medbriefcase"
+	inhand_icon_state = "medkit-emergency"
+	name = "big emergency medkit"
+	desc = "A very simple first aid kit meant to secure and stabilize serious wounds for later treatment. Looks like this is from a rare extended edition!"
+	storage_type = /datum/storage/medkit/big
+
+/obj/item/storage/medkit/emergency/big/PopulateContents()
+	if(empty)
+		return
+	var/list/items_inside = list(
+		/obj/item/healthanalyzer/simple = 1,
+		/obj/item/stack/medical/wrap/gauze = 1,
+		/obj/item/stack/medical/bruise_pack = 1,
+		/obj/item/stack/medical/ointment = 1,
+		/obj/item/reagent_containers/hypospray/medipen/ekit = 2,
+		/obj/item/reagent_containers/hypospray/medipen/blood_loss = 1,
+		/obj/item/storage/pill_bottle/iron = 1,
+	)
+	generate_items_inside(items_inside,src)
+
+/obj/item/storage/medkit/emergency/premium
+	icon_state = "medbriefcase_premium"
+	inhand_icon_state = "medkit-emergency"
+	name = "Premium! emergency medkit"
+	desc = "A very rare premium first aid kit meant to secure and stabilize serious wounds for later treatment."
+	custom_premium_price = PAYCHECK_COMMAND * 3
+	storage_type = /datum/storage/medkit/premium
+
+/obj/item/storage/medkit/emergency/premium/PopulateContents()
+	if(empty)
+		return
+	var/list/items_inside = list(
+		/obj/item/healthanalyzer/simple = 1,
+		/obj/item/stack/medical/wrap/gauze = 1,
+		/obj/item/storage/box/bandages = 1,
+		/obj/item/stack/medical/ointment = 1,
+		/obj/item/reagent_containers/hypospray/medipen/ekit = 2,
+		/obj/item/reagent_containers/hypospray/medipen/blood_loss = 1,
+		/obj/item/reagent_containers/hypospray/medipen/morphine = 1,
+		/obj/item/reagent_containers/hypospray/medipen/penacid = 1,
+		/obj/item/reagent_containers/hypospray/medipen/atropine = 1,
+		/obj/item/storage/pill_bottle/iron = 1,
+		/obj/item/emergency_bed,
+	)
+	generate_items_inside(items_inside,src)
+
+/// surgery
+
+/obj/item/storage/medkit/surgery/compact
+	name = "compact surgical medkit"
+	icon_state = "compact_medkit_surgery"
+	inhand_icon_state = "medkit-surgical"
+	desc = "A compact capacity aid kit for doctors, full of medical supplies and basic surgical equipment."
+	storage_type = /datum/storage/medkit/surgery
+
+/obj/item/storage/medkit/surgery/compact/PopulateContents()
+	if(empty)
+		return
+	var/list/items_inside = list(
+		/obj/item/healthanalyzer/simple = 1,
+		/obj/item/stack/medical/wrap/gauze/twelve = 1,
+		/obj/item/reagent_containers/hypospray/medipen = 1,
+		/obj/item/surgical_drapes = 1,
+		/obj/item/scalpel = 1,
+		/obj/item/hemostat = 1,
+		/obj/item/cautery = 1,
 	)
 	generate_items_inside(items_inside,src)
 
@@ -91,6 +210,36 @@
 		/obj/item/scalpel = 1,
 		/obj/item/hemostat = 1,
 		/obj/item/cautery = 1,
+	)
+	generate_items_inside(items_inside,src)
+
+/obj/item/storage/medkit/surgery/premium
+	name = "premium surgical medkit"
+	icon_state = "medkit_surgery_premium"
+	inhand_icon_state = "medkit-surgical"
+	desc = "A premium high capacity aid kit for doctors, full of medical supplies and basic surgical equipment."
+	storage_type = /datum/storage/medkit/surgery
+	custom_premium_price = PAYCHECK_COMMAND * 3
+
+/obj/item/storage/medkit/surgery/premium/PopulateContents()
+	if(empty)
+		return
+	var/list/items_inside = list(
+		/obj/item/healthanalyzer = 1,
+		/obj/item/stack/medical/wrap/gauze/twelve = 1,
+		/obj/item/stack/medical/suture = 2,
+		/obj/item/stack/medical/mesh = 2,
+		/obj/item/reagent_containers/hypospray/medipen = 1,
+		/obj/item/reagent_containers/medigel/sterilizine = 1,
+		/obj/item/storage/pill_bottle/lidocaine = 1,
+		/obj/item/surgical_drapes = 1,
+		/obj/item/scalpel = 1,
+		/obj/item/hemostat = 1,
+		/obj/item/retractor = 1,
+		/obj/item/circular_saw = 1,
+		/obj/item/cautery = 1,
+		/obj/item/bonesetter = 1,
+		/obj/item/blood_filter = 1,
 	)
 	generate_items_inside(items_inside,src)
 
@@ -141,6 +290,8 @@
 	desc = "A first aid kit with the ability to heal common types of injuries. You start thinking of the good old days just by looking at it."
 	empty = TRUE // long since been ransacked by hungry powergaming assistants breaking into med storage
 
+/// fire
+
 /obj/item/storage/medkit/fire
 	name = "burn treatment kit"
 	desc = "A specialized medical kit for when the ordnance lab <i>-spontaneously-</i> burns down."
@@ -165,6 +316,46 @@
 		/obj/item/reagent_containers/hypospray/medipen = 1)
 	generate_items_inside(items_inside,src)
 
+/obj/item/storage/medkit/fire/compact
+	name = "compact burn treatment kit"
+	desc = "A specialized medical kit for when the ordnance lab <i>-spontaneously-</i> burns down."
+	icon_state = "compact_medkit_burn"
+	inhand_icon_state = "medkit-ointment"
+	damagetype_healed = BURN
+
+/obj/item/storage/medkit/fire/compact/PopulateContents()
+	if(empty)
+		return
+	var/list/items_inside = list(
+		/obj/item/reagent_containers/applicator/patch/aiuri = 2,
+		/obj/item/stack/medical/ointment = 1,
+		/obj/item/stack/medical/bandage = 1,
+		/obj/item/reagent_containers/hypospray/medipen = 1)
+	generate_items_inside(items_inside,src)
+
+/obj/item/storage/medkit/fire/premium
+	name = "premium burn treatment kit"
+	desc = "A specialized medical kit for when the ordnance lab <i>-spontaneously-</i> burns down."
+	icon_state = "medkit_burn_premium"
+	inhand_icon_state = "medkit-ointment"
+	damagetype_healed = BURN
+	custom_premium_price = PAYCHECK_COMMAND * 3
+	storage_type = /datum/storage/medkit/premium
+
+/obj/item/storage/medkit/fire/compact/PopulateContents()
+	if(empty)
+		return
+	var/list/items_inside = list(
+		/obj/item/reagent_containers/applicator/patch/aiuri = 3,
+		/obj/item/stack/medical/mesh/advanced = 1,
+		/obj/item/reagent_containers/spray/hercuri = 1,
+		/obj/item/reagent_containers/hypospray/medipen/oxandrolone = 2,
+		/obj/item/reagent_containers/medigel/aiuri = 1,
+		/obj/item/reagent_containers/hypospray/medipen = 1)
+	generate_items_inside(items_inside,src)
+
+/// toxin
+
 /obj/item/storage/medkit/toxin
 	name = "toxin treatment kit"
 	desc = "Used to treat toxic blood content and radiation poisoning."
@@ -186,11 +377,50 @@
 	var/list/items_inside = list(
 		/obj/item/storage/pill_bottle/multiver/less = 1,
 		/obj/item/reagent_containers/syringe/syriniver = 3,
-		/obj/item/storage/pill_bottle/potassiodide = 1,
 		/obj/item/reagent_containers/hypospray/medipen/penacid = 1,
 		/obj/item/healthanalyzer/simple/disease = 1,
 		)
 	generate_items_inside(items_inside,src)
+
+/obj/item/storage/medkit/toxin/compact
+	name = "compact toxin treatment kit"
+	desc = "Used to treat toxic blood content and radiation poisoning."
+	icon_state = "compact_medkit_toxin"
+	inhand_icon_state = "medkit-toxin"
+	damagetype_healed = TOX
+
+/obj/item/storage/medkit/toxin/compact/PopulateContents()
+	if(empty)
+		return
+	var/list/items_inside = list(
+		/obj/item/storage/pill_bottle/multiver/less = 1,
+		/obj/item/reagent_containers/syringe/syriniver = 3,
+		/obj/item/reagent_containers/hypospray/medipen = 1,
+		)
+	generate_items_inside(items_inside,src)
+
+/obj/item/storage/medkit/toxin/premium
+	name = "premium toxin treatment kit"
+	desc = "Used to treat toxic blood content and radiation poisoning."
+	icon_state = "medkit_toxin_premium"
+	inhand_icon_state = "medkit-toxin"
+	damagetype_healed = TOX
+	custom_premium_price = PAYCHECK_COMMAND * 3
+	storage_type = /datum/storage/medkit/premium
+
+/obj/item/storage/medkit/toxin/premium/PopulateContents()
+	if(empty)
+		return
+	var/list/items_inside = list(
+		/obj/item/storage/pill_bottle/multiver = 1,
+		/obj/item/reagent_containers/syringe/penacid = 2,
+		/obj/item/reagent_containers/syringe/syriniver = 2,
+		/obj/item/reagent_containers/hypospray/medipen/penacid = 2,
+		/obj/item/healthanalyzer = 1,
+		)
+	generate_items_inside(items_inside,src)
+
+/// o2
 
 /obj/item/storage/medkit/o2
 	name = "oxygen deprivation treatment kit"
@@ -215,6 +445,46 @@
 		/obj/item/reagent_containers/hypospray/medipen = 1,
 		/obj/item/storage/pill_bottle/iron = 1)
 	generate_items_inside(items_inside,src)
+
+/obj/item/storage/medkit/o2/compact
+	name = "compact oxygen deprivation treatment kit"
+	desc = "A box full of oxygen goodies."
+	icon_state = "compact_medkit_o2"
+	inhand_icon_state = "medkit-o2"
+	damagetype_healed = OXY
+
+/obj/item/storage/medkit/o2/compact/PopulateContents()
+	if(empty)
+		return
+	var/list/items_inside = list(
+		/obj/item/reagent_containers/syringe/convermol = 1,
+		/obj/item/reagent_containers/hypospray/medipen = 1,
+		/obj/item/storage/pill_bottle/iron = 1)
+	generate_items_inside(items_inside,src)
+
+/obj/item/storage/medkit/o2/premium
+	name = "premium oxygen deprivation treatment kit"
+	desc = "A box full of oxygen goodies."
+	icon_state = "medkit_o2_premium"
+	inhand_icon_state = "medkit-o2"
+	custom_premium_price = PAYCHECK_COMMAND * 3
+	damagetype_healed = OXY
+	storage_type = /datum/storage/medkit/premium
+
+/obj/item/storage/medkit/o2/premium/PopulateContents()
+	if(empty)
+		return
+	var/list/items_inside = list(
+		/obj/item/reagent_containers/syringe/convermol = 3,
+		/obj/item/reagent_containers/hypospray/medipen/salbutamol = 2,
+		/obj/item/reagent_containers/hypospray/medipen = 2,
+		/obj/item/reagent_containers/hypospray/medipen/blood_loss = 1,
+		/obj/item/inhaler/salbutamol = 1,
+		/obj/item/reagent_containers/inhaler_canister/salbutamol = 1,
+		/obj/item/storage/pill_bottle/iron = 1)
+	generate_items_inside(items_inside,src)
+
+/// brute
 
 /obj/item/storage/medkit/brute
 	name = "brute trauma treatment kit"
@@ -242,6 +512,50 @@
 		)
 	generate_items_inside(items_inside,src)
 
+/obj/item/storage/medkit/brute/compact
+	name = "compact brute trauma treatment kit"
+	desc = "A first aid kit for when you get toolboxed."
+	icon_state = "compact_medkit_brute"
+	inhand_icon_state = "medkit-brute"
+	damagetype_healed = BRUTE
+
+/obj/item/storage/medkit/brute/compact/PopulateContents()
+	if(empty)
+		return
+	var/list/items_inside = list(
+		/obj/item/reagent_containers/applicator/patch/libital = 2,
+		/obj/item/stack/medical/wrap/gauze = 1,
+		/obj/item/storage/pill_bottle/probital = 1,
+		/obj/item/healthanalyzer/simple = 1,
+		)
+	generate_items_inside(items_inside,src)
+
+/obj/item/storage/medkit/brute/premium
+	name = "premium brute trauma treatment kit"
+	desc = "A first aid kit for when you get toolboxed."
+	icon_state = "medkit_brute_premium"
+	inhand_icon_state = "medkit-brute"
+	damagetype_healed = BRUTE
+	custom_premium_price = PAYCHECK_COMMAND * 3
+	storage_type = /datum/storage/medkit/premium
+
+/obj/item/storage/medkit/brute/premium/PopulateContents()
+	if(empty)
+		return
+	var/list/items_inside = list(
+		/obj/item/reagent_containers/applicator/patch/libital = 3,
+		/obj/item/stack/medical/wrap/gauze = 1,
+		/obj/item/stack/medical/suture/medicated = 1,
+		/obj/item/storage/pill_bottle/probital = 1,
+		/obj/item/storage/pill_bottle/iron = 1,
+		/obj/item/reagent_containers/hypospray/medipen/salacid = 2,
+		/obj/item/reagent_containers/medigel/libital = 1,
+		/obj/item/healthanalyzer = 1,
+		)
+	generate_items_inside(items_inside,src)
+
+/// advanced
+
 /obj/item/storage/medkit/advanced
 	name = "advanced first aid kit"
 	desc = "An advanced kit to help deal with advanced wounds."
@@ -262,6 +576,48 @@
 		/obj/item/stack/medical/wrap/gauze = 1,
 		/obj/item/storage/pill_bottle/penacid = 1)
 	generate_items_inside(items_inside,src)
+
+/obj/item/storage/medkit/advanced/compact
+	name = "compact advanced first aid kit"
+	desc = "An advanced kit to help deal with advanced wounds."
+	icon_state = "compact_medkit_advanced"
+	inhand_icon_state = "medkit-advanced"
+	custom_premium_price = PAYCHECK_COMMAND * 3
+	damagetype_healed = HEAL_ALL_DAMAGE
+
+/obj/item/storage/medkit/advanced/compact/PopulateContents()
+	if(empty)
+		return
+	var/list/items_inside = list(
+		/obj/item/reagent_containers/applicator/patch/synthflesh = 1,
+		/obj/item/reagent_containers/applicator/patch/sal_acid = 1,
+		/obj/item/reagent_containers/applicator/patch/aiuri = 1,
+		/obj/item/reagent_containers/hypospray/medipen/atropine = 1,
+		/obj/item/stack/medical/wrap/gauze = 1)
+	generate_items_inside(items_inside,src)
+
+/obj/item/storage/medkit/advanced/premium
+	name = "premium advanced first aid kit"
+	desc = "An advanced kit to help deal with advanced wounds."
+	icon_state = "medkit_advanced_premium"
+	inhand_icon_state = "medkit-advanced"
+	custom_premium_price = PAYCHECK_COMMAND * 8
+	damagetype_healed = HEAL_ALL_DAMAGE
+
+/obj/item/storage/medkit/advanced/premium/PopulateContents()
+	if(empty)
+		return
+	var/list/items_inside = list(
+		/obj/item/reagent_containers/medigel/synthflesh = 1,
+		/obj/item/reagent_containers/hypospray/medipen/atropine = 2,
+		/obj/item/reagent_containers/hypospray/medipen/penacid = 1,
+		/obj/item/reagent_containers/hypospray/medipen/salbutamol = 1,
+		/obj/item/reagent_containers/hypospray/medipen/survival = 1,
+		/obj/item/stack/medical/wrap/gauze = 1,
+		/obj/item/storage/pill_bottle/penacid = 1)
+	generate_items_inside(items_inside,src)
+
+/// tactical
 
 /obj/item/storage/medkit/tactical_lite
 	name = "combat first aid kit"
@@ -348,11 +704,13 @@
 	)
 	generate_items_inside(items_inside,src)
 
+/// coroner
+
 /obj/item/storage/medkit/coroner
 	name = "compact coroner's medkit"
 	desc = "A smaller medical kit designed primarily for assisting in dissecting the deceased, rather than treating the living."
 	icon = 'icons/obj/storage/medkit.dmi'
-	icon_state = "compact_coronerkit"
+	icon_state = "coronerkit"
 	inhand_icon_state = "coronerkit"
 	storage_type = /datum/storage/medkit/coroner
 
@@ -367,6 +725,63 @@
 		/obj/item/reagent_containers/syringe = 1,
 	)
 	generate_items_inside(items_inside,src)
+
+/obj/item/storage/medkit/coroner/big
+	name = "big coroner's medkit"
+	desc = "A medical kit designed primarily for assisting in dissecting the deceased, rather than treating the living."
+	icon = 'icons/obj/storage/medkit.dmi'
+	icon_state = "big_coronerkit"
+	inhand_icon_state = "coronerkit"
+	storage_type = /datum/storage/medkit/coroner
+
+/obj/item/storage/medkit/coroner/big/PopulateContents()
+	if(empty)
+		return
+	var/list/items_inside = list(
+		/obj/item/reagent_containers/cup/bottle/formaldehyde = 1,
+		/obj/item/reagent_containers/medigel/sterilizine = 1,
+		/obj/item/reagent_containers/blood = 1,
+		/obj/item/bodybag = 2,
+		/obj/item/reagent_containers/syringe = 1,
+		/obj/item/autopsy_scanner,
+		/obj/item/scalpel/cruel = 1,
+		/obj/item/hemostat/cruel = 1,
+		/obj/item/cautery/cruel = 1,
+		/obj/item/coin/silver = 2,
+	)
+	generate_items_inside(items_inside,src)
+
+/obj/item/storage/medkit/coroner/premium
+	name = "premium coroner's medkit"
+	desc = "A medical kit designed primarily for assisting in dissecting the deceased, rather than treating the living."
+	icon = 'icons/obj/storage/medkit.dmi'
+	icon_state = "coronerkit_premium"
+	inhand_icon_state = "coronerkit"
+	storage_type = /datum/storage/medkit/coroner
+
+/obj/item/storage/medkit/coroner/premium/PopulateContents()
+	if(empty)
+		return
+	var/list/items_inside = list(
+		/obj/item/reagent_containers/cup/bottle/formaldehyde = 1,
+		/obj/item/reagent_containers/medigel/sterilizine = 1,
+		/obj/item/reagent_containers/blood = 1,
+		/obj/item/bodybag = 2,
+		/obj/item/reagent_containers/syringe = 1,
+		/obj/item/autopsy_scanner,
+		/obj/item/scalpel/cruel = 1,
+		/obj/item/hemostat/cruel = 1,
+		/obj/item/retractor/cruel = 1,
+		/obj/item/surgicaldrill/cruel = 1,
+		/obj/item/circular_saw/cruel = 1,
+		/obj/item/cautery/cruel = 1,
+		/obj/item/bonesetter/cruel = 1,
+		/obj/item/blood_filter/cruel = 1,
+		/obj/item/coin/silver = 2,
+	)
+	generate_items_inside(items_inside,src)
+
+/// end medkit
 
 //medibot assembly
 /obj/item/storage/medkit/tool_act(mob/living/user, obj/item/tool, list/modifiers)

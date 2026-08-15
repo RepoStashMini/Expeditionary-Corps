@@ -413,6 +413,13 @@
 	list_reagents = list(/datum/reagent/medicine/c2/probital = 5, /datum/reagent/medicine/granibitaluri = 10)
 	rename_with_volume = TRUE
 
+/obj/item/reagent_containers/applicator/pill/lidocaine
+	name = "Lidocaine pill"
+	desc = "A numbing agent used often for surgeries, metabolizes slowly."
+	icon_state = "pill3"
+	list_reagents = list(/datum/reagent/medicine/lidocaine = 10)
+	rename_with_volume = TRUE
+
 /obj/item/reagent_containers/applicator/pill/iron
 	name = "iron pill"
 	desc = "Used to reduce bloodloss slowly."

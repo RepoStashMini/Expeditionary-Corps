@@ -235,6 +235,12 @@
 	icon_state = "medicalcrate"
 	base_icon_state = "medicalcrate"
 
+/obj/structure/closet/crate/medical/brute
+	desc = "A medical crate. This specimen is painted in the colors of the brute trauma treatment kit."
+	name = "medical crate"
+	icon_state = "brute_medicalcrate"
+	base_icon_state = "brute_medicalcrate"
+
 /obj/structure/closet/crate/deforest
 	name = "\improper DeForest Medical crate"
 	desc = "A DeForest brand crate of medical supplies."

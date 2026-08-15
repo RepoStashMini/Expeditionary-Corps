@@ -87,6 +87,25 @@
 	. = ..()
 	if(!isnull(holdables))
 		set_holdable(holdables)
+///big medkit
+/datum/storage/medkit/big
+	max_slots = 16
+	max_total_storage = 32
+	max_specific_storage = WEIGHT_CLASS_NORMAL //holds the same equipment as a medibelt
+
+/datum/storage/medkit/big/New(atom/parent, max_slots, max_specific_storage, max_total_storage, rustle_sound, remove_rustle_sound, list/holdables)
+	holdables = list_of_everything_medkits_can_hold
+	return ..()
+
+///premium medkit
+/datum/storage/medkit/premium
+	max_slots = 16
+	max_total_storage = 32
+	max_specific_storage = WEIGHT_CLASS_NORMAL //holds the same equipment as a medibelt
+
+/datum/storage/medkit/premium/New(atom/parent, max_slots, max_specific_storage, max_total_storage, rustle_sound, remove_rustle_sound, list/holdables)
+	holdables = list_of_everything_medkits_can_hold
+	return ..()
 
 ///Surgery medkit
 /datum/storage/medkit/surgery

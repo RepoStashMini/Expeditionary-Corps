@@ -38,7 +38,7 @@
 	if (prob(40))
 		new /obj/item/storage/toolbox/emergency(src)
 
-	switch (pick_weight(list("small" = 20, "aid" = 20, "tank" = 20, "both" = 30))) // NOVA EDIT CHANGE - ORIGINAL: switch (pick_weight(list("small" = 20, "aid" = 20, "tank" = 20, "both" = 30, "nothing" = 10)))
+	switch (pick_weight(list("small" = 20, "aid" = 20, "tank" = 20, "both" = 30, "nothing" = 10)))
 		if ("small")
 			new /obj/item/tank/internals/emergency_oxygen(src)
 			new /obj/item/tank/internals/emergency_oxygen(src)
@@ -47,8 +47,14 @@
 
 		if ("aid")
 			new /obj/item/tank/internals/emergency_oxygen(src)
-			new /obj/item/storage/medkit/emergency(src)
 			new /obj/item/clothing/mask/breath(src)
+			switch (pick_weight(list("small" = 90, "big" = 9, "premium" = 1)))
+				if ("small")
+					new /obj/item/storage/medkit/emergency(src)
+				if ("big")
+					new /obj/item/storage/medkit/emergency/big(src)
+				if ("premium")
+					new /obj/item/storage/medkit/emergency/premium(src)
 
 		if ("tank")
 			new /obj/item/tank/internals/oxygen(src)
@@ -58,13 +64,9 @@
 			new /obj/item/tank/internals/emergency_oxygen(src)
 			new /obj/item/clothing/mask/breath(src)
 
-		// NOVA EDIT REMOVAL START
-		/*
 		if ("nothing")
 			// doot
 			pass()
-		*/
-		// NOVA EDIT REMOVAL END
 
 /*
  * Fire Closet
