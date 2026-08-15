@@ -1,6 +1,6 @@
 /**
  * Chemical Tank Aesthetic Overrides
- */
+
 
 // Water Tank
 /obj/structure/reagent_dispensers/watertank
@@ -17,3 +17,4 @@
 // Firefighting Foam Tank
 /obj/structure/reagent_dispensers/foamtank
 	icon = 'modular_nova/modules/aesthetics/chemical_tanks/chemical_tanks.dmi'
+ */
