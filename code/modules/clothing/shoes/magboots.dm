@@ -1,5 +1,15 @@
 /datum/armor/shoes_magboots
 	bio = 90
+/datum/armor/shoes_magboots/syndie
+	bio = 90
+	acid = 10
+	bomb = 20
+	bullet = 15
+	laser = 15
+	fire = 30
+	melee = 20
+	wound = 20
+
 
 /obj/item/clothing/shoes/magboots
 	name = "magboots"
@@ -99,5 +109,7 @@
 	desc = "Reverse-engineered magnetic boots that have a heavy magnetic pull. Property of Gorlex Marauders."
 	icon_state = "syndiemag0"
 	base_icon_state = "syndiemag"
+	armor_type = /datum/armor/shoes_magboots/syndie
+	slowdown_active = 1
 	magpulse_fishing_modifier = 6
 	fishing_modifier = 3
