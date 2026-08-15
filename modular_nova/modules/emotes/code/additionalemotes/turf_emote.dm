@@ -33,6 +33,9 @@
 		if(isinsect(user) || HAS_TRAIT(user, TRAIT_WEBBING_ASPECT))
 			user.allowed_turfs += "web"
 
+		if(isakula(user) || HAS_TRAIT(user, TRAIT_WATER_ASPECT))
+			user.allowed_turfs += "water"
+
 		if(ispodperson(user) || ispodweak(user) || HAS_TRAIT(user, TRAIT_FLORAL_ASPECT))
 			user.allowed_turfs += "vines"
 
