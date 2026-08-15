@@ -11,6 +11,7 @@ GLOBAL_LIST_INIT(generic_ambience,list(
 	'sound/ambience/general/ambigen9.ogg',
 	'sound/ambience/general/ambigen10.ogg',
 	'sound/ambience/general/ambigen11.ogg',
+	'sound/ambience/general/ambigen12.ogg',
 	'sound/ambience/general/ambigen13.ogg',
 	'sound/ambience/general/ambigen14.ogg',
 	'sound/ambience/general/ambigen15.ogg',
