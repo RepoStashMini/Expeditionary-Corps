@@ -6086,6 +6086,7 @@
 #include "code\modules\paperwork\paper_biscuit.dm"
 #include "code\modules\paperwork\paper_cutter.dm"
 #include "code\modules\paperwork\paper_premade.dm"
+#include "code\modules\paperwork\paper_sticky.dm"
 #include "code\modules\paperwork\paperbin.dm"
 #include "code\modules\paperwork\paperplane.dm"
 #include "code\modules\paperwork\paperwork.dm"

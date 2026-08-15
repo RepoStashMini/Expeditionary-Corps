@@ -1,3 +1,8 @@
+/obj/item/folder/cc
+	desc = "A green folder."
+	icon_state = "folder_centcom"
+	bg_color = "#2e9f43"
+
 /obj/item/folder/blue
 	desc = "A blue folder."
 	icon_state = "folder_blue"
