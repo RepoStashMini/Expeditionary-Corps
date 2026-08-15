@@ -8,7 +8,9 @@
 	w_class = WEIGHT_CLASS_SMALL
 
 	force = 0.3 // Big soft towel is more harmless
-	//attack_verb = list("whipped")
+	attack_verb_continuous = list("hits", "bludgeons", "whacks","whipped")
+	attack_verb_simple = list("hit", "bludgeon", "whack","whipped")
+	hitsound = 'sound/items/towelwhip.ogg'
 
 	var/beach_towel = /obj/structure/towel
 
