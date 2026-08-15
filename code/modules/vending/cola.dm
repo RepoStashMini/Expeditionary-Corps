@@ -23,9 +23,9 @@
 		/obj/item/reagent_containers/cup/soda_cans/thirteenloko = 6,
 		/obj/item/reagent_containers/cup/soda_cans/shamblers = 6,
 		/obj/item/reagent_containers/cup/soda_cans/wellcheers = 6,
+		/obj/item/reagent_containers/cup/glass/drinkingglass/filled/nuka_cola = 1,
 	)
 	premium = list(
-		/obj/item/reagent_containers/cup/glass/drinkingglass/filled/nuka_cola = 1,
 		/obj/item/reagent_containers/cup/soda_cans/air = 1,
 		/obj/item/reagent_containers/cup/soda_cans/monkey_energy = 1,
 		/obj/item/reagent_containers/cup/soda_cans/grey_bull = 1,

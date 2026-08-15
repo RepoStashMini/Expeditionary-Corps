@@ -13,7 +13,6 @@
 		/obj/machinery/vending/imported/yangyu,
 		/obj/machinery/vending/imported/mothic,
 		/obj/machinery/vending/imported/tiziran,
-		/obj/machinery/vending/deforest_medvend,
 	)
 
 /datum/supply_pack/vending/imported/fill(obj/structure/closet/crate/target_crate)
