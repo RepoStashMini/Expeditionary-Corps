@@ -1041,7 +1041,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/light/cold/directional/north,
+/obj/machinery/light/cold/directional/north{
+	color = "#CC66FF"
+	},
 /turf/open/floor/iron/white_smooth,
 /area/station/medical/virology)
 "aPf" = (
@@ -2321,7 +2323,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/landmark/firealarm_sanity,
-/obj/machinery/power/apc/auto_name/directional/west,
 /turf/open/floor/iron/white_smooth,
 /area/station/medical/virology)
 "bEV" = (
@@ -3543,14 +3544,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/techfloor_grid,
 /area/station/engineering/storage_shared)
-"cwq" = (
-/obj/machinery/door/poddoor/preopen{
-	id = "brigwindows";
-	name = "Brig Front Blast Door"
-	},
-/obj/effect/mapping_helpers/airlock/access/all/security/general,
-/turf/open/floor/iron/techfloor_grid,
-/area/station/security/brig)
 "cwu" = (
 /obj/structure/curtain/cloth/fancy/mechanical/start_closed{
 	desc = "A set of curtains serving as a fancy theater backdrop. They can only be opened by a button.";
@@ -4092,6 +4085,11 @@
 /obj/structure/cable,
 /turf/open/floor/iron/smooth,
 /area/station/commons/toilet/locker)
+"cPt" = (
+/turf/open/floor/iron/techfloor_grid_half{
+	dir = 1
+	},
+/area/station/engineering/storage)
 "cPG" = (
 /turf/open/floor/iron/smooth,
 /area/station/service/hydroponics)
@@ -5003,16 +5001,6 @@
 /obj/effect/turf_decal/techfloor_edges,
 /turf/open/floor/iron/techfloor_gray,
 /area/station/expeditionary)
-"dwP" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/structure/cable,
-/obj/machinery/duct,
-/obj/machinery/door/airlock/multi_tile/metal{
-	dir = 8
-	},
-/turf/open/floor/catwalk_floor,
-/area/station/engineering/atmos/office)
 "dxF" = (
 /obj/machinery/holopad,
 /obj/effect/turf_decal/bot,
@@ -5844,6 +5832,13 @@
 /obj/structure/railing/alt{
 	dir = 4
 	},
+/obj/structure/closet/crate/radiation,
+/obj/item/geiger_counter,
+/obj/item/geiger_counter,
+/obj/item/clothing/suit/utility/radiation,
+/obj/item/clothing/suit/utility/radiation,
+/obj/item/clothing/head/utility/radiation,
+/obj/item/clothing/head/utility/radiation,
 /turf/open/floor/iron/techfloor_grid_large,
 /area/station/medical/storage)
 "eeP" = (
@@ -7015,14 +7010,14 @@
 /turf/open/floor/iron/smooth_large,
 /area/station/hallway/secondary/service)
 "eWv" = (
-/obj/machinery/door/airlock/multi_tile/metal{
-	dir = 8
-	},
 /obj/machinery/door/poddoor/preopen{
 	id = "brigwindows";
 	name = "Brig Front Blast Door"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
+/obj/machinery/door/airlock/security{
+	name = 4
+	},
 /turf/open/floor/iron/techfloor_grid,
 /area/station/security/brig)
 "eWE" = (
@@ -12682,7 +12677,11 @@
 /turf/open/floor/plating,
 /area/station/maintenance/floor3/port/aft)
 "jgz" = (
-/turf/closed/wall,
+/obj/machinery/suit_storage_unit/engine,
+/obj/machinery/light/dim/directional/south,
+/turf/open/floor/iron/techfloor_grid_half{
+	dir = 4
+	},
 /area/station/engineering/storage)
 "jhv" = (
 /obj/effect/turf_decal/smooth/dark_purple/half/contrasted{
@@ -15538,6 +15537,10 @@
 	},
 /turf/open/floor/plating,
 /area/station/engineering/atmos/refilling_room)
+"ljx" = (
+/obj/structure/reagent_dispensers/watertank/high,
+/turf/open/floor/iron/techfloor_grid,
+/area/station/engineering/storage)
 "ljD" = (
 /obj/structure/cable,
 /turf/open/floor/plating,
@@ -20674,9 +20677,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
 /obj/machinery/duct,
-/obj/machinery/door/airlock/multi_tile/metal{
-	dir = 4
-	},
 /turf/open/floor/catwalk_floor,
 /area/station/engineering/atmos/hallway)
 "oVm" = (
@@ -22808,6 +22808,9 @@
 	dir = 1
 	},
 /area/station/hallway/floor1)
+"qye" = (
+/turf/closed/wall,
+/area/station/maintenance/floor3/starboard/aft)
 "qyx" = (
 /turf/open/floor/iron/techmaint,
 /area/station/maintenance/floor4/starboard/fore)
@@ -25391,6 +25394,9 @@
 	},
 /turf/open/floor/iron/smooth,
 /area/station/engineering/atmos/storage/gas)
+"seA" = (
+/turf/open/floor/iron/techfloor_grid_large,
+/area/station/engineering/storage)
 "seM" = (
 /obj/machinery/light/directional/south,
 /turf/open/floor/iron/smooth_edge,
@@ -26855,10 +26861,6 @@
 	},
 /turf/open/floor/engine,
 /area/station/engineering/supermatter/room)
-"tiQ" = (
-/obj/machinery/door/airlock/security/blue,
-/turf/open/floor/iron/techfloor_gray,
-/area/station/expeditionary)
 "tjF" = (
 /obj/structure/chair/wood{
 	dir = 4
@@ -33350,7 +33352,9 @@
 	},
 /obj/structure/sign/warning/gas_mask/directional/south,
 /obj/structure/cable,
-/obj/machinery/light/cold/directional/south,
+/obj/machinery/light/cold/directional/south{
+	color = "#CC66FF"
+	},
 /turf/open/floor/iron/white_smooth,
 /area/station/medical/virology)
 "xMj" = (
@@ -54993,7 +54997,7 @@ gdJ
 vUR
 gdJ
 cOr
-dwP
+uHc
 hjq
 fEj
 vSV
@@ -113095,10 +113099,10 @@ bBr
 oku
 fSO
 jXT
+ljx
 xqK
 wzy
-jgz
-aoI
+qye
 hPh
 aoI
 oUr
@@ -113338,9 +113342,9 @@ eYT
 mhF
 kNg
 avq
+cPt
 njj
-jgz
-aoI
+qye
 hPh
 aoI
 oUr
@@ -113580,9 +113584,9 @@ ooc
 pXx
 pXx
 oku
+seA
 ljh
-jgz
-aoI
+qye
 hPh
 aoI
 oUr
@@ -113822,9 +113826,9 @@ mSv
 kbj
 kbj
 dOu
-njj
+xqK
 jgz
-aoI
+qye
 hPh
 hPh
 oUr
@@ -114063,10 +114067,10 @@ wzA
 lnQ
 oFm
 evq
+seA
 xqK
 wsr
-jgz
-aoI
+qye
 hPh
 hPh
 oUr
@@ -181799,7 +181803,7 @@ xHq
 ppP
 dlt
 dlt
-cwq
+eWv
 eWv
 dlt
 dlt
@@ -230675,7 +230679,7 @@ xXz
 xXz
 evO
 mMW
-tiQ
+jYV
 mMW
 evO
 nAp
