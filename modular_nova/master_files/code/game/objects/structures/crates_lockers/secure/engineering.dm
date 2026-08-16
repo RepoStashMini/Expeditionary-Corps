@@ -4,7 +4,6 @@
 	new /obj/item/construction/plumbing/engineering(src)
 	new /obj/item/circuitboard/machine/rodstopper(src)
 	new /obj/item/card/id/departmental_budget/eng(src)
-	new /obj/item/flatpacked_machine(src)
 
 /obj/structure/closet/secure_closet/engineering_personal/PopulateContents()
 	..()
