@@ -6970,6 +6970,7 @@
 #include "code\modules\vending\custom.dm"
 #include "code\modules\vending\cytopro.dm"
 #include "code\modules\vending\donk.dm"
+#include "code\modules\vending\donut.dm"
 #include "code\modules\vending\drinnerware.dm"
 #include "code\modules\vending\engineering.dm"
 #include "code\modules\vending\engivend.dm"
