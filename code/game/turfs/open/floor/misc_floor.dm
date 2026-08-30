@@ -260,7 +260,7 @@
 /turf/open/floor/plating/rust
 	//SDMM supports colors, this is simply for easier mapping
 	//and should be removed on initialize
-	color = COLOR_BROWN
+	icon_state = "plating_rust"
 
 /turf/open/floor/plating/rust/Initialize(mapload)
 	. = ..()

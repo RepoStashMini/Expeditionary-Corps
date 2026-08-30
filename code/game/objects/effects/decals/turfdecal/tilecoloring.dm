@@ -306,7 +306,7 @@ TILE_DECAL_SUBTYPE_HELPER(/obj/effect/turf_decal/smooth/dark)
 /// Trimlines
 /obj/effect/turf_decal/trimline
 	layer = TURF_PLATING_DECAL_LAYER
-	alpha = 110
+	alpha = 155
 	icon_state = "trimline_box"
 	use_holiday_colors = TRUE
 

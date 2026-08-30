@@ -109,3 +109,46 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/directions/lavaland, 32)
 	icon_state = "direction_arrival"
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/directions/arrival, 32)
+
+// Deck
+
+/obj/structure/sign/directions/deck/first
+	name = "\improper First Deck"
+	icon_state = "deck-1"
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/directions/deck/first, 32)
+
+/obj/structure/sign/directions/deck/second
+	name = "\improper Second Deck"
+	icon_state = "deck-2"
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/directions/deck/second, 32)
+
+/obj/structure/sign/directions/deck/third
+	name = "\improper Third Deck"
+	icon_state = "deck-3"
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/directions/deck/third, 32)
+
+/obj/structure/sign/directions/deck/fourth
+	name = "\improper Fourth Deck"
+	icon_state = "deck-4"
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/directions/deck/fourth, 32)
+
+
+/obj/structure/sign/directions/deck/first/old
+	name = "\improper First Deck"
+	icon_state = "deck-1old"
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/directions/deck/first/old, 32)
+
+/obj/structure/sign/directions/deck/second/old
+	name = "\improper Second Deck"
+	icon_state = "deck-2old"
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/directions/deck/second/old, 32)
+
+/obj/structure/sign/directions/deck/third/old
+	name = "\improper Third Deck"
+	icon_state = "deck-3old"
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/directions/deck/third/old, 32)
+
+/obj/structure/sign/directions/deck/fourth/old
+	name = "\improper Fourth Deck"
+	icon_state = "deck-4old"
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/directions/deck/fourth/old, 32)

@@ -231,3 +231,85 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/warning/pods, 32)
 	icon_state = "radshelter"
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/warning/rad_shelter, 32)
+
+////LASER
+
+/obj/structure/sign/warning/lethal_turrets
+	name = "\improper LETHAL TURRETS"
+	desc = "Enter at own risk!"
+	icon_state = "turrets"
+
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/warning/lethal_turrets, 32)
+
+/obj/structure/sign/warning/lethal_turrets/laser
+	name = "\improper HIGH POWER LASER"
+	desc = "Enter at own risk!"
+	icon_state = "turrets"
+
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/warning/lethal_turrets/laser, 32)
+
+/obj/structure/sign/warning/bomb_range
+	name = "\improper BOMB RANGE"
+	icon_state = "blast"
+
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/warning/bomb_range, 32)
+
+/obj/structure/sign/warning/fall
+	name = "\improper FALL HAZARD"
+	icon_state = "falling"
+
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/warning/fall, 32)
+
+/obj/structure/sign/warning/moving_parts
+	name = "\improper MOVING PARTS"
+	icon_state = "movingparts"
+
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/warning/moving_parts, 32)
+
+/obj/structure/sign/warning/moving_parts_old
+	name = "\improper MOVING PARTS"
+	icon_state = "movingpartsold"
+
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/warning/moving_parts_old, 32)
+
+/obj/structure/sign/warning/securearea
+	name = "\improper SECURE AREA"
+	icon_state = "securearea2"
+
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/warning/securearea, 32)
+
+/obj/structure/sign/warning/secureareaold
+	name = "\improper SECURE AREA"
+	icon_state = "securearea2old"
+
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/warning/secureareaold, 32)
+
+/obj/structure/sign/warning/armory
+	name = "\improper ARMORY"
+	icon_state = "armory"
+
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/warning/armory, 32)
+
+/obj/structure/sign/warning/armoryold
+	name = "\improper ARMORY"
+	icon_state = "armoryold"
+
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/warning/armoryold, 32)
+
+/obj/structure/sign/warning/server
+	name = "\improper SERVER ROOM"
+	icon_state = "server"
+
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/warning/server, 32)
+
+/obj/structure/sign/warning/serverold
+	name = "\improper SERVER ROOM"
+	icon_state = "serverold"
+
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/warning/serverold, 32)
+
+/obj/structure/sign/warning/serverold
+	name = "\improper TOXIC MATERIAL"
+	icon_state = "toxic_material"
+
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/warning/serverold, 32)

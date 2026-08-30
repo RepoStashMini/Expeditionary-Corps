@@ -20,6 +20,13 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/departments/med, 32)
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/departments/med_alt, 32)
 
+/obj/structure/sign/departments/medbay/mini
+	name = "\improper Medbay sign"
+	sign_change_name = "Generic Medical Alt"
+	icon_state = "medbay0"
+
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/departments/medbay/mini, 32)
+
 /obj/structure/sign/departments/medbay
 	name = "\improper Medbay sign"
 	sign_change_name = "Generic Medical"
@@ -43,6 +50,14 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/departments/medbay/alt, 32)
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/departments/exam_room, 32)
 
+/obj/structure/sign/departments/exam_room/mini
+	name = "\improper Exam Room sign"
+	sign_change_name = "Department - Medbay: Exam Room"
+	desc = "A guidance sign which reads 'Exam Room'."
+	icon_state = "examroom0"
+
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/departments/exam_room/mini, 32)
+
 /obj/structure/sign/departments/chemistry
 	name = "\improper Chemistry sign"
 	sign_change_name = "Department - Medbay: Chemistry"
@@ -56,6 +71,12 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/departments/chemistry, 32)
 	icon_state = "chemistry2"
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/departments/chemistry/alt, 32)
+
+/obj/structure/sign/departments/chemistry/mini
+	sign_change_name = "Department - Medbay: Chemistry Alt"
+	icon_state = "chemistry"
+
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/departments/chemistry/mini, 32)
 
 /obj/structure/sign/departments/chemistry/pharmacy
 	name = "\improper Pharmacy sign"
@@ -137,6 +158,14 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/departments/xenobio, 32)
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/departments/xenobio/alt, 32)
 
+/obj/structure/sign/departments/xenobio/mini
+	name = "\improper Xenobiology sign"
+	sign_change_name = "Department - Science: Xenobiology"
+	desc = "A sign labelling an area where xenobiological entities are researched."
+	icon_state = "xenobio"
+
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/departments/xenobio/mini, 32)
+
 /obj/structure/sign/departments/genetics
 	name = "\improper Genetics sign"
 	sign_change_name = "Department - Science: Genetics"
@@ -190,6 +219,12 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/departments/botany/alt2, 32)
 	icon_state = "botany"
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/departments/botany/alt3, 32)
+
+/obj/structure/sign/departments/botany/botany/mini
+	sign_change_name = "Department - Botany (Tray) Alt"
+	icon_state = "hydro"
+
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/departments/botany/mini, 32)
 
 /obj/structure/sign/departments/custodian
 	name = "\improper Janitor sign"
@@ -362,3 +397,23 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/departments/aisat, 32)
 	icon_state = "vault"
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/departments/vault, 32)
+
+
+
+
+/obj/structure/sign/departments/infm
+	name = "\improper Infirmary"
+	icon_state = "infm"
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/departments/infm, 32)
+
+/obj/structure/sign/departments/emerg
+	name = "\improper EMERGENCY ONLY"
+	desc = "A warning sign which reads 'EMERGENCY ONLY!'."
+	icon_state = "emerg"
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/departments/emerg, 32)
+
+/obj/structure/sign/departments/noidle
+	name = "\improper NO IDLING"
+	desc = "A warning sign which reads 'NO IDLING!'."
+	icon_state = "noidle"
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/departments/noidle, 32)

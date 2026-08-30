@@ -3137,6 +3137,7 @@
 #include "code\game\objects\structures\pinatas.dm"
 #include "code\game\objects\structures\plasticflaps.dm"
 #include "code\game\objects\structures\platform.dm"
+#include "code\game\objects\structures\platform_decorative.dm"
 #include "code\game\objects\structures\railings.dm"
 #include "code\game\objects\structures\reflector.dm"
 #include "code\game\objects\structures\safe.dm"
