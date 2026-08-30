@@ -115,6 +115,14 @@
 	attack_self(user)
 	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
+/obj/item/flashlight/upgraded
+	name = "high power flashlight"
+	desc = "An energy efficient flashlight."
+	icon_state = "biglight"
+	inhand_icon_state = "biglight"
+	light_power = 3
+	light_range = 6
+
 /obj/item/flashlight/suicide_act(mob/living/user)
 	if (user.is_blind())
 		user.visible_message(span_suicide("[user] is putting [src] close to [user.p_their()] eyes and turning it on... but [user.p_theyre()] blind!"))
