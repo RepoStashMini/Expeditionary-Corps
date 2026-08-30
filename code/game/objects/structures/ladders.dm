@@ -17,6 +17,8 @@
 	/// travel time for ladder in deciseconds
 	var/travel_time = 1 SECONDS
 
+	var/static/list/climbsounds = list('sound/effects/ladder.ogg','sound/effects/ladder2.ogg','sound/effects/ladder3.ogg','sound/effects/ladder4.ogg')
+
 /obj/structure/ladder/Initialize(mapload, obj/structure/ladder/up, obj/structure/ladder/down)
 	..()
 	GLOB.ladders += src
@@ -272,6 +274,9 @@
 /obj/structure/ladder/proc/show_initial_fluff_message(mob/user, going_up)
 	var/up_down = going_up ? "up" : "down"
 	user.balloon_alert_to_viewers("climbing [up_down]...")
+	playsound(src, pick(climbsounds), 50)
+	// playsound(target_ladder, pick(climbsounds), 50) // надо бы заставить это работать
+
 
 /obj/structure/ladder/proc/travel(mob/user, going_up = TRUE, is_ghost = FALSE, grant_exp = FALSE)
 	var/obj/structure/ladder/ladder = going_up ? up : down
