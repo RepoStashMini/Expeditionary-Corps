@@ -167,10 +167,12 @@
 	name = "mug"
 	desc = "A drink served in a classy mug."
 	icon = 'icons/obj/drinks/coffee.dmi'
-	icon_state = "tea_empty"
-	base_icon_state = "tea"
+	icon_state = "coffeecup"
 	inhand_icon_state = "coffee"
 
+	fill_icon_thresholds = list(30, 40, 50)
+	fill_icon_state = "coffeecup"
+/*
 /obj/item/reagent_containers/cup/glass/mug/Initialize(mapload)
 	. = ..()
 	AddElement(/datum/element/cuffable_item)
@@ -178,17 +180,17 @@
 /obj/item/reagent_containers/cup/glass/mug/update_icon_state()
 	icon_state = "[base_icon_state][reagents.total_volume ? null : "_empty"]"
 	return ..()
-
+*/
 /obj/item/reagent_containers/cup/glass/mug/tea
 	name = "Duke Purple tea"
 	desc = "An insult to Duke Purple is an insult to the Space Queen! Any proper gentleman will fight you, if you sully this tea."
-	icon_state = "tea"
+	icon_state = "coffeecup"
 	list_reagents = list(/datum/reagent/consumable/tea = 30)
 
 /obj/item/reagent_containers/cup/glass/mug/coco
 	name = "Dutch hot coco"
 	desc = "Made in Space South America."
-	icon_state = "tea"
+	icon_state = "coffeecup"
 	list_reagents = list(/datum/reagent/consumable/hot_coco = 15, /datum/reagent/consumable/sugar = 5)
 	drink_type = SUGAR
 	resistance_flags = FREEZE_PROOF
@@ -197,8 +199,90 @@
 /obj/item/reagent_containers/cup/glass/mug/nanotrasen
 	name = "\improper Nanotrasen mug"
 	desc = "A mug to display your corporate pride."
-	icon_state = "mug_nt_empty"
-	base_icon_state = "mug_nt"
+	icon_state = "coffeecup_NT"
+
+/obj/item/reagent_containers/cup/glass/mug/nanotrasen/Initialize(mapload)
+	. = ..()
+	if(prob(10))
+		name = "\improper Old Nanotrasen mug"
+		desc += "This is an old red mug with the Nanotrasen logo before the rebranding. Very rare!"
+		icon_state = "coffeecup_NT_old"
+
+/obj/item/reagent_containers/cup/glass/mug/nanotrasen_old
+	name = "\improper Old Nanotrasen mug"
+	desc = "This is an old red mug with the Nanotrasen logo before the rebranding. Very rare!"
+	icon_state = "coffeecup_NT_old"
+
+/obj/item/reagent_containers/cup/glass/mug/black
+	name = "black coffee cup"
+	desc = "A sleek black coffee cup."
+	icon_state = "coffeecup_black"
+
+/obj/item/reagent_containers/cup/glass/mug/green
+	name = "green coffee cup"
+	desc = "A pale green and pink coffee cup."
+	icon_state = "coffeecup_green"
+
+/obj/item/reagent_containers/cup/glass/mug/heart
+	name = "heart coffee cup"
+	desc = "A white coffee cup, it prominently features a red heart."
+	icon_state = "coffeecup_heart"
+
+/obj/item/reagent_containers/cup/glass/mug/scg
+	name = "\improper SCG coffee cup"
+	desc = "A blue coffee cup emblazoned with the crest of the Sol Central Government."
+	icon_state = "coffeecup_SCG"
+
+/obj/item/reagent_containers/cup/glass/mug/corp
+	name = "\improper EXO coffee cup"
+	desc = "A tasteful coffee cup in Expeditionary Corps Organisation corporate colours."
+	icon_state = "coffeecup_corp"
+
+/obj/item/reagent_containers/cup/glass/mug/one
+	name = "#1 coffee cup"
+	desc = "A white coffee cup, prominently featuring a #1."
+	icon_state = "coffeecup_one"
+
+/obj/item/reagent_containers/cup/glass/mug/punitelli
+	name = "#1 monkey coffee cup"
+	desc = "A white coffee cup, prominently featuring a \"#1 monkey\" decal."
+	icon_state = "coffeecup_punitelli"
+
+/obj/item/reagent_containers/cup/glass/mug/punitelli
+	name = "#1 monkey coffee cup"
+	desc = "A white coffee cup, prominently featuring a \"#1 monkey\" decal."
+	icon_state = "coffeecup_punitelli"
+
+/obj/item/reagent_containers/cup/glass/mug/rainbow
+	name = "rainbow coffee cup"
+	desc = "A rainbow coffee cup. The colors are almost as blinding as a welder."
+	icon_state = "coffeecup_rainbow"
+
+/obj/item/reagent_containers/cup/glass/mug/metal
+	name = "metal coffee cup"
+	desc = "A metal coffee cup. You're not sure which metal."
+	icon_state = "coffeecup_metal"
+	custom_materials = list(/datum/material/iron = SMALL_MATERIAL_AMOUNT)
+
+/obj/item/reagent_containers/cup/glass/mug/stg
+	name = "\improper ICCG coffee cup"
+	desc = "A coffee cup adorned with the flag of the Gilgamesh Colonial Confederation, for when you need some espionage charges to go with your morning coffee."
+	icon_state = "coffeecup_STC"
+
+/obj/item/reagent_containers/cup/glass/mug/pawn
+	name = "pawn coffee cup"
+	desc = "A black coffee cup adorned with the image of a red chess pawn."
+	icon_state = "coffeecup_pawn"
+
+/obj/item/reagent_containers/cup/glass/mug/diona
+	name = "diona nymph coffee cup"
+	desc = "A green coffee cup featuring the image of a diona nymph."
+	icon_state = "coffeecup_diona"
+
+/obj/item/reagent_containers/cup/glass/mug/dais
+	name = "\improper DAIS coffee cup"
+	desc = "A coffee cup imprinted with the stylish logo of Deimos Advanced Information Systems."
+	icon_state = "coffeecup_dais"
 
 /obj/item/reagent_containers/cup/glass/coffee_cup
 	name = "coffee cup"
@@ -528,10 +612,91 @@
 /obj/item/reagent_containers/cup/glass/flask/det/minor
 	list_reagents = list(/datum/reagent/consumable/applejuice = 30)
 
+/obj/item/reagent_containers/cup/glass/flask/barflask
+	name = "flask"
+	desc = "For those who can't be bothered to hang out at the bar to drink."
+	icon_state = "barflask"
+
+/obj/item/reagent_containers/cup/glass/flask/shiny
+	name = "shiny flask"
+	desc = "A shiny metal flask. It appears to have a Greek symbol inscribed on it."
+	icon_state = "shinyflask"
+
 /obj/item/reagent_containers/cup/glass/mug/britcup
 	name = "cup"
 	desc = "A cup with the British flag emblazoned on it."
 	icon = 'icons/obj/drinks/coffee.dmi'
-	icon_state = "britcup_empty"
-	base_icon_state = "britcup"
+	icon_state = "coffeecup_brit"
 	volume = 30
+
+/obj/item/reagent_containers/cup/glass/flask/vacuumflask
+	name = "vacuum flask"
+	desc = "Keeping your drinks at the perfect temperature since 1892."
+	icon_state = "vacuumflask"
+	volume = 60
+	var/obj/item/reagent_containers/cup/glass/flask/flask_cup/cup = /obj/item/reagent_containers/cup/glass/flask/flask_cup
+
+/obj/item/reagent_containers/cup/glass/flask/vacuumflask/Initialize(mapload)
+	. = ..()
+	if(ispath(cup))
+		cup = new cup(src)
+
+	// Flask is sealed when initialized with a cup.
+	reagents.flags &= ~OPENCONTAINER
+
+/obj/item/reagent_containers/cup/glass/flask/vacuumflask/attack_self(mob/user, list/modifiers)
+	if(cup)
+		to_chat(user, span_notice("You remove the [src]'s cap."))
+
+		// Move the cup out of the flask contents and put it into the user's hands
+		cup.forceMove(user.loc)
+		user.put_in_hands(cup)
+
+		reagents.flags |= OPENCONTAINER // The container becomes open when the cap is removed
+		cup = null
+		update_appearance()
+		return
+	return ..()
+
+// TG Style Alt-click handling to screw the cap back on
+/obj/item/reagent_containers/cup/glass/flask/vacuumflask/click_alt(mob/user)
+	// Check if the user is holding the correct cup in their active hand
+	var/obj/item/W = user.get_active_held_item()
+
+	if(!istype(W, /obj/item/reagent_containers/cup/glass/flask/flask_cup))
+		to_chat(user, span_warning("You need to hold the flask cup in your active hand to put it back on!"))
+		return CLICK_ACTION_BLOCKING
+
+	if(cup)
+		to_chat(user, span_warning("The [src] already has a cap."))
+		return CLICK_ACTION_BLOCKING
+
+	// Check volume constraints before merging liquids (since screwing it on dumps the cup's liquid into the flask)
+	if(W.reagents.total_volume + reagents.total_volume > volume)
+		to_chat(user, span_warning("There's too much fluid in both the cap and the [src]!"))
+		return CLICK_ACTION_BLOCKING
+
+	to_chat(user, span_notice("You screw the cap back onto the [src]."))
+
+	if(user.transferItemToLoc(W, src))
+		reagents.flags &= ~OPENCONTAINER // The container is now sealed
+		cup = W
+		// Dump all contents of the cap back into the flask
+		cup.reagents.trans_to(src, cup.reagents.total_volume)
+		update_appearance()
+		return CLICK_ACTION_SUCCESS
+
+	return CLICK_ACTION_BLOCKING
+
+/obj/item/reagent_containers/cup/glass/flask/vacuumflask/update_icon_state()
+	. = ..()
+	icon_state = cup ? initial(icon_state) : "[initial(icon_state)]-nobrim"
+
+// --- FLASK CUP (THE CAP) ---
+
+/obj/item/reagent_containers/cup/glass/flask/flask_cup
+	name = "vacuum flask cup"
+	desc = "The cup that appears in your hands after you unscrew the cap of the flask and turn it over. Magic!"
+	icon_state = "vacuumflask-brim"
+	volume = 10
+

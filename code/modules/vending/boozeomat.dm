@@ -68,7 +68,9 @@
 			"products" = list(
 				/obj/item/reagent_containers/cup/glass/drinkingglass = 30,
 				/obj/item/reagent_containers/cup/glass/drinkingglass/shotglass = 12,
-				/obj/item/reagent_containers/cup/glass/flask = 3,
+				/obj/item/reagent_containers/cup/glass/flask = 2,
+				/obj/item/reagent_containers/cup/glass/flask/barflask = 2,
+				/obj/item/reagent_containers/cup/glass/flask/vacuumflask = 1,
 				/obj/item/reagent_containers/cup/glass/bottle = 15,
 				/obj/item/reagent_containers/cup/glass/bottle/small = 15,
 			),
